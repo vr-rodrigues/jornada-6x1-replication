@@ -1,0 +1,41 @@
+% =============================================================
+% Section: Validation
+% =============================================================
+
+\section{Validation}\label{sec:validation}
+
+Table~\ref{tab:calibration_fit} reports the calibration targets, the domestic alternative-measurement check, and the external directional benchmarks together. Panel A targets are matched by construction. Panel B1 evaluates the model against the PNAD-habitual hours measurement, which the calibration does not target. The implied gap of $1.0$ h/week on mean formal hours and $5.8$ pp on the share above $36$h reflects the contracted-versus-habitual measurement distinction the baseline commits to. Panel B2 reports the Portuguese 1996 reform at the common $44\to 40$h cap and the Brazilian 1988 reform at its $48\to 44$h cap. Signs match. Aggregate output falls and hourly productivity rises in both data and model. Magnitudes do not match. The firm-level Portuguese estimate of $+4.4\%$ in hourly productivity is about $2.6$ points above the aggregate model prediction, a gap consistent with worker selection, work intensification, and sectoral capital deepening that the model does not encode. The Brazilian 1988 evidence points the same way with a slightly larger empirical hourly-wage response. Panel B2 should be read as a directional plausibility benchmark rather than an identified Brazilian lower bound for the effective $A_{\text{req}}$. Portugal and Brazil 1988 differ from the PEC 8/2025 environment in informality, institutional setting, and reform magnitude.
+
+\begin{table}[htbp]
+\centering
+\caption{Calibration fit: targets and checks outside calibration.}\label{tab:calibration_fit}
+\small
+\begin{tabular}{lccc}
+\hline\hline
+Moment & Data & Model & Gap \\
+\hline
+\multicolumn{4}{l}{\textit{Panel A: Calibration targets (matched by construction)}} \\
+\hline
+Informality rate, small firms ($\leq 49$ empl.)  & 0.500 & 0.500 & 0.000 \\
+Informality rate, large firms                    & 0.200 & 0.200 & 0.000 \\
+Formal employment share, small firms             & 0.590 & 0.590 & 0.000 \\
+Formal employment share, large firms             & 0.410 & 0.410 & 0.000 \\
+Aggregate informality, narrow PNAD               & 0.378 & 0.377 & 0.001 \\
+Wage premium $R$, MNR (2015) central target       & 1.400 & 1.400 & 0.000 \\
+\hline
+\multicolumn{4}{l}{\textit{Panel B1: Domestic checks outside calibration}} \\
+\hline
+Average weekly formal hours (DIEESE vs PNAD habitual)    & 41.23 & 42.24 & 1.01 h/week \\
+Share of formal workers above $36$h (DIEESE vs PNAD, \%) & 85.7  & 91.5  & 5.80 pp \\
+Aggregate weekly hours (formal $+$ informal)             & 39.13 & 42.91 & 3.78 h/week \\
+\hline
+\multicolumn{4}{l}{\textit{Panel B2: External directional benchmarks}} \\
+\hline
+$\Delta Y$ at $44\to 40$h cap, Portugal 1996 (firm-level) & $-3.20$ & $-2.00$ & 1.20 pp \\
+$\Delta Y/h$ at $44\to 40$h cap, Portugal 1996 (\%)       & $+4.40$ & $+1.77$ & 2.63 pp \\
+$\Delta W/h$ at $48\to 44$h, Brazil 1988 (\%, GMC 2003)   & $+7.00$ & $+1.77$ & 5.23 pp \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize Panel B1 rows 1--2 exploit the DIEESE-contracted vs PNAD-habitual measurement distinction. Row 3 reports aggregate weekly hours under the $h_I=44$ assumption, sensitivity-checked in the online appendix ($A_{\text{req}}$ shifts by $<0.2$ pp for $h_I\in[38,46]$). Panel B2 compares the model's aggregate prediction at the $44\to 40$h cap to the Portuguese firm-level estimate \citep{AsaiLopesTondini2024} and to Brazil's 1988 reform of comparable cap-cut magnitude (48$\to$44h, $\sim$8\%) as documented by \citet{GonzagaMenezesFilhoCamargo2003}. Both external benchmarks suggest the model is conservative on the hourly-productivity response. The model's $e(h)$ captures fatigue and not worker selection, work intensification, or sectoral capital deepening. Sources: PNAD Cont\'{i}nua Q4 2024, RAIS 2022, \citet{MeghirNaritaRobin2015}, \citet{AsaiLopesTondini2024}, \citet{GonzagaMenezesFilhoCamargo2003}.}
+\end{table}

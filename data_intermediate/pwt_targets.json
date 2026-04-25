@@ -1,0 +1,18 @@
+{
+  "source": "Penn World Table 10.01 (Feenstra, Inklaar, Timmer, 2015)",
+  "country": "Brazil",
+  "country_code": "BRA",
+  "collection_date": "2026-03-24T21:35:14.985943",
+  "labsh_latest": 0.578,
+  "labsh_year": 2019,
+  "labsh_avg_last5": 0.575,
+  "alpha_pwt_raw": 0.422,
+  "alpha_pwt_avg5": 0.425,
+  "fallback": true,
+  "fallback_note": "Download failed; values from PWT 10.01 documentation",
+  "alpha_gollin_adjusted": 0.35,
+  "gollin_adjustment_note": "Gollin (2002, JPE) correction for self-employment income:\n  PWT labsh includes only employee compensation.\n  Self-employed income is mixed (capital + labor).\n  Gollin's adjustment attributes 2/3 of self-employment income to labor.\n  For Brazil (~25% self-employed), this raises labsh from ~0.58 to ~0.65.\n  Hence α goes from ~0.42 (PWT raw) to ~0.35 (Gollin-adjusted).\n  The 0.35 value is standard in Brazilian macro (e.g., Barros Jr. et al.).",
+  "gollin_reference": "Gollin, D. (2002). Getting Income Shares Right. Journal of Political Economy, 110(2), 458-474.",
+  "alpha_recommended": 0.35,
+  "alpha_recommended_note": "Gollin-adjusted, standard for Brazilian macro literature"
+}

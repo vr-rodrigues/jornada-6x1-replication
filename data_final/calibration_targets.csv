@@ -1,0 +1,20 @@
+target_id,name,value,unit,source,variable,notes
+INF_AGG,Informality rate (aggregate),0.37799999999999995,proportion,"PNAD Continua Trimestral, Tabela 4093, IBGE",Taxa de informalidade (v12466),Avg last 4 quarters: 37.8%; Latest: 37.6%
+INF_SMALL,"Informality rate (small firms, <=49 employees)",0.5,proportion,PNAD Continua / RAIS cross-reference,Estimated from position in occupation x firm size,Target for wedge calibration (tau_S)
+INF_LARGE,"Informality rate (large firms, 50+ employees)",0.2,proportion,PNAD Continua / RAIS cross-reference,Estimated from position in occupation x firm size,Target for wedge calibration (tau_L)
+SHARE_SMALL,Small firms employment share (formal sector),0.59,proportion,"RAIS 2022, Ministerio do Trabalho",Share of formal employment in firms with <=49 employees,"RAIS-based, formal employment only (not PNAD all-workers)"
+SHARE_LARGE,Large firms employment share (formal sector),0.41,proportion,"RAIS 2022, Ministerio do Trabalho",Share of formal employment in firms with 50+ employees,Complement of SHARE_SMALL
+GAMMA_F_SMALL,Formal cost wedge (small firms),0.12,proportion,CLT/FGTS legislation + calibration,Effective marginal cost of formalization for small firms,Calibrated to reproduce INF_SMALL via wedge bisection
+GAMMA_F_LARGE,Formal cost wedge (large firms),0.03,proportion,CLT/FGTS legislation + calibration,Effective marginal cost of formalization for large firms,Calibrated to reproduce INF_LARGE via wedge bisection
+ALPHA,Capital share (Gollin-adjusted),0.35,proportion,"PWT 10.01 + Gollin (2002, JPE)","labsh_raw=0.578, alpha_raw=0.422",Gollin correction for self-employment income
+LABSH_RAW,Labor share (PWT raw),0.578,proportion,"PWT 10.01, Brazil, 2019",labsh variable from PWT,Before Gollin adjustment
+THETA_36,Hours bin weight: <=36h workers,0.085,proportion,DIEESE Tabela 7 / PNAD Continua,Share of formal workers in <=36h bin,Mapped from DIEESE <=39h category
+THETA_40,Hours bin weight: 40h workers,0.269,proportion,DIEESE Tabela 7 / PNAD Continua,Share of formal workers in 40h bin,Mapped from DIEESE 40h category
+THETA_44,Hours bin weight: >=41h workers,0.646,proportion,DIEESE Tabela 7 / PNAD Continua,Share of formal workers in >=41h (44h) bin,Mapped from DIEESE >=41h category
+ETA_I,Relative efficiency of informal labor,0.40,proportion,"La Porta & Shleifer (2014, JEP)",Wage-ratio midpoint (informal/formal) approx 1/3 to 1/2,LPS wage-ratio midpoint (theoretically consistent with CES marginal-product identification under competitive wage-taking)
+E_Q,Hours-output elasticity at h_ref,0.6,elasticity,"Pencavel (2015, Economic Journal)",Elasticity of output w.r.t. hours at reference formal hours,d ln(h*e(h))/d ln(h) at h_ref=42.24
+N_TOTAL,Total employment (normalized),0.59,normalized,"PNAD Continua, employment-to-population ratio","Baseline total employment (formal+informal), normalized",Approximate employment-to-population ratio for working-age
+H0,Baseline weekly hours cap (formal),44.0,hours/week,CLT Art. 58,Legal maximum weekly hours in Brazil (pre-reform),Statutory limit
+H1,Reform weekly hours cap,36.0,hours/week,PEC 6x1 proposal,Proposed new maximum weekly hours,Main policy counterfactual
+H_STAR,Peak-efficiency hours,40.0,hours/week,"Pencavel (2015), Collewet & Sauermann (2017)",Hours at which per-hour efficiency is maximized,Consistent with international evidence
+HI,Informal sector hours,44.0,hours/week,Model assumption,Hours worked by informal workers (not subject to cap),Assumption: informals work the pre-reform maximum

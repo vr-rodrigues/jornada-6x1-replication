@@ -1,0 +1,99 @@
+{
+  "collection_date": "2026-04-23T19:16:17.453068",
+  "_note": "Regenerated post-audit3 to match data_final/SECTORAL_PNAD_EMPIRICAL.csv (broad PNAD informality). Employment shares and informality rates now match the final CSV exactly. Theta splits remain estimated from DIEESE 2024 + PNAD habitual hours; they differ from the national PNAD theta because they represent contracted hours at sector level.",
+  "vab": {
+    "source": "IBGE, Contas Regionais do Brasil 2021, SIDRA Table 5938 (sum of 27 UFs)",
+    "period": "2021",
+    "pib_mil_reais": 9012142000.0,
+    "vab_total_direct_mil_reais": 7713999001.0,
+    "vab_agro_mil_reais": 591085000.0,
+    "vab_industry_mil_reais": 1993799001.0,
+    "vab_services_mil_reais": 5129115002.0,
+    "vab_services_ex_admin_mil_reais": 3910159002.0,
+    "vab_admin_mil_reais": 1218956000.0,
+    "vab_total_mil_reais": 7713999003.0,
+    "share_agro": 0.0766,
+    "share_industry": 0.2585,
+    "share_services": 0.6649
+  },
+  "employment": {
+    "agriculture": {
+      "lambda_s": 0.0758,
+      "N_s": 0.04472,
+      "NF_s": 0.01262,
+      "NI_s": 0.03210,
+      "inf_rate": 0.7179,
+      "name": "Agropecuaria",
+      "cnae_sections": "A",
+      "employment_share": 0.0758,
+      "informality_rate": 0.7179,
+      "avg_hours_total": 37.99,
+      "avg_hours_formal": 44.06,
+      "source": "IBGE, PNAD Continua Trimestral 2024 Q4, broad-informality definition (as in SECTORAL_PNAD_EMPIRICAL.csv)",
+      "notes": "Agriculture highest informality under broad definition (family farming, seasonal work, self-employment without CNPJ). Formal workers cluster at 44h."
+    },
+    "industry": {
+      "lambda_s": 0.2048,
+      "N_s": 0.12083,
+      "NF_s": 0.06714,
+      "NI_s": 0.05370,
+      "inf_rate": 0.4444,
+      "name": "Industria (incl. construcao)",
+      "cnae_sections": "B-F",
+      "employment_share": 0.2048,
+      "informality_rate": 0.4444,
+      "avg_hours_total": 40.33,
+      "avg_hours_formal": 42.46,
+      "source": "IBGE, PNAD Continua Trimestral 2024 Q4, broad-informality definition",
+      "notes": "Industry (extractive + manufacturing + utilities + construction). Broad informality includes non-CNPJ self-employed construction workers."
+    },
+    "services": {
+      "lambda_s": 0.7195,
+      "N_s": 0.42451,
+      "NF_s": 0.24971,
+      "NI_s": 0.17480,
+      "inf_rate": 0.4119,
+      "name": "Servicos",
+      "cnae_sections": "G-U",
+      "employment_share": 0.7195,
+      "informality_rate": 0.4119,
+      "avg_hours_total": 38.91,
+      "avg_hours_formal": 40.75,
+      "source": "IBGE, PNAD Continua Trimestral 2024 Q4, broad-informality definition",
+      "notes": "Services encompass commerce, transport, accommodation, IT, finance, public admin, education, health, domestic work."
+    }
+  },
+  "theta": {
+    "agriculture": {
+      "theta_36": 0.1014,
+      "theta_40": 0.2688,
+      "theta_44": 0.6298,
+      "source": "PNAD habitual hours 2024Q4 (as in SECTORAL_PNAD_EMPIRICAL.csv)",
+      "notes": "Agriculture formal workers predominantly work 44h/week"
+    },
+    "industry": {
+      "theta_36": 0.0483,
+      "theta_40": 0.4167,
+      "theta_44": 0.5350,
+      "source": "PNAD habitual hours 2024Q4 (as in SECTORAL_PNAD_EMPIRICAL.csv)",
+      "notes": "Industry: mix of 40h (continuous shifts) and 44h (standard CLT)"
+    },
+    "services": {
+      "theta_36": 0.1711,
+      "theta_40": 0.4097,
+      "theta_44": 0.4192,
+      "source": "PNAD habitual hours 2024Q4 (as in SECTORAL_PNAD_EMPIRICAL.csv)",
+      "notes": "Services: highest part-time share due to commerce/domestic/education"
+    }
+  },
+  "yph": {
+    "agriculture": 33.29,
+    "industry": 44.73,
+    "services": 34.05
+  },
+  "formal_weights": {
+    "agriculture": 0.0523614783790435,
+    "industry": 0.24564829952552555,
+    "services": 0.7019902220954309
+  }
+}

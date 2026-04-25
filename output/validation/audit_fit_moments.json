@@ -1,0 +1,42 @@
+{
+  "audit_date": "2026-04-22",
+  "targeted_moments_by_construction": {
+    "avg_contracted_hours": {
+      "paper_data": 42.2,
+      "paper_model": 42.2,
+      "by_construction": 42.244,
+      "verdict": "by_construction",
+      "explanation": "sum theta_b * h_b; theta_b is calibrated."
+    },
+    "affected_share": {
+      "paper_data": 0.91,
+      "paper_model": 0.92,
+      "by_construction": 0.915,
+      "verdict": "by_construction",
+      "explanation": "1 - theta_36 = 0.9150"
+    },
+    "formal_wagebill_share": {
+      "paper_data": 0.73,
+      "paper_model": 0.74,
+      "model_from_CES_FOC": 0.5630490201307791,
+      "verdict": "by_construction",
+      "explanation": "CES FOC at calibrated sigma, wedge, LF/LI."
+    }
+  },
+  "genuine_out_of_sample": {
+    "sectoral_informality_dispersion": {
+      "data_weighted_mean": 0.44179199,
+      "data_weighted_sd_pp": 8.01433065769233,
+      "model_sd_pp": 0.0,
+      "verdict": "MODEL_CANNOT_GENERATE",
+      "explanation": "National two-group model has no sectoral channel."
+    },
+    "pnad_habitual_vs_model": {
+      "model_hbar": 42.244,
+      "pnad_hbar": 41.232,
+      "gap": 1.0120000000000005,
+      "verdict": "GENUINE_GAP",
+      "explanation": "Calibrated to DIEESE; PNAD habitual is a different concept; the 1h gap is informative."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+% =============================================================
+% Subsection: Calibration (inside Section 2)
+% =============================================================
+
+Table~\ref{tab:params} lists the parameters under three headings. External parameters come from PWT, DIEESE, and PNAD Cont\'{i}nua. Moment-matched parameters ($\tau_g$, $\pi_m$, $\kappa$, $\psi$) are calibrated internally. Author-chosen parameters ($\eta_I$, $e_q$, $h^*$, $h_I$, $\gamma_F^g$) are set inside ranges consistent with the work-hours evidence of \citet{Pencavel2015} and \citet{CollewetSauermann2017}, the informal-productivity literature \citep{LaPortaShleifer2014}, and the CLT/FGTS compliance-cost literature. Cross-country hours evidence in \citet{BickFuchsSchundelnLagakos2018} provides directional support for declining marginal product of hours but does not identify a peak. The online appendix reports the source and sensitivity for each parameter.
+
+\begin{table}[htbp]
+\centering
+\caption{Parameter values by evidential basis.}\label{tab:params}
+\small
+\begin{tabular}{@{}l p{4.2cm} c p{4.8cm}@{}}
+\hline\hline
+Symbol & Description & Value & Source \\
+\hline
+\multicolumn{4}{l}{\textit{External}} \\
+\hline
+$\alpha$     & Capital share                  & 0.35   & PWT 10.01 + \citet{Gollin2002} \\
+$\omega$     & CES formal weight              & 0.622  & $1-$ narrow informality (PNAD Cont\'{i}nua 2025) \\
+$\theta_b$   & Hours-bin weights (formal)     & $(0.085, 0.269, 0.646)$ & DIEESE 2024 \\
+$\nu$        & Inverse Frisch elasticity       & 2.0    & Standard (Frisch $=0.5$) \\
+\hline
+\multicolumn{4}{l}{\textit{Moment-matched}} \\
+\hline
+$\sigma_{\text{sub}}$ & CES substitution elasticity & \textbf{1.326} $[1.116,1.469]$ & Wage premium \citep{MeghirNaritaRobin2015} \\
+$\tau_S,\tau_L$       & Formal wedges (small, large) & 2.609,\,0.004 & Bisection to group informality \\
+$\pi_m^S,\pi_m^L$     & Informality convex cost      & 0.000,\,42.11 & Bisection \\
+$\kappa$               & Efficiency curvature         & $2.11\times 10^{-3}$ & Derived from $e_q$ at $h_{\text{ref}}$ \\
+$\psi$                 & GHH disutility weight        & $5.74\times 10^{-5}$ & Baseline FOC \\
+\hline
+\multicolumn{4}{l}{\textit{Author-chosen (within ranges consistent with evidence)}} \\
+\hline
+$\eta_I$      & Informal relative efficiency   & 0.40   & \citet{LaPortaShleifer2014} informal/formal wage ratio midpoint ($\approx 1/3$ to $1/2$) \\
+$e_q$          & Hours--output elasticity       & 0.60   & \citet{Pencavel2015} range \\
+$h^*$          & Peak-efficiency hours          & 40     & \citet{Pencavel2015} \\
+$h_I$          & Informal hours                 & 44     & No statutory cap in informal sector \\
+$\gamma_F^S, \gamma_F^L$ & Adjustment costs        & 0.12,\,0.03 & RAIS + CLT/FGTS \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+The CES substitution elasticity $\sigma_{\text{sub}}$ is disciplined by the wage premium. From the CES first-order condition, the formal--informal wage premium $R$ is a monotone function of $\sigma_{\text{sub}}$. Plugging a widened window around \citeauthor{MeghirNaritaRobin2015}'s estimates, $R\in[1.15,1.55]$, into the CES FOC at the recalibrated $(\omega,\eta_I)=(0.622,0.40)$ yields
+\begin{equation}\label{eq:sigma_interval}
+R\in[1.15,1.55]\implies \sigma_{\text{sub}}\in[1.116,1.469],\quad A_{\text{req}}\in[7.50\%,8.58\%]\text{ (conservative, midbox).}
+\end{equation}
+The central value $\sigma=1.326$ corresponds to $R\approx 1.40$, the midpoint of the MNR window.\footnote{The window $R\in[1.15,1.55]$ spans the full range of MNR's reported estimates across sub-populations and alternative specifications (Tables~3 and~10). The mapping from $R$ to $\sigma_{\text{sub}}$ depends on $(\omega,\eta_I)$. The anchors $\omega=0.622$ ($1$ minus the narrow PNAD 2025 informality rate) and $\eta_I=0.40$ (midpoint of the La Porta--Shleifer informal/formal wage ratio range $1/3$ to $1/2$) are theoretically consistent: under competitive wage-taking the CES aggregator identifies $\eta_I$ through the marginal-product (wage) ratio rather than through value-added per employee, which is contaminated by capital-per-worker differences. The online appendix documents the derivation.} Letting $\omega$ and $\eta_I$ also vary over their data-consistent ranges ($\omega\in[0.58,0.66]$, $\eta_I\in[0.33,0.50]$), the joint $(\sigma,\omega,\eta_I)$-box envelope under the conservative specification is $[6.93\%, 9.23\%]$ at the eight corners. Under the preferred flat-below specification the central $A_{\text{req}}$ is $6.63\%$ and the envelope is $[5.62\%,7.48\%]$. The online appendix reports the full grids. The small reallocation elasticity documented by \citet{DerenoncourtGerardLagosMontialoux2025} supports a modest intra-firm $\sigma$ and is distinct from the high substitution elasticities between worker types reported in refugee studies. The online appendix discusses this distinction.
+
+Rebuilding the calibration on PNAD habitual hours ($\theta=(0.143,0.406,0.451)$, $44.2\%$ informality) yields $A_{\text{req}}=7.80\%$ under the conservative specification. The baseline uses DIEESE contracted hours because the statutory cap is a contracted-hours concept.

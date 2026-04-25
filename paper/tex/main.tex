@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+
+% === Packages ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\graphicspath{{figures/}}
+
+% Resolve cross-references to the online appendix
+\usepackage{xr-hyper}
+\externaldocument{online_appendix}
+
+% URL of the online appendix (replace with the public link once available)
+\newcommand{\onlineappendixurl}{[URL pending]}
+
+% === Metadata ===
+\title{How much productivity do we need to reduce the workweek?}
+\author{Victor Rangel\thanks{Insper. E-mail: \texttt{victorr@insper.edu.br}.}}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+% === Abstract ===
+\begin{abstract}
+Brazil proposes to reduce the formal workweek from 44 to 36 hours (PEC 8/2025). This paper builds a structural partial-equilibrium model with a CES aggregator over formal and informal effective labor, calibrated to Brazilian microdata, and quantifies the short-run output cost and the one-off TFP gain that would offset it. The required gain is $A_{\text{req}}\approx 6.6\%$ under the preferred specification, with a conservative upper bound a couple of percentage points higher. The figure is high relative to the post-1990 Brazilian TFP series, in which productivity fell on average and rose only modestly in the best post-Real-Plan decade. The CES substitution elasticity above unity and a moderate informal efficiency parameter, identified from the observed informal-to-formal wage ratio, push marginal workers toward informality rather than absorbing the hours loss intensively. Aggregate informality rises rather than falls. Welfare peaks inside the model at a cap above 40 hours and turns negative further down. Small firms and agriculture bear disproportionate costs.
+\end{abstract}
+
+\textbf{Keywords:} working hours, informality, total factor productivity, CES aggregator, Brazil, welfare
+
+\textbf{JEL:} E24, J22, J46, O17, O47
+
+\clearpage
+
+% ==================================================================
+% 1. Introduction
+% ==================================================================
+\input{sec_introduction}
+
+% ==================================================================
+% 2. Brazilian facts and framework
+% ==================================================================
+\section{Brazilian facts and framework}\label{sec:framework}
+
+\input{sec_facts}
+\input{sec_model}
+\input{sec_calibration}
+
+% ==================================================================
+% 3. Validation
+% ==================================================================
+\input{sec_validation}
+
+% ==================================================================
+% 4. Main results (includes welfare as §4.4)
+% ==================================================================
+\input{sec_results}
+\input{sec_welfare_conditional}
+
+% ==================================================================
+% 5. Policy implications
+% ==================================================================
+\input{sec_conclusion}
+
+% === Online appendix and replication ===
+\paragraph{Online appendix.} An online appendix containing data sources, partial-equilibrium omissions, calibration details, sensitivity grids, sectoral decomposition, type-level welfare, output decomposition, the historical TFP table, derivations, and the asymmetric-$e(h)$ robustness is available at \url{\onlineappendixurl}.
+
+\paragraph{Code and data availability.} Code and calibration targets to reproduce every numbered table and figure in this paper are available at the author's public repository \url{https://github.com/vr-rodrigues/jornada-6x1-replication} (to be activated upon publication).
+
+% === Bibliography ===
+\bibliographystyle{aer}
+\bibliography{bibliography_clean}
+
+\end{document}

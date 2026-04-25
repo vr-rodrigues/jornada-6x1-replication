@@ -1,0 +1,58 @@
+{
+  "description": "Pessimistic stress test: post-reform TFP is A_post = A_base*(1-delta). delta=0 is the baseline in the paper. delta in [0.5%, 2%] represents additional TFP deterioration that could arise from the shock itself (learning-by-doing disruption, organizational slack, informalization lock-in). All other calibration is held at the baseline values.",
+  "sigma_sub": 1.326,
+  "omega": 0.622,
+  "baseline": {
+    "Y": 4.113979698397168,
+    "inf": 0.377045,
+    "h_avg": 42.906091020000005,
+    "psi": 5.7380805439443124e-05
+  },
+  "grid": [
+    {
+      "delta_pct": 0.0,
+      "A_post_ratio": 1.0,
+      "A_req_pct": 8.182,
+      "dY_pct": -8.022,
+      "dInf_pp": 1.917,
+      "dCV_pct": -3.626,
+      "h_avg_post": 39.17
+    },
+    {
+      "delta_pct": 0.5,
+      "A_post_ratio": 0.995,
+      "A_req_pct": 8.726,
+      "dY_pct": -8.513,
+      "dInf_pp": 1.98,
+      "dCV_pct": -4.261,
+      "h_avg_post": 39.175
+    },
+    {
+      "delta_pct": 1.0,
+      "A_post_ratio": 0.99,
+      "A_req_pct": 9.275,
+      "dY_pct": -9.003,
+      "dInf_pp": 2.044,
+      "dCV_pct": -4.895,
+      "h_avg_post": 39.18
+    },
+    {
+      "delta_pct": 1.5,
+      "A_post_ratio": 0.985,
+      "A_req_pct": 9.83,
+      "dY_pct": -9.499,
+      "dInf_pp": 2.122,
+      "dCV_pct": -5.538,
+      "h_avg_post": 39.186
+    },
+    {
+      "delta_pct": 2.0,
+      "A_post_ratio": 0.98,
+      "A_req_pct": 10.391,
+      "dY_pct": -9.989,
+      "dInf_pp": 2.185,
+      "dCV_pct": -6.171,
+      "h_avg_post": 39.191
+    }
+  ]
+}

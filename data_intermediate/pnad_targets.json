@@ -1,0 +1,349 @@
+{
+  "informality_rate": {
+    "source": "PNAD Continua Trimestral, Tabela 4093, SIDRA/IBGE",
+    "variable": "Taxa de informalidade (%)",
+    "latest_quarter_name": "4º trimestre 2025",
+    "latest_quarter_value": 37.6,
+    "avg_last_4_quarters": 37.8,
+    "n_quarters": 4,
+    "quarterly_rates": [
+      {
+        "period": "1º trimestre 2025",
+        "rate_pct": 38.0
+      },
+      {
+        "period": "2º trimestre 2025",
+        "rate_pct": 37.8
+      },
+      {
+        "period": "3º trimestre 2025",
+        "rate_pct": 37.8
+      },
+      {
+        "period": "4º trimestre 2025",
+        "rate_pct": 37.6
+      }
+    ],
+    "quarterly_total_occupied_thousands": [
+      {
+        "period": "1º trimestre 2025",
+        "value": 100511.0
+      },
+      {
+        "period": "2º trimestre 2025",
+        "value": 102316.0
+      },
+      {
+        "period": "3º trimestre 2025",
+        "value": 102433.0
+      },
+      {
+        "period": "4º trimestre 2025",
+        "value": 102998.0
+      }
+    ],
+    "quarterly_informal_thousands": [
+      {
+        "period": "1º trimestre 2025",
+        "value": 38189.0
+      },
+      {
+        "period": "2º trimestre 2025",
+        "value": 38718.0
+      },
+      {
+        "period": "3º trimestre 2025",
+        "value": 38748.0
+      },
+      {
+        "period": "4º trimestre 2025",
+        "value": 38707.0
+      }
+    ],
+    "api_table": 4093,
+    "collection_date": "2026-03-24T21:34:46.352962"
+  },
+  "position_occupation": {
+    "source": "PNAD Continua Trimestral, Tabela 4097, SIDRA/IBGE",
+    "formal_thousands": 50401.0,
+    "informal_thousands": 22337.0,
+    "total_thousands": 72738.0,
+    "informality_rate_computed_pct": 30.71,
+    "categories": {
+      "96165": {
+        "name": "Total",
+        "code": "96165",
+        "thousands": 102998.0,
+        "pct": 100.0
+      },
+      "31721": {
+        "name": "Empregado no setor privado, exclusive trabalhador doméstico",
+        "code": "31721",
+        "thousands": 52974.0,
+        "pct": 51.4
+      },
+      "31722": {
+        "name": "Empregado no setor privado, exclusive trabalhador doméstico - com carteira de trabalho assinada",
+        "code": "31722",
+        "thousands": 39409.0,
+        "pct": 38.3
+      },
+      "31723": {
+        "name": "Empregado no setor privado, exclusive trabalhador doméstico - sem carteira de trabalho assinada",
+        "code": "31723",
+        "thousands": 13565.0,
+        "pct": 13.2
+      },
+      "31724": {
+        "name": "Trabalhador doméstico",
+        "code": "31724",
+        "thousands": 5570.0,
+        "pct": 5.4
+      },
+      "31725": {
+        "name": "Trabalhador doméstico - com carteira de trabalho assinada",
+        "code": "31725",
+        "thousands": 1371.0,
+        "pct": 1.3
+      },
+      "31726": {
+        "name": "Trabalhador doméstico - sem carteira de trabalho assinada",
+        "code": "31726",
+        "thousands": 4199.0,
+        "pct": 4.1
+      },
+      "31727": {
+        "name": "Empregado no setor público",
+        "code": "31727",
+        "thousands": 13004.0,
+        "pct": 12.6
+      },
+      "31728": {
+        "name": "Empregado no setor público, exclusive militar e funcionário público estatutário - com carteira de trabalho assinada",
+        "code": "31728",
+        "thousands": 1619.0,
+        "pct": 1.6
+      },
+      "31729": {
+        "name": "Empregado no setor público, exclusive militar e funcionário público estatutário - sem carteira de trabalho assinada",
+        "code": "31729",
+        "thousands": 3383.0,
+        "pct": 3.3
+      },
+      "31730": {
+        "name": "Empregado no setor público - militar e funcionário público estatutário",
+        "code": "31730",
+        "thousands": 8002.0,
+        "pct": 7.8
+      },
+      "96170": {
+        "name": "Empregador",
+        "code": "96170",
+        "thousands": 4152.0,
+        "pct": 4.0
+      },
+      "96171": {
+        "name": "Conta própria",
+        "code": "96171",
+        "thousands": 26109.0,
+        "pct": 25.3
+      },
+      "31731": {
+        "name": "Trabalhador familiar auxiliar",
+        "code": "31731",
+        "thousands": 1190.0,
+        "pct": 1.2
+      }
+    },
+    "formal_codes_used": [
+      "31722",
+      "31725",
+      "31728",
+      "31730",
+      "45934",
+      "45936"
+    ],
+    "informal_codes_used": [
+      "31723",
+      "31726",
+      "31729",
+      "45935",
+      "45937",
+      "31731"
+    ],
+    "api_table": 4097,
+    "collection_date": "2026-03-24T21:34:46.670551"
+  },
+  "firm_size": {
+    "source": "PNAD Continua Anual, Tabela 6413, SIDRA/IBGE",
+    "note": "Exclui setor publico e domesticos",
+    "period": "2024",
+    "small_le49_thousands": 58242.0,
+    "large_ge50_thousands": 24676.0,
+    "total_thousands": 82918.0,
+    "small_share_pct": 70.24,
+    "large_share_pct": 29.76,
+    "sizes_detail": {
+      "40303": {
+        "name": "Total",
+        "code": "40303",
+        "thousands": 82918.0,
+        "pct": 100.0
+      },
+      "40304": {
+        "name": "1 a 5 pessoas",
+        "code": "40304",
+        "thousands": 40416.0,
+        "pct": 48.7
+      },
+      "40305": {
+        "name": "6 a 10 pessoas",
+        "code": "40305",
+        "thousands": 7679.0,
+        "pct": 9.3
+      },
+      "40306": {
+        "name": "11 a 50 pessoas",
+        "code": "40306",
+        "thousands": 10147.0,
+        "pct": 12.2
+      },
+      "40307": {
+        "name": "51 ou mais pessoas",
+        "code": "40307",
+        "thousands": 24676.0,
+        "pct": 29.8
+      }
+    },
+    "api_table": 6413,
+    "collection_date": "2026-03-24T21:34:46.954888"
+  },
+  "average_hours": {
+    "source": "PNAD Continua Trimestral, Tabela 6374, SIDRA/IBGE",
+    "variable": "Media de horas semanais habitualmente trabalhadas",
+    "records": [
+      {
+        "period": "1º trimestre 2025",
+        "position": "Total",
+        "position_code": "120443",
+        "avg_hours": 39.3
+      },
+      {
+        "period": "1º trimestre 2025",
+        "position": "Empregado",
+        "position_code": "35423",
+        "avg_hours": 39.7
+      },
+      {
+        "period": "1º trimestre 2025",
+        "position": "Empregador",
+        "position_code": "35426",
+        "avg_hours": 37.7
+      },
+      {
+        "period": "1º trimestre 2025",
+        "position": "Conta própria",
+        "position_code": "98272",
+        "avg_hours": 44.8
+      },
+      {
+        "period": "1º trimestre 2025",
+        "position": "Trabalhador familiar auxiliar",
+        "position_code": "40089",
+        "avg_hours": 29.2
+      },
+      {
+        "period": "2º trimestre 2025",
+        "position": "Total",
+        "position_code": "120443",
+        "avg_hours": 39.2
+      },
+      {
+        "period": "2º trimestre 2025",
+        "position": "Empregado",
+        "position_code": "35423",
+        "avg_hours": 39.6
+      },
+      {
+        "period": "2º trimestre 2025",
+        "position": "Empregador",
+        "position_code": "35426",
+        "avg_hours": 37.6
+      },
+      {
+        "period": "2º trimestre 2025",
+        "position": "Conta própria",
+        "position_code": "98272",
+        "avg_hours": 44.4
+      },
+      {
+        "period": "2º trimestre 2025",
+        "position": "Trabalhador familiar auxiliar",
+        "position_code": "40089",
+        "avg_hours": 28.8
+      },
+      {
+        "period": "3º trimestre 2025",
+        "position": "Total",
+        "position_code": "120443",
+        "avg_hours": 39.1
+      },
+      {
+        "period": "3º trimestre 2025",
+        "position": "Empregado",
+        "position_code": "35423",
+        "avg_hours": 39.6
+      },
+      {
+        "period": "3º trimestre 2025",
+        "position": "Empregador",
+        "position_code": "35426",
+        "avg_hours": 37.5
+      },
+      {
+        "period": "3º trimestre 2025",
+        "position": "Conta própria",
+        "position_code": "98272",
+        "avg_hours": 44.7
+      },
+      {
+        "period": "3º trimestre 2025",
+        "position": "Trabalhador familiar auxiliar",
+        "position_code": "40089",
+        "avg_hours": 28.3
+      },
+      {
+        "period": "4º trimestre 2025",
+        "position": "Total",
+        "position_code": "120443",
+        "avg_hours": 39.1
+      },
+      {
+        "period": "4º trimestre 2025",
+        "position": "Empregado",
+        "position_code": "35423",
+        "avg_hours": 39.6
+      },
+      {
+        "period": "4º trimestre 2025",
+        "position": "Empregador",
+        "position_code": "35426",
+        "avg_hours": 37.5
+      },
+      {
+        "period": "4º trimestre 2025",
+        "position": "Conta própria",
+        "position_code": "98272",
+        "avg_hours": 45.0
+      },
+      {
+        "period": "4º trimestre 2025",
+        "position": "Trabalhador familiar auxiliar",
+        "position_code": "40089",
+        "avg_hours": 27.9
+      }
+    ],
+    "api_table": 6374,
+    "collection_date": "2026-03-24T21:34:47.294277"
+  }
+}

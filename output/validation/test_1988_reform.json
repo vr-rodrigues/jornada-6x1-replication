@@ -1,0 +1,31 @@
+{
+  "model_1988_48_to_44": {
+    "Y0": 12.844546928438318,
+    "Y1": 12.844546928438318,
+    "dY_pct": 0.0,
+    "dInf_pp": 0.0,
+    "hF0": 5008.0,
+    "hF1": 5008.0,
+    "dhF_pct": 0.0,
+    "dY_per_h_formal_pct": 0.0,
+    "A_req_pct": 0.0
+  },
+  "model_2025_44_to_36": {
+    "Y0": 12.349571976006,
+    "Y1": 12.189421114174417,
+    "dY_pct": -1.296813056701407,
+    "dInf_pp": -0.4642499999999994,
+    "hF0": 4832.0,
+    "hF1": 4320.0,
+    "dhF_pct": -10.596026490066224,
+    "dY_per_h_formal_pct": 9.299213433364818,
+    "A_req_pct": 0.9974975178295153
+  },
+  "gmc_2003_empirical": {
+    "cap_change_pct": -8.3,
+    "dhours_effective_pct": -5.0,
+    "dwages_hourly_pct": 7.0,
+    "demployment_pct": 0.0,
+    "note": "Gonzaga, Menezes-Filho, Camargo (2003), Journal of Development Economics."
+  }
+}

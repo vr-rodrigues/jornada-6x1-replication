@@ -1,0 +1,1 @@
+# Sectoral extension model

@@ -1,0 +1,128 @@
+{
+  "source": "Penn World Table 10.0 (downloaded 2026-04-20), variable rtfpna",
+  "country": "Brazil",
+  "a_req_pct": 6.63,
+  "modern_era_1995_2019": {
+    "horizon": "1995-2019",
+    "start_year": 1995,
+    "end_year": 2019,
+    "span_years": 24,
+    "tfp_start": 1.1866,
+    "tfp_end": 0.9705,
+    "annual_growth_pct": -0.834,
+    "years_to_compensate_areq": Infinity
+  },
+  "long_run_1990_2019": {
+    "horizon": "1990-2019",
+    "start_year": 1990,
+    "end_year": 2019,
+    "span_years": 29,
+    "tfp_start": 1.1566,
+    "tfp_end": 0.9705,
+    "annual_growth_pct": -0.603,
+    "years_to_compensate_areq": Infinity
+  },
+  "growth_decade_2003_2013": {
+    "horizon": "2003-2013",
+    "start_year": 2003,
+    "end_year": 2013,
+    "span_years": 10,
+    "tfp_start": 1.0826,
+    "tfp_end": 1.1112,
+    "annual_growth_pct": 0.26,
+    "years_to_compensate_areq": 24.7
+  },
+  "recent_decade_2010_2019": {
+    "horizon": "2010-2019",
+    "start_year": 2010,
+    "end_year": 2019,
+    "span_years": 9,
+    "tfp_start": 1.1513,
+    "tfp_end": 0.9705,
+    "annual_growth_pct": -1.88,
+    "years_to_compensate_areq": Infinity
+  },
+  "all_horizons": [
+    {
+      "horizon": "1954-2019",
+      "start_year": 1954,
+      "end_year": 2019,
+      "span_years": 65,
+      "tfp_start": 0.8054,
+      "tfp_end": 0.9705,
+      "annual_growth_pct": 0.287,
+      "years_to_compensate_areq": 22.4
+    },
+    {
+      "horizon": "1954-1980",
+      "start_year": 1954,
+      "end_year": 1980,
+      "span_years": 26,
+      "tfp_start": 0.8054,
+      "tfp_end": 1.4498,
+      "annual_growth_pct": 2.286,
+      "years_to_compensate_areq": 2.8
+    },
+    {
+      "horizon": "1980-2000",
+      "start_year": 1980,
+      "end_year": 2000,
+      "span_years": 20,
+      "tfp_start": 1.4498,
+      "tfp_end": 1.1137,
+      "annual_growth_pct": -1.31,
+      "years_to_compensate_areq": Infinity
+    },
+    {
+      "horizon": "1990-2019",
+      "start_year": 1990,
+      "end_year": 2019,
+      "span_years": 29,
+      "tfp_start": 1.1566,
+      "tfp_end": 0.9705,
+      "annual_growth_pct": -0.603,
+      "years_to_compensate_areq": Infinity
+    },
+    {
+      "horizon": "1995-2019",
+      "start_year": 1995,
+      "end_year": 2019,
+      "span_years": 24,
+      "tfp_start": 1.1866,
+      "tfp_end": 0.9705,
+      "annual_growth_pct": -0.834,
+      "years_to_compensate_areq": Infinity
+    },
+    {
+      "horizon": "2000-2019",
+      "start_year": 2000,
+      "end_year": 2019,
+      "span_years": 19,
+      "tfp_start": 1.1137,
+      "tfp_end": 0.9705,
+      "annual_growth_pct": -0.722,
+      "years_to_compensate_areq": Infinity
+    },
+    {
+      "horizon": "2003-2013",
+      "start_year": 2003,
+      "end_year": 2013,
+      "span_years": 10,
+      "tfp_start": 1.0826,
+      "tfp_end": 1.1112,
+      "annual_growth_pct": 0.26,
+      "years_to_compensate_areq": 24.7
+    },
+    {
+      "horizon": "2010-2019",
+      "start_year": 2010,
+      "end_year": 2019,
+      "span_years": 9,
+      "tfp_start": 1.1513,
+      "tfp_end": 0.9705,
+      "annual_growth_pct": -1.88,
+      "years_to_compensate_areq": Infinity
+    }
+  ],
+  "key_finding": "Brazilian TFP has declined over the long run (1990-2019: -0.60%/yr) and over recent decades. Even the best growth decade (2003-2013) had TFP growth of only +0.26%/yr, requiring 25 years to accumulate A_req = 6.63%. A one-off TFP gain of this magnitude has no historical precedent in the modern Brazilian series."
+}

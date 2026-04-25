@@ -1,0 +1,98 @@
+{
+  "collection_date": "2026-03-25T16:46:50.222669",
+  "vab": {
+    "source": "IBGE, Contas Regionais do Brasil 2021, SIDRA Table 5938 (sum of 27 UFs)",
+    "period": "2021",
+    "pib_mil_reais": 9012142000.0,
+    "vab_total_direct_mil_reais": 7713999001.0,
+    "vab_agro_mil_reais": 591085000.0,
+    "vab_industry_mil_reais": 1993799001.0,
+    "vab_services_mil_reais": 5129115002.0,
+    "vab_services_ex_admin_mil_reais": 3910159002.0,
+    "vab_admin_mil_reais": 1218956000.0,
+    "vab_total_mil_reais": 7713999003.0,
+    "share_agro": 0.0766,
+    "share_industry": 0.2585,
+    "share_services": 0.6649
+  },
+  "employment": {
+    "agriculture": {
+      "lambda_s": 0.085,
+      "N_s": 0.05015,
+      "NF_s": 0.019709,
+      "NI_s": 0.030441,
+      "inf_rate": 0.607,
+      "name": "Agropecuária",
+      "cnae_sections": "A",
+      "employment_share": 0.085,
+      "informality_rate": 0.607,
+      "avg_hours_formal": 43.5,
+      "avg_hours_total": 39.0,
+      "source": "IBGE, PNAD Contínua Trimestral 2024 (T4), Grupamento de atividade",
+      "notes": "Agriculture has highest informality due to family farming, seasonal work, and self-employment without CNPJ. Hours: formal workers cluster at 44h; many informal work <40h."
+    },
+    "industry": {
+      "lambda_s": 0.203,
+      "N_s": 0.11977,
+      "NF_s": 0.092462,
+      "NI_s": 0.027308,
+      "inf_rate": 0.228,
+      "name": "Indústria (incl. construção)",
+      "cnae_sections": "B-F",
+      "employment_share": 0.203,
+      "informality_rate": 0.228,
+      "avg_hours_formal": 42.5,
+      "avg_hours_total": 41.0,
+      "source": "IBGE, PNAD Contínua Trimestral 2024 (T4), Grupamento de atividade",
+      "notes": "Industry (extractive + manufacturing + utilities + construction) has low informality in manufacturing (CLT-dominated) but higher in construction (~45%). Blended rate ~22.8%."
+    },
+    "services": {
+      "lambda_s": 0.712,
+      "N_s": 0.42008,
+      "NF_s": 0.26423,
+      "NI_s": 0.15585,
+      "inf_rate": 0.371,
+      "name": "Serviços",
+      "cnae_sections": "G-U",
+      "employment_share": 0.712,
+      "informality_rate": 0.371,
+      "avg_hours_formal": 41.0,
+      "avg_hours_total": 39.5,
+      "source": "IBGE, PNAD Contínua Trimestral 2024 (T4), Grupamento de atividade",
+      "notes": "Services encompass commerce, transport, accommodation, IT, finance, public admin, education, health, domestic work. Informality driven by self-employed (conta-própria) and domestic workers without carteira."
+    }
+  },
+  "theta": {
+    "agriculture": {
+      "theta_36": 0.04,
+      "theta_40": 0.18,
+      "theta_44": 0.78,
+      "source": "Estimated from DIEESE 2024 + RAIS sector composition",
+      "notes": "Agriculture formal workers predominantly work 44h/week"
+    },
+    "industry": {
+      "theta_36": 0.05,
+      "theta_40": 0.3,
+      "theta_44": 0.65,
+      "source": "Estimated from DIEESE 2024 + RAIS sector composition",
+      "notes": "Industry: mix of 40h (continuous shifts) and 44h (standard CLT)"
+    },
+    "services": {
+      "theta_36": 0.1,
+      "theta_40": 0.26,
+      "theta_44": 0.64,
+      "source": "Estimated from DIEESE 2024 + RAIS sector composition",
+      "notes": "Services: highest part-time share due to commerce/domestic/education"
+    }
+  },
+  "yph": {
+    "agriculture": 33.29,
+    "industry": 44.73,
+    "services": 34.05
+  },
+  "formal_weights": {
+    "agriculture": 0.0523614783790435,
+    "industry": 0.24564829952552555,
+    "services": 0.7019902220954309
+  }
+}

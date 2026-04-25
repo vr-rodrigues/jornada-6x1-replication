@@ -1,0 +1,64 @@
+% =============================================================
+% Appendix body: Sectoral decomposition (no \section line)
+% =============================================================
+
+Table~\ref{tab:sectoral_params} reports sector-specific parameters and the calibrated wedges. Agriculture's informality rate is $71.8\%$, nearly twice the national average of $44.2\%$ under the broad IBGE definition. Industry ($44.4\%$) and services ($41.2\%$) are closer to the mean. The calibrated wedges range from $\tau_s=1.48$ in services to $\tau_s=5.63$ in agriculture. The agricultural wedge is benchmarked against FUNRURAL-SENAR-INSS employer-side obligations of $30$--$35\%$ of wages plus seasonality-related enforcement costs \citep{LemosGalvao2020}. The magnitude is large and not implausible given high institutional friction and a small formal base.
+
+\begin{table}[htbp]
+\centering
+\caption{Sector-specific parameters and calibrated wedges.}\label{tab:sectoral_params}
+\small
+\begin{tabular}{lcccccccr}
+\hline\hline
+Sector & $\lambda_s$ & VAB & Inf.\ rate & $\theta_{36}$ & $\theta_{40}$ & $\theta_{44}$ & Hrs (F) & $\tau_s$ \\
+\hline
+Agriculture & 0.076 & 0.077 & 71.8\% & 0.101 & 0.269 & 0.630 & 44.1 & 5.63 \\
+Industry    & 0.205 & 0.259 & 44.4\% & 0.048 & 0.417 & 0.535 & 42.5 &  2.10 \\
+Services    & 0.720 & 0.665 & 41.2\% & 0.171 & 0.410 & 0.419 & 40.8 &  1.48 \\
+\hline
+National    & 1.000 & 1.000 & 44.2\% & 0.143 & 0.406 & 0.451 & 41.2 & --- \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize $\lambda_s$: employment share, PNAD Q4 2024. VAB: value-added share, IBGE Contas Regionais 2021. $\theta_b$: share of formal workers in hours bin $b$. Hours: V4039 (habitual). Informality: broad IBGE definition (VD4009 + V4017 CNPJ).}
+\end{table}
+
+Table~\ref{tab:sectoral_results} reports the main sectoral results. The aggregate $A_{\text{req}}$ imposes a uniform TFP multiplier on all three sectors and solves by bisection for the value that restores total output. Under the full reform, agriculture requires $A_{\text{req}}=7.60\%$, industry $8.05\%$, and services $6.91\%$, with an aggregate of $7.21\%$. The aggregate is slightly below the national model's conservative headline of $8.18\%$ because this exercise uses PNAD habitual hours rather than DIEESE contracted hours. Industry's $A_{\text{req}}$ edges out agriculture's. At $\sigma>1$ and $\eta_I=0.40$ the reallocation friction scales with the size of the formal base, which is larger in industry than in agriculture despite agriculture's higher baseline informality. All three sectors see informality rise in response to the reform (agriculture $+2.88$ pp, industry $+2.73$ pp, services $+2.10$ pp), consistent with mildly substitutable formal--informal labor and the wage-disciplined informal efficiency parameter.
+
+\begin{table}[htbp]
+\centering
+\caption{Sectoral results: required TFP gain and worker exposure.}\label{tab:sectoral_results}
+\small
+\begin{tabular}{llrrrrc}
+\hline\hline
+Reform & Sector & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$Inf & Affected & Burden ratio \\
+ & & (\%) & (\%) & (pp) & (\% of sector) & ($A_{\text{req}}$/Aff.) \\
+\hline
+\multirow{4}{*}{$44\to 40$h}
+& Agriculture & 1.8 & $-$2.4 & $+$0.6 & 17.8 & 10.1 \\
+& Industry    & 1.6 & $-$1.6 & $+$0.4 & 29.7 & 5.4 \\
+& Services    & 1.3 & $-$1.3 & $+$0.4 & 24.7 & 5.2 \\
+& \textit{Aggregate} & \textit{1.4} & \textit{$-$1.4} & \textit{$+$0.4} & \textit{25.2} & \\
+\hline
+\multirow{4}{*}{$44\to 36$h}
+& Agriculture & 7.6 & $-$9.4 & $+$2.9 & 25.3 & 30.0 \\
+& Industry    & 8.0 & $-$7.9 & $+$2.7 & 52.9 & 15.2 \\
+& Services    & 6.9 & $-$6.7 & $+$2.1 & 48.7 & 14.2 \\
+& \textit{Aggregate} & \textit{7.2} & \textit{$-$7.2} & \textit{$+$2.3} & \textit{47.8} & \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize Affected: formal workers above the new cap, as \% of total sector employment. Burden ratio: $A_{\text{req}}$ / affected share, descriptive. Aggregate $A_{\text{req}}$: uniform TFP gain solving $\sum_s Y_s(A(1+A_{\text{req}}),h_1)=\sum_s Y_s(A,h_0)$ by bisection.}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{fig_sectoral_areq.pdf}
+\caption{Required TFP gain $A_{\text{req}}$ by sector under the moderate $44\to 40$h and full $44\to 36$h reforms, conservative calibration.}\label{fig:sectoral_areq}
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}
+{\footnotesize \textit{Notes:} Values are computed separately for each sector under the conservative symmetric $e(h)$ specification. Sector-specific parameters (informality, hours distribution, wedge $\tau_s$) come from PNAD Cont\'{i}nua Q4 2024. Common structural parameters ($\alpha$, $\sigma_{\text{sub}}$, $\omega$, $\kappa$, $h^*$) are kept at their national values.}
+\end{minipage}
+\end{figure}
+
+Services accounts for $71.0\%$ of model-implied baseline output and contributes $4.8$ of the $7.2$ pp aggregate output loss. A sector-specific policy exempting agriculture from the cap would reduce the aggregate $A_{\text{req}}$ by less than $0.2$ pp. The decomposition treats each sector as an independent instance of the national model and abstracts from cross-sector reallocation of labor and capital. It also collapses firm-size heterogeneity into a single representative firm per sector. A richer multi-sector framework with factor mobility is a natural extension.

@@ -1,0 +1,36 @@
+{
+  "description": "Validation of the model against the Portuguese 1996 reform (44->40h) estimated at firm level by Asai, Lopes & Tondini (2024).",
+  "sigma": 1.326,
+  "omega": 0.622,
+  "model_44_to_40": {
+    "A_req_pct": 1.925,
+    "dY_pct": -1.996,
+    "dHours_pct": -3.705,
+    "dInf_pp": 0.458,
+    "dYph_pct": 1.775,
+    "dCV_pct": 0.414
+  },
+  "model_44_to_36": {
+    "A_req_pct": 8.182,
+    "dY_pct": -8.022,
+    "dHours_pct": -8.708,
+    "dInf_pp": 1.917,
+    "dYph_pct": 0.751,
+    "dCV_pct": -3.626
+  },
+  "portugal_empirical_Asai2024": {
+    "dHours_pct": -10.9,
+    "dY_pct": -3.2,
+    "dEmp_pct": -1.7,
+    "dYph_pct": 4.4,
+    "dHourlyWage_pct": 9.2,
+    "elasticity_hours": -1.17,
+    "elasticity_employment": -0.19
+  },
+  "notes": [
+    "Our ΔY is economy-wide; Asai-Lopes-Tondini is firm-level (treated vs control).",
+    "Our e(h) captures only fatigue; Asai et al capture fatigue + quality + intensification + capital deepening.",
+    "Asai et al find hourly productivity +4.4pct at 44->40h; our model predicts 1.77pct.",
+    "Directional consistency: both find ΔY<0, Δhours<0, Δproductivity/h>0."
+  ]
+}

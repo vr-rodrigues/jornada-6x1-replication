@@ -1,0 +1,345 @@
+\documentclass[12pt,a4paper]{article}
+
+% === Packages ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\graphicspath{{figures/}}
+
+% Resolve cross-references to the online appendix
+\usepackage{xr-hyper}
+\externaldocument{online_appendix_pt}
+
+% URL of the online appendix (replace with the public link once available)
+\newcommand{\onlineappendixurl}{https://drive.google.com/file/d/1JI406MG1i_ETxhj50cY5_UrdeUlY4QqP/view?usp=drive_link}
+
+% === Metadata ===
+\title{Quanto de produtividade precisamos para reduzir a jornada de trabalho?}
+\author{Victor Rangel\thanks{Insper. E-mail: \texttt{victorr@insper.edu.br}.}}
+\date{Mar\c{c}o de 2026}
+
+\begin{document}
+
+\maketitle
+
+% === Resumo ===
+\begin{abstract}
+O Brasil prop\~oe reduzir a jornada formal de 44 para 36 horas semanais (PEC 8/2025), uma reforma que atingiria a maioria dos trabalhadores formais, cortaria mecanicamente o trabalho efetivo da economia em cerca de $14\%$ e exigiria um ganho compensat\'orio de produtividade ainda n\~ao precificado em um ambiente com a informalidade brasileira. Para precific\'a-lo, o artigo constr\'oi um modelo estrutural de equil\'ibrio parcial com agregador CES sobre trabalho efetivo formal e informal, calibrado com microdados brasileiros. O ganho requerido \'e $A_{\text{req}}\approx 6{,}6\%$ sob a especifica\c{c}\~ao preferida, com um limite superior conservador alguns pontos percentuais acima. O n\'umero \'e elevado quando comparado \`a s\'erie brasileira de PTF p\'os-1990, em que a produtividade caiu em m\'edia e cresceu apenas modestamente na melhor d\'ecada do p\'os-Plano Real. A elasticidade de substitui\c{c}\~ao CES acima da unidade e um par\^ametro moderado de efici\^encia informal, identificado da raz\~ao salarial informal/formal observada, empurram trabalhadores marginais para a informalidade em vez de absorver a perda de horas intensivamente. A informalidade agregada sobe em vez de cair. O bem-estar atinge seu m\'aximo no modelo em um teto acima de 40 horas e torna-se negativo mais abaixo. Firmas pequenas e a agricultura arcam com custos desproporcionais.
+\end{abstract}
+
+\textbf{Palavras-chave:} jornada de trabalho, informalidade, produtividade total dos fatores, agregador CES, Brasil, bem-estar
+
+\textbf{JEL:} E24, J22, J46, O17, O47
+
+\clearpage
+
+% ==================================================================
+% 1. Introdu\c{c}\~ao
+% ==================================================================
+\section{Introdu\c{c}\~ao}\label{sec:intro}
+
+O Brasil debate um corte de oito horas na jornada-padr\~ao. A PEC 8/2025 baixaria o teto de 44 para 36 horas semanais e atingiria cerca de dois ter\c{c}os dos empregados formais de uma s\'o vez, e dois n\'umeros ancoram a discuss\~ao de pol\'itica: quanto produto o corte retira no impacto e qual ganho \'unico de produtividade o recolocaria.
+
+O ambiente brasileiro complica as duas respostas. A informalidade \'e de $37{,}8\%$ pela defini\c{c}\~ao restrita da PNAD e $44{,}2\%$ pela ampla do IBGE, e varia de $41\%$ em servi\c{c}os a $72\%$ na agricultura. Tratamentos-padr\~ao de reformas de jornada modelam uma economia totalmente formal \citep{Cacciatore2016} ou tratam a informalidade como distor\c{c}\~ao est\'atica por tamanho \citep{Ulyssea2018}; nenhum foi aplicado a um corte de teto dessa magnitude.
+
+O modelo \'e est\'atico, de equil\'ibrio parcial e disciplinado por microdados brasileiros. Um agregador CES sobre trabalho efetivo formal e informal governa a realoca\c{c}\~ao. Uma fun\c{c}\~ao de fadiga $e(h)$ com pico em $40$ horas traduz o teto em produtividade por hora. Dois grupos por tamanho de firma geram incid\^encia diferencial, e prefer\^encias GHH viabilizam a avalia\c{c}\~ao de bem-estar. A elasticidade de substitui\c{c}\~ao \'e ancorada no pr\^emio salarial formal--informal brasileiro de \citet{MeghirNaritaRobin2015}, resultando em $\sigma_{\text{sub}}=1{,}326$ com intervalo $[1{,}116,\,1{,}469]$ aos par\^ametros $(\omega,\eta_I)=(0{,}622,\,0{,}40)$.
+
+O resultado central \'e $A_{\text{req}}$, o ganho \'unico de PTF que restauraria o produto pr\'e-reforma. Na especifica\c{c}\~ao preferida flat-below, $A_{\text{req}}=6{,}63\%$; na conservadora sim\'etrica, $A_{\text{req}}=8{,}18\%$. O envelope conjunto $(\sigma,\omega,\eta_I)$ \'e $[5{,}62\%,\,7{,}48\%]$ e $[6{,}93\%,\,9{,}23\%]$, respectivamente. \`A melhor taxa p\'os-1990 da PTF brasileira (PWT \texttt{rtfpna}, $+0{,}26\%$ ao ano em 2003--2013), acumular $A_{\text{req}}$ leva $25$--$31$ anos. Um teste de estresse que sobrep\~oe uma contra\c{c}\~ao de PTF p\'os-reforma de $1$--$2\%$ eleva o $A_{\text{req}}$ conservador para $9{,}28$--$10{,}39\%$.
+
+A informalidade sobe $+1{,}6$--$1{,}9$ p.p.\ porque $\sigma>1$ e $\eta_I=0{,}40$ tornam as margens formal e informal substitutos imperfeitos, e n\~ao sil\^os isolados: o teto empurra trabalhadores formais marginais para a informalidade em vez de ser absorvido integralmente pelo ajuste intensivo. O bem-estar tem m\'aximo pr\'oximo a um teto de $41$h e torna-se fortemente negativo abaixo de $38$h.
+
+O artigo contribui em tr\^es dire\c{c}\~oes. Incorpora a margem de realoca\c{c}\~ao formal--informal a uma an\'alise estrutural de reforma de jornada e mostra que a margem \'e modesta sob par\^ametros disciplinados pelo pr\^emio salarial. Prop\~oe $A_{\text{req}}$ como benchmark comunic\'avel e compar\'avel com o hist\'orico de PTF. Fornece um intervalo transparente, condicional ao pr\^emio salarial, para $\sigma_{\text{sub}}$ que o leitor pode reavaliar.
+
+O escopo \'e limitado. O arcabou\c{c}o \'e est\'atico e de equil\'ibrio parcial. Omite aprofundamento de capital, ajuste de pre\c{c}os em equil\'ibrio geral, sele\c{c}\~ao de trabalhadores e intensifica\c{c}\~ao do trabalho. Evid\^encia de Portugal 1996 \citep{AsaiLopesTondini2024} e Brasil 1988 \citep{GonzagaMenezesFilhoCamargo2003} entra como checagem direcional de plausibilidade, n\~ao como limite inferior identificado para o $A_{\text{req}}$ efetivo brasileiro.
+
+A Se\c{c}\~ao~\ref{sec:framework} apresenta fatos, modelo e calibra\c{c}\~ao; a Se\c{c}\~ao~\ref{sec:validation} valida o ajuste; a Se\c{c}\~ao~\ref{sec:results} reporta o contrafactual principal, o benchmark de PTF e o teste de estresse; a Se\c{c}\~ao~\ref{sec:conclusion} extrai implica\c{c}\~oes de pol\'itica p\'ublica.
+
+% ==================================================================
+% 2. Fatos brasileiros e arcabou\c{c}o
+% ==================================================================
+\section{Fatos brasileiros e arcabou\c{c}o}\label{sec:framework}
+
+Quatro fatos brasileiros motivam o modelo e disciplinam a calibra\c{c}\~ao. Primeiro, as horas formais est\~ao concentradas no teto estatut\'ario. O DIEESE (2024) reporta $8{,}5\%$ dos trabalhadores formais em 36 horas, $26{,}9\%$ em 40 horas e $64{,}6\%$ em ou perto de 44 horas, com m\'edia de $42{,}2$ horas semanais. A PNAD Cont\'inua Q4 2024 (horas habituais) d\'a distribui\c{c}\~ao mais achatada com m\'edia de $41{,}2$. A maioria dos trabalhadores formais opera em 40 horas ou acima, exatamente a margem que um teto de 36h restringiria.
+
+Segundo, a informalidade \'e grande e dispersa. A taxa nacional \'e de $37{,}8\%$ (restrita) ou $44{,}2\%$ (ampla). A faixa setorial \'e de $71{,}8\%$ na agricultura, $44{,}4\%$ na ind\'ustria e $41{,}2\%$ em servi\c{c}os (Tabela~\ref{tab:facts_informality}). Terceiro, o pr\^emio salarial formal--informal \'e positivo e moderado. \citet{MeghirNaritaRobin2015} documentam um pr\^emio salarial condicional $R\in[1{,}15,\,1{,}55]$ (raz\~ao entre o sal\'ario-hora m\'edio formal e o sal\'ario-hora m\'edio informal entre trabalhadores comparáveis), que a calibra\c{c}\~ao adiante usa para ancorar a elasticidade CES de substitui\c{c}\~ao $\sigma_{\text{sub}}$ entre trabalho formal e informal. Quarto, a PTF brasileira permaneceu estagnada ou em queda ao longo do per\'iodo p\'os-1990. A s\'erie \texttt{rtfpna} da Penn World Table 10.01 mostra queda anualizada de $-0{,}6\%$ ao ano no per\'iodo 1990--2019 e crescimento de apenas $+0{,}26\%$ ao ano na melhor d\'ecada p\'os-Plano Real (2003--2013). O benchmark de PTF na Se\c{c}\~ao~\ref{sec:results} usa essa s\'erie como \^ancora para $A_{\text{req}}$.
+
+\begin{table}[htbp]
+\centering
+\caption{Momentos setoriais e nacionais do mercado de trabalho, PNAD Cont\'inua Q4 2024.}\label{tab:facts_informality}
+\small
+\begin{tabular}{lcccccc}
+\hline\hline
+Setor & $\lambda_s$ & Informalidade & Hrs m\'edias & $\theta_{36}$ & $\theta_{40}$ & $\theta_{44}$ \\
+ & & (ampla) & (formal) & & & \\
+\hline
+Agricultura & 0{,}076 & 71{,}8\% & 44{,}1 & 0{,}101 & 0{,}269 & 0{,}630 \\
+Ind\'ustria & 0{,}205 & 44{,}4\% & 42{,}5 & 0{,}048 & 0{,}417 & 0{,}535 \\
+Servi\c{c}os & 0{,}720 & 41{,}2\% & 40{,}8 & 0{,}171 & 0{,}410 & 0{,}419 \\
+\hline
+Nacional    & 1{,}000 & 44{,}2\% & 41{,}2 & 0{,}143 & 0{,}406 & 0{,}451 \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+\begin{minipage}{0.95\textwidth}
+{\footnotesize \textit{Notas:} $\lambda_s$ \'e a participa\c{c}\~ao do setor no emprego nacional. Informalidade usa a defini\c{c}\~ao ampla do IBGE (VD4009 combinada com o indicador V4017 CNPJ). ``Hrs m\'edias'' \'e a m\'edia de horas semanais dos trabalhadores \emph{formais} (V4039, habitual). $\theta_{36}$, $\theta_{40}$, $\theta_{44}$ s\~ao as parcelas de trabalhadores formais em cada bin de horas contratadas. \textit{Fonte:} PNAD Cont\'inua Q4 2024, microdados IBGE, ponderados pela amostra, $N=209{,}311$.}
+\end{minipage}
+\end{table}
+
+Uma firma representativa no grupo $g\in\{\text{Pequena},\text{Grande}\}$ (pequena: at\'e 49 empregados; grande: 50 ou mais) produz o produto $Y_g$ a partir do capital $K_g$ e do trabalho efetivo $L_g$ com tecnologia Cobb--Douglas:
+\begin{equation}\label{eq:production}
+Y_g = A\cdot K_g^{\alpha}\cdot L_g^{1-\alpha},
+\end{equation}
+em que $A$ \'e a produtividade agregada e $\alpha$ \'e a parcela do capital na renda. O trabalho efetivo $L_g$ combina trabalhadores formais ($F$) e informais ($I$) por um agregador CES:
+\begin{equation}\label{eq:ces}
+L_g = \left[\omega L_{F,g}^{\rho} + (1-\omega)L_{I,g}^{\rho}\right]^{1/\rho},\quad \rho=(\sigma_{\text{sub}}-1)/\sigma_{\text{sub}},
+\end{equation}
+em que $\omega$ \'e o peso CES do trabalho formal (um $\omega$ maior torna o trabalho formal mais importante na produ\c{c}\~ao) e $\sigma_{\text{sub}}$ \'e a elasticidade de substitui\c{c}\~ao entre trabalho formal e informal. Quando $\sigma_{\text{sub}}<1$, os dois insumos s\~ao complementos, de modo que um aumento do custo do trabalho formal \emph{n\~ao} provoca grande realoca\c{c}\~ao para a margem informal. Os dois insumos de trabalho s\~ao
+\[
+L_{F,g}=N_{F,g}\sum_b\theta_b h_b e(h_b),\qquad L_{I,g}=\eta_I N_{I,g} h_I e(h_I),
+\]
+em que $N_{F,g}$ e $N_{I,g}$ s\~ao os quantitativos de trabalhadores formais e informais no grupo $g$ (com $N_{I,g}\equiv N_g-N_{F,g}$ e o emprego total do grupo $N_g$ fixo), $h_b$ indexa os tr\^es bins de horas contratadas $b\in\{36,40,44\}$ com parcelas $\theta_b$ entre os formais, $h_I=44$ s\~ao as horas semanais informais (sem teto estatut\'ario) e $\eta_I$ \'e a produtividade por cabe\c{c}a de um trabalhador informal relativa \`a de um formal. A efici\^encia por hora segue $e(h)=\exp\{-\kappa(h-h^*)^2\}$ acima do pico $h^*=40$, em que $\kappa$ \'e a curvatura da penalidade de fadiga que jornadas longas imp\~oem \`a produtividade. Abaixo do pico o artigo considera dois regimes: uma especifica\c{c}\~ao preferida flat-below com $e(h)=1$ para $h\leq h^*$ (sem penalidade de efici\^encia para jornadas menores) e uma especifica\c{c}\~ao conservadora sim\'etrica com a mesma forma quadr\'atica abaixo de $h^*$. A especifica\c{c}\~ao flat-below \'e informada por \citet{Pencavel2015}, que documenta a perna de fadiga acima do pico mas n\~ao caracteriza a efici\^encia abaixo dele. A sim\'etrica serve como limite superior conservador.
+
+Cada firma escolhe o quantitativo de trabalhadores formais $N_{F,g}$ para maximizar o lucro l\'iquido de tr\^es cunhas de custo:
+\begin{equation}\label{eq:firm}
+Y_g-\tau_g N_{F,g}-\tfrac{1}{2}\pi_m N_{I,g}^2-\tfrac{1}{2}\gamma_{F,g}(N_{F,g}-\bar{N}_{F,g})^2,
+\end{equation}
+em que $\tau_g$ \'e um custo linear por trabalhador formal (obriga\c{c}\~oes CLT/FGTS e enforcement dependente do tamanho), $\pi_m$ \'e um custo convexo de informalidade (multas, risco reputacional e acesso limitado a insumos do setor formal) e $\gamma_{F,g}$ \'e um custo quadr\'atico de ajuste que penaliza desvios em rela\c{c}\~ao ao quantitativo formal pr\'e-reforma $\bar{N}_{F,g}$. A cunha $\tau_g$ \'e calibrada para casar a informalidade do grupo e desempenha o papel de uma distor\c{c}\~ao dependente do tamanho no esp\'irito de \citet{HsiehKlenow2009} e \citet{RestucciaRogerson2008}, com microfunda\c{c}\~oes de formalidade end\'ogena em \citet{DixCarneiroGoldbergMeghirUlyssea2026}. Cortar o teto estatut\'ario de $h_0=44$ horas para $h_1$ reduz o trabalho efetivo tanto via os bins de horas $h_b$ quanto via a fun\c{c}\~ao de efici\^encia $e(h_b)$, e alarga a cunha entre o produto marginal do trabalho formal e seu custo privado.
+
+O objeto de interesse \'e o multiplicador de PTF que restaura o produto agregado:
+\begin{equation}\label{eq:areq}
+A_{\text{req}}:\quad \sum_g Y_g\!\left(A\,(1+A_{\text{req}}),K_g,h_1\right)=\sum_g Y_g(A,K_g,h_0).
+\end{equation}
+Em palavras, $A_{\text{req}}$ \'e o ganho percentual \'unico na produtividade agregada $A$ que compensaria exatamente a perda de produto de curto prazo induzida pela mudan\c{c}a do teto de $h_0$ para $h_1$; \'e um \emph{benchmark} cont\'abil que o leitor pode comparar com o hist\'orico de PTF brasileiro, n\~ao uma taxa de crescimento prevista. Para bem-estar, as prefer\^encias s\~ao GHH \citep{GreenwoodHercowitzHuffman1988} com $\sigma_{\text{ghh}}=1$ e elasticidade de Frisch $1/\nu=0{,}5$. A varia\c{c}\~ao compensat\'oria \'e
+\begin{equation}\label{eq:cv}
+\Delta\text{CV}=\frac{C_1-\psi h_1^{1+\nu}/(1+\nu)}{C_0-\psi h_0^{1+\nu}/(1+\nu)}-1.
+\end{equation}
+O numerador e o denominador s\~ao os equivalentes de consumo de bem-estar p\'os- e pr\'e-reforma sob prefer\^encias GHH: consumo l\'iquido da desutilidade do trabalho monetizada $\psi h^{1+\nu}/(1+\nu)$. $\Delta$CV \'e, portanto, a varia\c{c}\~ao percentual de bem-estar (valor positivo indica que a reforma melhora o bem-estar; negativo, que o reduz).
+
+O modelo \'e est\'atico e de equil\'ibrio parcial. O capital \'e pr\'e-determinado, o emprego total $N$ \'e fixo, e as retroalimenta\c{c}\~oes de equil\'ibrio geral (sal\'ario-pre\c{c}o, monet\'aria, fiscal, intersetorial) est\~ao ausentes. O ap\^endice online enumera os canais omitidos e bracketeia seu efeito agregado. Uma elasticidade de custo de uso $\varepsilon_K\in[0{,}2,\,0{,}4]$ \citep{Caballero1999} com parcela de capital $\alpha=0{,}35$ implica
+\begin{equation}\label{eq:pe_bound}
+\Delta A_{\text{req}}^{K}\approx -\alpha\cdot\varepsilon_K\cdot|\Delta L_F/L|\in[-1{,}0,\,-1{,}8]\text{ p.p.},
+\end{equation}
+onde $\Delta A_{\text{req}}^{K}$ \'e a corre\c{c}\~ao para baixo do $A_{\text{req}}$ de curto prazo uma vez incorporada a resposta end\'ogena do estoque de capital. O an\'alogo de m\'edio prazo do \emph{headline} cai, portanto, $1$--$2$ p.p.\ em horizonte de $3$--$5$ anos.
+
+A Tabela~\ref{tab:params} lista os par\^ametros. Par\^ametros externos v\^em da PWT, DIEESE e PNAD Cont\'inua. Par\^ametros calibrados por momentos ($\tau_g$, $\pi_m$, $\kappa$, $\psi$) s\~ao ajustados internamente. Par\^ametros escolhidos pelo autor ($\eta_I$, $e_q$, $h^*$, $h_I$, $\gamma_F^g$) situam-se em faixas consistentes com a evid\^encia sobre horas de trabalho em \citet{Pencavel2015} e \citet{CollewetSauermann2017}, a literatura de produtividade informal \citep{LaPortaShleifer2014} e a literatura de compliance CLT/FGTS. A evid\^encia transnacional sobre horas em \citet{BickFuchsSchundelnLagakos2018} fornece suporte auxiliar para produtividade marginal decrescente. O ap\^endice online apresenta fontes e sensibilidade completas para cada par\^ametro.
+
+\begin{table}[htbp]
+\centering
+\caption{Valores de par\^ametros por base evidencial.}\label{tab:params}
+\small
+\begin{tabular}{@{}l p{4.2cm} c p{4.8cm}@{}}
+\hline\hline
+S\'imbolo & Descri\c{c}\~ao & Valor & Fonte \\
+\hline
+\multicolumn{4}{l}{\textit{Externos}} \\
+\hline
+$\alpha$     & Parcela de capital             & 0{,}35   & PWT 10.01 + \citet{Gollin2002} \\
+$\omega$     & Peso formal CES                & 0{,}622  & $1-$ informalidade restrita (PNAD Cont\'inua 2025) \\
+$\theta_b$   & Parcelas por bin de horas      & $(0{,}085, 0{,}269, 0{,}646)$ & DIEESE 2024 \\
+$\nu$        & Inverso da elasticidade de Frisch & 2{,}0 & Padr\~ao (Frisch $=0{,}5$) \\
+\hline
+\multicolumn{4}{l}{\textit{Calibrados por momentos}} \\
+\hline
+$\sigma_{\text{sub}}$ & Elasticidade de substitui\c{c}\~ao CES & \textbf{1{,}326} $[1{,}116,\,1{,}469]$ & Pr\^emio salarial \citep{MeghirNaritaRobin2015} \\
+$\tau_S,\tau_L$       & Cunhas formais (pequena, grande) & 2{,}609;\,0{,}004 & Bisse\c{c}\~ao para informalidade do grupo \\
+$\pi_m^S,\pi_m^L$     & Custo convexo de informalidade   & 0{,}000;\,42{,}11 & Bisse\c{c}\~ao \\
+$\kappa$               & Curvatura de efici\^encia & $2{,}11\times 10^{-3}$ & Derivado de $e_q$ em $h_{\text{ref}}$ \\
+$\psi$                 & Peso de desutilidade GHH & $5{,}74\times 10^{-5}$ & CPO de base \\
+\hline
+\multicolumn{4}{l}{\textit{Escolhidos pelo autor (dentro de faixas consistentes com a evid\^encia)}} \\
+\hline
+$\eta_I$      & Efici\^encia relativa informal & 0{,}40   & Ponto m\'edio da raz\~ao salarial LPS (informal/formal) aprox.\ 1/3 a 1/2 \\
+$e_q$          & Elasticidade horas--produto    & 0{,}60   & Faixa \citet{Pencavel2015} \\
+$h^*$          & Horas de efici\^encia de pico  & 40       & \citet{Pencavel2015} \\
+$h_I$          & Horas informais                & 44       & Sem teto estatut\'ario no setor informal \\
+$\gamma_F^S, \gamma_F^L$ & Custos de ajuste         & 0{,}12;\,0{,}03 & RAIS + CLT/FGTS \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+A elasticidade $\sigma_{\text{sub}}$ \'e disciplinada pelo pr\^emio salarial. Da CPO do CES, o pr\^emio salarial formal--informal $R$ \'e fun\c{c}\~ao mon\'otona de $\sigma_{\text{sub}}$. Substituindo uma janela ampliada em torno das estimativas de \citeauthor{MeghirNaritaRobin2015}, $R\in[1{,}15,\,1{,}55]$, na CPO do CES no recalibrado $(\omega,\eta_I)=(0{,}622,\,0{,}40)$ obt\'em-se o intervalo
+\begin{equation}\label{eq:sigma_interval}
+R\in[1{,}15,\,1{,}55]\implies \sigma_{\text{sub}}\in[1{,}116,\,1{,}469],\quad A_{\text{req}}\in[7{,}60\%,\,8{,}70\%]\text{ (conservador, midbox).}
+\end{equation}
+O valor central $\sigma=1{,}326$ corresponde a $R\approx 1{,}40$.\footnote{Adotamos $R\in[1{,}15,\,1{,}55]$ como janela plaus\'ivel em torno do pr\^emio salarial formal--informal condicional em \citet{MeghirNaritaRobin2015}. O mapeamento de $R$ para $\sigma$ depende de $(\omega,\eta_I)$; as \^ancoras $\omega=0{,}622$ ($= 1$ menos a informalidade restrita PNAD 2025) e $\eta_I=0{,}40$ (ponto m\'edio da raz\~ao salarial informal/formal LPS, $\approx 1/3$ a $1/2$) d\~ao o mapeamento acima. Sob concorr\^encia perfeita e salarista, a identifica\c{c}\~ao da produtividade marginal no CES usa a raz\~ao salarial, n\~ao a raz\~ao de VA por trabalhador, que \'e contaminada por gaps de capital por trabalhador.} Permitindo que $\omega$ e $\eta_I$ tamb\'em variem em suas faixas consistentes com os dados ($\omega\in[0{,}58,\,0{,}66]$, $\eta_I\in[0{,}33,\,0{,}50]$), o envelope da caixa conjunta $(\sigma,\omega,\eta_I)$ sob a especifica\c{c}\~ao conservadora \'e $[6{,}93\%,\,9{,}23\%]$ nos oito cantos. Sob a especifica\c{c}\~ao preferida flat-below o $A_{\text{req}}$ central \'e $6{,}63\%$ e o envelope \'e $[5{,}62\%,\,7{,}48\%]$. O ap\^endice online reporta as grades completas. A pequena elasticidade de realoca\c{c}\~ao documentada por \citet{DerenoncourtGerardLagosMontialoux2025} sustenta um $\sigma$ pequeno do tipo intrafirma, distinto das elasticidades altas entre tipos de trabalhadores em estudos de refugiados. O ap\^endice online discute a distin\c{c}\~ao.
+
+Reconstruir a calibra\c{c}\~ao com horas habituais da PNAD ($\theta=(0{,}143,\,0{,}406,\,0{,}451)$, informalidade $44{,}2\%$) resulta em $A_{\text{req}}=7{,}80\%$ sob a especifica\c{c}\~ao conservadora e aproximadamente $5{,}9\%$ sob a preferida. O gap preferido \'e maior do que o conservador porque a distribui\c{c}\~ao $\theta$ da PNAD coloca mais massa formal abaixo do pico de efici\^encia $h^*=40$, que a especifica\c{c}\~ao flat-below trata como neutra enquanto a sim\'etrica penaliza. Adotamos horas contratadas do DIEESE como baseline porque o teto estatut\'ario \'e um conceito de horas contratadas.
+
+% ==================================================================
+% 3. Valida\c{c}\~ao
+% ==================================================================
+\section{Valida\c{c}\~ao}\label{sec:validation}
+
+A Tabela~\ref{tab:calibration_fit} reporta os targets, a checagem dom\'estica de medida alternativa e os benchmarks direcionais externos em um s\'o lugar. Os targets do Painel A s\~ao casados por constru\c{c}\~ao. O Painel B1 usa a medida de horas habituais da PNAD, que o modelo n\~ao targeta: as diferen\c{c}as de $1{,}0$ h/semana nas horas m\'edias formais e $5{,}8$ p.p.\ na parcela acima de $36$h refletem a distin\c{c}\~ao contratada-versus-habitual com que o baseline se compromete. O Painel B2 reporta a reforma portuguesa de 1996 no teto $44\to 40$h e a reforma brasileira de 1988 no teto $48\to 44$h. Os sinais casam: o produto agregado cai, a produtividade hor\'aria sobe. As magnitudes n\~ao: a estimativa portuguesa a n\'ivel de firma de $+4{,}4\%$ na produtividade hor\'aria est\'a cerca de $2{,}6$ pontos acima da previs\~ao do modelo agregado, uma diferen\c{c}a consistente com sele\c{c}\~ao de trabalhadores, intensifica\c{c}\~ao e aprofundamento de capital setorial que o modelo n\~ao codifica. A evid\^encia brasileira de 1988 aponta na mesma dire\c{c}\~ao, com resposta emp\'irica hor\'aria de sal\'arios ligeiramente maior. Lemos o Painel B2 como benchmark direcional de plausibilidade, n\~ao como limite inferior brasileiro para o $A_{\text{req}}$ efetivo. Portugal e o Brasil de 1988 diferem do ambiente da PEC 8/2025 em informalidade, arranjo institucional e magnitude da reforma.
+
+\begin{table}[htbp]
+\centering
+\caption{Ajuste da calibra\c{c}\~ao: targets e checagens fora da calibra\c{c}\~ao.}\label{tab:calibration_fit}
+\small
+\begin{tabular}{lccc}
+\hline\hline
+Momento & Dado & Modelo & Gap \\
+\hline
+\multicolumn{4}{l}{\textit{Painel A: Targets de calibra\c{c}\~ao (casados por constru\c{c}\~ao)}} \\
+\hline
+Informalidade, pequenas firmas ($\leq 49$ empl.)  & 0{,}500 & 0{,}500 & 0{,}000 \\
+Informalidade, grandes firmas                     & 0{,}200 & 0{,}200 & 0{,}000 \\
+Parcela de emprego formal, pequenas firmas        & 0{,}590 & 0{,}590 & 0{,}000 \\
+Parcela de emprego formal, grandes firmas         & 0{,}410 & 0{,}410 & 0{,}000 \\
+Informalidade agregada, PNAD restrita             & 0{,}378 & 0{,}377 & 0{,}001 \\
+Pr\^emio salarial $R$, MNR (2015) target central  & 1{,}400 & 1{,}400 & 0{,}000 \\
+\hline
+\multicolumn{4}{l}{\textit{Painel B1: Checagens dom\'esticas fora da calibra\c{c}\~ao}} \\
+\hline
+Horas formais semanais m\'edias (DIEESE vs PNAD habitual) & 41{,}23 & 42{,}24 & 1{,}01 h/sem \\
+Parcela de formais acima de $36$h (DIEESE vs PNAD, \%)    & 85{,}7  & 91{,}5  & 5{,}80 p.p. \\
+Horas semanais agregadas (formal + informal)              & 39{,}13 & 42{,}91 & 3{,}78 h/sem \\
+\hline
+\multicolumn{4}{l}{\textit{Painel B2: Benchmarks direcionais externos}} \\
+\hline
+$\Delta Y$ no teto $44\to 40$h, Portugal 1996 (firma)     & $-3{,}20$ & $-2{,}00$ & 1{,}20 p.p. \\
+$\Delta Y/h$ no teto $44\to 40$h, Portugal 1996 (\%)      & $+4{,}40$ & $+1{,}77$ & 2{,}63 p.p. \\
+$\Delta W/h$ em $48\to 44$h, Brasil 1988 (\%, GMC 2003)   & $+7{,}00$ & $+1{,}77$ & 5{,}23 p.p. \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize Painel B1 linhas 1--2 exploram a distin\c{c}\~ao DIEESE-contratadas vs PNAD-habituais. Linha 3 reporta horas semanais agregadas sob a hip\'otese $h_I=44$, cuja sensibilidade \'e testada no ap\^endice online ($A_{\text{req}}$ desloca-se em menos de $0{,}2$ p.p.\ para $h_I\in[38,\,46]$). Painel B2 compara a previs\~ao agregada do modelo no teto $44\to 40$h com a estimativa portuguesa a n\'ivel de firma \citep{AsaiLopesTondini2024} e com a reforma brasileira de 1988 de magnitude compar\'avel (48$\to$44h, $\sim$8\%) documentada por \citet{GonzagaMenezesFilhoCamargo2003}. Ambos os benchmarks externos sugerem que o modelo \'e conservador na resposta de produtividade hor\'aria, como esperado porque o $e(h)$ captura apenas fadiga, n\~ao sele\c{c}\~ao de trabalhadores, intensifica\c{c}\~ao ou aprofundamento setorial de capital. Fontes: PNAD Cont\'inua Q4 2024, RAIS 2022, \citet{MeghirNaritaRobin2015}, \citet{AsaiLopesTondini2024}, \citet{GonzagaMenezesFilhoCamargo2003}.}
+\end{table}
+
+% ==================================================================
+% 4. Resultados principais
+% ==================================================================
+\section{Resultados principais}\label{sec:results}
+
+A Tabela~\ref{tab:main_results} reporta os efeitos agregados da reforma sob ambos os regimes de $e(h)$, com emprego total fixo. Sob a especifica\c{c}\~ao preferida flat-below, o produto cai $\Delta Y=-6{,}60\%$, o bem-estar agregado cai $\Delta\text{CV}=-1{,}76\%$, e o ganho requerido de PTF \'e $A_{\text{req}}=6{,}63\%$. Sob a especifica\c{c}\~ao conservadora sim\'etrica, $\Delta Y=-8{,}02\%$, $\Delta\text{CV}=-3{,}63\%$, e $A_{\text{req}}=8{,}18\%$. A informalidade agregada sobe $+1{,}57$--$1{,}92$ p.p.\ em ambas as especifica\c{c}\~oes. Variando os tr\^es par\^ametros que carregam peso---a elasticidade de substitui\c{c}\~ao $\sigma$, o peso CES do trabalho formal $\omega$ e o par\^ametro de efici\^encia informal $\eta_I$---nos cantos de suas faixas consistentes com os dados, obt\'em-se um envelope conjunto $A_{\text{req}}\in[5{,}62\%,\,7{,}48\%]$ sob a especifica\c{c}\~ao preferida e $[6{,}93\%,\,9{,}23\%]$ sob a conservadora. O envelope preferido fica estritamente abaixo do conservador porque o canal de fadiga flat-below contribui positivamente \`a produtividade hor\'aria que a especifica\c{c}\~ao sim\'etrica n\~ao entrega. O bound de ajuste de capital da Equa\c{c}\~ao~\eqref{eq:pe_bound} reduz o $A_{\text{req}}$ efetivo em $1$--$1{,}8$ p.p.\ em elasticidades de livro-texto em horizonte de $3$--$5$ anos, colocando o an\'alogo de m\'edio prazo em aproximadamente $4{,}8\%$--$5{,}6\%$ sob a especifica\c{c}\~ao preferida e $6{,}4\%$--$7{,}2\%$ sob a conservadora.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultados principais: reforma $44\to 36$h.}\label{tab:main_results}
+\small
+\begin{tabular}{@{}l c c@{}}
+\hline\hline
+ & Flat-below & Sim\'etrica \\
+ & (preferida) & (conservadora) \\
+\hline
+\multicolumn{3}{l}{\textit{Previs\~oes positivas (sem compensa\c{c}\~ao de PTF)}} \\
+Produto, $\Delta Y$                       & $-6{,}60\%$       & $-8{,}02\%$ \\
+Bem-estar (GHH), $\Delta$CV               & $-1{,}76\%$       & $-3{,}63\%$ \\
+Informalidade, $\Delta$Inf                & $+1{,}57$ p.p.    & $+1{,}92$ p.p. \\
+Produto por hora, $\Delta Y/h$            & $+2{,}39\%$       & $+0{,}75\%$ \\
+\hline
+\multicolumn{3}{l}{\textit{Benchmark: ganho de PTF que restaura o produto}} \\
+$A_{\text{req}}$, central                 & $6{,}63\%$        & $8{,}18\%$ \\
+$A_{\text{req}}$, envelope conjunto       & $[5{,}62;\,7{,}48]\%$ & $[6{,}93;\,9{,}23]\%$ \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize O envelope conjunto cobre os oito cantos da caixa $(\sigma,\omega,\eta_I)$ disciplinada. O envelope preferido fica estritamente abaixo do conservador porque a especifica\c{c}\~ao flat-below tem um canal de fadiga positivo que a sim\'etrica n\~ao tem.}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{fig_areq_vs_hours.pdf}
+\caption{Ganho requerido de PTF $A_{\text{req}}$ como fun\c{c}\~ao do teto semanal de horas.}\label{fig:areq_curve}
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}
+{\footnotesize \textit{Notas:} A curva preferida flat-below fornece $6{,}63\%$ no teto proposto de 36h; a curva conservadora sim\'etrica fornece $8{,}18\%$. As duas curvas coincidem acima de $h^{*}=40$ e divergem abaixo do pico, refletindo a hip\'otese distinta sobre $e(h)$ abaixo do pico de efici\^encia.}
+\end{minipage}
+\end{figure}
+
+A curva da Figura~\ref{fig:areq_curve} \'e convexa. As primeiras horas de redu\c{c}\~ao custam pouco em termos de PTF porque levam os trabalhadores formais para perto do pico de efici\^encia em $h^*=40$. Redu\c{c}\~oes subsequentes ficam mais caras \`a medida que o teto ultrapassa o \'otimo. A perda de produto decomp\~oe-se em um canal mec\^anico de horas ($-14{,}78\%$, id\^entico nas especifica\c{c}\~oes) e um canal de fadiga que troca de sinal entre as especifica\c{c}\~oes, de $+2{,}19\%$ sob flat-below para $-0{,}92\%$ sob sim\'etrica. O res\'iduo de realoca\c{c}\~ao CES \'e modesto em ambos os casos: $\sigma>1$ torna trabalho formal e informal substitutos imperfeitos e o moderado $\eta_I=0{,}40$ amortece mas n\~ao elimina o custo de realoca\c{c}\~ao. O ap\^endice online reporta a figura de decomposi\c{c}\~ao completa.
+
+Ancoramos $A_{\text{req}}$ no hist\'orico brasileiro de PTF usando a s\'erie \texttt{rtfpna} da PWT 10.01 \citep{FeenstraInklaarTimmer2015}. A Figura~\ref{fig:tfp_history} usa o baseline preferido $A_{\text{req}}=6{,}63\%$. A PTF brasileira caiu $-0{,}60\%$ ao ano em 1990--2019 e cresceu apenas $+0{,}26\%$ ao ano na melhor d\'ecada (2003--2013), o que exigiria aproximadamente 25 anos para acumular o $A_{\text{req}}$ preferido e 31 anos sob a especifica\c{c}\~ao conservadora. A taxa de $+2{,}3\%$ ao ano em 1954--1980 reflete o ``milagre'' econ\^omico e n\~ao \'e um ponto de refer\^encia realista. O ap\^endice online reporta a tabela completa. O benchmark preferido n\~ao tem precedente na s\'erie brasileira p\'os-1990 em qualquer horizonte considerado.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_areq_vs_tfp_history.pdf}
+\caption{PTF brasileira e o ganho \'unico de produtividade necess\'ario.}\label{fig:tfp_history}
+\vspace{2pt}
+\begin{minipage}{0.95\textwidth}
+{\footnotesize \textit{Notas:} O Painel A plota a s\'erie \texttt{rtfpna} da PWT (PTF real a pre\c{c}os nacionais constantes) para o Brasil, 1954--2019. O Painel B mostra taxas anualizadas de crescimento da PTF por horizonte; os r\'otulos indicam os anos necess\'arios para acumular o baseline preferido $A_{\text{req}}=6{,}63\%$ \`a taxa hist\'orica (``nunca'' quando a taxa \'e n\~ao positiva). \textit{Fonte:} Penn World Table 10.01 \citep{FeenstraInklaarTimmer2015}.}
+\end{minipage}
+\end{figure}
+
+Um teste de estresse pessimista assume PTF p\'os-reforma $A_{\text{post}}=A(1-\delta)$ para $\delta\in[0\%,\,2\%]$, capturando disrup\c{c}\~ao de aprendizado e hist\'erese no setor informal. A Tabela~\ref{tab:stress_test} reporta o resultado sob a especifica\c{c}\~ao conservadora. Uma contra\c{c}\~ao de PTF de $1\%$ eleva $A_{\text{req}}$ de $8{,}18\%$ para $9{,}28\%$ e a perda de bem-estar de $3{,}63\%$ para $4{,}94\%$. Uma contra\c{c}\~ao de $2\%$, magnitude observada em 2015--2016, eleva $A_{\text{req}}$ para $10{,}39\%$. O teste n\~ao prev\^e um $\delta$ espec\'ifico. Mostra que a previs\~ao central \'e robusta a deteriora\c{c}\~ao moderada da PTF p\'os-reforma.
+
+\begin{table}[htbp]
+\centering
+\caption{Teste de estresse pessimista: reforma com choque de PTF p\'os-reforma.}\label{tab:stress_test}
+\small
+\begin{tabular}{crrrr}
+\hline\hline
+Choque p\'os-reforma & $A_{\text{req}}$ & $\Delta Y$ & $\Delta\text{Inf}$ & $\Delta\text{CV}$ \\
+$\delta$ (\%) & (\%) & (\%) & (p.p.) & (\%) \\
+\hline
+\textbf{0{,}0} (baseline) & $+8{,}18$ & $-8{,}02$ & $+1{,}917$ & $-3{,}63$ \\
+0{,}5 & $+8{,}73$ & $-8{,}51$ & $+1{,}980$ & $-4{,}26$ \\
+1{,}0 & $+9{,}28$ & $-9{,}00$ & $+2{,}044$ & $-4{,}89$ \\
+1{,}5 & $+9{,}83$ & $-9{,}50$ & $+2{,}122$ & $-5{,}54$ \\
+2{,}0 & $+10{,}39$ & $-9{,}99$ & $+2{,}185$ & $-6{,}17$ \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+\begin{minipage}{0.95\textwidth}
+{\footnotesize \textit{Notas:} $\delta$ \'e uma contra\c{c}\~ao da PTF p\'os-reforma al\'em do efeito mec\^anico do teto ($A_{\text{p\'os}}=A(1-\delta)$), capturando disrup\c{c}\~ao do aprendizado e hist\'erese no setor informal. $A_{\text{req}}$ \'e o ganho requerido de PTF que restaura o produto; $\Delta Y$ \'e a varia\c{c}\~ao agregada do produto; $\Delta$Inf \'e a varia\c{c}\~ao da informalidade agregada (em pontos percentuais); $\Delta$CV \'e o bem-estar agregado pela Equa\c{c}\~ao~\eqref{eq:cv}. A linha $\delta=0$ reproduz o headline conservador da Tabela~\ref{tab:main_results}.}
+\end{minipage}
+\end{table}
+
+% ==================================================================
+% 5. Bem-estar e heterogeneidade
+% ==================================================================
+A varia\c{c}\~ao compensat\'oria agregada na reforma $44\to 36$h \'e $-1{,}76\%$ sob a especifica\c{c}\~ao preferida flat-below e $-3{,}63\%$ sob a conservadora sim\'etrica, ambas calculadas pela Equa\c{c}\~ao~\eqref{eq:cv}. A Figura~\ref{fig:welfare_schedule} plota o schedule completo. O bem-estar atinge m\'aximo perto do teto de $41$h em aproximadamente $+0{,}80\%$ sob ambas as especifica\c{c}\~oes, porque o ganho de lazer supera a perda de consumo nessa faixa. As duas curvas coincidem entre 44h e 40h e divergem abaixo de 40h. A coincid\^encia reflete um fato estrutural: em qualquer teto no intervalo $[40,\,44]$, os trabalhadores que sentem a restri\c{c}\~ao v\^em do bin de 44h, e sua efici\^encia hor\'aria sobe em dire\c{c}\~ao ao pico sob ambas as especifica\c{c}\~oes (de $e(44)=0{,}967$ rumo a $e(40)=1$). A diverg\^encia abaixo de 40h reflete a diferen\c{c}a de especifica\c{c}\~ao: o caso flat-below mant\'em $e(h)=1$ para $h\leq 40$, enquanto o caso sim\'etrico atribui uma penalidade de efici\^encia que se acumula \`a medida que o teto se afasta do pico. O bem-estar torna-se negativo abaixo de $38$h em ambas as especifica\c{c}\~oes. Uma redu\c{c}\~ao moderada de 44 para 41 \'e melhoradora de bem-estar dentro do modelo. A reforma completa $44\to 36$ n\~ao.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{fig_welfare_schedule.pdf}
+\caption{Schedule de bem-estar por teto de horas sob ambas as calibra\c{c}\~oes.}\label{fig:welfare_schedule}
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}
+{\footnotesize \textit{Notas:} Cada curva plota o bem-estar agregado $\Delta$CV da Equa\c{c}\~ao~\eqref{eq:cv} em tetos sucessivamente menores, em rela\c{c}\~ao ao baseline de 44h, sob as especifica\c{c}\~oes preferida flat-below e conservadora sim\'etrica de $e(h)$. $\Delta$CV atinge m\'aximo perto de 41h em cerca de $+0{,}80\%$ e torna-se negativo abaixo de 38h. No teto proposto de 36h, o bem-estar cai $1{,}76\%$ sob a especifica\c{c}\~ao preferida e $3{,}63\%$ sob a conservadora.}
+\end{minipage}
+\end{figure}
+
+Um ganho de PTF de aproximadamente $1{,}1\%$ no teto de 36h \'e suficiente para tornar a reforma neutra em bem-estar sob a especifica\c{c}\~ao preferida; o limiar conservador \'e $2{,}4\%$. Ambos os limiares ficam bem abaixo do $A_{\text{req}}$ neutro em produto porque o lazer compensa parcialmente a perda de consumo. Uma vis\~ao por tipo de trabalhador do efeito de bem-estar e a reconcilia\c{c}\~ao da n\~ao linearidade GHH entre CV por tipo e CV do agente representativo est\~ao no ap\^endice online.
+
+Custos de ajuste e informalidade diferem entre tamanhos de firma e setores, produzindo incid\^encia heterog\^enea da reforma. Firmas pequenas ($\leq 49$ empregados) requerem um ganho de PTF maior do que firmas grandes, refletindo cunhas de formaliza\c{c}\~ao maiores e informalidade de base mais alta. Aplicar o arcabou\c{c}o nacional separadamente a tr\^es setores amplos (agricultura, ind\'ustria, servi\c{c}os) com par\^ametros setoriais da PNAD entrega um $A_{\text{req}}$ por setor de $7{,}60\%$ na agricultura, $8{,}05\%$ na ind\'ustria e $6{,}91\%$ em servi\c{c}os sob a especifica\c{c}\~ao conservadora, com informalidade subindo em todos os setores (agricultura $+2{,}88$ p.p., ind\'ustria $+2{,}73$ p.p., servi\c{c}os $+2{,}10$ p.p.). O $A_{\text{req}}$ da ind\'ustria agora supera ligeiramente o da agricultura porque o moderado $\eta_I=0{,}40$ combinado \`a base formal maior da ind\'ustria amortece o gap mec\^anico entre os dois setores. Os servi\c{c}os concentram a maior parte da perda agregada de produto via sua escala de produto, n\~ao por efeito maior por trabalhador. O ap\^endice online reporta a decomposi\c{c}\~ao completa e as sensibilidades de par\^ametros.
+
+% ==================================================================
+% 5. Implica\c{c}\~oes de pol\'itica p\'ublica
+% ==================================================================
+\section{Implica\c{c}\~oes de pol\'itica p\'ublica}\label{sec:conclusion}
+
+O artigo quantifica um dilema que o debate brasileiro sobre a jornada deixou impl\'icito. Cortar a jornada estatut\'aria de 44 para 36 horas afeta a grande maioria dos trabalhadores formais brasileiros e, mecanicamente, reduz o trabalho efetivo da economia em cerca de $14\%$. Se a economia absorve esse corte sem perda de produto depende de uma pergunta simples: a produtividade por trabalhador sobe quanto ao mesmo tempo? O artigo coloca um n\'umero nessa pergunta. Para manter o produto agregado, a produtividade precisaria dar um salto \'unico entre $6{,}63\%$ (especifica\c{c}\~ao preferida) e $8{,}18\%$ (limite superior conservador). Nenhum dos dois n\'umeros tem paralelo no hist\'orico de produtividade brasileira desde 1990. Na melhor d\'ecada do p\'os-Plano Real, a produtividade cresceu cerca de um quarto de ponto percentual ao ano. Acumular o salto requerido, a esse ritmo, levaria de vinte e cinco a trinta e um anos.
+
+Quatro mensagens seguem para o formulador de pol\'itica.
+
+Primeiro, a proposta de 36 horas \'e agressiva pelo padr\~ao do hist\'orico brasileiro. A reforma pede que a economia entregue de uma vez s\'o um salto de produtividade que ela n\~ao entregou em trinta anos. Sem esse salto, o modelo prev\^e perda de produto de curto prazo de $6\tfrac{1}{2}$ a $8$ por cento e perda agregada de bem-estar de $1\tfrac{3}{4}$ a $3\tfrac{2}{3}$ por cento. O requisito de produtividade \'e um benchmark, n\~ao uma previs\~ao: a expectativa realista, na aus\^encia de um milagre de produtividade, \'e que uma parcela relevante dessa perda efetivamente se materialize.
+
+Segundo, uma redu\c{c}\~ao menor seria provavelmente boa para o bem-estar. Reduzir a jornada de 44 para 41 horas melhora o bem-estar agregado no modelo, porque o valor que os trabalhadores atribuem ao lazer adicional supera o consumo que eles perdem. Abaixo de 41 horas, o bem-estar come\c{c}a a cair. Abaixo de 38, o bem-estar fica negativo. O teto \'otimo para o bem-estar dentro do modelo est\'a perto de 41 horas. Um teto de 36 horas ultrapassa o \'otimo por margem consider\'avel.
+
+Terceiro, o custo da reforma \'e concentrado, n\~ao disperso. Firmas pequenas, que empregam a maior parte dos trabalhadores formais no Brasil, carregam o maior requisito de produtividade por trabalhador. Ind\'ustria e agricultura carregam os maiores requisitos por setor, e todos os tr\^es setores veem a informalidade subir em resposta ao teto, em vez de cair. Servi\c{c}os, embora n\~ao seja o mais exposto por trabalhador, concentra a maior parte da perda agregada de produto por pura escala. Um desenho de pol\'itica que ignora essa concentra\c{c}\~ao subestima o custo de ajuste.
+
+Quarto, a realoca\c{c}\~ao para a informalidade \'e real mas de segunda ordem em rela\c{c}\~ao ao canal de horas. Uma preocupa\c{c}\~ao comum ao regular a jornada formal em uma economia de alta informalidade \'e que trabalhadores e firmas migrariam simplesmente para o setor informal. O modelo calibrado, disciplinado pelo pr\^emio salarial formal--informal observado, encontra um aumento agregado de informalidade de $1{,}6$--$1{,}9$ p.p. Essa informaliza\c{c}\~ao \'e material para a contabilidade de bem-estar, mas \'e pequena em rela\c{c}\~ao \`a contra\c{c}\~ao mec\^anica de aproximadamente $15\%$ das horas. O custo de produto vem primordialmente de menos horas trabalhadas, n\~ao de trabalhadores saindo do setor formal; ainda assim, a reforma empurra trabalhadores adicionais para a informalidade, enfraquecendo os pr\'oprios objetivos formalizadores da pol\'itica.
+
+Essas conclus\~oes v\~em com limites que o artigo explicita. O modelo \'e de curto prazo e equil\'ibrio parcial. O ajuste end\'ogeno do estoque de capital em horizonte de tr\^es a cinco anos reduz o ganho de produtividade requerido em cerca de um ponto e meio percentual. O emprego total \'e mantido fixo, de modo que o modelo desliga a partilha de trabalho; a evid\^encia emp\'irica sobre partilha de trabalho na Alemanha \citep{Hunt1996} e na reforma constitucional brasileira de 1988 \citep{GonzagaMenezesFilhoCamargo2003} sugere que essa restri\c{c}\~ao \'e defens\'avel, mas n\~ao ingenua. A experi\^encia portuguesa de 1996 \citep{AsaiLopesTondini2024} documenta ganhos de produtividade a n\'ivel de firma maiores do que os que o modelo produz, o que sugere que o modelo faz uma leitura conservadora. Nenhum desses limites muda a mensagem central.
+
+A implica\c{c}\~ao operacional \'e que a reforma de 44 para 36, como atualmente proposta, pede que a produtividade brasileira entregue um ganho \'unico que o pa\'is n\~ao produziu no per\'iodo p\'os-1990 sob qualquer regime de crescimento observado. Um caminho faseado com uma parada intermedi\'aria pr\'oxima de 41 horas seria melhoradora de bem-estar dentro do modelo e compraria tempo para o estoque de capital, a margem informal e a produtividade a n\'ivel de firma se ajustarem. A escolha entre a reforma completa e o caminho faseado \'e em \'ultima inst\^ancia pol\'itica, mas a aritm\'etica da produtividade favorece o segundo.
+
+% === Ap\^endice online, c\'odigo e dados / Bibliografia ===
+\paragraph{Ap\^endice online.} Um ap\^endice online com fontes de dados, omiss\~oes do equil\'ibrio parcial, detalhes da calibra\c{c}\~ao, grades de sensibilidade, decomposi\c{c}\~ao setorial, bem-estar por tipo, decomposi\c{c}\~ao do produto, tabela hist\'orica de PTF, deriva\c{c}\~oes e a robustez do $e(h)$ assim\'etrico est\'a dispon\'ivel em \url{\onlineappendixurl}.
+
+\paragraph{Disponibilidade de c\'odigo e dados.} C\'odigo e targets de calibra\c{c}\~ao para reproduzir cada tabela e figura numerada neste artigo est\~ao dispon\'iveis no reposit\'orio p\'ublico do autor \url{https://github.com/vr-rodrigues/jornada-6x1-replication} (a ser ativado ap\'os publica\c{c}\~ao).
+
+\bibliographystyle{aer}
+\bibliography{bibliography_clean}
+
+\end{document}

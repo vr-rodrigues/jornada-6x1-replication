@@ -1,0 +1,59 @@
+% =============================================================
+% Section: Main results
+% =============================================================
+
+\section{Main results}\label{sec:results}
+
+Table~\ref{tab:main_results} reports the aggregate effects of the reform under both $e(h)$ regimes, holding total employment fixed. Under the preferred flat-below specification, output falls by $\Delta Y=-6.60\%$, aggregate welfare by $\Delta\text{CV}=-1.76\%$, and the required TFP gain is $A_{\text{req}}=6.63\%$. Under the conservative symmetric specification, $\Delta Y=-8.02\%$, $\Delta\text{CV}=-3.63\%$, and $A_{\text{req}}=8.18\%$. Aggregate informality rises by $+1.6$--$1.9$ pp under both specifications. With moderate informal relative efficiency ($\eta_I=0.40$, identified from the observed wage ratio) and mildly substitutable formal--informal labor ($\sigma>1$), firms shift marginal workers toward informality when the cap tightens instead of absorbing the hours loss intensively. Varying the three load-bearing parameters ($\sigma$, $\omega$, $\eta_I$) at the corners of their data-consistent ranges gives a joint envelope of $A_{\text{req}}\in[5.62\%,\,7.48\%]$ under the preferred specification and $[6.93\%,\,9.23\%]$ under the conservative one. The preferred envelope lies strictly below the conservative one because the flat-below fatigue channel contributes positively to per-hour productivity, which the symmetric specification does not deliver. The capital-adjustment bound of Equation~\eqref{eq:pe_bound} lowers the effective $A_{\text{req}}$ by $1$--$1.8$ pp at textbook elasticities over a $3$--$5$ year horizon, placing the medium-run analog at roughly $4.8\%$--$5.6\%$ under the preferred specification and $6.4\%$--$7.2\%$ under the conservative one.
+
+\begin{table}[htbp]
+\centering
+\caption{Main results: $44\to 36$h reform.}\label{tab:main_results}
+\small
+\begin{tabular}{@{}l c c@{}}
+\hline\hline
+ & Flat-below & Symmetric \\
+ & (preferred) & (conservative) \\
+\hline
+\multicolumn{3}{l}{\textit{Positive predictions (no TFP compensation)}} \\
+Output, $\Delta Y$                       & $-6.60\%$        & $-8.02\%$ \\
+Welfare (GHH), $\Delta$CV                & $-1.76\%$        & $-3.63\%$ \\
+Informality, $\Delta$Inf                 & $+1.57$ pp       & $+1.92$ pp \\
+Output per hour, $\Delta Y/h$            & $+2.39\%$        & $+0.75\%$ \\
+\hline
+\multicolumn{3}{l}{\textit{Benchmark: TFP gain that restores output}} \\
+$A_{\text{req}}$, central                & $6.63\%$         & $8.18\%$ \\
+$A_{\text{req}}$, joint envelope         & $[5.62,\,7.48]\%$ & $[6.93,\,9.23]\%$ \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+{\footnotesize The joint envelope spans the eight corners of the disciplined $(\sigma,\omega,\eta_I)$ box. The preferred envelope lies strictly below the conservative one because the flat-below specification has a positive fatigue channel that the symmetric one does not.}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{fig_areq_vs_hours.pdf}
+\caption{Required TFP gain $A_{\text{req}}$ as a function of the weekly hours cap.}\label{fig:areq_curve}
+\vspace{2pt}
+\begin{minipage}{0.92\textwidth}
+{\footnotesize \textit{Notes:} The preferred flat-below schedule yields $6.63\%$ at the proposed $36$h cap. The conservative symmetric schedule yields $8.18\%$. The two schedules coincide above $h^{*}=40$ and diverge below it, reflecting different assumptions about $e(h)$ below the efficiency peak.}
+\end{minipage}
+\end{figure}
+
+The curve in Figure~\ref{fig:areq_curve} is convex. The first hours of reduction cost little in TFP terms because they move formal workers toward the efficiency peak at $h^*=40$. Subsequent reductions grow more expensive as the cap overshoots the optimum. The output loss decomposes into a mechanical hours channel (approximately $-14.8\%$, identical across specifications) and a fatigue channel that switches sign between specifications, from small-positive under flat-below to small-negative under symmetric. The CES reallocation residual is positive and moderate. The condition $\sigma>1$ makes formal and informal labor imperfect substitutes, and the moderate $\eta_I=0.40$ dampens but does not eliminate the reallocation cost when informality rises. The online appendix reports the full decomposition figure.
+
+We anchor $A_{\text{req}}$ against post-1990 Brazilian TFP history using the PWT 10.01 \texttt{rtfpna} series \citep{FeenstraInklaarTimmer2015}. Figure~\ref{fig:tfp_history} uses the preferred baseline $A_{\text{req}}=6.63\%$. Brazilian TFP fell by $-0.60\%$ per year over 1990--2019 and rose by only $+0.26\%$ per year in the best decade (2003--2013). At the best-decade rate, accumulating the preferred $A_{\text{req}}$ takes approximately $25$ years and the conservative one takes $31$ years. The $+2.3\%$ per year of 1954--1980 reflects the Brazilian economic miracle and is not a realistic reference point. The online appendix reports the full table. The preferred benchmark has no precedent in the post-1990 Brazilian series under any horizon considered.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_areq_vs_tfp_history.pdf}
+\caption{Brazilian TFP and the required one-off productivity gain.}\label{fig:tfp_history}
+\vspace{2pt}
+\begin{minipage}{0.95\textwidth}
+{\footnotesize \textit{Notes:} Panel~A plots the PWT \texttt{rtfpna} series (real TFP at constant national prices) for Brazil, 1954--2019. Panel~B shows annualized TFP growth rates by horizon. Labels indicate the years required to accumulate the preferred baseline $A_{\text{req}}=6.63\%$ at each historical rate (``never'' when the rate is non-positive). \textit{Source:} Penn World Table 10.01 \citep{FeenstraInklaarTimmer2015}.}
+\end{minipage}
+\end{figure}
+
+A pessimistic stress test sets post-reform TFP to $A_{\text{post}}=A(1-\delta)$ for $\delta\in[0\%,2\%]$, capturing disruption to learning-by-doing and hysteresis in the informal sector. Table~\ref{tab:stress_test} reports the result under the conservative specification. A TFP contraction of $1\%$ raises $A_{\text{req}}$ from $8.18\%$ to $9.28\%$ and the welfare loss from $3.63\%$ to $4.89\%$. A $2\%$ contraction, a magnitude observed in 2015--2016, raises $A_{\text{req}}$ to $10.39\%$. The stress test does not predict a particular $\delta$. It shows that the central prediction does not collapse under moderate post-reform TFP deterioration.
+
+\input{tab_stress_test_autogen}
