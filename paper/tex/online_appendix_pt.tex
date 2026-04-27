@@ -49,7 +49,7 @@ Todos os dados prov\^em de fontes p\'ublicas. PNAD Cont\'inua (IBGE/SIDRA), tabe
 
 O arcabou\c{c}o est\'atico de equil\'ibrio parcial exclui sete canais de equil\'ibrio geral. A acumula\c{c}\~ao de capital responde \`a menor produtividade marginal do capital ap\'os a contra\c{c}\~ao do trabalho efetivo. Sal\'arios e pre\c{c}os ajustam-se em equil\'ibrio geral, restaurando parcialmente a demanda por trabalho formal. A participa\c{c}\~ao na for\c{c}a de trabalho pode subir com o lazer. Autoridades monet\'aria e fiscal podem acomodar. Trabalhadores podem realocar-se entre setores. A decis\~ao de formalidade pode mover-se em qualquer dire\c{c}\~ao. A partilha de trabalho \'e desligada pela hip\'otese de $N$ fixo. Todos os sete canais exceto o \'ultimo t\^em sinal esperado negativo sobre $A_{\text{req}}$.
 
-Um bound textbook sobre o canal do capital d\'a a ordem de magnitude. Com elasticidade de custo de uso $\varepsilon_K\in[0{,}2,\,0{,}4]$ \citep{Caballero1999} e parcela de capital $\alpha=0{,}35$, em horizonte de $3$--$5$ anos o $A_{\text{req}}$ efetivo sob a especifica\c{c}\~ao conservadora cai de $8{,}18\%$ para $6{,}4\%$--$7{,}2\%$, e sob a preferida para $4{,}8\%$--$5{,}6\%$. Os seis canais restantes s\~ao pequenos individualmente e de sinal misto. Os n\'umeros headline devem ser lidos como limites superiores de curto prazo sobre o ganho de PTF necess\'ario. O horizonte de $1$--$2$ anos do modelo n\~ao \'e o mesmo que os 30 anos da s\'erie PWT usada como \^ancora. A \^ancora \'e lida como o ganho cumulativo de PTF necess\'ario ao longo do per\'iodo de implementa\c{c}\~ao faseada de $3$--$10$ anos.
+Um bound textbook sobre o canal do capital d\'a a ordem de magnitude. Com elasticidade de custo de uso $\varepsilon_K\in[0{,}2,\,0{,}4]$ \citep{Caballero1999} e parcela de capital $\alpha=0{,}35$, em horizonte de $3$--$5$ anos o $A_{\text{req}}$ efetivo sob a especifica\c{c}\~ao conservadora cai de $8{,}18\%$ para $6{,}4\%$--$7{,}2\%$, e sob a preferida para $4{,}8\%$--$5{,}6\%$. Os seis canais restantes s\~ao pequenos individualmente e de sinal misto. Os n\'umeros centrais devem ser lidos como limites superiores de curto prazo sobre o ganho de PTF necess\'ario. O horizonte de $1$--$2$ anos do modelo n\~ao \'e o mesmo que os 30 anos da s\'erie PWT usada como \^ancora. A \^ancora \'e lida como o ganho cumulativo de PTF necess\'ario ao longo do per\'iodo de implementa\c{c}\~ao faseada de $3$--$10$ anos.
 
 \clearpage
 \section{Detalhes da calibra\c{c}\~ao}\label{app:calibration_details}
@@ -211,15 +211,15 @@ Agregado, Equa\c{c}\~ao~\eqref{eq:cv} do principal & $-3{,}63\%$ & $100\%$ \\
 \end{minipage}
 \end{table}
 
-A Figura~\ref{fig:welfare_threshold} mostra a resposta de bem-estar como fun\c{c}\~ao de um ganho ex\'ogeno de PTF no teto de 36h sob a especifica\c{c}\~ao conservadora. O limiar de neutralidade de bem-estar \'e de aproximadamente $2{,}9\%$ sob a especifica\c{c}\~ao conservadora e cerca de $1{,}4\%$ sob a preferida.
+A Figura~\ref{fig:welfare_threshold} mostra a resposta de bem-estar como fun\c{c}\~ao de um ganho ex\'ogeno de PTF no teto de 36h sob as duas especifica\c{c}\~oes. Os limiares de neutralidade de bem-estar s\~ao gerados pelo pipeline de replica\c{c}\~ao e marcados na figura.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{slide10c_welfare_threshold.png}
-\caption{Bem-estar $\Delta$CV como fun\c{c}\~ao do ganho de PTF no teto de 36h, especifica\c{c}\~ao conservadora.}\label{fig:welfare_threshold}
+\caption{Bem-estar $\Delta$CV como fun\c{c}\~ao do ganho de PTF no teto de 36h.}\label{fig:welfare_threshold}
 \vspace{2pt}
 \begin{minipage}{0.85\textwidth}
-{\footnotesize \textit{Notas:} Eixo horizontal: ganho ex\'ogeno \'unico de PTF aplicado sobre a reforma $44\to 36$h. Eixo vertical: bem-estar agregado $\Delta$CV da Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal. A curva \'e monot\^onica crescente no ganho de PTF. O limiar de neutralidade de bem-estar ($\Delta$CV$=0$) \'e cerca de $2{,}9\%$ sob a especifica\c{c}\~ao conservadora e cerca de $1{,}4\%$ sob a preferida.}
+{\footnotesize \textit{Notas:} Eixo horizontal: ganho ex\'ogeno \'unico de PTF aplicado sobre a reforma $44\to 36$h. Eixo vertical: bem-estar agregado $\Delta$CV da Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal. As curvas e os limiares s\~ao gerados por \texttt{src/tables\_figures/plot\_welfare\_schedule.py}.}
 \end{minipage}
 \end{figure}
 
@@ -258,7 +258,7 @@ Teto de horas & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$CV & $\Delta$Inf \\
 \caption{Decomposi\c{c}\~ao de $\Delta Y$ no teto $44\to 36$h sob cada calibra\c{c}\~ao.}\label{fig:decomposition}
 \vspace{2pt}
 \begin{minipage}{0.92\textwidth}
-{\footnotesize \textit{Notas:} O canal mec\^anico de horas (efeito direto de menos horas contratadas, com efici\^encia por hora fixa) \'e id\^entico entre especifica\c{c}\~oes em $-14{,}78\%$. O canal de fadiga (contribui\c{c}\~ao de $e(h)$) troca de sinal entre a preferida flat-below ($+2{,}19\%$) e a conservadora sim\'etrica ($-0{,}92\%$). O res\'iduo de realoca\c{c}\~ao \'e o termo cruzado do CES e \'e pequeno em ambos os casos porque $\sigma<1$ torna trabalho formal e informal complementos.}
+{\footnotesize \textit{Notas:} As barras s\~ao geradas por \texttt{src/tables\_figures/plot\_main\_figures.py}. O canal mec\^anico de horas \'e o efeito direto do teto menor de horas formais, mantendo fixa a efici\^encia por hora. O canal de efici\^encia \'e a mudan\c{c}a na efici\^encia hor\'aria formal $e(h)$. O res\'iduo inclui a resposta de realoca\c{c}\~ao formal--informal e o termo cruzado CES. Os valores exatos s\~ao gravados em \texttt{output/validation/decomposition\_results.json}.}
 \end{minipage}
 \end{figure}
 

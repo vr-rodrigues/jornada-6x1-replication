@@ -1,0 +1,14 @@
+{
+  "preferred_flat_below": {
+    "mechanical_hours": -14.780797272985513,
+    "efficiency_channel": 2.2844533351203733,
+    "reallocation_residual": 5.901006927264364,
+    "total_output": -6.595337010600777
+  },
+  "conservative_symmetric": {
+    "mechanical_hours": -14.780797272985513,
+    "efficiency_channel": -0.8669194786441015,
+    "reallocation_residual": 7.625422542519244,
+    "total_output": -8.02229420911037
+  }
+}

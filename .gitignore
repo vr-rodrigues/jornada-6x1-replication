@@ -19,6 +19,7 @@ env/
 *.synctex.gz
 *.lof
 *.lot
+paper/tex/*.pdf
 
 # OS / editors
 .DS_Store

@@ -4,6 +4,7 @@ plot_welfare_schedule.py — Proper welfare schedule under both calibrations,
 using the exact same psi-calibration and compensating-variation formula
 as calibrate_all.py.
 """
+import json
 import os, sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +18,12 @@ from calibrate_all import (
 )
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-OUT = os.path.join(ROOT, "output", "figures", "fig_welfare_schedule.png")
+OUT_DIR = os.path.join(ROOT, "output", "figures")
+VALIDATION_DIR = os.path.join(ROOT, "output", "validation")
+os.makedirs(OUT_DIR, exist_ok=True)
+os.makedirs(VALIDATION_DIR, exist_ok=True)
+OUT = os.path.join(OUT_DIR, "fig_welfare_schedule.png")
+THRESHOLD_OUT = os.path.join(OUT_DIR, "slide10c_welfare_threshold.png")
 PAPER_COPY = os.path.join(ROOT, "paper", "overleaf", "figures",
                            "fig_welfare_schedule.png")
 
@@ -163,12 +169,12 @@ def build_spec(eff_fn):
                 eff_fn=eff_fn)
 
 
-def welfare_at(spec, hcap):
+def welfare_at(spec, hcap, A=1.0):
     """Return (dY_pct, dCV_pct, h_avg_cap) at a given cap for a spec."""
     Y_t, C_t, hrs_t = 0.0, 0.0, 0.0
     for g in spec["groups"].values():
         sol = solve_NF_custom(spec["eff_fn"], spec["kappa"],
-                               g["N"], hcap, HI, 1.0, g["K"], ALPHA,
+                               g["N"], hcap, HI, A, g["K"], ALPHA,
                                OMEGA, SIGMA, ETA_I, H_STAR,
                                g["wedge"], g["pim"], g["gF"],
                                g["NF_init"], THETA)
@@ -179,6 +185,18 @@ def welfare_at(spec, hcap):
     dcv = compensating_variation(spec["c_base_pc"], spec["h_base"],
                                    c_pc, h_cap, NU_GHH, spec["psi"]) * 100
     return dY, dcv, h_cap
+
+
+def threshold_gain(gains, dcvs):
+    """Linear interpolation for the gain where dCV crosses zero."""
+    for i in range(1, len(gains)):
+        y0, y1 = dcvs[i - 1], dcvs[i]
+        if y0 == 0:
+            return float(gains[i - 1])
+        if (y0 < 0 <= y1) or (y1 < 0 <= y0):
+            x0, x1 = gains[i - 1], gains[i]
+            return float(x0 + (0 - y0) * (x1 - x0) / (y1 - y0))
+    return None
 
 
 def main():
@@ -249,6 +267,72 @@ def main():
     pdf = save_pdf(fig, OUT)
     plt.close()
     print(f"[OK] {pdf}")
+
+    # --- Threshold figure used by the online appendices ---
+    gains = np.linspace(0.0, 8.0, 81)
+    flat_thr_dcv = []
+    sym_thr_dcv = []
+    for gain in gains:
+        _, dcvF, _ = welfare_at(spec_flat, 36.0, A=1.0 + gain / 100.0)
+        _, dcvS, _ = welfare_at(spec_sym, 36.0, A=1.0 + gain / 100.0)
+        flat_thr_dcv.append(dcvF)
+        sym_thr_dcv.append(dcvS)
+
+    flat_threshold = threshold_gain(gains, flat_thr_dcv)
+    sym_threshold = threshold_gain(gains, sym_thr_dcv)
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.plot(gains, flat_thr_dcv, "-", color=COLOR_PREF, linewidth=1.8,
+            label="Preferred\n(flat-below)")
+    ax.plot(gains, sym_thr_dcv, "--", color=COLOR_CONS, linewidth=1.8,
+            label="Conservative\n(symmetric)")
+    ax.axhline(0, color="#666666", linewidth=0.6, alpha=0.8)
+    for threshold, color, label in [
+        (flat_threshold, COLOR_PREF, "preferred"),
+        (sym_threshold, COLOR_CONS, "conservative"),
+    ]:
+        if threshold is None:
+            continue
+        ax.axvline(threshold, color=color, linewidth=0.8,
+                   linestyle=":", alpha=0.8)
+        ax.annotate(
+            f"{label}:\n{threshold:.2f}%",
+            xy=(threshold, 0),
+            xytext=(threshold + 0.35, 1.0 if label == "preferred" else -1.0),
+            fontsize=10, fontstyle="italic", color=color,
+            ha="left", va="center",
+            arrowprops=dict(arrowstyle="->", color=color, lw=0.9),
+        )
+
+    set_axis_style(
+        ax,
+        title="Welfare Threshold at the 36h Cap",
+        xlabel="Exogenous TFP gain (%)",
+        ylabel=r"$\Delta$CV (%) $-$ GHH compensating variation",
+    )
+    ax.legend(loc="lower right", frameon=False, labelspacing=0.8)
+    plt.tight_layout()
+    fig.savefig(THRESHOLD_OUT, dpi=300, bbox_inches="tight")
+    threshold_pdf = save_pdf(fig, THRESHOLD_OUT)
+    plt.close()
+    print(f"[OK] {THRESHOLD_OUT}")
+    print(f"[OK] {threshold_pdf}")
+
+    threshold_json = os.path.join(VALIDATION_DIR, "welfare_thresholds.json")
+    with open(threshold_json, "w", encoding="utf-8") as f:
+        json.dump({
+            "hcap": 36,
+            "gain_grid_pct": [float(x) for x in gains],
+            "preferred_flat_below": {
+                "threshold_gain_pct": flat_threshold,
+                "dcv_pct": [float(x) for x in flat_thr_dcv],
+            },
+            "conservative_symmetric": {
+                "threshold_gain_pct": sym_threshold,
+                "dcv_pct": [float(x) for x in sym_thr_dcv],
+            },
+        }, f, indent=2)
+    print(f"[OK] {threshold_json}")
 
     paper_pdf = PAPER_COPY.replace(".png", ".pdf")
     if os.path.isdir(os.path.dirname(paper_pdf)):

@@ -69,6 +69,7 @@ plt.close()
 
 import shutil
 paper_pdf = PAPER.replace(".png", ".pdf")
-shutil.copy(pdf, paper_pdf)
+if os.path.isdir(os.path.dirname(paper_pdf)):
+    shutil.copy(pdf, paper_pdf)
+    print(f"[OK] {paper_pdf}")
 print(f"[OK] {pdf}")
-print(f"[OK] {paper_pdf}")

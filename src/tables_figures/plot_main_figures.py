@@ -9,6 +9,7 @@ Outputs:
   - fig_decomposition.png     (Figure 2 replacement for slide07_decomp_fadiga_outros.png)
   - fig_welfare_schedule.png  (Figure 4 replacement for slide10d_welfare_by_hours.png)
 """
+import json
 import os, sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,6 +29,8 @@ from calibrate_all import HOURS_BINS
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT_DIR = os.path.join(ROOT, "output", "figures")
 os.makedirs(OUT_DIR, exist_ok=True)
+VALIDATION_DIR = os.path.join(ROOT, "output", "validation")
+os.makedirs(VALIDATION_DIR, exist_ok=True)
 PAPER_FIG_DIR = os.path.join(ROOT, "paper", "overleaf", "figures")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -105,6 +108,36 @@ def areq_at_cap(groups, kappa, hcap, eff_fn, Y_target):
         else:
             hi = m
     return (0.5*(lo+hi) - 1.0) * 100
+
+
+def formal_hours(hcap):
+    return float(np.sum(THETA * np.minimum(HOURS_BINS, float(hcap))))
+
+
+def formal_effective_hours(hcap, kappa, eff_fn):
+    capped = np.minimum(HOURS_BINS, float(hcap))
+    return float(np.sum(THETA * capped * eff_fn(capped, kappa)))
+
+
+def output_decomposition(groups, kappa, eff_fn, Y0):
+    Y1, _ = agg_out(groups, kappa, 1.0, H1, eff_fn)
+    total = (Y1 / Y0 - 1.0) * 100
+
+    h_base = formal_hours(H0)
+    h_reform = formal_hours(H1)
+    mechanical = (h_reform / h_base - 1.0) * 100
+
+    eff_base = formal_effective_hours(H0, kappa, eff_fn) / h_base
+    eff_reform = formal_effective_hours(H1, kappa, eff_fn) / h_reform
+    efficiency = (eff_reform / eff_base - 1.0) * 100
+
+    residual = total - mechanical - efficiency
+    return {
+        "mechanical_hours": mechanical,
+        "efficiency_channel": efficiency,
+        "reallocation_residual": residual,
+        "total_output": total,
+    }
 
 
 # ---------------------------------------------------------------
@@ -192,21 +225,29 @@ def main():
     print(f"[OK] {out1.replace('.png','.pdf')}")
 
     # ---- FIGURE 2: Decomposition (preferred flat-below) ----
-    # Under flat-below: mechanical = -14.7%, fatigue = +2.2%, other = residual
-    # Aggregate dY flat = -6.07%
-    # Mechanical = dh_reform/dh_base - 1 in effective-labor terms
-    # Just use published decomposition numbers:
-    mech_flat = -14.78
-    fat_flat = +2.66
-    reallocation_flat = -6.45 - mech_flat - fat_flat  # residual
+    dec_flat = output_decomposition(g_flat, kappa_flat, eff_flat_below, Y0_flat)
+    dec_sym = output_decomposition(g_sym, kappa, eff_sym, Y0_sym)
 
-    mech_sym = -14.78
-    fat_sym = -0.92
-    reallocation_sym = -7.84 - mech_sym - fat_sym
+    categories = ["Mechanical\n(hours cut)", "Efficiency\n$e(h)$",
+                  "Reallocation\n(residual)", "Total"]
+    vals_flat = [
+        dec_flat["mechanical_hours"],
+        dec_flat["efficiency_channel"],
+        dec_flat["reallocation_residual"],
+        dec_flat["total_output"],
+    ]
+    vals_sym = [
+        dec_sym["mechanical_hours"],
+        dec_sym["efficiency_channel"],
+        dec_sym["reallocation_residual"],
+        dec_sym["total_output"],
+    ]
 
-    categories = ["Mechanical\n(hours cut)", "Fatigue $e(h)$", "Reallocation\n(residual)", "Total"]
-    vals_flat = [mech_flat, fat_flat, reallocation_flat, -6.45]
-    vals_sym  = [mech_sym,  fat_sym,  reallocation_sym,  -7.84]
+    dec_path = os.path.join(VALIDATION_DIR, "decomposition_results.json")
+    with open(dec_path, "w", encoding="utf-8") as f:
+        json.dump({"preferred_flat_below": dec_flat,
+                   "conservative_symmetric": dec_sym}, f, indent=2)
+    print(f"[OK] {dec_path}")
 
     x = np.arange(len(categories))
     w = 0.35
