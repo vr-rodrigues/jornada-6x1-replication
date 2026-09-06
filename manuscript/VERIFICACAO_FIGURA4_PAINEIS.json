@@ -1,0 +1,1688 @@
+{
+  "verified_utc": "2026-09-05T19:32:53.613522+00:00",
+  "status": "passed",
+  "backup": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER_antes_figura4_paineis_20260905_161318",
+  "command": "python PAPER/build_paper.py",
+  "typography_rebuild": "python PAPER/build_paper.py --skip-assets",
+  "figure_page": 21,
+  "scenarios": 5368,
+  "previous_40h_points_preserved": 1364,
+  "max_previous_slice_error": 1.4210854715202004e-14,
+  "plot_checks": {
+    "panels_top_to_bottom": [
+      40,
+      36
+    ],
+    "common_x_limits": [
+      0.4,
+      2.5
+    ],
+    "common_y_limits_percent": [
+      0.0,
+      100.0
+    ],
+    "shared_normalization": true,
+    "color_limits": [
+      -5.0,
+      10.0
+    ],
+    "signed_A_req": true,
+    "labels_use_formalization_cost": true
+  },
+  "canonical_anchor_errors": {
+    "40": {
+      "omega": 0.0,
+      "Y0": 0.0,
+      "Y1": 0.0,
+      "dY_pct": 0.0,
+      "A_req_pct": 2.220446049250313e-16,
+      "A_req_frozen_pct": 0.0,
+      "baseline_informality_pct": 0.0,
+      "informality_pct": 0.0,
+      "dInf_pp": 0.0,
+      "canonical_omega": 0.0
+    },
+    "36": {
+      "omega": 0.0,
+      "Y0": 0.0,
+      "Y1": 8.881784197001252e-16,
+      "dY_pct": 0.0,
+      "A_req_pct": 0.0,
+      "A_req_frozen_pct": 0.0,
+      "baseline_informality_pct": 0.0,
+      "informality_pct": 7.105427357601002e-15,
+      "dInf_pp": 0.0,
+      "canonical_omega": 0.0
+    }
+  },
+  "central_summary": {
+    "40": {
+      "minimum": -1.9337353421925885,
+      "minimum_cost_reduction_pct": 100.0,
+      "zero_PTF_target_status": "attainable",
+      "zero_PTF_target_cost_reduction_pct": 23.529594457220814
+    },
+    "36": {
+      "minimum": 4.621061386933301,
+      "minimum_cost_reduction_pct": 100.0,
+      "zero_PTF_target_status": "unattainable_on_0_1",
+      "zero_PTF_target_cost_reduction_pct": null
+    }
+  },
+  "unchanged_citation_keys": 40,
+  "numerical_checks": {
+    "max_A_req_pct": 9.631532645574836,
+    "max_restoration_residual": 5.353495424742505e-13,
+    "max_frozen_restoration_residual": 2.220446049250313e-16,
+    "max_kkt_violation": 1.5394695067338926e-13,
+    "max_bridge_residual": 2.195910120406097e-11,
+    "max_baseline_informality_error": 2.831068712794149e-15,
+    "max_anchor_error": 7.105427357601002e-15,
+    "max_minimum_optimizer_error": 0.0
+  },
+  "integrity_audit": {
+    "status": "passed",
+    "audited_utc": "2026-09-05T19:31:23.415645+00:00",
+    "method": "SHA256 comparison of all backup-manifest entries, immutable audited replication code, pre-Figure4 asset sources, non-transition result CSVs and non-transition PNGs; no simulations rerun. JSON changes inspected recursively.",
+    "counts": {
+      "backups": 7,
+      "backup_files": 583,
+      "replication_code_files": 72,
+      "source_manifest_entries": 15,
+      "unique_source_files": 13,
+      "unchanged_result_csv_files": 18,
+      "unchanged_other_figure_png_files": 7,
+      "base44_runtime_json_files": 2,
+      "current_generated_asset_hashes": 55,
+      "current_module_hashes": 8
+    },
+    "backup_checks": [
+      {
+        "backup": "PAPER_antes_base44_20260905_143805",
+        "files_checked": 97,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "583ed1c14f50b5f31065ae5e80e2fc9852899a337607a9f06f0f296e4919e9e7"
+      },
+      {
+        "backup": "PAPER_antes_figura4_paineis_20260905_161318",
+        "files_checked": 118,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "22603c3b94044cbccff856fb02d5b2a333236aafa6f01f168c76931c13a18fd8"
+      },
+      {
+        "backup": "PAPER_antes_repor_literatura_20260905_152208",
+        "files_checked": 116,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "8a86393be1c666630801267365dd6dba12ee19a166cb2aa40e2227536e238e4a"
+      },
+      {
+        "backup": "PAPER_antes_restaurar_graficos_20260905_134322",
+        "files_checked": 82,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "166dfafa3c35393bdf7ae0caf482227c02c5c93431bce765e701002ea7472aa8"
+      },
+      {
+        "backup": "PAPER_antes_segunda_revisao_20260905_092422",
+        "files_checked": 81,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "fea499396157d08ec548f020281415ec32c570969bb005c5ec498714b321d407"
+      },
+      {
+        "backup": "PAPER_original_20260905_020616",
+        "files_checked": 10,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "405ec2174eaf53c57d7ab67d2ed08a50eebebe83781b4aee7b681350a430e4a8"
+      },
+      {
+        "backup": "PAPER_revisao_ampla_20260905_024411",
+        "files_checked": 79,
+        "status": "passed",
+        "failures": [],
+        "manifest_sha256": "ed00b9c9b69640b90833237c0830efc3ef415aaf085295a7515aa0934a72a4a8"
+      }
+    ],
+    "replication_code": [
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\asymmetric_eh.py",
+        "expected_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2",
+        "actual_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\audit_fit_moments.py",
+        "expected_sha256": "3da3595fe52e3d157ff48acc6a9689339266e204e3ec1ab576ca328e13d4f70f",
+        "actual_sha256": "3da3595fe52e3d157ff48acc6a9689339266e204e3ec1ab576ca328e13d4f70f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\calibrate_all.py",
+        "expected_sha256": "e5bcd52671ab2f05402d570dd46ab5b99475ef65e9b31dd4d2e6943a65efd0fa",
+        "actual_sha256": "e5bcd52671ab2f05402d570dd46ab5b99475ef65e9b31dd4d2e6943a65efd0fa"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\calibrate_flatbelow.py",
+        "expected_sha256": "0771825576d36ea2012122c5508f36cbed01076792ec30f4f37f0bfed792c551",
+        "actual_sha256": "0771825576d36ea2012122c5508f36cbed01076792ec30f4f37f0bfed792c551"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\calibrate_pnad_alt.py",
+        "expected_sha256": "9f2b73d98f2846330e2c5ecc1c0de98dbc843b8005c9a2a983b61fc49e288ad8",
+        "actual_sha256": "9f2b73d98f2846330e2c5ecc1c0de98dbc843b8005c9a2a983b61fc49e288ad8"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\corrected_pipeline.py",
+        "expected_sha256": "44650a3bc239939a585e3393ffcdf551a7ffbb05a6306b83642c0358b3dd2018",
+        "actual_sha256": "44650a3bc239939a585e3393ffcdf551a7ffbb05a6306b83642c0358b3dd2018"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\efficiency_diagnostics.py",
+        "expected_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2",
+        "actual_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\fatigue_scan.py",
+        "expected_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2",
+        "actual_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\joint_envelope.py",
+        "expected_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2",
+        "actual_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\joint_envelope_flat.py",
+        "expected_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2",
+        "actual_sha256": "f67c29c3a6b002acd468d45d9ad27c037801671ca6c58ec39896075ee7338ff2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\probe_original.py",
+        "expected_sha256": "926adabbdb6afd61c42a80a554d849a6a337ae5428e0282ee047f032e75499db",
+        "actual_sha256": "926adabbdb6afd61c42a80a554d849a6a337ae5428e0282ee047f032e75499db"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\solve_sigma_for_R.py",
+        "expected_sha256": "979a1074d912a2c160202bfe2b2d2620c251fc2d3efb73c21c64f336c313437c",
+        "actual_sha256": "979a1074d912a2c160202bfe2b2d2620c251fc2d3efb73c21c64f336c313437c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\test_1988_reform.py",
+        "expected_sha256": "5e483d9370ce71623dc2d3d56a02e23106675bc6034717c127753c57a12b8db0",
+        "actual_sha256": "5e483d9370ce71623dc2d3d56a02e23106675bc6034717c127753c57a12b8db0"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\wage_bridge.py",
+        "expected_sha256": "3619fa2a06fa4ff2f39d5f101815f0bb99a47f270e59a73241dfaf0cca475be2",
+        "actual_sha256": "3619fa2a06fa4ff2f39d5f101815f0bb99a47f270e59a73241dfaf0cca475be2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\calibration\\write_corrections_report.py",
+        "expected_sha256": "af4b1938f58bd307dae129ed4f69bc4a44d364563e5c3863f40d5fcc13108d9b",
+        "actual_sha256": "af4b1938f58bd307dae129ed4f69bc4a44d364563e5c3863f40d5fcc13108d9b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\data_clean\\clean_and_merge.py",
+        "expected_sha256": "319496a3c85550f8c2e77ff5d6bef3b52b52ccb130f0a167ca9033d8393526db",
+        "actual_sha256": "319496a3c85550f8c2e77ff5d6bef3b52b52ccb130f0a167ca9033d8393526db"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\data_raw\\collect_pnad.py",
+        "expected_sha256": "de3259c6dc072326a1d08c773c684ce41db5b6e3e916b910e8c1e66ff64483b6",
+        "actual_sha256": "de3259c6dc072326a1d08c773c684ce41db5b6e3e916b910e8c1e66ff64483b6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\data_raw\\collect_pwt.py",
+        "expected_sha256": "f4ae97886cb01f8f8d55bfa187e3d974ea2e9ad6978cc34f3117b16931138943",
+        "actual_sha256": "f4ae97886cb01f8f8d55bfa187e3d974ea2e9ad6978cc34f3117b16931138943"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\data_raw\\collect_rais.py",
+        "expected_sha256": "356ea5a21cd5c39c5e7c7d3f991ca427f1fc0e4487488774b41ec74575fa2192",
+        "actual_sha256": "356ea5a21cd5c39c5e7c7d3f991ca427f1fc0e4487488774b41ec74575fa2192"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\data_raw\\reprocess_verified_inputs.py",
+        "expected_sha256": "6e7c430849816ecc48b6cb5ec9b3d63f166e46d5fcb1e494bd776dcb5020481d",
+        "actual_sha256": "6e7c430849816ecc48b6cb5ec9b3d63f166e46d5fcb1e494bd776dcb5020481d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\estimation_sigma_sub\\strategy_B_smm.py",
+        "expected_sha256": "0d8f4039c7447a54e615efe59d67baa2e960a3f297eb8a7fc7e3670cf69483ae",
+        "actual_sha256": "0d8f4039c7447a54e615efe59d67baa2e960a3f297eb8a7fc7e3670cf69483ae"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\areq_solver.py",
+        "expected_sha256": "6d50aace558804dbc969bd392ceb35dc8d72e5cda3632584dfa4aff90f865092",
+        "actual_sha256": "6d50aace558804dbc969bd392ceb35dc8d72e5cda3632584dfa4aff90f865092"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\calibration.py",
+        "expected_sha256": "ecf3b4696fbd8c298761d9bf4dadd6344a3cc0725dee6efe9b0fd76fcb9cdebd",
+        "actual_sha256": "ecf3b4696fbd8c298761d9bf4dadd6344a3cc0725dee6efe9b0fd76fcb9cdebd"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\ces_aggregator.py",
+        "expected_sha256": "f693a6b2f6fffeaeaf2ff878e99d362fcef8710e93659e0ff8a99b57fe661d58",
+        "actual_sha256": "f693a6b2f6fffeaeaf2ff878e99d362fcef8710e93659e0ff8a99b57fe661d58"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\decomposition.py",
+        "expected_sha256": "dc2ac649c6ee3c6429f63ca074de8adbdc51a2d04e91934c6db3d1575233fb20",
+        "actual_sha256": "dc2ac649c6ee3c6429f63ca074de8adbdc51a2d04e91934c6db3d1575233fb20"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\efficiency.py",
+        "expected_sha256": "ef6bd0e0d4be58163db5106c12452b490768ccfd61b5ab4f25acefb69721fb4b",
+        "actual_sha256": "ef6bd0e0d4be58163db5106c12452b490768ccfd61b5ab4f25acefb69721fb4b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\firm_problem.py",
+        "expected_sha256": "a8e6ca9b54881ca2ad6c185891cfb7076ab82fc52942e4a31a5eee8682f6f7c1",
+        "actual_sha256": "a8e6ca9b54881ca2ad6c185891cfb7076ab82fc52942e4a31a5eee8682f6f7c1"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\groups.py",
+        "expected_sha256": "8c2177204a738419cd54006372b0f9df752776d559ba23ab73a454bf5d9bd33a",
+        "actual_sha256": "8c2177204a738419cd54006372b0f9df752776d559ba23ab73a454bf5d9bd33a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\production.py",
+        "expected_sha256": "6ef15c82b78e881fd1b83f54d55b2e84e4cb62b9281f4dbc9b6378253afd6c2f",
+        "actual_sha256": "6ef15c82b78e881fd1b83f54d55b2e84e4cb62b9281f4dbc9b6378253afd6c2f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\simulation.py",
+        "expected_sha256": "d6c9759f81c0ce50def2a885b44ce52e93696b5753b0138c428014272ccd267b",
+        "actual_sha256": "d6c9759f81c0ce50def2a885b44ce52e93696b5753b0138c428014272ccd267b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\welfare.py",
+        "expected_sha256": "136900a33216268afcd3eebfa31aa7a1bf67fd6d43cd1f74d57efcb4ac70296b",
+        "actual_sha256": "136900a33216268afcd3eebfa31aa7a1bf67fd6d43cd1f74d57efcb4ac70296b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\model\\__init__.py",
+        "expected_sha256": "b3901352e09617219942ab9f4746e945354355f480fd88f9a4a41c8aa21f44da",
+        "actual_sha256": "b3901352e09617219942ab9f4746e945354355f480fd88f9a4a41c8aa21f44da"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\nr17_study\\00_setup_test.py",
+        "expected_sha256": "e200863a98d3756c62e438634e919767e473d1bb786dff6f1051b6990391a40d",
+        "actual_sha256": "e200863a98d3756c62e438634e919767e473d1bb786dff6f1051b6990391a40d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\nr17_study\\01_diagnose_sizes.py",
+        "expected_sha256": "20d3112f93bec8261e9267ff69856a5de07d726429190f2fbcdb4d6e223c5f7c",
+        "actual_sha256": "20d3112f93bec8261e9267ff69856a5de07d726429190f2fbcdb4d6e223c5f7c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\nr17_study\\02_hours_distribution.py",
+        "expected_sha256": "19be93ee05dfbfedef3264c722118c3549cbddfedd1bccccef33caa28c7dae51",
+        "actual_sha256": "19be93ee05dfbfedef3264c722118c3549cbddfedd1bccccef33caa28c7dae51"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\nr17_study\\03_explore_nursing.py",
+        "expected_sha256": "e808aaf4ddcb8d822731ed25d84cfa7d43a210dbb046451d5dfeff99453e1146",
+        "actual_sha256": "e808aaf4ddcb8d822731ed25d84cfa7d43a210dbb046451d5dfeff99453e1146"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\nr17_study\\04_scan_all_cbos.py",
+        "expected_sha256": "6484062da3651365630ebfc35edfab949b0c8a85f6535540a2c7ce9d390ac404",
+        "actual_sha256": "6484062da3651365630ebfc35edfab949b0c8a85f6535540a2c7ce9d390ac404"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\build_corrected_assets.py",
+        "expected_sha256": "548700a97931e3b3a1c640eb323189adc8fa3769388ebd1f4ffe3c6e3090080d",
+        "actual_sha256": "548700a97931e3b3a1c640eb323189adc8fa3769388ebd1f4ffe3c6e3090080d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\compute_portugal_validation.py",
+        "expected_sha256": "171b93fbda4375d2d05ca59d9fb373e6b3423a2b9636fce803ee953e6d187967",
+        "actual_sha256": "171b93fbda4375d2d05ca59d9fb373e6b3423a2b9636fce803ee953e6d187967"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\compute_stress_test.py",
+        "expected_sha256": "238008ffee9796494737cefb34e24180f33190de93b4ace28b8b2208baeb0dd2",
+        "actual_sha256": "238008ffee9796494737cefb34e24180f33190de93b4ace28b8b2208baeb0dd2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\compute_tfp_anchor.py",
+        "expected_sha256": "77c02a5c45e707e1fd470d6a8fd6662204cff11546465954d39b14dcc6933018",
+        "actual_sha256": "77c02a5c45e707e1fd470d6a8fd6662204cff11546465954d39b14dcc6933018"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\current_run.py",
+        "expected_sha256": "1c2ad684c3e2aab96df93eeaa498abefdd03e12b6966ada916de7dc9d7f6b431",
+        "actual_sha256": "1c2ad684c3e2aab96df93eeaa498abefdd03e12b6966ada916de7dc9d7f6b431"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\plot_calibration_fit.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\plot_figures_pt.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\plot_main_figures.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\plot_sectoral_fig.py",
+        "expected_sha256": "a6825f8ade8f50552ecbbb0f57f5e11006d3bd960c4d25730b7314e2f5768063",
+        "actual_sha256": "a6825f8ade8f50552ecbbb0f57f5e11006d3bd960c4d25730b7314e2f5768063"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\plot_welfare_schedule.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\write_appendix_tables.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\write_corrected_appendix.py",
+        "expected_sha256": "f3861174551b076c53bc2a71f638ebd2465f7d7c99e79f4ddd7b3db36c36b15f",
+        "actual_sha256": "f3861174551b076c53bc2a71f638ebd2465f7d7c99e79f4ddd7b3db36c36b15f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\write_pt_autogen_tables.py",
+        "expected_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390",
+        "actual_sha256": "1de2d43517074c6a9e7b92c808113d4d6293f3b27a7eb2317539661bf781f390"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\tables_figures\\_style.py",
+        "expected_sha256": "c9e5632439825fef62a4b9f194b160d5efda97dff8dc2f3f2a017ae5d824594a",
+        "actual_sha256": "c9e5632439825fef62a4b9f194b160d5efda97dff8dc2f3f2a017ae5d824594a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\data\\check_pnad_vars.R",
+        "expected_sha256": "f9f0c4520d04c77d4d544be8f8b09ad42855c57087c8280d44a87bba347b530e",
+        "actual_sha256": "f9f0c4520d04c77d4d544be8f8b09ad42855c57087c8280d44a87bba347b530e"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\data\\collect_sectoral_data.py",
+        "expected_sha256": "04aa76e8d0329093e4dacbf9f2db49ab297666c50fcf798853a3c6a58fa52f1f",
+        "actual_sha256": "04aa76e8d0329093e4dacbf9f2db49ab297666c50fcf798853a3c6a58fa52f1f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\data\\pnad_sectoral_microdata.R",
+        "expected_sha256": "045bf1d0d2e7524ca0f57393b4f91bf08b6413ccc8339d982adecb93e45e913c",
+        "actual_sha256": "045bf1d0d2e7524ca0f57393b4f91bf08b6413ccc8339d982adecb93e45e913c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\figures\\plot_sectoral_figures.R",
+        "expected_sha256": "839f0546b5ffdc22e5c93d1b3bed5e6dc118d52e5db21dbfece571ad7410ac5f",
+        "actual_sha256": "839f0546b5ffdc22e5c93d1b3bed5e6dc118d52e5db21dbfece571ad7410ac5f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\decomposition.py",
+        "expected_sha256": "9b7792b0aa110eacef865d45e855ad4257d974d59e4eca467fe2c9f4f2961c54",
+        "actual_sha256": "9b7792b0aa110eacef865d45e855ad4257d974d59e4eca467fe2c9f4f2961c54"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\inputs.py",
+        "expected_sha256": "2b04e91aed7d69a4dafd89713109f9ac15c1b6b6b9cfc19d5ae00716cdca079b",
+        "actual_sha256": "2b04e91aed7d69a4dafd89713109f9ac15c1b6b6b9cfc19d5ae00716cdca079b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\red_team_tests.py",
+        "expected_sha256": "b7756fbc520e4d98bd66188835c524a7204d7dc13df1749761442847c62242a3",
+        "actual_sha256": "b7756fbc520e4d98bd66188835c524a7204d7dc13df1749761442847c62242a3"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\run_empirical.py",
+        "expected_sha256": "ee98d8d7c11f8c9e131a7ecd96c9eed1b6d5756a1663717f91eab71e47f6ab20",
+        "actual_sha256": "ee98d8d7c11f8c9e131a7ecd96c9eed1b6d5756a1663717f91eab71e47f6ab20"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\sector_assets.py",
+        "expected_sha256": "0aee4e6fa438ebe60c060d87c92e9e003c1cae4032434e9da7749b81afb2effd",
+        "actual_sha256": "0aee4e6fa438ebe60c060d87c92e9e003c1cae4032434e9da7749b81afb2effd"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\sector_model.py",
+        "expected_sha256": "342ce7ab5488f5aca0c64f1a823344fc55a2fd571f292521966874ad7598a60a",
+        "actual_sha256": "342ce7ab5488f5aca0c64f1a823344fc55a2fd571f292521966874ad7598a60a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\sensitivity.py",
+        "expected_sha256": "68b2039e7b4a0071aa5099ee059daab790997045745d4979853a24e562bb792f",
+        "actual_sha256": "68b2039e7b4a0071aa5099ee059daab790997045745d4979853a24e562bb792f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\workers_affected.py",
+        "expected_sha256": "062d65cf05be61652e04ab7c1c9be5f2d33cba3cd56aac283ffda87dce544d85",
+        "actual_sha256": "062d65cf05be61652e04ab7c1c9be5f2d33cba3cd56aac283ffda87dce544d85"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\src\\sectoral\\model\\__init__.py",
+        "expected_sha256": "fdac14a027ba7612578375ba2f260e9d331955b0586c2356e1f702ebcd5ee575",
+        "actual_sha256": "fdac14a027ba7612578375ba2f260e9d331955b0586c2356e1f702ebcd5ee575"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\tests\\test_model.py",
+        "expected_sha256": "35ba1018013b8aec8daf03f29096b4cc1faac42de5fad33496c3547290a8319d",
+        "actual_sha256": "35ba1018013b8aec8daf03f29096b4cc1faac42de5fad33496c3547290a8319d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\tests\\test_pipeline_corrected.py",
+        "expected_sha256": "582a2287d4b83dc7ada35346ed3d3bd634249ae1c0c357d1572ee87f9ca77125",
+        "actual_sha256": "582a2287d4b83dc7ada35346ed3d3bd634249ae1c0c357d1572ee87f9ca77125"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\tests\\test_sectoral_corrected.py",
+        "expected_sha256": "08e9433188e16638c36164cc741d3862c14e76000aecdbf7b4a93d9858dbf8e3",
+        "actual_sha256": "08e9433188e16638c36164cc741d3862c14e76000aecdbf7b4a93d9858dbf8e3"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\tests\\test_verified_empirical.py",
+        "expected_sha256": "cf67d422be8d3415be076a078e53db025a89d99a3eede1962e2878a738df9a62",
+        "actual_sha256": "cf67d422be8d3415be076a078e53db025a89d99a3eede1962e2878a738df9a62"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\tests\\test_wage_bridge.py",
+        "expected_sha256": "1d60ae88259de31db12e7c6a7a34beaf0f3c6e19c3949f95c59f61c71035fe56",
+        "actual_sha256": "1d60ae88259de31db12e7c6a7a34beaf0f3c6e19c3949f95c59f61c71035fe56"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\run_all.py",
+        "expected_sha256": "b9ff9340c2a3c826417349c3d3bbac160d951e54eaf69da6ce6895d24c370262",
+        "actual_sha256": "b9ff9340c2a3c826417349c3d3bbac160d951e54eaf69da6ce6895d24c370262"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\requirements.txt",
+        "expected_sha256": "2b3a3918d844e70fe01a43f04da87c6f81060aa35f258a2e4b2882f18e348493",
+        "actual_sha256": "2b3a3918d844e70fe01a43f04da87c6f81060aa35f258a2e4b2882f18e348493"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\requirements-replication.lock.txt",
+        "expected_sha256": "6c730a44fbca87c81c70b1adba8964dde209ce21ebb22208bb41cb6ff22c5c95",
+        "actual_sha256": "6c730a44fbca87c81c70b1adba8964dde209ce21ebb22208bb41cb6ff22c5c95"
+      }
+    ],
+    "source_entries": [
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\RUN_MANIFEST.json",
+        "expected_sha256": "a86ad6d22ff4ca6e3801da495274e1e2f0054ff30789293424f5f8d6c5619805",
+        "actual_sha256": "a86ad6d22ff4ca6e3801da495274e1e2f0054ff30789293424f5f8d6c5619805"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\COMPARATIVO_RESULTADOS.csv",
+        "expected_sha256": "66278355728310c45677ee534eaba6ee6e7758e6a3ba264d700627516bdcc46e",
+        "actual_sha256": "66278355728310c45677ee534eaba6ee6e7758e6a3ba264d700627516bdcc46e"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\RESULTADOS_SETORIAIS.csv",
+        "expected_sha256": "398849db702c7a68f5648136ebd89996e2bf85df3696df8d764f033d095fc56a",
+        "actual_sha256": "398849db702c7a68f5648136ebd89996e2bf85df3696df8d764f033d095fc56a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\sensitivity\\EMPIRICAL_SENSITIVITY.csv",
+        "expected_sha256": "47a56b407231853701ffb10aae9aa637501c6976aaef5698a4fde6cd3d106dbc",
+        "actual_sha256": "47a56b407231853701ffb10aae9aa637501c6976aaef5698a4fde6cd3d106dbc"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\INPUTS.json",
+        "expected_sha256": "9ec7db798c7e831d2a74fe2cb063b536648941fe47a506b8d2e39106e4c317cb",
+        "actual_sha256": "9ec7db798c7e831d2a74fe2cb063b536648941fe47a506b8d2e39106e4c317cb"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\BRIDGE.json",
+        "expected_sha256": "0c831247d3df3f1ea3288594ab0716ec61920e46f0981b455ae8385153c33e1b",
+        "actual_sha256": "0c831247d3df3f1ea3288594ab0716ec61920e46f0981b455ae8385153c33e1b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\RESULTS.csv",
+        "expected_sha256": "2c801e5f2bb61f05ffe1fe556977b5f57982f8bdae08f792a9ba1135f71a09b5",
+        "actual_sha256": "2c801e5f2bb61f05ffe1fe556977b5f57982f8bdae08f792a9ba1135f71a09b5"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\data_intermediate\\reprocessed\\pnad_targets.json",
+        "expected_sha256": "6e0fe36c6da60afe511582420fd917d579101e5032f10473ff36ba014a8a9ecf",
+        "actual_sha256": "6e0fe36c6da60afe511582420fd917d579101e5032f10473ff36ba014a8a9ecf"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\data_final\\SECTORAL_BASELINE_FACTS.csv",
+        "expected_sha256": "b24e15bc879bc6b6a6aee81cf5c63c129071ad081ae272079f3de34d18da9a9f",
+        "actual_sha256": "b24e15bc879bc6b6a6aee81cf5c63c129071ad081ae272079f3de34d18da9a9f"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical\\INPUTS.json",
+        "expected_sha256": "b91cfb1179aa418aea2f7327a7f8dc76e9b0b0ed7ca1716a98b762a42c80aee6",
+        "actual_sha256": "b91cfb1179aa418aea2f7327a7f8dc76e9b0b0ed7ca1716a98b762a42c80aee6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical\\BRIDGE.json",
+        "expected_sha256": "f1ba944a060bf0014ae3d0e1934881e0b562e944d303dcea6906023b41398ae4",
+        "actual_sha256": "f1ba944a060bf0014ae3d0e1934881e0b562e944d303dcea6906023b41398ae4"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\INPUTS.json",
+        "expected_sha256": "9ec7db798c7e831d2a74fe2cb063b536648941fe47a506b8d2e39106e4c317cb",
+        "actual_sha256": "9ec7db798c7e831d2a74fe2cb063b536648941fe47a506b8d2e39106e4c317cb"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\BRIDGE.json",
+        "expected_sha256": "0c831247d3df3f1ea3288594ab0716ec61920e46f0981b455ae8385153c33e1b",
+        "actual_sha256": "0c831247d3df3f1ea3288594ab0716ec61920e46f0981b455ae8385153c33e1b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\RESULTS_FULL.json",
+        "expected_sha256": "e3da2b1c1ccac40a9a161747912a52761713e272776375fb4c1270be9c7ecbc7",
+        "actual_sha256": "e3da2b1c1ccac40a9a161747912a52761713e272776375fb4c1270be9c7ecbc7"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\data_raw\\fred\\RTFPNABRA632NRUG_pwt110.csv",
+        "expected_sha256": "3475e738843340c9640729f7fd4f47d2403c76af97a401af533c657200272c0b",
+        "actual_sha256": "3475e738843340c9640729f7fd4f47d2403c76af97a401af533c657200272c0b"
+      }
+    ],
+    "old_and_new_source_manifest_identical": true,
+    "unchanged_result_csvs": [
+      {
+        "file": "base44/NATIONAL_BASE44.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\NATIONAL_BASE44.csv",
+        "expected_sha256": "e3c3e39aee8081eb7a6a1dc529006e4b3f368309c4641a194f5eaf6326db9512",
+        "actual_sha256": "e3c3e39aee8081eb7a6a1dc529006e4b3f368309c4641a194f5eaf6326db9512"
+      },
+      {
+        "file": "base44/NATIONAL_SENSITIVITY_BASE44.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\NATIONAL_SENSITIVITY_BASE44.csv",
+        "expected_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6",
+        "actual_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6"
+      },
+      {
+        "file": "base44/SECTOR_OBSERVED_BRIDGE_BASE44.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_OBSERVED_BRIDGE_BASE44.csv",
+        "expected_sha256": "f7229dda729b846fd47e2c1182ec225688e3ac1ca40f34d9f15ceb2e73a92d78",
+        "actual_sha256": "f7229dda729b846fd47e2c1182ec225688e3ac1ca40f34d9f15ceb2e73a92d78"
+      },
+      {
+        "file": "base44/SECTOR_RESULTS_BASE44.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_RESULTS_BASE44.csv",
+        "expected_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598",
+        "actual_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598"
+      },
+      {
+        "file": "comparison_results.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\comparison_results.csv",
+        "expected_sha256": "b1234d82f4f7c641efc9a90ea44403afa2625bb6841211f45f0616aa8c6390f5",
+        "actual_sha256": "b1234d82f4f7c641efc9a90ea44403afa2625bb6841211f45f0616aa8c6390f5"
+      },
+      {
+        "file": "curves_national.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\curves_national.csv",
+        "expected_sha256": "6eaa788867537d92b6d94c05e8cfffce11c3fdccbdfcecfd968465a8dd62053a",
+        "actual_sha256": "6eaa788867537d92b6d94c05e8cfffce11c3fdccbdfcecfd968465a8dd62053a"
+      },
+      {
+        "file": "decomposition.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\decomposition.csv",
+        "expected_sha256": "b7042955ccf386c3470a1d30eab8434580675672fc1146398fc1eca90ac63140",
+        "actual_sha256": "b7042955ccf386c3470a1d30eab8434580675672fc1146398fc1eca90ac63140"
+      },
+      {
+        "file": "decomposition_levels.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\decomposition_levels.csv",
+        "expected_sha256": "a2042f8850caf849199eba231a77407ca8ed2858b06b3ad90224e6facb669c4d",
+        "actual_sha256": "a2042f8850caf849199eba231a77407ca8ed2858b06b3ad90224e6facb669c4d"
+      },
+      {
+        "file": "national_results.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\national_results.csv",
+        "expected_sha256": "d860d892ebb4a34fc6e0a35da98ea68df12344c2094c3f756b20f7ef345caf1c",
+        "actual_sha256": "d860d892ebb4a34fc6e0a35da98ea68df12344c2094c3f756b20f7ef345caf1c"
+      },
+      {
+        "file": "national_results_integral.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\national_results_integral.csv",
+        "expected_sha256": "a985b9525e679ff07d8b3e3a1fc6c71c237b45a370f392536cee87bb522c7ed9",
+        "actual_sha256": "a985b9525e679ff07d8b3e3a1fc6c71c237b45a370f392536cee87bb522c7ed9"
+      },
+      {
+        "file": "sectoral_results.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sectoral_results.csv",
+        "expected_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598",
+        "actual_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598"
+      },
+      {
+        "file": "sectoral_results_integral.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sectoral_results_integral.csv",
+        "expected_sha256": "fe157456ae6654f8a5015fb7c6b72491330e808ef9936eb56aed52d36a55fbc5",
+        "actual_sha256": "fe157456ae6654f8a5015fb7c6b72491330e808ef9936eb56aed52d36a55fbc5"
+      },
+      {
+        "file": "sensitivity_empirical.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sensitivity_empirical.csv",
+        "expected_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6",
+        "actual_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6"
+      },
+      {
+        "file": "sensitivity_empirical_integral.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sensitivity_empirical_integral.csv",
+        "expected_sha256": "3360c1236e51761bb54c93bc67e421801484150ae891d38d3596ecc1e5d22d96",
+        "actual_sha256": "3360c1236e51761bb54c93bc67e421801484150ae891d38d3596ecc1e5d22d96"
+      },
+      {
+        "file": "tfp_history.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_history.csv",
+        "expected_sha256": "a0c01c01113b2e069b800d0c5c4db6a755faa9bf73922967a5ec783143cb13ec",
+        "actual_sha256": "a0c01c01113b2e069b800d0c5c4db6a755faa9bf73922967a5ec783143cb13ec"
+      },
+      {
+        "file": "tfp_history_rates.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_history_rates.csv",
+        "expected_sha256": "6a11a7144fb67a6cd5cfd6a6e7c167146a0ba22bfeafb87cae145cd69359023d",
+        "actual_sha256": "6a11a7144fb67a6cd5cfd6a6e7c167146a0ba22bfeafb87cae145cd69359023d"
+      },
+      {
+        "file": "tfp_horizons.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_horizons.csv",
+        "expected_sha256": "ec8b0e1a96da30d898d17af94ff46c0232d33c3c2481d0bd94a08c9180991da0",
+        "actual_sha256": "ec8b0e1a96da30d898d17af94ff46c0232d33c3c2481d0bd94a08c9180991da0"
+      },
+      {
+        "file": "welfare_threshold.csv",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\welfare_threshold.csv",
+        "expected_sha256": "899584d97f48187630ed265c02fb232943807dfd99b30d9860cece12500972a4",
+        "actual_sha256": "899584d97f48187630ed265c02fb232943807dfd99b30d9860cece12500972a4"
+      }
+    ],
+    "unchanged_other_figure_pngs": [
+      {
+        "file": "fig_areq_vs_hours_pt.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_hours_pt.png",
+        "expected_sha256": "305834aa5da49ac81e0aa24e4c3b243a10347acebe4a61f6994d628dbe2ac8f9",
+        "actual_sha256": "305834aa5da49ac81e0aa24e4c3b243a10347acebe4a61f6994d628dbe2ac8f9"
+      },
+      {
+        "file": "fig_areq_vs_tfp_history_pt.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_tfp_history_pt.png",
+        "expected_sha256": "472dc5c7aab02c61fbb9d93f8ab40355ed148846d4204463963b4f378cd8d89a",
+        "actual_sha256": "472dc5c7aab02c61fbb9d93f8ab40355ed148846d4204463963b4f378cd8d89a"
+      },
+      {
+        "file": "fig_decomposition.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_decomposition.png",
+        "expected_sha256": "8ca121039507ca4f76e5c060ea17e6ae9e1ed2dc5bc4dbb0c8d6ae2104c729c3",
+        "actual_sha256": "8ca121039507ca4f76e5c060ea17e6ae9e1ed2dc5bc4dbb0c8d6ae2104c729c3"
+      },
+      {
+        "file": "fig_sectoral_areq.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sectoral_areq.png",
+        "expected_sha256": "f48696cb696834e89557937e326337445f1a1ddd3a4e69d257e6f51b1708a447",
+        "actual_sha256": "f48696cb696834e89557937e326337445f1a1ddd3a4e69d257e6f51b1708a447"
+      },
+      {
+        "file": "fig_sensitivity_pt.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sensitivity_pt.png",
+        "expected_sha256": "bfc7f493cc660e5b2e09d260ada8f99c8c1cd0ad49ada630f1d7f41241a57690",
+        "actual_sha256": "bfc7f493cc660e5b2e09d260ada8f99c8c1cd0ad49ada630f1d7f41241a57690"
+      },
+      {
+        "file": "fig_welfare_schedule_pt.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_welfare_schedule_pt.png",
+        "expected_sha256": "28fdf354b537303f8fb4abed4edccd28de09699a400621df06a10c1513bbcfca",
+        "actual_sha256": "28fdf354b537303f8fb4abed4edccd28de09699a400621df06a10c1513bbcfca"
+      },
+      {
+        "file": "slide10c_welfare_threshold.png",
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\slide10c_welfare_threshold.png",
+        "expected_sha256": "4f306f4a1f0f119a7c84795546c1bcba53ae8abed70ff90d72627bede9aa4fd2",
+        "actual_sha256": "4f306f4a1f0f119a7c84795546c1bcba53ae8abed70ff90d72627bede9aa4fd2"
+      }
+    ],
+    "base44_json_changes": [
+      {
+        "file": "base44/CHECKS.json",
+        "status": "passed",
+        "changes": [
+          {
+            "key": "elapsed_seconds",
+            "before": 11.046573700004956,
+            "after": 14.121279000013601
+          }
+        ],
+        "only_elapsed_seconds_changed": true
+      },
+      {
+        "file": "base44/EDITORIAL_SUMMARY.json",
+        "status": "passed",
+        "changes": [
+          {
+            "key": "checks.elapsed_seconds",
+            "before": 11.046573700004956,
+            "after": 14.121279000013601
+          }
+        ],
+        "only_elapsed_seconds_changed": true
+      }
+    ],
+    "current_assets": [
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\CHECKS.json",
+        "expected_sha256": "19fc104aad0a0a9de081d7229f5589f563e236b0b58bc4e1746c2a5defcde8f1",
+        "actual_sha256": "19fc104aad0a0a9de081d7229f5589f563e236b0b58bc4e1746c2a5defcde8f1"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\EDITORIAL_SUMMARY.json",
+        "expected_sha256": "f6077d5189ad2e89ad9b98a3a358121ed9450d7bfbacf63cd04c371b60827af6",
+        "actual_sha256": "f6077d5189ad2e89ad9b98a3a358121ed9450d7bfbacf63cd04c371b60827af6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\NATIONAL_BASE44.csv",
+        "expected_sha256": "e3c3e39aee8081eb7a6a1dc529006e4b3f368309c4641a194f5eaf6326db9512",
+        "actual_sha256": "e3c3e39aee8081eb7a6a1dc529006e4b3f368309c4641a194f5eaf6326db9512"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\NATIONAL_SENSITIVITY_BASE44.csv",
+        "expected_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6",
+        "actual_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\PROVENANCE.json",
+        "expected_sha256": "f8b9320f36dcb56d14786534df2a105b740777a1da002c99789aa3dfab101617",
+        "actual_sha256": "f8b9320f36dcb56d14786534df2a105b740777a1da002c99789aa3dfab101617"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_BRIDGES.json",
+        "expected_sha256": "fcfa33042a6042e232ac11b780dbd587559e268f73b62e7947de8882ed930f88",
+        "actual_sha256": "fcfa33042a6042e232ac11b780dbd587559e268f73b62e7947de8882ed930f88"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_DETAILS.json",
+        "expected_sha256": "b05199d42451a589920e29dbe7798548f0cfe4be2fc954ac64c98c065f7a3014",
+        "actual_sha256": "b05199d42451a589920e29dbe7798548f0cfe4be2fc954ac64c98c065f7a3014"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_OBSERVED_BRIDGE_BASE44.csv",
+        "expected_sha256": "f7229dda729b846fd47e2c1182ec225688e3ac1ca40f34d9f15ceb2e73a92d78",
+        "actual_sha256": "f7229dda729b846fd47e2c1182ec225688e3ac1ca40f34d9f15ceb2e73a92d78"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_PARAMETERS.json",
+        "expected_sha256": "978c2eb1c30d2d6d1f81d1521e64fedd507d51994b2586e13a336dac0781c4ab",
+        "actual_sha256": "978c2eb1c30d2d6d1f81d1521e64fedd507d51994b2586e13a336dac0781c4ab"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SECTOR_RESULTS_BASE44.csv",
+        "expected_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598",
+        "actual_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\base44\\SENSITIVITY_DETAILS.json",
+        "expected_sha256": "ae003e98123cfbe7fa61c42118598da5cf4e9dd7bf8ce71b64b0722b6b233716",
+        "actual_sha256": "ae003e98123cfbe7fa61c42118598da5cf4e9dd7bf8ce71b64b0722b6b233716"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\comparison_results.csv",
+        "expected_sha256": "b1234d82f4f7c641efc9a90ea44403afa2625bb6841211f45f0616aa8c6390f5",
+        "actual_sha256": "b1234d82f4f7c641efc9a90ea44403afa2625bb6841211f45f0616aa8c6390f5"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\curves_national.csv",
+        "expected_sha256": "6eaa788867537d92b6d94c05e8cfffce11c3fdccbdfcecfd968465a8dd62053a",
+        "actual_sha256": "6eaa788867537d92b6d94c05e8cfffce11c3fdccbdfcecfd968465a8dd62053a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\decomposition.csv",
+        "expected_sha256": "b7042955ccf386c3470a1d30eab8434580675672fc1146398fc1eca90ac63140",
+        "actual_sha256": "b7042955ccf386c3470a1d30eab8434580675672fc1146398fc1eca90ac63140"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\decomposition_levels.csv",
+        "expected_sha256": "a2042f8850caf849199eba231a77407ca8ed2858b06b3ad90224e6facb669c4d",
+        "actual_sha256": "a2042f8850caf849199eba231a77407ca8ed2858b06b3ad90224e6facb669c4d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_hours_pt.pdf",
+        "expected_sha256": "5acaff06e6d892589267e1c77b878500fa8c61f21df1d515964947d09302d86e",
+        "actual_sha256": "5acaff06e6d892589267e1c77b878500fa8c61f21df1d515964947d09302d86e"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_hours_pt.png",
+        "expected_sha256": "305834aa5da49ac81e0aa24e4c3b243a10347acebe4a61f6994d628dbe2ac8f9",
+        "actual_sha256": "305834aa5da49ac81e0aa24e4c3b243a10347acebe4a61f6994d628dbe2ac8f9"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_tfp_history_pt.pdf",
+        "expected_sha256": "f9fc850bd2b4dce03fa0c8644be4f16d968df54d1fcd3e0120186a2ac66d52fe",
+        "actual_sha256": "f9fc850bd2b4dce03fa0c8644be4f16d968df54d1fcd3e0120186a2ac66d52fe"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_areq_vs_tfp_history_pt.png",
+        "expected_sha256": "472dc5c7aab02c61fbb9d93f8ab40355ed148846d4204463963b4f378cd8d89a",
+        "actual_sha256": "472dc5c7aab02c61fbb9d93f8ab40355ed148846d4204463963b4f378cd8d89a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_decomposition.pdf",
+        "expected_sha256": "8c3e71ed485c70d3719fad8dc8346404eaf4bfa1355d38f989d9d1a14256ab73",
+        "actual_sha256": "8c3e71ed485c70d3719fad8dc8346404eaf4bfa1355d38f989d9d1a14256ab73"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_decomposition.png",
+        "expected_sha256": "8ca121039507ca4f76e5c060ea17e6ae9e1ed2dc5bc4dbb0c8d6ae2104c729c3",
+        "actual_sha256": "8ca121039507ca4f76e5c060ea17e6ae9e1ed2dc5bc4dbb0c8d6ae2104c729c3"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sectoral_areq.pdf",
+        "expected_sha256": "5d3711f2c514e22e959f7d27a9f572399a5a2e0787b3bed143c1f061814f6890",
+        "actual_sha256": "5d3711f2c514e22e959f7d27a9f572399a5a2e0787b3bed143c1f061814f6890"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sectoral_areq.png",
+        "expected_sha256": "f48696cb696834e89557937e326337445f1a1ddd3a4e69d257e6f51b1708a447",
+        "actual_sha256": "f48696cb696834e89557937e326337445f1a1ddd3a4e69d257e6f51b1708a447"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sensitivity_pt.pdf",
+        "expected_sha256": "ce3beee316f6130caf4e733205dae1a94bb79d8e4b267c55291ac7125f7047cd",
+        "actual_sha256": "ce3beee316f6130caf4e733205dae1a94bb79d8e4b267c55291ac7125f7047cd"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_sensitivity_pt.png",
+        "expected_sha256": "bfc7f493cc660e5b2e09d260ada8f99c8c1cd0ad49ada630f1d7f41241a57690",
+        "actual_sha256": "bfc7f493cc660e5b2e09d260ada8f99c8c1cd0ad49ada630f1d7f41241a57690"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_transition_map_pt.pdf",
+        "expected_sha256": "10ec4adca8862482ccd944ca832f7839ab8c2aa07d08717663bd9584574c8271",
+        "actual_sha256": "10ec4adca8862482ccd944ca832f7839ab8c2aa07d08717663bd9584574c8271"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_transition_map_pt.png",
+        "expected_sha256": "040736aa085077629ddce6cd8886b4811a5098d1e4581801f39ccd4b72b922a7",
+        "actual_sha256": "040736aa085077629ddce6cd8886b4811a5098d1e4581801f39ccd4b72b922a7"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_welfare_schedule_pt.pdf",
+        "expected_sha256": "ed4a7426e4aaf52a9b152161065ff216dd936270c596116ce29115211d2b8e5c",
+        "actual_sha256": "ed4a7426e4aaf52a9b152161065ff216dd936270c596116ce29115211d2b8e5c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\fig_welfare_schedule_pt.png",
+        "expected_sha256": "28fdf354b537303f8fb4abed4edccd28de09699a400621df06a10c1513bbcfca",
+        "actual_sha256": "28fdf354b537303f8fb4abed4edccd28de09699a400621df06a10c1513bbcfca"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\national_results.csv",
+        "expected_sha256": "d860d892ebb4a34fc6e0a35da98ea68df12344c2094c3f756b20f7ef345caf1c",
+        "actual_sha256": "d860d892ebb4a34fc6e0a35da98ea68df12344c2094c3f756b20f7ef345caf1c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\national_results_integral.csv",
+        "expected_sha256": "a985b9525e679ff07d8b3e3a1fc6c71c237b45a370f392536cee87bb522c7ed9",
+        "actual_sha256": "a985b9525e679ff07d8b3e3a1fc6c71c237b45a370f392536cee87bb522c7ed9"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\reference_44_checks.json",
+        "expected_sha256": "37aae08bc089e77d3e917fa5c5450e5e7bc8e4bcd841acec059c50f5fef66fa2",
+        "actual_sha256": "37aae08bc089e77d3e917fa5c5450e5e7bc8e4bcd841acec059c50f5fef66fa2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sectoral_results.csv",
+        "expected_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598",
+        "actual_sha256": "9692de913754c63dfb1c455b3ffba71c599224f1f5e45b4bc755db18cb242598"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sectoral_results_integral.csv",
+        "expected_sha256": "fe157456ae6654f8a5015fb7c6b72491330e808ef9936eb56aed52d36a55fbc5",
+        "actual_sha256": "fe157456ae6654f8a5015fb7c6b72491330e808ef9936eb56aed52d36a55fbc5"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sensitivity_empirical.csv",
+        "expected_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6",
+        "actual_sha256": "7427b77874e536290e1f32599a0cb8e3b4f8e9c43b1ca7734384f5e3a68511f6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\sensitivity_empirical_integral.csv",
+        "expected_sha256": "3360c1236e51761bb54c93bc67e421801484150ae891d38d3596ecc1e5d22d96",
+        "actual_sha256": "3360c1236e51761bb54c93bc67e421801484150ae891d38d3596ecc1e5d22d96"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\slide10c_welfare_threshold.pdf",
+        "expected_sha256": "a9442ee7994d14bb500f3fee2d483d09e1e88c63248faa223eeb359c20f11195",
+        "actual_sha256": "a9442ee7994d14bb500f3fee2d483d09e1e88c63248faa223eeb359c20f11195"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\slide10c_welfare_threshold.png",
+        "expected_sha256": "4f306f4a1f0f119a7c84795546c1bcba53ae8abed70ff90d72627bede9aa4fd2",
+        "actual_sha256": "4f306f4a1f0f119a7c84795546c1bcba53ae8abed70ff90d72627bede9aa4fd2"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_comparison.tex",
+        "expected_sha256": "648d64ab2e28e8ce1e7248c87875ffb80dcdedeffde7284d9e1586e02f516386",
+        "actual_sha256": "648d64ab2e28e8ce1e7248c87875ffb80dcdedeffde7284d9e1586e02f516386"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_comparison_part1.tex",
+        "expected_sha256": "a0f9d09037706715d133d8fc47e14d1017d18b313bf6b3acae7f56d64439331b",
+        "actual_sha256": "a0f9d09037706715d133d8fc47e14d1017d18b313bf6b3acae7f56d64439331b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_comparison_part2.tex",
+        "expected_sha256": "11726b9a0dd9f3dbe5f7beff0bf3105dacc81e2cfa38f2a1ee7a0524792b0a4e",
+        "actual_sha256": "11726b9a0dd9f3dbe5f7beff0bf3105dacc81e2cfa38f2a1ee7a0524792b0a4e"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_decomposition_levels.tex",
+        "expected_sha256": "6aa05f4537b5da8563bf8dec9c9478a74a93bfbb81990e5c8c8a3737ff553246",
+        "actual_sha256": "6aa05f4537b5da8563bf8dec9c9478a74a93bfbb81990e5c8c8a3737ff553246"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_mapping.tex",
+        "expected_sha256": "9ca15e3dc03f92b656fdd9ace7f5b797d9217eccb421c1b177edd43966d824b9",
+        "actual_sha256": "9ca15e3dc03f92b656fdd9ace7f5b797d9217eccb421c1b177edd43966d824b9"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_national.tex",
+        "expected_sha256": "b704ad2f8e6cab46ca58b78b82c5132194dbf5345a2e77360b760f09977b240c",
+        "actual_sha256": "b704ad2f8e6cab46ca58b78b82c5132194dbf5345a2e77360b760f09977b240c"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_sectoral.tex",
+        "expected_sha256": "abda78f6943ce739237540f51bae1f2d41e31f6dd7f94fab9478d4be70da632a",
+        "actual_sha256": "abda78f6943ce739237540f51bae1f2d41e31f6dd7f94fab9478d4be70da632a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_sensitivity.tex",
+        "expected_sha256": "7aca3f5aedb5f6e69b3c28dcac2fdf12c571975df320c1b0f81b0392b7fed1dc",
+        "actual_sha256": "7aca3f5aedb5f6e69b3c28dcac2fdf12c571975df320c1b0f81b0392b7fed1dc"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tab_tfp_horizons.tex",
+        "expected_sha256": "ce1f20f246bd1243bec62a3b9c64c4e981d12568bc480763e388088ae261fdf7",
+        "actual_sha256": "ce1f20f246bd1243bec62a3b9c64c4e981d12568bc480763e388088ae261fdf7"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_history.csv",
+        "expected_sha256": "a0c01c01113b2e069b800d0c5c4db6a755faa9bf73922967a5ec783143cb13ec",
+        "actual_sha256": "a0c01c01113b2e069b800d0c5c4db6a755faa9bf73922967a5ec783143cb13ec"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_history_rates.csv",
+        "expected_sha256": "6a11a7144fb67a6cd5cfd6a6e7c167146a0ba22bfeafb87cae145cd69359023d",
+        "actual_sha256": "6a11a7144fb67a6cd5cfd6a6e7c167146a0ba22bfeafb87cae145cd69359023d"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_horizons.csv",
+        "expected_sha256": "ec8b0e1a96da30d898d17af94ff46c0232d33c3c2481d0bd94a08c9180991da0",
+        "actual_sha256": "ec8b0e1a96da30d898d17af94ff46c0232d33c3c2481d0bd94a08c9180991da0"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\tfp_provenance.json",
+        "expected_sha256": "e5b3906827d4f32097741a0326902ccc164f6164b83029ce0c76ab9708c62c4b",
+        "actual_sha256": "e5b3906827d4f32097741a0326902ccc164f6164b83029ce0c76ab9708c62c4b"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\transition_map.csv",
+        "expected_sha256": "6144d8ec14bd3f460da0c9cddaa16688aeac280481c57a995972a8ca3ba0f4a6",
+        "actual_sha256": "6144d8ec14bd3f460da0c9cddaa16688aeac280481c57a995972a8ca3ba0f4a6"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\transition_map_checks.json",
+        "expected_sha256": "3f805f361e48f14bf340827afcb39737a4b1122c361968dad860b1a316ea01df",
+        "actual_sha256": "3f805f361e48f14bf340827afcb39737a4b1122c361968dad860b1a316ea01df"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\welfare_threshold.csv",
+        "expected_sha256": "899584d97f48187630ed265c02fb232943807dfd99b30d9860cece12500972a4",
+        "actual_sha256": "899584d97f48187630ed265c02fb232943807dfd99b30d9860cece12500972a4"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\generated\\welfare_threshold_checks.json",
+        "expected_sha256": "ca7b273289fba75303740984bad700ac5d9dc0de97aab80f8b047fd84a77d1e8",
+        "actual_sha256": "ca7b273289fba75303740984bad700ac5d9dc0de97aab80f8b047fd84a77d1e8"
+      }
+    ],
+    "current_module_integrity": [
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\baseline44_experiments.py",
+        "expected_sha256": "5f1048eb5f318e6a9eef672cdedd02414220fe499431d67813771ce2d31cd288",
+        "actual_sha256": "5f1048eb5f318e6a9eef672cdedd02414220fe499431d67813771ce2d31cd288"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\generate_assets.py",
+        "expected_sha256": "6b92b8434cf4b4238209395b3f722873499e6a7b07ad2236f51d93aa901f36e7",
+        "actual_sha256": "6b92b8434cf4b4238209395b3f722873499e6a7b07ad2236f51d93aa901f36e7"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\original_appendix_figures.py",
+        "expected_sha256": "9cf5a14fe4006f1340bc5fac08de6c5135f98037464918135d051bc53d6c6f2a",
+        "actual_sha256": "9cf5a14fe4006f1340bc5fac08de6c5135f98037464918135d051bc53d6c6f2a"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\original_main_figures.py",
+        "expected_sha256": "bc57345b1a28b90268c65fdd4307d26c7f5e33843e82afe767fdf262e4358cd7",
+        "actual_sha256": "bc57345b1a28b90268c65fdd4307d26c7f5e33843e82afe767fdf262e4358cd7"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\original_tfp_figure.py",
+        "expected_sha256": "198001dca27e0c58da4d7b8a6dfdf9fbe9f7aea4c0a837366e4c3b617a6baa08",
+        "actual_sha256": "198001dca27e0c58da4d7b8a6dfdf9fbe9f7aea4c0a837366e4c3b617a6baa08"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\original_transition_figure.py",
+        "expected_sha256": "74acbe9bbc334836f874fb5349419be0fbfb6cdcdf3bf656e2fc1b8e6d35d250",
+        "actual_sha256": "74acbe9bbc334836f874fb5349419be0fbfb6cdcdf3bf656e2fc1b8e6d35d250"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\paper_config.py",
+        "expected_sha256": "64150dda896e7de4a6c252edc2fa6da241ead3d35afe94aadd811019186002b3",
+        "actual_sha256": "64150dda896e7de4a6c252edc2fa6da241ead3d35afe94aadd811019186002b3"
+      },
+      {
+        "status": "passed",
+        "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\scripts\\transition_experiments.py",
+        "expected_sha256": "21a895cc730935fb699dfea940c13c1d451d3baecc5ac3b8d236ae1874338564",
+        "actual_sha256": "21a895cc730935fb699dfea940c13c1d451d3baecc5ac3b8d236ae1874338564"
+      }
+    ],
+    "problems": [],
+    "elapsed_seconds": 2.830021100002341,
+    "notes": [
+      "The updated transition_map.csv and fig_transition_map_pt.png are intentionally excluded from before/after equality.",
+      "Unchanged PNG equality verifies all other figure appearances; byte equality is not required for rebuilt figure PDFs whose metadata may change."
+    ]
+  },
+  "independent_numerical_audit": {
+    "status": "passed",
+    "created_utc": "2026-09-05T19:27:44.345772+00:00",
+    "scope": "Independent algebra; no project model/calibration functions imported. Production unchanged.",
+    "rows_audited": 5368,
+    "direct_root_samples": 40,
+    "frontiers_audited": 88,
+    "thresholds_audited": 176,
+    "independent_max_errors": {
+      "omega": 2.441935542663032e-12,
+      "Y0": 1.0331291377951857e-11,
+      "tau_national": 5.579714468240127e-11,
+      "Y1": 1.4694023775518872e-11,
+      "restored_output_relative": 1.4102052858788738e-12,
+      "foc_reform": 6.31311513482613e-11,
+      "foc_compensated": 6.235204193238975e-11,
+      "frozen_A_req_pp": 2.7000623958883807e-11,
+      "direct_root_A_req_pp": 9.534595335480844e-11,
+      "direct_root_NF": 1.4396261960314405e-12,
+      "frontier_min_A_req_pp": 9.685585666829866e-11,
+      "frontier_min_relief": 0.0,
+      "threshold_relief": 1.3435974555164876e-11,
+      "threshold_output_relative": 5.355715870791755e-13
+    },
+    "baseline_invariants": {
+      "omega": true,
+      "Y0": true,
+      "tau_national": true,
+      "pi_national": true,
+      "baseline_NF": true,
+      "NF_init": true,
+      "gamma_F": true,
+      "hourly_ratio_target": true,
+      "baseline_operator_h0": true
+    },
+    "frozen_invariant": true,
+    "tau_shock_max_error": 0.0,
+    "canonical_anchor_errors": {
+      "40": {
+        "Y0": 0.0,
+        "Y1": 0.0,
+        "dY_pct": 0.0,
+        "A_req_pct": 0.0,
+        "A_req_frozen_pct": 0.0,
+        "informality_pct": 0.0,
+        "dInf_pp": 0.0
+      },
+      "36": {
+        "Y0": 0.0,
+        "Y1": 0.0,
+        "dY_pct": 0.0,
+        "A_req_pct": 0.0,
+        "A_req_frozen_pct": 0.0,
+        "informality_pct": 0.0,
+        "dInf_pp": 0.0
+      }
+    },
+    "frontier_status_counts": {
+      "40": {
+        "0": {
+          "unattainable_on_0_1": 2,
+          "attainable": 42
+        },
+        "1": {
+          "attainable": 44
+        }
+      },
+      "36": {
+        "0": {
+          "unattainable_on_0_1": 44
+        },
+        "1": {
+          "unattainable_on_0_1": 44
+        }
+      }
+    },
+    "frontier_issues": [],
+    "central": {
+      "40": {
+        "no_relief_A_req_pct": 1.5725760814721212,
+        "full_relief_A_req_pct": -1.9337353421925219,
+        "thresholds": {
+          "0": {
+            "relief_pct": 23.52959445719098
+          },
+          "1": {
+            "relief_pct": 7.764032401142153
+          }
+        }
+      },
+      "36": {
+        "no_relief_A_req_pct": 8.381260761027454,
+        "full_relief_A_req_pct": 4.621061386933323,
+        "thresholds": {
+          "0": {
+            "attainable": false
+          },
+          "1": {
+            "attainable": false
+          }
+        }
+      }
+    },
+    "samples": [
+      {
+        "sigma": 0.4,
+        "cap": 40.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 1.3412822938431157,
+        "recorded_A_req_pct": 1.3412822938430935
+      },
+      {
+        "sigma": 0.4,
+        "cap": 40.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 0.8049274255510275,
+        "recorded_A_req_pct": 0.8049274255510053
+      },
+      {
+        "sigma": 0.4,
+        "cap": 40.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": 0.44823480579667674,
+        "recorded_A_req_pct": 0.44823480579667674
+      },
+      {
+        "sigma": 0.4,
+        "cap": 40.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": 0.24880744477138172,
+        "recorded_A_req_pct": 0.24880744479698347
+      },
+      {
+        "sigma": 0.4,
+        "cap": 40.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": 0.18625812861403634,
+        "recorded_A_req_pct": 0.18625812859141
+      },
+      {
+        "sigma": 0.4,
+        "cap": 36.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 7.237445203423598,
+        "recorded_A_req_pct": 7.237445203423554
+      },
+      {
+        "sigma": 0.4,
+        "cap": 36.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 6.669503159062873,
+        "recorded_A_req_pct": 6.669503159062873
+      },
+      {
+        "sigma": 0.4,
+        "cap": 36.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": 6.295151102191787,
+        "recorded_A_req_pct": 6.295151102191809
+      },
+      {
+        "sigma": 0.4,
+        "cap": 36.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": 6.0875025869394195,
+        "recorded_A_req_pct": 6.0875025869393085
+      },
+      {
+        "sigma": 0.4,
+        "cap": 36.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": 6.0227495628604855,
+        "recorded_A_req_pct": 6.02274956286033
+      },
+      {
+        "sigma": 1.0,
+        "cap": 40.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 1.4954774362173184,
+        "recorded_A_req_pct": 1.4954774362125223
+      },
+      {
+        "sigma": 1.0,
+        "cap": 40.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 0.21623047353538372,
+        "recorded_A_req_pct": 0.21623047357937075
+      },
+      {
+        "sigma": 1.0,
+        "cap": 40.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": -0.6348385817680935,
+        "recorded_A_req_pct": -0.6348385816925983
+      },
+      {
+        "sigma": 1.0,
+        "cap": 40.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": -1.0970968927451974,
+        "recorded_A_req_pct": -1.0970968926522717
+      },
+      {
+        "sigma": 1.0,
+        "cap": 40.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": -1.236039037126524,
+        "recorded_A_req_pct": -1.236039037031178
+      },
+      {
+        "sigma": 1.0,
+        "cap": 36.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 7.99586828279617,
+        "recorded_A_req_pct": 7.995868282765262
+      },
+      {
+        "sigma": 1.0,
+        "cap": 36.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 6.634690524208997,
+        "recorded_A_req_pct": 6.634690524234355
+      },
+      {
+        "sigma": 1.0,
+        "cap": 36.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": 5.729113803769681,
+        "recorded_A_req_pct": 5.729113803828456
+      },
+      {
+        "sigma": 1.0,
+        "cap": 36.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": 5.237249644641384,
+        "recorded_A_req_pct": 5.237249644714903
+      },
+      {
+        "sigma": 1.0,
+        "cap": 36.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": 5.0894087959334255,
+        "recorded_A_req_pct": 5.089408796016004
+      },
+      {
+        "sigma": 1.326,
+        "cap": 40.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 1.5725760814721212,
+        "recorded_A_req_pct": 1.5725760814771839
+      },
+      {
+        "sigma": 1.326,
+        "cap": 40.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": -0.08190309902322834,
+        "recorded_A_req_pct": -0.08190309902322834
+      },
+      {
+        "sigma": 1.326,
+        "cap": 40.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": -1.1798780372725748,
+        "recorded_A_req_pct": -1.1798780372692774
+      },
+      {
+        "sigma": 1.326,
+        "cap": 40.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": -1.7635695114864514,
+        "recorded_A_req_pct": -1.7635695114864736
+      },
+      {
+        "sigma": 1.326,
+        "cap": 40.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": -1.9337353421925219,
+        "recorded_A_req_pct": -1.9337353421925885
+      },
+      {
+        "sigma": 1.326,
+        "cap": 36.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 8.381260761027454,
+        "recorded_A_req_pct": 8.381260761025477
+      },
+      {
+        "sigma": 1.326,
+        "cap": 36.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 6.616726774650994,
+        "recorded_A_req_pct": 6.616726774650594
+      },
+      {
+        "sigma": 1.326,
+        "cap": 36.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": 5.43739026312029,
+        "recorded_A_req_pct": 5.437390263120245
+      },
+      {
+        "sigma": 1.326,
+        "cap": 36.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": 4.806073610089445,
+        "recorded_A_req_pct": 4.806073610085004
+      },
+      {
+        "sigma": 1.326,
+        "cap": 36.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": 4.621061386933323,
+        "recorded_A_req_pct": 4.621061386933301
+      },
+      {
+        "sigma": 2.5,
+        "cap": 40.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 1.8176555360150504,
+        "recorded_A_req_pct": 1.8176555360155833
+      },
+      {
+        "sigma": 2.5,
+        "cap": 40.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": -1.0442737444711359,
+        "recorded_A_req_pct": -1.0442737445088834
+      },
+      {
+        "sigma": 2.5,
+        "cap": 40.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": -2.9032704704686774,
+        "recorded_A_req_pct": -2.903270470471342
+      },
+      {
+        "sigma": 2.5,
+        "cap": 40.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": -3.7917462601033236,
+        "recorded_A_req_pct": -3.7917462601017915
+      },
+      {
+        "sigma": 2.5,
+        "cap": 40.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": -4.01556576803036,
+        "recorded_A_req_pct": -4.0155657680303385
+      },
+      {
+        "sigma": 2.5,
+        "cap": 36.0,
+        "relief": 0.0,
+        "oracle_A_req_pct": 9.631532645574836,
+        "recorded_A_req_pct": 9.631532645574836
+      },
+      {
+        "sigma": 2.5,
+        "cap": 36.0,
+        "relief": 0.25,
+        "oracle_A_req_pct": 6.556817517555635,
+        "recorded_A_req_pct": 6.556817517555857
+      },
+      {
+        "sigma": 2.5,
+        "cap": 36.0,
+        "relief": 0.5,
+        "oracle_A_req_pct": 4.473517511449132,
+        "recorded_A_req_pct": 4.4735175114492876
+      },
+      {
+        "sigma": 2.5,
+        "cap": 36.0,
+        "relief": 0.75,
+        "oracle_A_req_pct": 3.4317368598269615,
+        "recorded_A_req_pct": 3.431736859827006
+      },
+      {
+        "sigma": 2.5,
+        "cap": 36.0,
+        "relief": 1.0,
+        "oracle_A_req_pct": 3.1605410378026777,
+        "recorded_A_req_pct": 3.1605410378026777
+      }
+    ],
+    "source_sha256": {
+      "replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\INPUTS.json": "9ec7db798c7e831d2a74fe2cb063b536648941fe47a506b8d2e39106e4c317cb",
+      "replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\BRIDGE.json": "0c831247d3df3f1ea3288594ab0716ec61920e46f0981b455ae8385153c33e1b",
+      "replication_package\\output\\runs\\20260905_005724_846373\\national_empirical_topcode44\\RESULTS.csv": "2c801e5f2bb61f05ffe1fe556977b5f57982f8bdae08f792a9ba1135f71a09b5",
+      "PAPER\\.build_paper\\transition_panels\\transition_map.csv": "6144d8ec14bd3f460da0c9cddaa16688aeac280481c57a995972a8ca3ba0f4a6",
+      "PAPER\\.build_paper\\transition_panels\\transition_map_checks.json": "fa9754f5ab01a8f7226f9c7cc78c0bd89faf9a615f2530ace21d6011049845f7",
+      "PAPER\\scripts\\transition_experiments.py": "21a895cc730935fb699dfea940c13c1d451d3baecc5ac3b8d236ae1874338564"
+    }
+  },
+  "pdf_checks": {
+    "main": {
+      "pages": 26,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 53741
+    },
+    "online_appendix_pt": {
+      "pages": 23,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 45720
+    },
+    "folha_rosto": {
+      "pages": 2,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 4263
+    }
+  },
+  "build_manifest_sha256": "80978d527b10dc022ca9418a4b1bef7ed0cbb5ea5a9008b82a77eba55a652dea",
+  "asset_manifest_sha256": "6ac9536164c48f25af5f28963477e65131b9b1100c5061b7690700b83e05db4e",
+  "visual_review_sha256": "57b9207129cfcd66fc6b35e5370da8115b1d71267cf10ab1afed02e96894da89"
+}

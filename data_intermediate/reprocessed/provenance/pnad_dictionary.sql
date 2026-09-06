@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados.br_ibge_pnadc.dicionario` WHERE UPPER(nome_coluna) IN ('VD4002','VD4009','V4019','V4017','V4018','V40183','V4039','V4039C','V1028') ORDER BY nome_coluna,chave

@@ -55,7 +55,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(labels, fontsize=11)
 set_axis_style(
     ax,
-    title="Required TFP Gain by Sector (conservative symmetric calibration)",
+    title="Required TFP Gain by Sector (two-sided penalty calibration)",
     xlabel=None,
     ylabel=r"Sector-specific $A_{req}$ (%)",
 )

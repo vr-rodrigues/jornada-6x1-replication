@@ -10,6 +10,8 @@
 \usepackage{multirow}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{ragged2e}
+\Urlmuskip=0mu plus 1mu\relax
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
@@ -27,9 +29,9 @@
 
 % === Metadata ===
 \title{Ap\^endice Online de\\
-``Quanto de produtividade precisamos para reduzir a jornada de trabalho?''}
+``Nota de Pol\'itica P\'ublica: Quanto de produtividade precisamos para reduzir a jornada de trabalho?''}
 \author{Victor Rangel\thanks{Insper. E-mail: \texttt{victorr@insper.edu.br}.}}
-\date{Mar\c{c}o de 2026}
+\date{Abril de 2026}
 
 \begin{document}
 
@@ -42,21 +44,50 @@ Este ap\^endice online re\'une fontes de dados, omiss\~oes do equil\'ibrio parci
 
 \section{Fontes de dados}\label{app:data}
 
-Todos os dados prov\^em de fontes p\'ublicas. PNAD Cont\'inua (IBGE/SIDRA), tabelas 4093, 4097, 6374 e 6413 (trimestrais, 2023--2025), fornece taxa de informalidade, posi\c{c}\~ao na ocupa\c{c}\~ao, horas m\'edias, distribui\c{c}\~ao por tamanho de firma e o peso CES formal $\omega=0{,}622$ ($1$ menos a informalidade restrita PNAD 2025). RAIS/CAGED (Minist\'erio do Trabalho) fornece registros administrativos anuais do emprego formal, usados para distribui\c{c}\~ao por tamanho de firma e parcelas formal/informal. A Penn World Table 10.01 fornece a parcela do trabalho para o Brasil ($\text{labsh}=0{,}578$), ajustada via \citet{Gollin2002} para $\alpha=0{,}35$. DIEESE (2024) fornece a distribui\c{c}\~ao de horas na for\c{c}a de trabalho formal, $\theta=(0{,}085,\,0{,}269,\,0{,}646)$ para os bins $\{36,\,40,\,44\}$. Um exerc\'icio de auditoria no pacote de replica\c{c}\~ao verifica que os momentos n\~ao targeteados no texto principal n\~ao s\~ao consequ\^encias alg\'ebricas da calibra\c{c}\~ao.
+Todos os dados prov\^em de fontes p\'ublicas. PNAD Cont\'inua (IBGE/SIDRA), tabelas 4093, 4097, 6374, 6389 e 6413, fornece taxa de informalidade, posi\c{c}\~ao na ocupa\c{c}\~ao, horas m\'edias, rendimentos publicados por par formal/informal, distribui\c{c}\~ao por tamanho de firma e o peso CES formal $\omega=0{,}622$ \citep{PNAD2025}. O pacote congela as chamadas SIDRA em \texttt{data\_intermediate/pnad\_targets.json} e \texttt{data\_raw/sidra/pnadcm\_6389\_wage\_by\_position\_last.json}. RAIS/CAGED fornece registros administrativos do emprego formal, usados para distribui\c{c}\~ao por tamanho de firma e parcelas de emprego formal \citep{RAIS2022}. Como o pacote n\~ao chama uma API p\'ublica da RAIS, as parcelas derivadas da RAIS ficam documentadas em \texttt{data\_intermediate/rais\_targets.json}. A PWT fornece a evid\^encia de participa\c{c}\~ao do trabalho ajustada via \citet{Gollin2002} para $\alpha=0{,}35$. A \^ancora hist\'orica de PTF usa PWT 11.0 via a s\'erie FRED \texttt{RTFPNABRA632NRUG}, que estende a s\'erie brasileira \texttt{rtfpna} at\'e 2023 \citep{PWT2025,FREDPWTBrazil2026}. O insumo FRED fica congelado em \texttt{data\_raw/fred/RTFPNABRA632NRUG\_pwt110.csv}. O DIEESE fornece categorias de horas contratadas que o modelo mapeia para $\theta=(0{,}085,\,0{,}269,\,0{,}646)$ nos bins $\{36,\,40,\,44\}$ \citep{DIEESE2024}. O mapeamento atribui a categoria DIEESE $\leq 39$h ao bin de 36h, mant\'em a categoria 40h e atribui a categoria $\geq 41$h ao bin de 44h. Um exerc\'icio de auditoria no pacote de replica\c{c}\~ao verifica que os momentos n\~ao targeteados no texto principal n\~ao s\~ao consequ\^encias alg\'ebricas da calibra\c{c}\~ao.
 
 \clearpage
 \section{O que o equil\'ibrio parcial omite}\label{app:pe_omits}
 
 O arcabou\c{c}o est\'atico de equil\'ibrio parcial exclui sete canais de equil\'ibrio geral. A acumula\c{c}\~ao de capital responde \`a menor produtividade marginal do capital ap\'os a contra\c{c}\~ao do trabalho efetivo. Sal\'arios e pre\c{c}os ajustam-se em equil\'ibrio geral, restaurando parcialmente a demanda por trabalho formal. A participa\c{c}\~ao na for\c{c}a de trabalho pode subir com o lazer. Autoridades monet\'aria e fiscal podem acomodar. Trabalhadores podem realocar-se entre setores. A decis\~ao de formalidade pode mover-se em qualquer dire\c{c}\~ao. A partilha de trabalho \'e desligada pela hip\'otese de $N$ fixo. Todos os sete canais exceto o \'ultimo t\^em sinal esperado negativo sobre $A_{\text{req}}$.
 
-Um bound textbook sobre o canal do capital d\'a a ordem de magnitude. Com elasticidade de custo de uso $\varepsilon_K\in[0{,}2,\,0{,}4]$ \citep{Caballero1999} e parcela de capital $\alpha=0{,}35$, em horizonte de $3$--$5$ anos o $A_{\text{req}}$ efetivo sob a especifica\c{c}\~ao conservadora cai de $8{,}18\%$ para $6{,}4\%$--$7{,}2\%$, e sob a preferida para $4{,}8\%$--$5{,}6\%$. Os seis canais restantes s\~ao pequenos individualmente e de sinal misto. Os n\'umeros centrais devem ser lidos como limites superiores de curto prazo sobre o ganho de PTF necess\'ario. O horizonte de $1$--$2$ anos do modelo n\~ao \'e o mesmo que os 30 anos da s\'erie PWT usada como \^ancora. A \^ancora \'e lida como o ganho cumulativo de PTF necess\'ario ao longo do per\'iodo de implementa\c{c}\~ao faseada de $3$--$10$ anos.
+\begin{table}[htbp]
+\centering
+\caption{Canais modelados, bracketeados e omitidos em torno do benchmark principal.}\label{tab:omitted_channels}
+\small
+\begin{tabular}{@{}p{3.0cm}p{2.5cm}p{2.2cm}p{3.0cm}p{1.9cm}@{}}
+\hline\hline
+Canal & Sinal esperado & Horizonte & Objeto afetado & Status \\
+\hline
+Substitui\c{c}\~ao formal-informal & $+$ sobre informalidade; resultado l\'iquido no modelo & Curto prazo & $A_{\text{req}}$, informalidade, incid\^encia & modelado \\
+Ajuste de capital & $-$ sobre $A_{\text{req}}$ & 3--5 anos & $A_{\text{req}}$, neutralidade em produto & bracketeado \\
+Perdas de coordena\c{c}\~ao abaixo de 40h & $+$ sobre $A_{\text{req}}$ & Curto prazo & $A_{\text{req}}$, produto & bracketeado \\
+Compliance, evas\~ao, PJ/MEI & $\pm$ & Imediato a curto prazo & Incid\^encia e alcance efetivo & discutido \\
+Horas extras e escala & $\pm$ & Imediato a curto prazo & Produto, custos trabalhistas & discutido \\
+Barganha salarial e pre\c{c}os & $\pm$ & Curto a m\'edio prazo & Incid\^encia, demanda formal & discutido \\
+Oferta de trabalho e partilha & em geral $-$ sobre $A_{\text{req}}$; bem-estar $\pm$ & M\'edio prazo & Produto, bem-estar, emprego & discutido \\
+Realoca\c{c}\~ao setorial e liga\c{c}\~oes insumo-produto & $\pm$ & M\'edio prazo & $A_{\text{req}}$ setorial e agregado & modelado parcialmente \\
+\hline\hline
+\end{tabular}
+\\[2pt]
+\begin{minipage}{0.95\textwidth}
+\justifying
+{\footnotesize \textit{Notas:} O sinal indica a dire\c{c}\~ao esperada para o ganho efetivo de produtividade requerido ou para a margem de incid\^encia afetada, mantendo fixo o teto legal. O status distingue canais dentro do modelo quantitativo, canais com limite expl\'icito e canais apenas discutidos qualitativamente.}
+\end{minipage}
+\end{table}
+
+O teste de estresse pessimista permite que a PTF p\'os-reforma caia por $\delta$ antes de calcular o ganho de produtividade necess\'ario para restaurar o produto. Ele n\~ao \'e previs\~ao de disrup\c{c}\~ao; \'e uma checagem para o caso em que reorganiza\c{c}\~ao, compliance ou perdas de aprendizado tornam a transi\c{c}\~ao temporariamente menos produtiva.
+
+\input{tab_stress_test_pt_autogen}
+
+Um limite simples sobre o canal do capital d\'a a ordem de magnitude. Com elasticidade de custo de uso $\varepsilon_K\in[0{,}2,\,0{,}4]$ \citep{Caballero1999} e parcela de capital $\alpha=0{,}35$, em horizonte de $3$ a $5$ anos o $A_{\text{req}}$ efetivo sob penalidade bilateral cai de $8{,}18\%$ para algo entre $6{,}4\%$ e $7{,}2\%$, e sob fadiga s\'o acima de 40h para algo entre $4{,}8\%$ e $5{,}6\%$. Os seis canais restantes s\~ao pequenos individualmente e de sinal misto. Os n\'umeros centrais devem ser lidos como limites superiores de curto prazo sobre o ganho de PTF necess\'ario. O horizonte de $1$ a $2$ anos do modelo n\~ao \'e o mesmo que a janela hist\'orica PWT usada como \^ancora. A \^ancora \'e lida como o ganho cumulativo de PTF necess\'ario ao longo do per\'iodo de implementa\c{c}\~ao faseada de $3$ a $10$ anos.
 
 \clearpage
 \section{Detalhes da calibra\c{c}\~ao}\label{app:calibration_details}
 
 \subsection{Elasticidade horas--produto e forma da efici\^encia}
 
-A evid\^encia de Pencavel documenta produtividade marginal decrescente de horas em jornadas longas para um setor industrial espec\'ifico. \citet{CollewetSauermann2017} encontram perdas an\'alogas em horas longas em um painel holand\^es de call-center. \citet{BickFuchsSchundelnLagakos2018} trazem evid\^encia transnacional consistente com produtividade marginal decrescente de horas, embora seu foco primordial seja a rela\c{c}\~ao entre horas e renda. Nenhum dos tr\^es trabalhos identifica uma localiza\c{c}\~ao precisa do pico nem uma resposta de efici\^encia abaixo do pico. A escolha de colocar o pico em $h^*=40$ e comparar uma especifica\c{c}\~ao preferida flat-below (sem penalidade para horas menores) com uma conservadora sim\'etrica (curvatura igual em ambos os lados) \'e uma escolha de modelagem informada por essa literatura, e n\~ao uma estimativa direta dela. A Se\c{c}\~ao~\ref{app:asymmetric} reporta quatro formas alternativas.
+A evid\^encia de Pencavel documenta produtividade marginal decrescente de horas em jornadas longas para um setor industrial espec\'ifico. \citet{CollewetSauermann2017} encontram perdas an\'alogas em horas longas em um painel holand\^es de call-center. \citet{BickFuchsSchundelnLagakos2018} trazem evid\^encia transnacional consistente com produtividade marginal decrescente de horas, embora seu foco primordial seja a rela\c{c}\~ao entre horas e renda. Nenhum dos tr\^es trabalhos identifica uma localiza\c{c}\~ao precisa do pico nem uma resposta de efici\^encia abaixo do pico. A escolha de colocar o pico em $h^*=40$ e comparar a especifica\c{c}\~ao de fadiga s\'o acima de 40h com a especifica\c{c}\~ao de penalidade bilateral \'e uma escolha de modelagem informada por essa literatura, e n\~ao uma estimativa direta dela. A robustez abaixo compara quatro formas alternativas.
 
 \subsection{Efici\^encia informal e custos de ajuste}
 
@@ -64,47 +95,52 @@ A efici\^encia informal $\eta_I=0{,}40$ \'e fixada no ponto m\'edio da raz\~ao s
 
 \subsection{Reconcilia\c{c}\~ao com elasticidades de substitui\c{c}\~ao maiores}\label{app:sigma_discussion}
 
-Estudos de crise de refugiados reportam elasticidades de substitui\c{c}\~ao entre tipos de trabalhadores de $\sigma\approx 11$--$30$ \citep{OttavianoPeri2012, BaharDiTellaGulek2025}. Essas magnitudes n\~ao s\~ao diretamente compar\'aveis a $\sigma_{\text{sub}}$ como definido aqui por tr\^es raz\~oes. A margem difere. Estudos de refugiados medem substitui\c{c}\~ao entre trabalhadores de origens diferentes em equil\'ibrio, enquanto $\sigma_{\text{sub}}$ captura substitui\c{c}\~ao intrafirma entre regimes de emprego formal e informal. O horizonte difere. Estudos de refugiados identificam respostas de m\'edio prazo que incluem entrada de firmas e realoca\c{c}\~ao organizacional, enquanto este modelo mant\'em a distribui\c{c}\~ao de firmas fixa. A unidade difere. Estudos de refugiados incluem trabalhadores aut\^onomos, enquanto este agregador trata de emprego assalariado. Modelos DSGE de informalidade \citep{LeyvaUrrutia2020, McKiernan2021} tamb\'em usam par\^ametros $\sigma$ que governam mobilidade setorial em vez de substitui\c{c}\~ao intrafirma. Em \citet{Ulyssea2018}, trabalhadores formais e informais s\~ao substitutos perfeitos dentro da firma, com diferen\c{c}as de produtividade capturadas inteiramente pela distribui\c{c}\~ao de tipos de firmas. A calibra\c{c}\~ao $\sigma=1{,}326$ pode ser lida como uma decomposi\c{c}\~ao param\'etrica que atribui parte do gap de produtividade formal--informal a $\eta_I=0{,}40$ e parte a $\sigma>1$ (substitutos imperfeitos mas n\~ao complementos), ambos disciplinados pelo pr\^emio salarial observado.
+Estudos de crise de refugiados reportam elasticidades de substitui\c{c}\~ao entre tipos de trabalhadores de $\sigma\approx 11$ a $30$ \citep{OttavianoPeri2012, BaharDiTellaGulek2025}. Essas magnitudes n\~ao s\~ao diretamente compar\'aveis a $\sigma_{\text{sub}}$ como definido aqui. Estudos de refugiados medem substitui\c{c}\~ao entre trabalhadores de origens diferentes em equil\'ibrio. Aqui, $\sigma_{\text{sub}}$ captura substitui\c{c}\~ao intrafirma entre regimes de emprego formal e informal. O horizonte tamb\'em difere, j\'a que estudos de refugiados identificam respostas de m\'edio prazo que incluem entrada de firmas e realoca\c{c}\~ao organizacional, enquanto este modelo mant\'em a distribui\c{c}\~ao de firmas fixa. A unidade difere porque estudos de refugiados incluem trabalhadores aut\^onomos, enquanto este agregador trata de emprego assalariado. Modelos DSGE de informalidade \citep{LeyvaUrrutia2020, McKiernan2021} tamb\'em usam par\^ametros $\sigma$ que governam mobilidade setorial em vez de substitui\c{c}\~ao intrafirma. Em \citet{Ulyssea2018}, trabalhadores formais e informais s\~ao substitutos perfeitos dentro da firma, com diferen\c{c}as de produtividade capturadas inteiramente pela distribui\c{c}\~ao de tipos de firmas. A calibra\c{c}\~ao $\sigma=1{,}326$ pode ser lida como uma decomposi\c{c}\~ao param\'etrica que atribui parte do gap de produtividade formal-informal a $\eta_I=0{,}40$ e parte a $\sigma>1$, ambos disciplinados pelo pr\^emio salarial observado.
 
 \subsection{Disciplinando $\sigma_{\text{sub}}$: resultados completos}
 
-Para cada $\sigma$ em grade $[0{,}40,\,3{,}00]$, recalibra-se o modelo completo e calcula-se o pr\^emio salarial formal--informal implicado pela CPO do CES,
+Para cada $\sigma$ em grade $[0{,}40,\,3{,}00]$, recalibra-se o modelo completo e calcula-se o pr\^emio salarial formal-informal implicado pela CPO do CES,
 \[
 R(\sigma)=\frac{\omega}{1-\omega}\cdot\left(\frac{L_F}{L_I}\right)^{\rho-1}\cdot z,
 \]
-onde $z=\text{eff}_{hF}/(\eta_I h_I e(h_I))$. O mapeamento \'e mon\'otono decrescente em $\sigma$. Fixando $R\in[1{,}15,\,1{,}55]$ obt\'em-se $\sigma\in[1{,}116,\,1{,}469]$ e o $A_{\text{req}}\in[7{,}60\%,\,8{,}70\%]$ conservador. Corbi-Ferraz-Narita (2024) e \citet{DerenoncourtGerardLagosMontialoux2025} encontram elasticidades de realoca\c{c}\~ao pequenas consistentes com essa faixa.
+onde $z=\text{eff}_{hF}/(\eta_I h_I e(h_I))$. O mapeamento \'e mon\'otono em $\sigma$. No recalibrado $(\omega,\eta_I)=(0{,}622,\,0{,}40)$, fixar $R\in[1{,}15,\,1{,}55]$ entrega $\sigma\in[1{,}116,\,1{,}469]$ e o $A_{\text{req}}\in[7{,}50\%,\,8{,}58\%]$ sob penalidade bilateral na caixa central. O envelope completo da caixa $(\sigma,\omega,\eta_I)$ \'e $[6{,}93\%,\,9{,}23\%]$. \citet{DerenoncourtGerardLagosMontialoux2025} encontram elasticidade de realoca\c{c}\~ao formal-informal pequena, consistente com o $\sigma$ intrafirma modesto usado no artigo.
+
+A ponte salarial compara rendimentos PNAD publicados com a janela de pr\^emio salarial MNR. Essas raz\~oes n\~ao s\~ao usadas como estimativas controladas do pr\^emio formal. Elas verificam se os pares de empregados privados e trabalhadores dom\'esticos colocam gaps atuais de rendimentos formal/informal pr\'oximos da janela estrutural usada para disciplinar $\sigma_{\text{sub}}$. Aut\^onomos e empregadores aparecem como contexto, mas n\~ao identificam o par\^ametro porque seus rendimentos misturam trabalho, capital, escala e composi\c{c}\~ao de clientes.
+
+\input{tab_wage_premium_bridge_pt_autogen}
 
 \clearpage
 \section{Sensibilidade}\label{app:sensitivity}
 
-A Tabela~\ref{tab:sensitivity_univariate} reporta $A_{\text{req}}$ sob varia\c{c}\~ao univariada de cada par\^ametro dentro de faixas economicamente disciplinadas. Tr\^es par\^ametros carregam o peso, $\sigma$, $\omega$ e $\eta_I$. Os demais primitivos deslocam $A_{\text{req}}$ em no m\'aximo $\pm 0{,}3$ p.p. A Tabela~\ref{tab:heatmap} reporta a grade completa $(\sigma,\omega)$. O resultado qualitativo de que $A_{\text{req}}$ excede $4\%$ em todas as combina\c{c}\~oes da grade \'e plenamente robusto.
+A an\'alise de sensibilidade varia cada par\^ametro dentro de faixas economicamente disciplinadas. Tr\^es par\^ametros carregam a maior parte da varia\c{c}\~ao em $A_{\text{req}}$, $\sigma$, $\omega$ e $\eta_I$. Os demais primitivos deslocam $A_{\text{req}}$ em no m\'aximo $\pm 0{,}3$ p.p. A grade completa $(\sigma,\omega)$ preserva o resultado qualitativo, com $A_{\text{req}}$ acima de $4\%$ em todas as combina\c{c}\~oes.
 
 \begin{table}[htbp]
 \centering
-\caption{Sensibilidade univariada dentro de faixas economicamente disciplinadas (conservadora).}\label{tab:sensitivity_univariate}
+\caption{Sensibilidade univariada dentro de faixas economicamente disciplinadas (penalidade bilateral).}\label{tab:sensitivity_univariate}
 \small
 \begin{tabular}{llrl}
 \hline\hline
 Par\^ametro & Faixa disciplinada & Faixa de $A_{\text{req}}$ & Hierarquia \\
 \hline
-$\sigma_{\text{sub}}$ & $[1{,}12,\,1{,}47]$ & $[7{,}60\%,\,8{,}70\%]$ & Alta (load-bearing) \\
-$\omega$ & $[0{,}58,\,0{,}66]$ & $[7{,}45\%,\,8{,}72\%]$ & Alta \\
-$\eta_I$ & $[0{,}33,\,0{,}50]$ & $[7{,}55\%,\,8{,}55\%]$ & Moderada \\
-$\alpha$ & $[0{,}30,\,0{,}40]$ & $[7{,}55\%,\,8{,}85\%]$ & Moderada \\
-$e_q$ & $[0{,}40,\,0{,}80]$ & $[7{,}95\%,\,8{,}41\%]$ & Baixa \\
-$h_I$ & $[38,\,46]$ & $[8{,}00\%,\,8{,}24\%]$ & Baixa \\
-$\nu$ & $[1{,}0,\,3{,}0]$ & $\Delta$CV: $[-3{,}80\%,\,-3{,}55\%]$ & Baixa (apenas bem-estar) \\
+$\sigma_{\text{sub}}$ & $[1{,}116,\,1{,}469]$ & $[7{,}50\%,\,8{,}58\%]$ & Alta (load-bearing) \\
+$\omega$ & $[0{,}58,\,0{,}66]$ & $[7{,}65\%,\,8{,}65\%]$ & Alta \\
+$\eta_I$ & $[0{,}33,\,0{,}50]$ & $[8{,}02\%,\,8{,}32\%]$ & Moderada \\
+$\alpha$ & $[0{,}30,\,0{,}40]$ & $[7{,}3\%,\,8{,}5\%]$ & Moderada \\
+$e_q$ & $[0{,}40,\,0{,}80]$ & $[7{,}8\%,\,8{,}1\%]$ & Baixa \\
+$h_I$ & $[38,\,46]$ & $[7{,}9\%,\,8{,}1\%]$ & Baixa \\
+$\nu$ & $[1{,}0,\,3{,}0]$ & $\Delta$CV: $[-3{,}4\%,\,-3{,}3\%]$ & Baixa (apenas bem-estar) \\
 \hline\hline
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.95\textwidth}
-{\footnotesize \textit{Notas:} Cada linha varia um par\^ametro dentro de sua faixa consistente com os dados e mant\'em os demais no baseline. ``Faixa disciplinada'' \'e o intervalo derivado de evid\^encia externa (Se\c{c}\~ao~\ref{app:calibration_details}). ``Faixa de $A_{\text{req}}$'' \'e o intervalo implicado para o ganho requerido de PTF sob a especifica\c{c}\~ao conservadora de $e(h)$ no teto $44\to 36$h. ``Hierarquia'' classifica cada par\^ametro pela amplitude de seu intervalo de $A_{\text{req}}$.}
+\justifying
+{\footnotesize \textit{Notas:} Cada linha varia um par\^ametro dentro de sua faixa consistente com os dados e mant\'em os demais no baseline. ``Faixa disciplinada'' \'e o intervalo derivado de evid\^encia externa (Se\c{c}\~ao~\ref{app:calibration_details}). ``Faixa de $A_{\text{req}}$'' \'e o intervalo implicado para o ganho requerido de PTF sob penalidade bilateral de $e(h)$ no teto $44\to 36$h. ``Hierarquia'' classifica cada par\^ametro pela amplitude de seu intervalo de $A_{\text{req}}$.}
 \end{minipage}
 \end{table}
 
 \begin{table}[htbp]
 \centering
-\caption{$A_{\text{req}}$ (\%) por $\sigma$ e $\omega$ em $\eta_I=0{,}40$ (conservadora).}\label{tab:heatmap}
+\caption{$A_{\text{req}}$ (\%) por $\sigma$ e $\omega$ em $\eta_I=0{,}40$ (penalidade bilateral).}\label{tab:heatmap}
 \small
 \begin{tabular}{r|rrr}
 \hline\hline
@@ -117,16 +153,21 @@ $\sigma$ \textbackslash{} $\omega$ & 0{,}58 & 0{,}622 & 0{,}66 \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.80\textwidth}
-{\footnotesize \textit{Notas:} Cada c\'elula \'e o ganho requerido de PTF (\%) no teto $44\to 36$h sob a especifica\c{c}\~ao conservadora sim\'etrica de $e(h)$, para o par $(\sigma,\omega)$ indicado e com os demais par\^ametros no baseline. A linha em negrito $\sigma=1{,}326$ \'e o valor central calibrado. O intervalo consistente com MNR \'e $[1{,}116,\,1{,}469]$.}
+\justifying
+{\footnotesize \textit{Notas:} Cada c\'elula \'e o ganho requerido de PTF (\%) no teto $44\to 36$h sob a especifica\c{c}\~ao de penalidade bilateral de $e(h)$, para o par $(\sigma,\omega)$ indicado e com os demais par\^ametros no baseline. A linha em negrito $\sigma=1{,}326$ \'e o valor central calibrado. O intervalo consistente com MNR \'e $[1{,}116,\,1{,}469]$.}
 \end{minipage}
 \end{table}
+
+O envelope expl\'icito de oito cantos cobre ambas as especifica\c{c}\~oes. Os cantos combinam $\sigma\in\{1{,}116,1{,}469\}$, $\omega\in\{0{,}58,0{,}66\}$ e $\eta_I\in\{0{,}33,0{,}50\}$. A tabela \'e gerada dos arquivos JSON de valida\c{c}\~ao do pacote de replica\c{c}\~ao.
+
+\input{tab_envelope_corners_pt_autogen}
 
 \clearpage
 \section{Decomposi\c{c}\~ao setorial}\label{app:sectoral}
 
 Esta se\c{c}\~ao aplica o arcabou\c{c}o nacional separadamente a tr\^es setores amplos (agricultura, ind\'ustria, servi\c{c}os) com par\^ametros setoriais obtidos dos microdados da PNAD Cont\'inua Q4 2024 (209{,}311 pessoas ocupadas, ponderadas pela amostra). Par\^ametros estruturais comuns ($\alpha$, $\sigma_{\text{sub}}$, $\omega$, $\kappa$, $h^*$) s\~ao preservados da calibra\c{c}\~ao nacional. Cada setor \'e tratado como inst\^ancia independente do modelo nacional. O exerc\'icio n\~ao modela mobilidade intersetorial ou rela\c{c}\~oes insumo-produto.
 
-A Tabela~\ref{tab:sectoral_params} reporta par\^ametros setoriais e as cunhas calibradas. A informalidade da agricultura \'e de $71{,}8\%$, quase o dobro da m\'edia nacional de $44{,}2\%$ sob a defini\c{c}\~ao ampla do IBGE. Ind\'ustria ($44{,}4\%$) e servi\c{c}os ($41{,}2\%$) s\~ao mais pr\'oximos da m\'edia. As cunhas calibradas variam de $\tau_s=1{,}48$ em servi\c{c}os a $\tau_s=5{,}63$ na agricultura. A cunha agr\'icola \'e comparada com as obriga\c{c}\~oes patronais FUNRURAL-SENAR-INSS de $30$--$35\%$ dos sal\'arios mais custos de enforcement ligados \`a sazonalidade \citep{LemosGalvao2020}. A magnitude \'e grande e n\~ao implaus\'ivel dada a fric\c{c}\~ao institucional alta sobre uma base formal pequena.
+Os par\^ametros setoriais deixam claro que a agricultura \'e o caso de maior informalidade. Sua taxa \'e de $71{,}8\%$, quase o dobro da m\'edia nacional de $44{,}2\%$ sob a defini\c{c}\~ao ampla do IBGE. Ind\'ustria ($44{,}4\%$) e servi\c{c}os ($41{,}2\%$) ficam mais pr\'oximos da m\'edia. As cunhas calibradas variam de $\tau_s=1{,}48$ em servi\c{c}os a $\tau_s=5{,}63$ na agricultura. Obriga\c{c}\~oes rurais sobre folha incluem contribui\c{c}\~oes previdenci\'arias patronais, contribui\c{c}\~oes de risco do trabalho e contribui\c{c}\~oes a terceiros como SENAR, com regras de reporte documentadas em orienta\c{c}\~ao oficial de folha \citep{BrasilLei8212,ReceitaESocialRural2021}. A compara\c{c}\~ao \'e qualitativa, pois $\tau_s$ \'e calibrada para casar a informalidade setorial e n\~ao imposta a partir de al\'iquotas legais.
 
 \begin{table}[htbp]
 \centering
@@ -144,10 +185,13 @@ Nacional    & 1{,}000 & 1{,}000 & 44{,}2\% & 0{,}143 & 0{,}406 & 0{,}451 & 41{,}
 \hline\hline
 \end{tabular}
 \\[2pt]
+\begin{minipage}{0.95\textwidth}
+\justifying
 {\footnotesize $\lambda_s$: parcela de emprego, PNAD Q4 2024. VAB: parcela do valor adicionado, IBGE Contas Regionais 2021. $\theta_b$: parcela de trabalhadores formais no bin $b$. Horas: V4039 (habitual). Informalidade: defini\c{c}\~ao ampla (VD4009 + V4017 CNPJ).}
+\end{minipage}
 \end{table}
 
-A Tabela~\ref{tab:sectoral_results} reporta os principais resultados setoriais. O $A_{\text{req}}$ agregado imp\~oe um multiplicador de PTF uniforme em todos os tr\^es setores e resolve por bisse\c{c}\~ao. Sob a reforma completa, a agricultura requer $A_{\text{req}}=7{,}60\%$, a ind\'ustria $8{,}05\%$ e servi\c{c}os $6{,}91\%$, com agregado de $7{,}21\%$. O $A_{\text{req}}$ da ind\'ustria supera ligeiramente o da agricultura. Com $\sigma>1$ e $\eta_I=0{,}40$, a fric\c{c}\~ao de realoca\c{c}\~ao escala com o tamanho da base formal, que \'e maior na ind\'ustria do que na agricultura. Todos os tr\^es setores v\^eem a informalidade subir em resposta \`a reforma (agricultura $+2{,}88$ p.p., ind\'ustria $+2{,}73$ p.p., servi\c{c}os $+2{,}10$ p.p.), consistente com trabalho formal--informal moderadamente substitu\'ivel.
+O $A_{\text{req}}$ agregado imp\~oe um multiplicador de PTF uniforme em todos os tr\^es setores e resolve por bisse\c{c}\~ao. Sob a reforma completa, a agricultura requer $A_{\text{req}}=7{,}60\%$, a ind\'ustria $8{,}05\%$ e servi\c{c}os $6{,}91\%$, com agregado de $7{,}21\%$. O $A_{\text{req}}$ da ind\'ustria supera ligeiramente o da agricultura. Com $\sigma>1$ e $\eta_I=0{,}40$, a fric\c{c}\~ao de realoca\c{c}\~ao escala com o tamanho da base formal, que \'e maior na ind\'ustria do que na agricultura. Todos os tr\^es setores veem a informalidade subir em resposta \`a reforma (agricultura $+2{,}88$ p.p., ind\'ustria $+2{,}73$ p.p., servi\c{c}os $+2{,}10$ p.p.), consistente com trabalho formal-informal moderadamente substitu\'ivel.
 
 \begin{table}[htbp]
 \centering
@@ -176,10 +220,11 @@ Reforma & Setor & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$Inf & Afetados & Raz\~
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.92\textwidth]{fig_sectoral_areq.pdf}
-\caption{Ganho requerido de PTF $A_{\text{req}}$ por setor sob as reformas moderada $44\to 40$h e completa $44\to 36$h, calibra\c{c}\~ao conservadora.}\label{fig:sectoral_areq}
+\caption{Ganho requerido de PTF $A_{\text{req}}$ por setor sob as reformas moderada $44\to 40$h e completa $44\to 36$h, penalidade bilateral.}\label{fig:sectoral_areq}
 \vspace{2pt}
 \begin{minipage}{0.92\textwidth}
-{\footnotesize \textit{Notas:} Valores calculados separadamente para cada setor sob a especifica\c{c}\~ao conservadora sim\'etrica de $e(h)$. Par\^ametros espec\'ificos por setor (informalidade, distribui\c{c}\~ao de horas, cunha $\tau_s$) v\^em da PNAD Cont\'inua Q4 2024. Os par\^ametros estruturais comuns ($\alpha$, $\sigma_{\text{sub}}$, $\omega$, $\kappa$, $h^*$) s\~ao mantidos nos valores nacionais.}
+\justifying
+{\footnotesize \textit{Notas:} Valores calculados separadamente para cada setor sob a especifica\c{c}\~ao de penalidade bilateral de $e(h)$. Par\^ametros espec\'ificos por setor (informalidade, distribui\c{c}\~ao de horas, cunha $\tau_s$) v\^em da PNAD Cont\'inua Q4 2024 \citep{PNAD2025}. Os par\^ametros estruturais comuns ($\alpha$, $\sigma_{\text{sub}}$, $\omega$, $\kappa$, $h^*$) s\~ao mantidos nos valores nacionais.}
 \end{minipage}
 \end{figure}
 
@@ -188,28 +233,34 @@ Os servi\c{c}os respondem por $71{,}0\%$ do produto de base implicado pelo model
 \clearpage
 \section{Bem-estar: vis\~ao por tipo}\label{app:welfare_additional}
 
-A Tabela~\ref{tab:welfare_conditional} reporta uma decomposi\c{c}\~ao por tipo do efeito de bem-estar na reforma $44\to 36$h sob a especifica\c{c}\~ao conservadora, usando parcelas da folha de pagamento CES. Trabalhadores que permanecem formais trabalham aproximadamente 6 horas semanais a menos, com perda de consumo em torno de $6\%$ e ganho l\'iquido de bem-estar sob prefer\^encias GHH com $\nu=2$. O bem-estar dos trabalhadores informais \'e pouco afetado porque $h_I=44$ n\~ao est\'a sujeito ao teto. A massa de trabalhadores desformalizados na margem enfrenta perdas acentuadas. Sob o moderado $\eta_I=0{,}40$, essa massa \'e material e menor do que sob especifica\c{c}\~oes de menor efici\^encia. Os n\'umeros por tipo s\~ao uma aproxima\c{c}\~ao de primeira ordem. O CV exato do agente representativo na Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal calcula o composto em consumo e horas agregados. O gap entre a soma ponderada por tipo e o agregado \'e a corre\c{c}\~ao tipo-Jensen implicada pela concavidade do composto GHH.
+A decomposi\c{c}\~ao por tipo usa parcelas de trabalhadores e de folha salarial no contrafactual $44\to 36$h sob penalidade bilateral. Trabalhadores que permanecem formais trabalham aproximadamente 6 horas semanais a menos e ganham na incid\^encia de primeira ordem. O bem-estar dos trabalhadores informais \'e pouco afetado porque $h_I=44$ n\~ao est\'a sujeito ao teto. A massa de trabalhadores desformalizados na margem enfrenta perdas acentuadas. Sob o moderado $\eta_I=0{,}40$, essa massa \'e pequena, mas importante para a incid\^encia. Os n\'umeros por tipo s\~ao uma aproxima\c{c}\~ao de primeira ordem. O CV exato do agente representativo na Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal calcula o composto em consumo e horas agregados, de modo que n\~ao \'e a soma ponderada das linhas por tipo.
 
 \begin{table}[htbp]
 \centering
-\caption{Bem-estar por tipo de trabalhador ($44\to 36$h, conservadora).}\label{tab:welfare_conditional}
+\caption{Incid\^encia de bem-estar por tipo de trabalhador no endpoint de 36h.}\label{tab:welfare_incidence_by_type}
 \small
-\begin{tabular}{lcc}
+\begin{tabular}{lrrr}
 \hline\hline
-Tipo de trabalhador & $\Delta$CV$_k$ (primeira ordem) & Parcela $s_k$ \\
+Tipo de trabalhador & $\Delta$CV$_k$ & Parcela de trabalhadores & Parcela da folha \\
+ & (\%) & (\%) & (\%) \\
 \hline
-Formais que permanecem & $+2{,}0\%$ & $60{,}5\%$ \\
-Informais (inalterados) & $\approx 0$ & $37{,}5\%$ \\
-Desformalizados & $-30{,}0\%$ & $2{,}0\%$ \\
+Formais que permanecem & $+1{,}41$ & 60{,}4 & 68{,}5 \\
+Informais n\~ao afetados & $+0{,}00$ & 37{,}7 & 29{,}3 \\
+Desformalizados & $-28{,}57$ & 1{,}9 & 2{,}2 \\
 \hline
-Agregado, Equa\c{c}\~ao~\eqref{eq:cv} do principal & $-3{,}63\%$ & $100\%$ \\
+Agregado, agente representativo & $-3{,}64$ & 100{,}0 & 100{,}0 \\
 \hline\hline
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.90\textwidth}
-{\footnotesize \textit{Notas:} $\Delta$CV$_k$ \'e a varia\c{c}\~ao compensat\'oria de primeira ordem aplicada ao tipo $k$ (GHH, $\nu=2$), avaliada no consumo e nas horas pr\'oprios de cada tipo. $s_k$ \'e a parcela da folha de pagamento CES usada como peso de agrega\c{c}\~ao. O valor do agente representativo pela Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal \'e $-3{,}63\%$. O gap entre a soma ponderada por tipo e o valor agregado \'e a corre\c{c}\~ao tipo-Jensen implicada pela concavidade do composto GHH.}
+\justifying
+{\footnotesize \textit{Notas:} As linhas separam trabalhadores de base em formais que permanecem formais, informais que j\'a est\~ao fora do teto estatut\'ario e trabalhadores deslocados da formalidade para a informalidade no contrafactual $44\to36$h sob penalidade bilateral. A linha agregada \'e o valor de agente representativo do modelo, n\~ao a soma ponderada das linhas por tipo.}
 \end{minipage}
 \end{table}
+
+O diagn\'ostico com prefer\^encias separ\'aveis recalcula a curva de bem-estar usando prefer\^encias separ\'aveis log e CRRA(2). Ele n\~ao \'e uma an\'alise distributiva, mas verifica se o padr\~ao de sinais \'e uma consequ\^encia fr\'agil das prefer\^encias GHH.
+
+\input{tab_welfare_preference_robustness_pt_autogen}
 
 A Figura~\ref{fig:welfare_threshold} mostra a resposta de bem-estar como fun\c{c}\~ao de um ganho ex\'ogeno de PTF no teto de 36h sob as duas especifica\c{c}\~oes. Os limiares de neutralidade de bem-estar s\~ao gerados pelo pipeline de replica\c{c}\~ao e marcados na figura.
 
@@ -219,13 +270,14 @@ A Figura~\ref{fig:welfare_threshold} mostra a resposta de bem-estar como fun\c{c
 \caption{Bem-estar $\Delta$CV como fun\c{c}\~ao do ganho de PTF no teto de 36h.}\label{fig:welfare_threshold}
 \vspace{2pt}
 \begin{minipage}{0.85\textwidth}
+\justifying
 {\footnotesize \textit{Notas:} Eixo horizontal: ganho ex\'ogeno \'unico de PTF aplicado sobre a reforma $44\to 36$h. Eixo vertical: bem-estar agregado $\Delta$CV da Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal. As curvas e os limiares s\~ao gerados por \texttt{src/tables\_figures/plot\_welfare\_schedule.py}.}
 \end{minipage}
 \end{figure}
 
 \begin{table}[htbp]
 \centering
-\caption{Schedule de bem-estar, especifica\c{c}\~ao conservadora.}\label{tab:welfare_schedule}
+\caption{Schedule de bem-estar, penalidade bilateral.}\label{tab:welfare_schedule}
 \small
 \begin{tabular}{rrrrl}
 \hline\hline
@@ -245,7 +297,8 @@ Teto de horas & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$CV & $\Delta$Inf \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.85\textwidth}
-{\footnotesize \textit{Notas:} Todas as linhas s\~ao resultados do modelo sob a especifica\c{c}\~ao conservadora sim\'etrica de $e(h)$, medidos em rela\c{c}\~ao ao baseline de 44h. $A_{\text{req}}$ \'e o ganho requerido de PTF para o teto indicado. $\Delta Y$ \'e a varia\c{c}\~ao agregada do produto. $\Delta$CV \'e o bem-estar agregado pela Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal. $\Delta$Inf \'e a varia\c{c}\~ao da informalidade agregada. A linha em negrito \'e o teto proposto de 36h.}
+\justifying
+{\footnotesize \textit{Notas:} Todas as linhas s\~ao resultados do modelo sob a especifica\c{c}\~ao de penalidade bilateral de $e(h)$, medidos em rela\c{c}\~ao ao baseline de 44h. $A_{\text{req}}$ \'e o ganho requerido de PTF para o teto indicado. $\Delta Y$ \'e a varia\c{c}\~ao agregada do produto. $\Delta$CV \'e o bem-estar agregado pela Equa\c{c}\~ao~\eqref{eq:cv} do artigo principal. $\Delta$Inf \'e a varia\c{c}\~ao da informalidade agregada. A linha em negrito \'e o endpoint de 36h.}
 \end{minipage}
 \end{table}
 
@@ -258,36 +311,15 @@ Teto de horas & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$CV & $\Delta$Inf \\
 \caption{Decomposi\c{c}\~ao de $\Delta Y$ no teto $44\to 36$h sob cada calibra\c{c}\~ao.}\label{fig:decomposition}
 \vspace{2pt}
 \begin{minipage}{0.92\textwidth}
-{\footnotesize \textit{Notas:} As barras s\~ao geradas por \texttt{src/tables\_figures/plot\_main\_figures.py}. O canal mec\^anico de horas \'e o efeito direto do teto menor de horas formais, mantendo fixa a efici\^encia por hora. O canal de efici\^encia \'e a mudan\c{c}a na efici\^encia hor\'aria formal $e(h)$. O res\'iduo inclui a resposta de realoca\c{c}\~ao formal--informal e o termo cruzado CES. Os valores exatos s\~ao gravados em \texttt{output/validation/decomposition\_results.json}.}
+\justifying
+{\footnotesize \textit{Notas:} As barras s\~ao geradas por \texttt{src/tables\_figures/plot\_main\_figures.py}. O canal mec\^anico de horas \'e o efeito direto do teto menor de horas formais, mantendo fixa a efici\^encia por hora. O canal de efici\^encia \'e a mudan\c{c}a na efici\^encia hor\'aria formal $e(h)$. O res\'iduo inclui a resposta de realoca\c{c}\~ao formal-informal e o termo cruzado CES. Os valores exatos s\~ao gravados em \texttt{output/validation/decomposition\_results.json}.}
 \end{minipage}
 \end{figure}
 
 \clearpage
 \section{Tabela hist\'orica de PTF}\label{app:tfp_history_table}
 
-\begin{table}[htbp]
-\centering
-\caption{Crescimento hist\'orico da PTF brasileira e anos necess\'arios para acumular $A_{\text{req}}$.}\label{tab:tfp_history}
-\small
-\begin{tabular}{lrrrr}
-\hline\hline
-Horizonte & Dura\c{c}\~ao (anos) & Crescim.\ PTF (\%/ano) & Anos at\'e $A_{\text{req}}$ & Viabilidade \\
-\hline
-1954--2019 & 65 & $+0{,}29$ & 22{,}4 & vi\'avel \\
-1954--1980 & 26 & $+2{,}29$ & 2{,}8 & vi\'avel \\
-1980--2000 & 20 & $-1{,}31$ & $\infty$ & \textit{nunca} \\
-1990--2019 & 29 & $-0{,}60$ & $\infty$ & \textit{nunca} \\
-1995--2019 & 24 & $-0{,}83$ & $\infty$ & \textit{nunca} \\
-2000--2019 & 19 & $-0{,}72$ & $\infty$ & \textit{nunca} \\
-2003--2013 & 10 & $+0{,}26$ & 24{,}7 & vi\'avel \\
-2010--2019 & 9 & $-1{,}88$ & $\infty$ & \textit{nunca} \\
-\hline\hline
-\end{tabular}
-\\[2pt]
-\begin{minipage}{0.95\textwidth}
-{\footnotesize \textit{Notas:} Crescimento anualizado \'e $(\text{PTF}_1/\text{PTF}_0)^{1/T}-1$. A coluna ``Anos at\'e $A_{\text{req}}$'' usa o baseline preferido $A_{\text{req}}=6{,}63\%$ e \'e calculada como $\ln(1+A_{\text{req}})/\ln(1+g)$. Horizontes com crescimento n\~ao positivo s\~ao reportados como ``nunca''. \textit{Fonte:} Penn World Table 10.01, vari\'avel \texttt{rtfpna} (PTF real a pre\c{c}os nacionais constantes).}
-\end{minipage}
-\end{table}
+\input{tab_areq_tfp_horizons_pt_autogen}
 
 \clearpage
 \section{Deriva\c{c}\~oes}\label{app:derivations}
@@ -317,29 +349,11 @@ onde $\partial Y_g/\partial L_{F,g}=(1-\alpha)Y_g/L_g\cdot(\partial L_g/\partial
 $A_{\text{req}}$ resolve a Equa\c{c}\~ao~\eqref{eq:areq} do artigo principal. A estrutura Cobb-Douglas $Y_g=A K_g^\alpha L_g^{1-\alpha}$ \'e linear em $A$ e o $L_g(A)$ \'otimo \'e fracamente crescente em $A$, ent\~ao $\partial\sum_g Y_g/\partial A>0$ e a bisse\c{c}\~ao converge para um \'unico $A_{\text{req}}$.
 
 \clearpage
-\section{Robustez do $e(h)$ assim\'etrico}\label{app:asymmetric}
+\section{Robustez da efici\^encia das horas}\label{app:hours_efficiency}
 
-A Tabela~\ref{tab:asymmetric_eh} reporta $A_{\text{req}}$ sob quatro especifica\c{c}\~oes para $e(h)$. O $e(h)=\exp\{-\kappa(h-40)^2\}$ sim\'etrico de baseline com $\kappa=2{,}11\times 10^{-3}$ \'e comparado com tr\^es alternativas assim\'etricas que variam a curvatura abaixo de $h^*=40$ enquanto mant\^em a curvatura acima de $h^*$ em $\kappa$.
+A robustez compara a hip\'otese de fadiga s\'o acima de 40h e a hip\'otese de penalidade bilateral com um benchmark sem canal de efici\^encia, curvaturas alternativas abaixo de 40h e deslocamentos de uma hora no pico de efici\^encia. A curvatura acima de $h^*=40$ permanece no valor de baseline, exceto na linha sem efici\^encia.
 
-\begin{table}[htbp]
-\centering
-\caption{$A_{\text{req}}$ sob $e(h)$ assim\'etrico.}\label{tab:asymmetric_eh}
-\small
-\begin{tabular}{llrr}
-\hline\hline
-Cen\'ario & Hip\'otese abaixo de $h^*$ & $e(36)$ & $A_{\text{req}}$ \\
-\hline
-Sim\'etrico (conservador) & $\kappa_{\text{abaixo}}=\kappa$ & 0{,}967 & 8{,}18\% \\
-Meia-curvatura abaixo & $\kappa_{\text{abaixo}}=0{,}5\kappa$ & 0{,}983 & 7{,}40\% \\
-Curvatura dupla abaixo & $\kappa_{\text{abaixo}}=2\kappa$ & 0{,}935 & 9{,}73\% \\
-Flat abaixo (preferida) & $\kappa_{\text{abaixo}}=0$ & 1{,}000 & 6{,}63\% \\
-\hline\hline
-\end{tabular}
-\\[2pt]
-\begin{minipage}{0.90\textwidth}
-{\footnotesize \textit{Notas:} A curvatura acima de $h^*=40$ \'e fixada em $\kappa=2{,}11\times 10^{-3}$ nos quatro cen\'arios. Apenas a curvatura abaixo do pico varia. $e(36)$ \'e a efici\^encia por hora no teto proposto de 36h (quanto mais distante de 1, maior a penalidade de efici\^encia). $A_{\text{req}}$ \'e o ganho requerido de PTF no teto $44\to 36$h sob cada cen\'ario.}
-\end{minipage}
-\end{table}
+\input{tab_efficiency_diagnostics_pt_autogen}
 
 % === Bibliografia ===
 \clearpage

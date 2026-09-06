@@ -1,0 +1,28 @@
+{
+  "bilateral": {
+    "omega": 0.6760343735546176,
+    "sigma_sub": 1.326,
+    "efficiency_mode": "bilateral",
+    "measure": "hourly",
+    "target": 1.622443453115618,
+    "implied": 1.6224434531156184,
+    "residual": 4.440892098500626e-16,
+    "status": "conditional_calibration_not_joint_identification",
+    "aggregation": "sum productive payrolls and physical hours across firms before forming formal/informal ratios",
+    "assumption": "national observed pay ratio mapped to gross productive marginal products of three classified sectors; tau/pi normalization retained",
+    "employment_coverage_share": 0.9998106701103413
+  },
+  "flat_below": {
+    "omega": 0.6770921951422844,
+    "sigma_sub": 1.326,
+    "efficiency_mode": "flat_below",
+    "measure": "hourly",
+    "target": 1.622443453115618,
+    "implied": 1.6224434531156184,
+    "residual": 4.440892098500626e-16,
+    "status": "conditional_calibration_not_joint_identification",
+    "aggregation": "sum productive payrolls and physical hours across firms before forming formal/informal ratios",
+    "assumption": "national observed pay ratio mapped to gross productive marginal products of three classified sectors; tau/pi normalization retained",
+    "employment_coverage_share": 0.9998106701103413
+  }
+}

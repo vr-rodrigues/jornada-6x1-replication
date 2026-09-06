@@ -1,0 +1,5 @@
+﻿efficiency_mode,moment,observed_paid_sample,model_all_occupied,gap,targeted,interpretation
+bilateral,hourly,1.622443453115618,1.6224434531156182,2.220446049250313e-16,True,Paid earnings ratio extended to all occupied including unpaid workers under an explicit selection/marginal-product hypothesis
+bilateral,weekly,1.8800997144694485,1.8940177470704938,0.013918032601045294,False,Paid earnings ratio extended to all occupied including unpaid workers under an explicit selection/marginal-product hypothesis
+flat_below,hourly,1.622443453115618,1.6224434531156173,-6.661338147750939e-16,True,Paid earnings ratio extended to all occupied including unpaid workers under an explicit selection/marginal-product hypothesis
+flat_below,weekly,1.8800997144694485,1.8940177470704933,0.01391803260104485,False,Paid earnings ratio extended to all occupied including unpaid workers under an explicit selection/marginal-product hypothesis

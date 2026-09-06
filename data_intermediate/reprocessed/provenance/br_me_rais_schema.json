@@ -1,0 +1,388 @@
+{
+  "kind": "bigquery#table",
+  "etag": "0NRPIEmSrFtNpK2SGD9vyw==",
+  "id": "basedosdados:br_me_rais.microdados_vinculos",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/basedosdados/datasets/br_me_rais/tables/microdados_vinculos",
+  "tableReference": {
+    "projectId": "basedosdados",
+    "datasetId": "br_me_rais",
+    "tableId": "microdados_vinculos"
+  },
+  "description": "Microdados públicos dos vínculos de emprego na RAIS. Base desidentificada,\nisto é, que não inclui identificadores únicos de linha. Cada linha representa\num vínculo - por isso indicamos este como nível de observação mesmo que não\nconste como coluna.\nComentários:\n  • Alguns valores relacionados à conexão com o diretório foram desconsiderados durante os testes.\n  • Os códigos de cbo_2002 foram ignorados devido à descontinuidade de parte deles, conforme descrito no documento oficial (https://portalfat.mte.gov.br/wp-content/uploads/2016/04/CBO2002_Liv3.pdf).\n  • As variáveis cnae_1 e cnae_2_subclasse apresentam códigos que não existem oficialmente na documentação dos cnae, por isso, não são compatíveis com o diretório.\n",
+  "schema": {
+    "fields": [
+      {
+        "name": "ano",
+        "type": "INTEGER",
+        "description": "Ano"
+      },
+      {
+        "name": "sigla_uf",
+        "type": "STRING",
+        "description": "Sigla da Unidade da Federação"
+      },
+      {
+        "name": "id_municipio",
+        "type": "STRING",
+        "description": "ID Município - IBGE 7 Dígitos"
+      },
+      {
+        "name": "tipo_vinculo",
+        "type": "STRING",
+        "description": "Tipo do Vínculo"
+      },
+      {
+        "name": "vinculo_ativo_3112",
+        "type": "STRING",
+        "description": "Vínculo Ativo no dia 31/12"
+      },
+      {
+        "name": "tipo_admissao",
+        "type": "STRING",
+        "description": "Tipo da Admissão"
+      },
+      {
+        "name": "mes_admissao",
+        "type": "INTEGER",
+        "description": "Mês de Admissão"
+      },
+      {
+        "name": "mes_desligamento",
+        "type": "INTEGER",
+        "description": "Mês de Desligamento"
+      },
+      {
+        "name": "motivo_desligamento",
+        "type": "STRING",
+        "description": "Motivo do Desligamento"
+      },
+      {
+        "name": "causa_desligamento_1",
+        "type": "STRING",
+        "description": "Causa 1 do Desligamento"
+      },
+      {
+        "name": "causa_desligamento_2",
+        "type": "STRING",
+        "description": "Causa 2 do Desligamento"
+      },
+      {
+        "name": "causa_desligamento_3",
+        "type": "STRING",
+        "description": "Causa 3 do Desligamento"
+      },
+      {
+        "name": "faixa_tempo_emprego",
+        "type": "STRING",
+        "description": "Faixa Tempo Emprego"
+      },
+      {
+        "name": "faixa_horas_contratadas",
+        "type": "STRING",
+        "description": "Faixa Horas Contratadas"
+      },
+      {
+        "name": "tempo_emprego",
+        "type": "FLOAT",
+        "description": "Tempo Emprego"
+      },
+      {
+        "name": "quantidade_horas_contratadas",
+        "type": "INTEGER",
+        "description": "Quantidade de Horas Contratadas"
+      },
+      {
+        "name": "id_municipio_trabalho",
+        "type": "STRING",
+        "description": "ID Município de Trabalho"
+      },
+      {
+        "name": "quantidade_dias_afastamento",
+        "type": "INTEGER",
+        "description": "Quantidade de Dias sob Afastamento"
+      },
+      {
+        "name": "indicador_cei_vinculado",
+        "type": "STRING",
+        "description": "Indicador CEI Vinculado"
+      },
+      {
+        "name": "indicador_trabalho_parcial",
+        "type": "STRING",
+        "description": "Indicador Trabalho Parcial"
+      },
+      {
+        "name": "indicador_trabalho_intermitente",
+        "type": "STRING",
+        "description": "Indicador Trabalho Intermitente"
+      },
+      {
+        "name": "indicador_vinculo_abandonado",
+        "type": "STRING",
+        "description": "Indicador de Vínculo Abandonado"
+      },
+      {
+        "name": "faixa_remuneracao_media_sm",
+        "type": "STRING",
+        "description": "Faixa Remuneração Média (Salários Mínimos)"
+      },
+      {
+        "name": "valor_remuneracao_media_sm",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração Média (Salários Mínimos)"
+      },
+      {
+        "name": "valor_remuneracao_media",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração Média (Nominal)"
+      },
+      {
+        "name": "faixa_remuneracao_dezembro_sm",
+        "type": "STRING",
+        "description": "Faixa Remuneração em Dezembro (Salários Mínimos)"
+      },
+      {
+        "name": "valor_remuneracao_dezembro_sm",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Dezembro (Salários Mínimos)"
+      },
+      {
+        "name": "valor_remuneracao_janeiro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Janeiro (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_fevereiro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Fevereiro (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_marco",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Março (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_abril",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Abril (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_maio",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Maio (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_junho",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Junho (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_julho",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Julho (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_agosto",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Agosto (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_setembro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Setembro (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_outubro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Outubro (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_novembro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Novembro (Nominal)"
+      },
+      {
+        "name": "valor_remuneracao_dezembro",
+        "type": "FLOAT",
+        "description": "Valor da Remuneração em Dezembro (Nominal)"
+      },
+      {
+        "name": "tipo_salario",
+        "type": "STRING",
+        "description": "Tipo do Salário"
+      },
+      {
+        "name": "valor_salario_contratual",
+        "type": "FLOAT",
+        "description": "Valor Contratual do Salário"
+      },
+      {
+        "name": "subatividade_ibge",
+        "type": "STRING",
+        "description": "Subatividade - IBGE"
+      },
+      {
+        "name": "subsetor_ibge",
+        "type": "STRING",
+        "description": "Subsetor - IBGE"
+      },
+      {
+        "name": "cbo_1994",
+        "type": "STRING",
+        "description": "Classificação Brasileira de Ocupações (CBO) 1994"
+      },
+      {
+        "name": "cbo_2002",
+        "type": "STRING",
+        "description": "Classificação Brasileira de Ocupações (CBO) 2002"
+      },
+      {
+        "name": "cnae_1",
+        "type": "STRING",
+        "description": "Classificação Nacional de Atividades Econômicas (CNAE) 1.0"
+      },
+      {
+        "name": "cnae_2",
+        "type": "STRING",
+        "description": "Classificação Nacional de Atividades Econômicas (CNAE) 2.0"
+      },
+      {
+        "name": "cnae_2_subclasse",
+        "type": "STRING",
+        "description": "Classificação Nacional de Atividades Econômicas (CNAE) 2.0 Subclasse"
+      },
+      {
+        "name": "faixa_etaria",
+        "type": "STRING",
+        "description": "Faixa Etária"
+      },
+      {
+        "name": "idade",
+        "type": "INTEGER",
+        "description": "Idade"
+      },
+      {
+        "name": "grau_instrucao_1985_2005",
+        "type": "STRING",
+        "description": "Grau de Instrução 1985-2005"
+      },
+      {
+        "name": "grau_instrucao_apos_2005",
+        "type": "STRING",
+        "description": "Grau de Instrução Após 2005"
+      },
+      {
+        "name": "nacionalidade",
+        "type": "STRING",
+        "description": "Nacionalidade"
+      },
+      {
+        "name": "sexo",
+        "type": "STRING",
+        "description": "Sexo do Trabalhador"
+      },
+      {
+        "name": "raca_cor",
+        "type": "STRING",
+        "description": "Raça ou Cor"
+      },
+      {
+        "name": "indicador_portador_deficiencia",
+        "type": "STRING",
+        "description": "Indicador de Portador de Deficiência"
+      },
+      {
+        "name": "tipo_deficiencia",
+        "type": "STRING",
+        "description": "Tipo da Deficiência"
+      },
+      {
+        "name": "ano_chegada_brasil",
+        "type": "INTEGER",
+        "description": "Ano de Chegada no Brasil"
+      },
+      {
+        "name": "tamanho_estabelecimento",
+        "type": "STRING",
+        "description": "Tamanho do Estabelecimento"
+      },
+      {
+        "name": "tipo_estabelecimento",
+        "type": "STRING",
+        "description": "Tipo do Estabelecimento"
+      },
+      {
+        "name": "natureza_juridica",
+        "type": "STRING",
+        "description": "Natureza Jurídica"
+      },
+      {
+        "name": "indicador_simples",
+        "type": "STRING",
+        "description": "Indicador do Simples"
+      },
+      {
+        "name": "bairros_sp",
+        "type": "STRING",
+        "description": "Bairros em São Paulo"
+      },
+      {
+        "name": "distritos_sp",
+        "type": "STRING",
+        "description": "Distritos em São Paulo"
+      },
+      {
+        "name": "bairros_fortaleza",
+        "type": "STRING",
+        "description": "Bairros em Fortaleza"
+      },
+      {
+        "name": "bairros_rj",
+        "type": "STRING",
+        "description": "Bairros no Rio de Janeiro"
+      },
+      {
+        "name": "regioes_administrativas_df",
+        "type": "STRING",
+        "description": "Regiões Administrativas no Distrito Federal"
+      }
+    ]
+  },
+  "numBytes": "478505900385",
+  "numLongTermBytes": "478505900385",
+  "numRows": "2163605953",
+  "creationTime": "1780009148455",
+  "lastModifiedTime": "1780009150642",
+  "type": "TABLE",
+  "location": "US",
+  "clustering": {
+    "fields": [
+      "sigla_uf",
+      "id_municipio"
+    ]
+  },
+  "rangePartitioning": {
+    "field": "ano",
+    "range": {
+      "start": "1985",
+      "end": "2030",
+      "interval": "1"
+    }
+  },
+  "numTimeTravelPhysicalBytes": "0",
+  "numTotalLogicalBytes": "478505900385",
+  "numActiveLogicalBytes": "0",
+  "numLongTermLogicalBytes": "478505900385",
+  "numTotalPhysicalBytes": "44392327375",
+  "numActivePhysicalBytes": "0",
+  "numLongTermPhysicalBytes": "44392327375",
+  "numPartitions": "41",
+  "partitionDefinition": {
+    "partitionedColumn": [
+      {
+        "field": "ano"
+      }
+    ]
+  },
+  "numCurrentPhysicalBytes": "44392327375"
+}

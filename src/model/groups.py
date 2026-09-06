@@ -1,90 +1,93 @@
-# -*- coding: utf-8 -*-
-"""Group construction for heterogeneous firm-size analysis."""
-
+"""Calibrated groups with explicit employment-share accounting and assumptions."""
 import numpy as np
-from .efficiency import calibrate_kappa, formal_hours_avg
-from .firm_problem import solve_NF
-from .calibration import calibrate_wedge, calibrate_pi_m
+from .efficiency import calibrate_kappa, formal_hours_avg, hours_distribution
+from .calibration import calibrate_wedges
 
-
-# Default group specifications
+# Legacy inputs, retained as assumptions until verified empirical replacements.
+# "share" is participation in FORMAL employment, never total employment.
 DEFAULT_GROUP_SPECS = {
-    "Pequenas": {"share": 0.59, "inf_target": 0.50, "gamma_F": 0.12, "K_share": 0.35},
-    "Grandes":  {"share": 0.41, "inf_target": 0.20, "gamma_F": 0.03, "K_share": 0.65},
+    "Pequenas":{"share":.59,"inf_target":.50,"gamma_F":.12,"K_share":.35},
+    "Grandes":{"share":.41,"inf_target":.20,"gamma_F":.03,"K_share":.65},
 }
 
 
-def build_groups(targets, sigma_sub=1.15, omega=0.622,
-                 group_specs=None, theta=None):
-    """
-    Build calibrated group parameters from targets dict.
+def formal_to_total_shares(formal_shares,informality):
+    """s_total[g] proportional to s_formal[g]/(1-informality[g])."""
+    names = list(formal_shares)
+    if set(names) != set(informality):
+        raise ValueError("Share and informality groups differ")
+    shares = np.array([formal_shares[g] for g in names],dtype=float)
+    inf = np.array([informality[g] for g in names],dtype=float)
+    if (np.any(shares < 0) or not np.isfinite(shares).all() or
+            not np.isclose(shares.sum(),1.,atol=1e-10,rtol=0) or
+            np.any(inf < 0) or np.any(inf >= 1) or not np.isfinite(inf).all()):
+        raise ValueError("Shares must sum to 1 and informality must be in [0,1)")
+    raw = shares/(1.-inf)
+    return dict(zip(names,(raw/raw.sum()).tolist()))
 
-    Args:
-        targets: dict from calibration_targets.csv
-        sigma_sub: CES substitution elasticity (default: 1.15, central of MNR-disciplined interval)
-        omega: CES formal weight (default: 0.622 = 1 - narrow PNAD informality 2025)
-        group_specs: dict of group specifications (default: DEFAULT_GROUP_SPECS)
-        theta: hours distribution array (default: from targets)
 
-    Returns:
-        groups: dict of group parameter dicts
-        kappa: calibrated kappa
-        theta: theta array used
+def build_groups(targets,sigma_sub=1.15,omega=.622,group_specs=None,theta=None,
+                 efficiency_mode="bilateral",hours_bins=None,share_basis="formal",
+                 resource_costs=False,kappa_override=None):
+    """Construct groups; omega is a technological assumption, not a jobs share.
+
+    H_REF_EFFICIENCY optionally fixes the external elasticity reference hours.
+    This is separate from the empirical hours distribution. kappa_override
+    allows explicit sensitivity without fictitious below-peak identification.
     """
+    v = lambda key:targets[key]["value"]
     if group_specs is None:
-        group_specs = DEFAULT_GROUP_SPECS
-
-    alpha = targets["ALPHA"]["value"]
-    eta_I = targets["ETA_I"]["value"]
-    e_q = targets["E_Q"]["value"]
-    h0 = targets["H0"]["value"]
-    h1 = targets["H1"]["value"]
-    h_star = targets["H_STAR"]["value"]
-    hI = targets["HI"]["value"]
-    N_total = targets["N_TOTAL"]["value"]
-
+        specs = {g:dict(s) for g,s in DEFAULT_GROUP_SPECS.items()}
+        for name,suffix in (("Pequenas","SMALL"),("Grandes","LARGE")):
+            for field,prefix in (("share","SHARE"),("inf_target","INF"),
+                                 ("gamma_F","GAMMA_F"),("K_share","K_SHARE")):
+                key = f"{prefix}_{suffix}"
+                if key in targets:
+                    specs[name][field] = v(key)
+    else:
+        specs = group_specs
+    alpha,eta_I,e_q = v("ALPHA"),v("ETA_I"),v("E_Q")
+    h0,h1,h_star,hI,N_total = [v(k) for k in ("H0","H1","H_STAR","HI","N_TOTAL")]
     if theta is None:
-        theta = np.array([
-            targets["THETA_36"]["value"],
-            targets["THETA_40"]["value"],
-            targets["THETA_44"]["value"],
-        ])
-
-    h_ref = formal_hours_avg(h0, theta)
-    kappa = calibrate_kappa(h_ref, h_star, e_q)
-
-    common = {
-        "A": 1.0, "alpha": alpha, "h0": h0, "h1": h1, "hI": hI,
-        "h_star": h_star, "omega": omega, "sigma_sub": sigma_sub,
-        "eta_I": eta_I, "kappa": kappa,
-    }
-
+        theta = [v("THETA_36"),v("THETA_40"),v("THETA_44")]
+    theta,bins = hours_distribution(theta,hours_bins)
+    h_ref = (v("H_REF_EFFICIENCY") if "H_REF_EFFICIENCY" in targets
+             else formal_hours_avg(h0,theta,bins))
+    kappa = (calibrate_kappa(h_ref,h_star,e_q,efficiency_mode)
+             if kappa_override is None else float(kappa_override))
+    shares = {g:spec.get("formal_share",spec.get("share")) for g,spec in specs.items()}
+    if share_basis == "formal":
+        total_shares = formal_to_total_shares(shares,{g:s["inf_target"] for g,s in specs.items()})
+    elif share_basis == "total":
+        # Explicit diagnostic only: reproduces the legacy interpretation.
+        if not np.isclose(sum(shares.values()),1.,atol=1e-10,rtol=0):
+            raise ValueError("Total shares must sum to 1")
+        total_shares = shares
+    else:
+        raise ValueError("share_basis must be formal or total")
+    if not np.isclose(sum(s["K_share"] for s in specs.values()),1.,atol=1e-10,rtol=0):
+        raise ValueError("Capital shares must sum to one")
+    common = {"A":1.,"alpha":alpha,"h0":h0,"h1":h1,"hI":hI,"h_star":h_star,
+              "omega":omega,"sigma_sub":sigma_sub,"eta_I":eta_I,"kappa":kappa,
+              "efficiency_mode":efficiency_mode,"hours_bins":bins.tolist(),
+              "theta":theta.tolist(),"resource_costs":resource_costs,
+              "h_ref_efficiency":h_ref,"share_basis_input":share_basis}
     groups = {}
-    for gname, spec in group_specs.items():
-        N_g = N_total * spec["share"]
-        K_g = 1.0 * spec["K_share"]
+    for name,spec in specs.items():
+        Ng,Kg = N_total*total_shares[name],spec["K_share"]
+        if Ng <= 0 or Kg <= 0:
+            raise ValueError("Each modeled group needs positive labor and capital")
+        wedge = calibrate_wedges(spec["inf_target"],Ng,h0,hI,1.,Kg,alpha,
+                                 omega,sigma_sub,eta_I,kappa,h_star,theta,
+                                 efficiency_mode,bins)
+        groups[name] = {**common,**wedge,"N_total":Ng,"K":Kg,
+                        "gamma_F":spec["gamma_F"],
+                        "NF_init":Ng*(1-spec["inf_target"]),
+                        "inf_target":spec["inf_target"],
+                        "share_total":total_shares[name],
+                        "input_share":shares[name]}
+    formal_total = sum(p["NF_init"] for p in groups.values())
+    for p in groups.values():
+        p["share_formal_implied"] = p["NF_init"]/formal_total
+    return groups,kappa,theta
 
-        # Check if pi_m is needed (wedge=0 gives too much informality)
-        pi_m_g = 0.0
-        sol_w0 = solve_NF(N_g, h0, hI, 1.0, K_g, alpha, omega, sigma_sub,
-                          eta_I, kappa, h_star, 0.0, pi_m_g, 0.0,
-                          N_g * (1 - spec["inf_target"]), theta)
-        if sol_w0["informality"] > spec["inf_target"] + 1e-10:
-            pi_m_g = calibrate_pi_m(spec["inf_target"], N_g, h0, hI,
-                                    1.0, K_g, alpha, omega, sigma_sub,
-                                    eta_I, kappa, h_star, theta)
-
-        wedge = calibrate_wedge(spec["inf_target"], N_g, h0, hI,
-                                1.0, K_g, alpha, omega, sigma_sub,
-                                eta_I, kappa, h_star, pi_m_g, theta)
-
-        groups[gname] = {
-            **common,
-            "N_total": N_g, "K": K_g,
-            "gamma_F": spec["gamma_F"],
-            "pi_m": pi_m_g,
-            "formal_wedge": wedge,
-            "NF_init": N_g * (1 - spec["inf_target"]),
-        }
-
-    return groups, kappa, theta

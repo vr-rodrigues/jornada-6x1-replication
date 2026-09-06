@@ -1,0 +1,31 @@
+{
+  "moments": [
+    {
+      "moment": "mean_formal_hours",
+      "value": 42.244,
+      "classification": "accounting_identity_given_hours_weights"
+    },
+    {
+      "moment": "formal_share_above_36",
+      "value": 0.915,
+      "classification": "accounting_identity_given_hours_weights"
+    },
+    {
+      "moment": "informality_by_group",
+      "classification": "calibration_target_not_validation"
+    },
+    {
+      "moment": "aggregate_informality",
+      "value": 0.4091580502215657,
+      "classification": "accounting_implication_of_shares_and_group_targets"
+    },
+    {
+      "moment": "formal_payroll_share",
+      "value": 0.7018376997539233,
+      "classification": "conditional_model_implication; no independent comparable observed target verified"
+    }
+  ],
+  "sectoral_dispersion": "Size groups are not sectors. No zero-dispersion validation is defined without a mapping.",
+  "hours_comparison": "Habitual and contracted hours are distinct concepts, not behavioral out-of-sample validation.",
+  "identification": "Sensitivity box is not an identified set: no likelihood, confidence region or complete moment restrictions imposed."
+}

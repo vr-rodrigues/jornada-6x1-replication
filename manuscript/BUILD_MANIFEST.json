@@ -1,0 +1,134 @@
+{
+  "started_utc": "2026-09-05T23:57:57.307208+00:00",
+  "finished_utc": "2026-09-05T23:59:34.567681+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "commands": [
+    [
+      "C:\\Users\\victo\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "scripts/generate_assets.py"
+    ],
+    [
+      "C:\\Users\\victo\\AppData\\Roaming\\TinyTeX\\bin\\windows\\xelatex.EXE",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-output-directory=.build_paper/journal",
+      "main.tex"
+    ],
+    [
+      "C:\\Users\\victo\\AppData\\Roaming\\TinyTeX\\bin\\windows\\biber.EXE",
+      "--input-directory=.build_paper/journal",
+      "--output-directory=.build_paper/journal",
+      "main"
+    ],
+    [
+      "C:\\Users\\victo\\AppData\\Roaming\\TinyTeX\\bin\\windows\\xelatex.EXE",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-output-directory=.build_paper/journal",
+      "online_appendix_pt.tex"
+    ],
+    [
+      "C:\\Users\\victo\\AppData\\Roaming\\TinyTeX\\bin\\windows\\biber.EXE",
+      "--input-directory=.build_paper/journal",
+      "--output-directory=.build_paper/journal",
+      "online_appendix_pt"
+    ],
+    [
+      "C:\\Users\\victo\\AppData\\Roaming\\TinyTeX\\bin\\windows\\xelatex.EXE",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-output-directory=.build_paper/journal",
+      "folha_rosto.tex"
+    ]
+  ],
+  "xelatex_version": "XeTeX 3.141592653-2.6-0.999997 (TeX Live 2025)",
+  "biber_version": "biber version: 2.21",
+  "build_directory": ".build_paper/journal",
+  "replication_run": "20260905_005724_846373",
+  "checks": {
+    "main": {
+      "pages": 25,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 53584,
+      "embedded_fonts": [
+        "/FIAGZQ+TimesNewRomanPSMT",
+        "/IAIYUA+TimesNewRomanPS-ItalicMT",
+        "/YAXGQM+TeXGyreTermesMath-Regular-Identity-H"
+      ],
+      "bibliography": {
+        "cited_and_printed": 34,
+        "missing_access_dates": []
+      }
+    },
+    "online_appendix_pt": {
+      "pages": 26,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 45198,
+      "embedded_fonts": [
+        "/PFTQDS+TimesNewRomanPSMT",
+        "/ROQPQK+TeXGyreTermesMath-Regular-Identity-H",
+        "/YMWOGD+TimesNewRomanPS-ItalicMT"
+      ],
+      "bibliography": {
+        "cited_and_printed": 13,
+        "missing_access_dates": []
+      }
+    },
+    "folha_rosto": {
+      "pages": 2,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 4503,
+      "embedded_fonts": [
+        "/BPSRRC+TimesNewRomanPS-ItalicMT",
+        "/XINHSE+TeXGyreTermesMath-Regular-Identity-H",
+        "/YTVDUV+TimesNewRomanPSMT"
+      ],
+      "bibliography": null
+    }
+  },
+  "assets_manifest_sha256": "6fad23e314ef493f730b22befa917d97ee22a350fe42213baa1f1836c59dd4ec",
+  "source_sha256": {
+    "folha_rosto.tex": "e669a42f55129670317c4f4c5562da3ac911d6c390b8bc0cde611ab3b4ab8efc",
+    "journal_style.tex": "6d54a9837f4fe97dc8c6ac24c8ae139267e9a3e261cfa8c2af460ef88e469615",
+    "main.tex": "8bd39b9308b83bbc816bedaf323d4b70a112961b3b18134d9459754617793637",
+    "online_appendix_pt.tex": "74ee4b4c5f020a3145138900819baa414e9011efc9b7405c6c7b220fec0aa23b",
+    "bibliography_clean.bib": "04eb3e76a5a1c1fc43e2339b3c63834c8d52c66ca3133414b7fb588d5b7bda49",
+    "bibliography_verified.bib": "e130509437e8356764daf1524efe2fbb21447d5380e1015ac787a65994b990bc",
+    "sections/abstract_en.tex": "d2885d6d9e3ceb61dd72f5168d7d54693f0692dcb1206357f35a156a2ea47d64",
+    "sections/abstract_pt.tex": "8aa385d132d5809ef736317616956192a1596c121cbb168e9e181600eb4f1ab3",
+    "sections/app_data.tex": "62ed71d2debcc10210885639bd6256c5b2ef506b269e62edd5c37104aa649ad2",
+    "sections/app_model.tex": "f23ea21e5c4b8a2ddb7cb5c460ce21d98d39ec9a92e12da7c12a1797bdaa1bd1",
+    "sections/app_results.tex": "f6b04323138c648b969bd267f2555412042cb2e8f9eb4b1812532c0017aba454",
+    "sections/calibration.tex": "db0c106f4c16e3aec2fe9514c47398bb618cee532fe62d2584263eecbb9c27cf",
+    "sections/conclusion.tex": "e0a20ccf7e660e77abd7379af5478cb6ed6a14a0705602cbc7d929d17b06ca83",
+    "sections/facts.tex": "b9733838f8107b705287b9990f04fdc086fdda06c6e2d6c1f915d229aa155bb4",
+    "sections/intro.tex": "fc5c0f130a4b28dafd8ff382588dda96483805393fcbab9a45864a9312eda7e2",
+    "sections/model.tex": "c99a899e88654288f269a606ddbe9ed545ed3b994bf15d793351bdf353dc3036",
+    "sections/policy.tex": "905175c8b95e2b076d981facffcdb5124a62297f6847c8ff52b46530bb7e0cc2",
+    "sections/results.tex": "300075338cee1d3f8946f295c19a1eae1e904da0bfff62ad7ffe63f21058ac1a",
+    "sections/validation.tex": "b1ea0cee0621ab1978ee2714ba43405e379ff85643d7586e44a2baaedb80970d",
+    "build_paper.py": "bdeba175ffbb05fb97391ba4f7e9391c3d78cf69a626cb191d9ba5de73371d0d",
+    "export_overleaf.py": "a04bf9137dcf276c10958cd92b307f5cc9a3a4597a0ed8c2012be789c7de3917",
+    "export_overleaf_flat.py": "b96a92356b0758ff8a3a006f09410a3c30deef3da694141505856c6058993f47",
+    "scripts/baseline44_experiments.py": "5901a84ba2025fd4d91662b0c55aa77ea39c29580fd9b6bdb572a3b14c258e34",
+    "scripts/generate_assets.py": "245a8843f5df938f7dde7793b633097b38ab01d2bfd2d1b7ddae6c2616df2303",
+    "scripts/original_appendix_figures.py": "9cf5a14fe4006f1340bc5fac08de6c5135f98037464918135d051bc53d6c6f2a",
+    "scripts/original_main_figures.py": "bc57345b1a28b90268c65fdd4307d26c7f5e33843e82afe767fdf262e4358cd7",
+    "scripts/original_tfp_figure.py": "198001dca27e0c58da4d7b8a6dfdf9fbe9f7aea4c0a837366e4c3b617a6baa08",
+    "scripts/original_transition_figure.py": "c943ccf3469ecac4d0351b0c16ff384ab55cfbc3d416d6d76e0a730c670d23dd",
+    "scripts/paper_config.py": "64150dda896e7de4a6c252edc2fa6da241ead3d35afe94aadd811019186002b3",
+    "scripts/transition_experiments.py": "944cd140c7f356ba074ede04535044ab3fb75a7a34a0fc3d20419f53bc17cee8"
+  },
+  "pdf_sha256": {
+    "main.pdf": "0dc9d1df3abdc4c3e2a935c4349eff12641a9885b918cf9090f9fcdfd667e5ad",
+    "online_appendix_pt.pdf": "341a705d1048faecb0bc5081ad1ff557669ca205e4fe13f39519f210035b8ace",
+    "folha_rosto.pdf": "2b68f3ac7d07ba61f66f8f95dfe251825a67bf80100582fab861636e332771ca"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "backup": "PAPER_antes_segunda_revisao_20260905_092422",
+  "preservation": [
+    {
+      "directory": "PAPER_original_20260905_020616",
+      "verified": 10,
+      "failures": []
+    },
+    {
+      "directory": "PAPER_revisao_ampla_20260905_024411",
+      "verified": 79,
+      "failures": []
+    },
+    {
+      "directory": "PAPER_antes_segunda_revisao_20260905_092422",
+      "verified": 81,
+      "failures": []
+    }
+  ],
+  "source_counts_including_LaTeX": [
+    {
+      "section": "intro",
+      "before_source_words": 902,
+      "after_source_words": 874
+    },
+    {
+      "section": "facts",
+      "before_source_words": 807,
+      "after_source_words": 668
+    },
+    {
+      "section": "model",
+      "before_source_words": 1003,
+      "after_source_words": 794
+    },
+    {
+      "section": "calibration",
+      "before_source_words": 1000,
+      "after_source_words": 697
+    },
+    {
+      "section": "validation",
+      "before_source_words": 574,
+      "after_source_words": 442
+    },
+    {
+      "section": "results",
+      "before_source_words": 1753,
+      "after_source_words": 1252
+    },
+    {
+      "section": "policy",
+      "before_source_words": 989,
+      "after_source_words": 825
+    },
+    {
+      "section": "conclusion",
+      "before_source_words": 284,
+      "after_source_words": 261
+    }
+  ],
+  "assets_unchanged": 33,
+  "sectoral_source_sha256": "786b95dc7b853ad231ce208360c1c293223da73e6f3736d4564cd18ff4acd83c",
+  "sectoral_contributions": [
+    {
+      "mode": "bilateral",
+      "Y0_total": 4.077271805930232,
+      "services_Y0": 2.892783450826027,
+      "services_Y1": 2.707892712687682,
+      "services_contribution_pp": -4.534667957859187,
+      "services_share_of_total_loss_pct": 65.90873059890657
+    },
+    {
+      "mode": "flat_below",
+      "Y0_total": 4.159974408892794,
+      "services_Y0": 2.965152298872721,
+      "services_Y1": 2.8253492485165097,
+      "services_contribution_pp": -3.3606709228151446,
+      "services_share_of_total_loss_pct": 65.28428705961878
+    }
+  ]
+}

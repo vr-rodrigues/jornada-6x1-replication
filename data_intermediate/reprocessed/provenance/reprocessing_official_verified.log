@@ -1,0 +1,10 @@
+BigQuery unavailable: RuntimeError: Explicit official-only route selected; see bigquery_blocker.json
+Using explicitly allowed official IBGE/MTE fallback, SAME 2024Q4.
+PNAD official parser: 300,000 records
+PNAD official parser: 400,000 records
+{
+  "pnad_informality": 0.3860008721172535,
+  "pnad_occupied": 101831958.5143261,
+  "rais_small_share": 0.3938863739756182,
+  "rais_active_links": 52790864
+}

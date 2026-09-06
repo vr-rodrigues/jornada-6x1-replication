@@ -1,0 +1,139 @@
+\section{Dados, definições e rastreabilidade}\label{app:data}
+\subsection{PNAD Contínua: período, versão e universo}
+O reprocessamento utiliza os microdados públicos do quarto trimestre de 2024, arquivo \path{PNADC_042024_20250815.zip}, disponibilizado pelo IBGE, e o leiaute contido em \path{Dicionario_e_input_20221031.zip} \citep{PNAD2024T4Microdados,PNADDicionario2022}. A atualização do arquivo de pessoas é de 15 de agosto de 2025; a data do dicionário não representa a versão dos microdados. A coleta e a verificação ocorreram em 5 de setembro de 2026. As 469.334 linhas foram verificadas como pertencentes a 2024T4. Nenhum trimestre foi substituído.
+
+A tentativa inicial de consulta à Base dos Dados via BigQuery encontrou bloqueios de autenticação e de criação de tarefas de consulta. Por isso, o processamento documentado usa os arquivos oficiais do IBGE e do Ministério do Trabalho e Emprego (MTE). Os esquemas e as consultas SQL arquivados registram a rota tentada; não são apresentados como evidência de extração pelo BigQuery. Os resultados foram calculados da fonte oficial alternativa, cuja versão e integridade podem ser verificadas.
+
+O universo reúne pessoas com 14 anos ou mais (\texttt{V2009}), ocupadas na semana de referência (\texttt{VD4002=1}). Cada pessoa entra uma vez, com atividade, posição na ocupação, rendimento e horas do trabalho principal. O peso é \texttt{V1028}, trimestral e ajustado pela não entrevista e calibração populacional. Não se calculam médias simples dos estados nem se somam vínculos administrativos como pessoas distintas.
+
+A amostra contém 385.717 pessoas de 14 anos ou mais e 209.311 ocupadas. Os totais ponderados são 173,430 milhões e 101,832 milhões, respectivamente; a razão entre ocupados e população de 14 anos ou mais é $0{,}587166$. A escala do modelo, $N=0{,}59$, é uma normalização mantida para preservar as unidades dos custos quadráticos. Ela não é a nova estimativa da taxa de ocupação.
+
+\subsection{Formalidade, CNPJ e valores ausentes}
+A classificação combina \texttt{VD4009} e, para empregadores e conta própria, a pergunta de CNPJ \texttt{V4019}: 1 (sim) e 2 (não). A pergunta \texttt{V4017} trata da existência de sócio trabalhando no negócio. A Tabela~\ref{tab:app_classification} explicita as categorias.
+\begin{table}[htbp]
+\centering
+\caption{Classificação da formalidade no trabalho principal}
+\label{tab:app_classification}
+\normalsize
+\begin{tabular}{@{}p{1.6cm}p{7.1cm}p{4.8cm}@{}}
+\toprule
+VD4009 & Posição na ocupação & Classificação \\
+\midrule
+1 e 3 & Empregado privado e doméstico com carteira & Formal \\
+2 e 4 & Empregado privado e doméstico sem carteira & Informal \\
+5, 6 e 7 & Empregado público com ou sem carteira, militar ou estatutário & Formal no complemento estatístico adotado \\
+8 e 9 & Empregador e trabalhador por conta própria & Formal se V4019=1; informal se V4019=2 \\
+10 & Trabalhador familiar auxiliar & Informal \\
+Outros & Posição desconhecida, ou CNPJ desconhecido em 8/9 & Desconhecida \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}\normalsize
+\textit{Notas:} A inclusão de empregados públicos sem carteira no complemento formal segue a definição estatística adotada; não afirma regularidade jurídica de cada contrato. CNPJ ausente fora de 8/9 é não aplicável e não altera a classificação. Fonte: \citet{PNADDicionario2022}.
+\end{minipage}
+\end{table}
+
+Respostas desconhecidas não são convertidas em ausência de CNPJ. O processamento registra seu peso e calcula limites inferior e superior da informalidade sobre todos os ocupados, além da taxa entre classificáveis. Nesta amostra, todos os ocupados são classificáveis, e não há peso ausente ou não positivo. A informalidade é $38{,}600087\%$. Substituir apenas \texttt{V4019} por \texttt{V4017} no mesmo arquivo gera $44{,}174116\%$; 8,951 milhões de pessoas ponderadas mudam de categoria, com erros nos dois sentidos. A comparação isola o erro de variável, não mudança temporal do mercado de trabalho.
+
+\subsection{Horas habituais, efetivas e mapeamento da reforma}
+Horas habituais do trabalho principal são \texttt{V4039}, com suporte válido de 1 a 120 horas; horas efetivas na semana de referência são \texttt{V4039C}, de 0 a 120. Zero hora efetiva é admissível. Variáveis de todos os trabalhos não substituem as do trabalho principal. A base não fornece horas contratadas para identificar diretamente exposição ao teto contratual.
+\begin{table}[htbp]
+\centering
+\caption{Horas e rendimento: momentos nacionais de 2024T4}
+\label{tab:app_hours}
+\normalsize
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Medida no trabalho principal & Total & Formal & Informal \\
+\midrule
+Horas habituais & 39,13169 & 41,42440 & 35,48475 \\
+Horas efetivas & 37,85473 & 39,98102 & 34,47250 \\
+Horas contratadas & --- & --- & --- \\
+Rendimento mensal habitual (R\$) & 3.195,29 & 3.881,49 & 2.064,51 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.94\textwidth}\normalsize
+\textit{Notas:} V1028 é o peso. Horas cobrem todos os ocupados classificáveis; rendimentos usam renda positiva e horas habituais válidas. Rendimento é nominal, do trabalho principal (VD4016). O traço indica medida não disponível. Fonte: \citet{PNAD2024T4Microdados}.
+\end{minipage}
+\end{table}
+
+Não há horas habituais ou efetivas ausentes entre ocupados. O arquivo de entrada preserva a distribuição formal completa por valor observado. Os pesos nas faixas até 36h, 37--40h e acima de 40h são $0{,}144146$, $0{,}400253$ e $0{,}455601$. Atribuir a todas as pessoas dessas faixas as jornadas de 36h, 40h e 44h seria uma aproximação adicional. A especificação principal não faz essa substituição por três pontos.
+
+Entre os formais, $17{,}973275\%$ declaram mais de 44 horas habituais. No exercício principal, limita-se a distribuição inicial por $h_b^0=\min\{h_b,44\}$, reduzindo a média formal para $39{,}946640$h. Nos contrafactuais, $h_b(H)=\min\{h_b^0,H\}$ para $H=40$ ou $36$. Assim, a comparação é 44$\to$40/36, preservando os valores observados abaixo de 44h. A limitação inicial é hipótese de mapeamento, não observação de horas contratadas. Interpretar o corte como efeito legal é hipótese de alcance uniforme em categorias formais heterogêneas. Não se infere descumprimento legal de horas habituais acima de 44h.
+
+Ponte e cunhas são recalibradas nesse estado inicial. A distribuição habitual integral permanece arquivada e é utilizada como sensibilidade: nessa alternativa, preservam-se todas as respostas, e o limite interno de 120h apenas reproduz o maior valor do suporte. A comparação testa o papel da cauda longa e da base inicial. Horas informais permanecem na média habitual, $h_I=35{,}484752$h, no modelo nacional.
+
+Os pesos legados $(0{,}085,0{,}269,0{,}646)$, anteriormente atribuídos ao DIEESE como horas contratadas, não puderam ser associados a uma tabela primária verificável daquele universo e ano. Permanecem apenas nos controles antigos, como hipóteses. Não se usa publicação de outro ano para certificar retrospectivamente a atribuição.
+
+\subsection{Rendimentos e denominadores da ponte horária}
+Sejam $r_i$ o rendimento mensal habitual nominal do trabalho principal (\texttt{VD4016}), $h_i$ as horas habituais e $w_i$ o peso. Para $j\in\{F,I\}$, a amostra remunerada $\mathcal S_j$ exige renda positiva e horas válidas. A razão com horas observadas é
+\begin{equation}\label{eq:app_observed_bridge}
+R_h^{\mathrm{dados}}=
+\frac{\left(\frac{12}{52}\sum_{i\in\mathcal S_F}w_i r_i\right)/\sum_{i\in\mathcal S_F}w_i h_i}
+{\left(\frac{12}{52}\sum_{i\in\mathcal S_I}w_i r_i\right)/\sum_{i\in\mathcal S_I}w_i h_i}.
+\end{equation}
+O fator mensal para semanal $12/52$ cancela. Rendimento e horas de cada modalidade usam as mesmas pessoas. Um deflator comum também cancelaria; não se combinam trimestres ou conceitos diferentes.
+\begin{table}[htbp]
+\centering
+\caption{Razões observadas de remuneração formal/informal}
+\label{tab:app_wage_bridge}
+\normalsize
+\begin{tabular}{@{}p{7.1cm}rr@{}}
+\toprule
+Estimando & Ocupados pagos & Empregados privados \\
+\midrule
+Folha por total de horas & 1,622443 & 1,164325 \\
+Rendimento semanal médio por pessoa & 1,880100 & 1,318282 \\
+Médias individuais de rendimento por hora & 1,584094 & 1,174950 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\textwidth}\normalsize
+\textit{Notas:} Segunda coluna: categorias ocupacionais remuneradas; terceira: VD4009=1 ou 2. Rendimento semanal e mensal dão a mesma razão por pessoa. As três linhas são estimandos distintos. Fonte: \citet{PNAD2024T4Microdados}.
+\end{minipage}
+\end{table}
+
+No exercício principal, o denominador formal usa $\min\{h_i,44\}$ nas mesmas pessoas remuneradas; rendimentos e horas informais são preservados. O alvo passa a $R_h^{44}=1{,}682473$, enquanto $R_h^{\mathrm{dados}}=1{,}622443$ permanece o momento observado da distribuição integral. Essa transformação acompanha a limitação das horas no modelo e não constitui uma nova observação de remuneração por hora contratada. Manter silenciosamente a razão integral após limitar o denominador formal mudaria o estimando da ponte.
+
+A ponte exclui 28.603 formais e 1.381.710 informais ponderados por renda ausente ou não positiva. Há 5.006 registros amostrais de renda ausente, incluindo universos sem remuneração. O modelo abrange todos os ocupados, inclusive familiares auxiliares; estender a razão da amostra paga a esse universo é hipótese de seleção. Rendimentos de empregadores e conta própria misturam trabalho, capital e características do negócio. O momento amplo não é prêmio salarial controlado ou produtividade causal. A razão de empregados privados informa um universo restrito; transportá-la para todos os ocupados exige outra hipótese.
+
+\subsection{RAIS, estabelecimento e participação no emprego}
+A RAIS 2022 registra 52.790.864 vínculos ativos em 31/12/2022. Porte é do estabelecimento, e uma pessoa pode ter múltiplos vínculos. A planilha oficial, aba \texttt{TABELA 2}, células C87:D95, permite reconstituir a Tabela~\ref{tab:app_rais} \citep{RAIS2022TabelasVerificadas}. Não se trata de pessoas por empresas consolidadas.
+\begin{table}[htbp]
+\centering
+\caption{Vínculos por porte de estabelecimento: RAIS 2022}
+\label{tab:app_rais}
+\normalsize
+\begin{tabular}{@{}lr@{}}
+\toprule
+Porte do estabelecimento & Vínculos em 31/12/2022 \\
+\midrule
+1--4 & 4.747.386 \\
+5--9 & 4.494.655 \\
+10--19 & 5.166.304 \\
+20--49 & 6.385.257 \\
+\midrule
+1--49 & 20.793.602 \\
+Todos os portes & 52.790.864 \\
+Participação de 1--49 & 39,388637\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A fonte não sustenta $59\%$ nem $13\%+19\%=32\%$ para esse recorte. As informalidades por porte de $50\%$ e $20\%$ não são observações RAIS, que cobre apenas vínculos formais. A migração ao eSocial impõe cautela temporal \citep{RAIS2022NotaTecnica}. A variável de tamanho do negócio PNAD tem universo e categorias próprios, sem correspondência automática com estabelecimento RAIS.
+
+A correção contábil independe da escolha empírica. Para participação formal $s_{F,g}$ e informalidade $i_g$, a participação total é
+\begin{equation}\label{eq:app_formal_total}
+s_{N,g}=\frac{s_{F,g}/(1-i_g)}{\sum_j s_{F,j}/(1-i_j)},\qquad i=\sum_gs_{N,g}i_g.
+\end{equation}
+Por exemplo, $s_F=(0{,}59,0{,}41)$ e $i_g=(0{,}50,0{,}20)$ implicam $s_N=(0{,}697194,0{,}302806)$ e $i=40{,}915805\%$. $37{,}7\%$ trata participações formais como totais. O exemplo é teste contábil, não estimativa brasileira. Para evitar universos incompatíveis, o cenário nacional reprocessado usa um grupo de ocupados; os setores usam pessoas da PNAD.
+
+\subsection{Integridade e incerteza}
+A proveniência contém endereço, data, tamanho e SHA256. Os identificadores integrais são:
+\begin{description}
+\item[Microdados PNAD (209.873.314 bytes)]\hfill\\
+{\normalsize\path{1e04e77bd7c96d212a24000e32b1f41d713ad476bc84109b72c750246f390a2a}}
+\item[Dicionário (70.208 bytes)]\hfill\\
+{\normalsize\path{691ce2acd94e805741c71ea699888ad628a5fb5cbf1037fdf9626eba6b99cadc}}
+\item[Planilha RAIS (1.893.910 bytes)]\hfill\\
+{\normalsize\path{43ec36950a6ec9598682990bf5ff5ad9bfb9b0f6ee15e1ae68de820cbc5b3684}}
+\end{description}
+As estimativas são pontuais, ponderadas por V1028. Não foram calculados erros-padrão com estratos e unidades primárias; as casas decimais documentam reprodução, não precisão inferencial.

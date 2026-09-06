@@ -1,8 +1,10 @@
 {
   "source": "RAIS 2022, Ministério do Trabalho e Emprego",
+  "official_url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/rais/rais-2022",
+  "technical_note_url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/rais/rais-2022/nota-tecnica-rais-2022.pdf",
   "secondary_source": "SEBRAE/DataSebrae, Panorama das Empresas 2024",
   "universe": "Emprego formal (com carteira assinada + estatutários)",
-  "collection_date": "2026-03-24T21:35:49.120652",
+  "collection_date": "2026-04-27T22:16:09.596908",
   "small_le49_share_formal": 0.59,
   "large_ge50_share_formal": 0.41,
   "share_note": "Proporção do emprego formal (vínculos ativos em 31/12)",
@@ -35,7 +37,11 @@
     "note": "Informalidade é maior em firmas pequenas (mais conta-própria, sem carteira)"
   },
   "formal_cost_wedge": {
-    "source": "Legislação CLT + FGTS + contribuições patronais",
+    "source": "Legislação CLT/FGTS + regras oficiais de folha/eSocial",
+    "official_references": [
+      "Lei 8.212/1991",
+      "Nota Orientativa eSocial S-1.0 05/2021"
+    ],
     "gamma_F_small": 0.12,
     "gamma_F_large": 0.03,
     "components": {
@@ -46,7 +52,7 @@
       "Salario_educacao": 0.025,
       "13o_ferias_provisao": 0.11
     },
-    "note": "\n                γ_F captura o wedge EFETIVO (não o custo bruto total).\n                O custo bruto CLT é ~68-72% sobre o salário.\n                γ_F no modelo é o wedge MARGINAL que diferencia a decisão\n                de formalizar/informalizar. Firmas grandes têm γ_F menor\n                porque: (i) escala dilui custos fixos de compliance,\n                (ii) acesso a regimes tributários favoráveis (Simples Nacional\n                beneficia mais as menores, mas compliance é proporcionalmente\n                mais custoso para micro).\n                Valores 0.12 e 0.03 são calibrados para reproduzir as taxas\n                de informalidade observadas por porte.\n            "
+    "note": "\n                γ_F captura o wedge EFETIVO (não o custo bruto total).\n                O custo bruto CLT indicado aqui e apenas contextual.\n                γ_F no modelo é o wedge MARGINAL que diferencia a decisão\n                de formalizar/informalizar. Firmas grandes têm γ_F menor\n                porque: (i) escala dilui custos fixos de compliance,\n                (ii) acesso a regimes tributários favoráveis (Simples Nacional\n                beneficia mais as menores, mas compliance é proporcionalmente\n                mais custoso para micro).\n                Valores 0.12 e 0.03 são calibrados para reproduzir as taxas\n                de informalidade observadas por porte.\n            "
   },
   "consistency_check": {
     "small_share + large_share": 1.0,

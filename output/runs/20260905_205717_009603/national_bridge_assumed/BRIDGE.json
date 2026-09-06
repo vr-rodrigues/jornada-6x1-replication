@@ -1,0 +1,24 @@
+[
+  {
+    "efficiency_mode": "bilateral",
+    "omega": 0.5761673523170515,
+    "sigma_sub": 1.326,
+    "measure": "hourly",
+    "target": 1.4,
+    "implied": 1.400000000000001,
+    "residual": 1.1102230246251565e-15,
+    "status": "conditional_calibration_not_joint_identification",
+    "assumption": "Gross marginal products proxy observed remuneration; tau/pi are not separately identified"
+  },
+  {
+    "efficiency_mode": "flat_below",
+    "omega": 0.5760195128964878,
+    "sigma_sub": 1.326,
+    "measure": "hourly",
+    "target": 1.4,
+    "implied": 1.4000000000000008,
+    "residual": 8.881784197001252e-16,
+    "status": "conditional_calibration_not_joint_identification",
+    "assumption": "Gross marginal products proxy observed remuneration; tau/pi are not separately identified"
+  }
+]

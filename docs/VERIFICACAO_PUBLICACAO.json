@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-05",
+  "base_commit": "5559433",
+  "verification_run": "output/runs/20260905_205717_009603",
+  "status": "complete",
+  "test_count": 61,
+  "tests_passed": true,
+  "numerical_checks": {
+    "max_foc_violation": 1.90983340253581e-14,
+    "max_output_restoration_error": 1.9984014443252818e-15,
+    "max_decomposition_error_pct": 1.7763568394002505e-15,
+    "max_ce_identity_error": 1.0602629885170245e-14
+  },
+  "economic_comparison_csv_byte_identical_to_pinned_run": true,
+  "sectoral_comparison_csv_byte_identical_to_pinned_run": true,
+  "main_and_appendix_pixel_identical_to_local_final": true,
+  "national_sectoral_transition_and_comparison_csv_byte_identical": true,
+  "model_and_runner_unchanged_from_audited_run": true,
+  "author_update": {
+    "fernando_orcid": "0000-0002-9073-7684",
+    "specific_victor_ai_sentence_removed": true
+  },
+  "original_archive_sha256": "4bd8f302c0dab296aa5cac039164ab9c4ddac869819aa4c493e5f5996369af95",
+  "raw_pnad_in_git": false,
+  "raw_data_collection_rerun_for_this_publication": false,
+  "published_overleaf": "manuscript/overleaf/jornada_overleaf_pasta_unica_20260905_210105.zip"
+}

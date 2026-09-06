@@ -214,7 +214,8 @@
   year    = {2026},
   volume  = {94},
   number  = {2},
-  pages   = {573--618}
+  pages   = {573--618},
+  note    = {Final publication metadata checked against author page and NBER Working Paper No.~28391; DOI not available in the audited records. \url{https://www.nber.org/papers/w28391}}
 }
 
 @unpublished{BussoFazioLevy2012,
@@ -311,10 +312,10 @@
 % === Data Sources ===
 
 @misc{PNAD2025,
-  author  = {{IBGE}},
+  author  = {{Instituto Brasileiro de Geografia e Estatistica}},
   title   = {Pesquisa Nacional por Amostra de Domic\'{i}lios Cont\'{i}nua},
-  year    = {2025},
-  note    = {Trimestral. Dispon\'{i}vel em: \url{https://sidra.ibge.gov.br}}
+  year    = {2026},
+  note    = {SIDRA tables 4093, 4097, 6374, 6389, and 6413, accessed through \url{https://sidra.ibge.gov.br} and \url{https://apisidra.ibge.gov.br}}
 }
 
 @misc{PWT2024,
@@ -324,11 +325,74 @@
   note    = {University of Groningen. \url{https://www.rug.nl/ggdc/productivity/pwt/}}
 }
 
+@misc{PWT2025,
+  author  = {{Groningen Growth and Development Centre}},
+  title   = {{Penn World Table} version 11.0},
+  year    = {2025},
+  note    = {University of Groningen. Release covers 185 countries through 2023. Checked 2026-04-28. \url{https://www.rug.nl/ggdc/productivity/pwt/pwt-releases/pwt110}}
+}
+
+@misc{FREDPWTBrazil2026,
+  author  = {{Federal Reserve Bank of St. Louis}},
+  title   = {Total Factor Productivity at Constant National Prices for Brazil [{RTFPNABRA632NRUG}]},
+  year    = {2026},
+  note    = {FRED mirror of Penn World Table 11.0, source ID \texttt{rtfpna}; extracted and frozen at \texttt{data\_raw/fred/RTFPNABRA632NRUG\_pwt110.csv}. Checked 2026-04-28. \url{https://fred.stlouisfed.org/series/RTFPNABRA632NRUG}}
+}
+
+@misc{RAIS2022,
+  author  = {{Ministerio do Trabalho e Emprego}},
+  title   = {Relacao Anual de Informacoes Sociais, ano-base 2022},
+  year    = {2024},
+  note    = {Administrative records of formal employment. Used for formal employment shares by firm size. Public RAIS 2022 files and technical note checked 2026-04-28. \url{https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/estatisticas-trabalho/rais/rais-2022}}
+}
+
+@misc{BrasilLei8212,
+  author  = {{Presidencia da Republica}},
+  title   = {Lei No.~8.212, de 24 de julho de 1991},
+  year    = {1991},
+  note    = {Plano de Custeio da Previdencia Social, including employer payroll contributions. Consolidated text checked 2026-04-28. \url{https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm}}
+}
+
+@misc{ReceitaESocialRural2021,
+  author  = {{Receita Federal do Brasil and eSocial}},
+  title   = {Nota Orientativa S-1.0 No.~05/2021},
+  year    = {2021},
+  note    = {Guidance on rural producers' payroll and commercialization contribution reporting in eSocial. Checked 2026-04-28. \url{https://www.gov.br/esocial/pt-br/documentacao-tecnica/manuais/nota-orientativa-s-1-0-05-2021-atualizada-em-24-05-2021.pdf/view}}
+}
+
+@misc{CamaraPEC82025Protocol,
+  author  = {{Camara dos Deputados}},
+  title   = {{PEC} que acaba com a escala de trabalho 6x1 e protocolada na Camara},
+  year    = {2025},
+  note    = {Agencia Camara Noticias, 25 February 2025. \url{https://www.camara.leg.br/noticias/1136400-pec-que-acaba-com-a-escala-de-trabalho-6x1-e-protocolada-na-camara}}
+}
+
+@misc{CamaraFortyHours2025,
+  author  = {{Camara dos Deputados}},
+  title   = {Relator propoe jornada maxima de 40 horas e restricoes a escala 6x1},
+  year    = {2025},
+  note    = {Agencia Camara Noticias, 3 December 2025. \url{https://www.camara.leg.br/noticias/1229360-relator-propoe-jornada-maxima-de-40-horas-e}}
+}
+
+@misc{CamaraAdmissibility2026,
+  author  = {{Camara dos Deputados}},
+  title   = {Comissao aprova admissibilidade de propostas que acabam com a escala 6x1},
+  year    = {2026},
+  note    = {Agencia Camara Noticias, 22 April 2026. \url{https://www.camara.leg.br/noticias/1265049-comissao-aprova-admissibilidade-de-propostas-que-acabam-com-a-escala-6x1}}
+}
+
+@misc{CamaraSpecialCommission2026,
+  author  = {{Camara dos Deputados}},
+  title   = {Motta cria comissao especial para analisar fim da escala 6x1},
+  year    = {2026},
+  note    = {Agencia Camara Noticias, 24 April 2026; updated 27 April 2026. \url{https://www.camara.leg.br/noticias/1266146-motta-cria-comissao-especial-para-analisar-fim-da-escala-6x1}}
+}
+
 @misc{DIEESE2024,
   author  = {{DIEESE}},
   title   = {Anu\'{a}rio do Sistema P\'{u}blico de Emprego, Trabalho e Renda},
   year    = {2024},
-  note    = {Departamento Intersindical de Estat\'{i}stica e Estudos Socioecon\^{o}micos}
+  note    = {Departamento Intersindical de Estat\'{i}stica e Estudos Socioecon\^{o}micos. Contracted-hours distribution from Table 7 is mapped to model bins as documented in \texttt{data\_final/calibration\_targets.csv}; source checked 2026-04-28. \url{https://www.dieese.org.br}}
 }
 
 % === New references added in JMacro R&R revision ===
@@ -390,6 +454,16 @@
   doi     = {10.1016/j.labeco.2016.02.004}
 }
 
+@article{FanSchorKellyGu2025,
+  author  = {Fan, Wen and Schor, Juliet B. and Kelly, Orla and Gu, Guolin},
+  title   = {Work Time Reduction via a {4-Day} Workweek Finds Improvements in Workers' Well-Being},
+  journal = {Nature Human Behaviour},
+  year    = {2025},
+  volume  = {9},
+  pages   = {2153--2168},
+  doi     = {10.1038/s41562-025-02259-6}
+}
+
 @article{CalmforsHoel1988,
   author  = {Calmfors, Lars and Hoel, Michael},
   title   = {Work Sharing and Overtime},
@@ -409,14 +483,4 @@
   volume  = {1B},
   pages   = {813--862},
   doi     = {10.1016/S1574-0048(99)10020-X}
-}
-
-@article{LemosGalvao2020,
-  author  = {Lemos, Anderson L.~F. and Galv{\~a}o, Ant\^{o}nio C.~F.},
-  title   = {Formaliza\c{c}\~{a}o no Agroneg\'{o}cio {Brasileiro}: {Custos}, Enforcement e Incentivos},
-  journal = {Revista de Pol\'{i}tica Agr\'{i}cola},
-  year    = {2020},
-  volume  = {29},
-  number  = {4},
-  pages   = {86--103}
 }

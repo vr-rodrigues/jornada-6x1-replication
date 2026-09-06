@@ -1,0 +1,81 @@
+\section{Modelo}\label{sec:model}
+
+O modelo traduz os fatos da Seção~\ref{sec:facts} em uma contabilidade macroeconômica de curto prazo. Há um grupo nacional de firmas e dois tipos de trabalho, formal e informal; a extensão setorial usa grupos indexados por $g$. O emprego total de cada grupo é fixo no horizonte do contrafactual; firmas escolhem sua composição formal--informal, enquanto capital e produtividade agregada são inicialmente predeterminados.
+
+\subsection{Tecnologia e eficiência das horas}
+
+Uma firma representativa do grupo $g$ produz $Y_g$ combinando capital $K_g$ e trabalho efetivo $L_g$ por uma tecnologia Cobb--Douglas:
+\begin{equation}\label{eq:production}
+Y_g=A_g K_g^\alpha L_g^{1-\alpha},\qquad 0<\alpha<1,
+\end{equation}
+em que $A_g$ denota a PTF e $\alpha$ é a elasticidade do produto em relação ao capital. O insumo trabalho é um agregado CES de trabalho efetivo formal e informal:
+\begin{equation}\label{eq:ces}
+L_g=\left[\omega L_{F,g}^{\rho}+(1-\omega)L_{I,g}^{\rho}\right]^{1/\rho},
+\qquad \rho=\frac{\sigma_{\mathrm{sub}}-1}{\sigma_{\mathrm{sub}}}.
+\end{equation}
+em que $\omega$ é o peso tecnológico do trabalho formal e $\sigma_{\mathrm{sub}}$ é a elasticidade de substituição. Os insumos efetivos são
+\begin{align}
+L_{F,g}&=N_{F,g}q_{F,g}(\bar h), &
+q_{F,g}(\bar h)&=\sum_b\theta_{b,g}\,h_{b,g}(\bar h)e\bigl(h_{b,g}(\bar h)\bigr),\label{eq:effective_formal}\\
+L_{I,g}&=\eta_I N_{I,g}h_{I,g}e(h_{I,g}), &
+h_{b,g}(\bar h)&=\min\{h_{b,g}^{0},\bar h\}.
+\end{align}
+O emprego total satisfaz $N_{I,g}=N_g-N_{F,g}$. Entre os formais, $b$ indexa as faixas observadas de horas habituais, com participações $\theta_{b,g}$. Para representar a redução a partir do teto de 44h, usamos $h_{b,g}^{0}=\min\{h_{b,g}^{\mathrm{obs}},44\}$ no estado inicial e $\bar h\leq44$ no contrafactual. Essa limitação é uma hipótese de representação da jornada, não uma observação de horas contratuais. No setor informal, mantemos a média observada $h_{I,g}$. O parâmetro $\eta_I$ mede a eficiência relativa do insumo informal. A redistribuição de trabalhadores preserva a distribuição de horas dentro de cada modalidade.
+
+A eficiência horária acima do pico $h^*=40$ segue $e(h)=\exp\{-\kappa(h-h^*)^2\}$. A evidência de \citet{Pencavel2015} motiva a perda de eficiência associada a jornadas longas, mas não identifica a curva brasileira nem o formato abaixo do pico. Por isso consideramos duas especificações:
+\begin{equation}\label{eq:efficiency_modes}
+e_B(h)=\exp\{-\kappa(h-h^*)^2\},\qquad
+e_F(h)=\exp\{-\kappa[\max\{h-h^*,0\}]^2\}.
+\end{equation}
+Na especificação de \emph{fadiga apenas acima de 40 horas}, $e_F(h)=1$ para $h\leq h^*$. Na alternativa de \emph{penalidade bilateral}, a mesma forma quadrática vale dos dois lados de $h^*$, penalizando também jornadas menores. O pico refere-se à eficiência por hora, não necessariamente ao trabalho efetivo total $he(h)$.
+
+\subsection{Formalização e decisão da firma}
+
+Tomando o emprego total como dado, a firma escolhe continuamente $N_{F,g}\in[0,N_g]$ para maximizar
+\begin{equation}\label{eq:firm}
+J_g=Y_g-\tau_g N_{F,g}-\frac{\pi_g}{2}N_{I,g}^2
+-\frac{\gamma_g}{2}(N_{F,g}-N_{F,g}^0)^2.
+\end{equation}
+O custo linear $\tau_g$ resume obrigações formais; $\pi_g$ governa o custo convexo da informalidade; e $\gamma_g$ penaliza desvios em relação ao emprego formal pré-reforma $N_{F,g}^0$. As cunhas representam distorções privadas, no espírito de \citet{HsiehKlenow2009} e \citet{RestucciaRogerson2008}. \citet{DixCarneiroGoldbergMeghirUlyssea2026} fornecem uma microfundamentação relacionada para formalidade endógena. A redução do teto altera $L_{F,g}$ e, portanto, a condição marginal que determina a composição do emprego.
+
+Definindo $MP_{F,g}=\partial Y_g/\partial N_{F,g}$ e $MP_{I,g}=\partial Y_g/\partial N_{I,g}$ com a outra modalidade fixa, a condição interior é
+\begin{equation}\label{eq:firm_foc}
+J_g'=MP_{F,g}-MP_{I,g}-\tau_g+\pi_g N_{I,g}
+-\gamma_g(N_{F,g}-N_{F,g}^0)=0.
+\end{equation}
+Verificam-se também as fronteiras: $J_g'(0+)\leq0$ na inferior e $J_g'(N_g-)\geq0$ na superior.
+
+No estado inicial, um alvo de informalidade identifica somente $\tau_g-\pi_gN_{I,g}^0=D_g$, em que $D_g=MP_{F,g}^0-MP_{I,g}^0$. Para separar as cunhas impomos
+\begin{equation}\label{eq:wedge_normalization}
+\tau_g\geq0,\qquad\pi_g\geq0,\qquad\tau_g\pi_g=0.
+\end{equation}
+As cunhas são recalibradas sob essa normalização em cada especificação, sem identificação independente de ambas. O apêndice apresenta a solução completa.
+
+\subsection{Produtividade requerida e bem-estar}
+
+Definimos $\Areq$ como a variação de PTF que restaura o produto agregado. Seja $N_{F,g}^*(a,\bar h)$ a escolha da firma quando a produtividade é multiplicada por $a>0$:
+\begin{equation}\label{eq:areq}
+\sum_gY_g\!\left(a A_g,K_g,\bar h,N_{F,g}^*(a,\bar h)\right)=Y_0,
+\qquad \Areq=a-1.
+\end{equation}
+Essa definição transforma a perda de produto em uma unidade comparável entre tetos e com a história da PTF. O produto de referência $Y_0$ é o da base de 44h, de modo que $\Areq(44)=0$. Ela não impõe nem prevê que a reforma produza tal ganho. A busca reotimiza a composição em cada avaliação de $a$; $A_{\mathrm{req}}^{\mathrm{fixo}}$ mantém $N_{F,g}=N_{F,g}^0$. Ambas restauram produto bruto, com requisito assinado: se negativo, não há necessidade de ganho adicional.
+
+A decomposição atualiza sucessivamente \emph{horas físicas, eficiência e realocação}, gerando os níveis $Y_H$, $Y_E$ e $Y_1$. Em cada passo preservam-se os componentes ainda não alterados do estado inicial:
+\begin{equation}\label{eq:decomposition}
+\frac{Y_1-Y_0}{Y_0}
+=\frac{Y_H-Y_0}{Y_0}+\frac{Y_E-Y_H}{Y_0}+\frac{Y_1-Y_E}{Y_0}.
+\end{equation}
+O denominador comum garante a soma das parcelas; a atribuição das interações depende da ordem declarada.
+
+Para o diagnóstico de bem-estar, adotamos preferências GHH \citep{GreenwoodHercowitzHuffman1988}, com elasticidade de Frisch $1/\nu=0{,}5$. A restrição de recursos é $\mathcal C+\mathcal J=Y$, em que $\mathcal C$ é o consumo agregado e $\mathcal J=\sum_g\gamma_g(N_{F,g}-N_{F,g}^0)^2/2$ é o custo real de ajuste. Os pagamentos associados a $\tau_g$ e $\pi_g$ são transferências devolvidas ao domicílio representativo; a alternativa de custos reais consta do apêndice.
+
+O composto GHH mede consumo líquido da desutilidade monetizada do trabalho. Com consumo por trabalhador $C=\mathcal C/\sum_gN_g$, média de horas físicas $h$ e $G=C-v(h)$, em que $v(h)=\psi h^{1+\nu}/(1+\nu)$, reportamos sua variação e o equivalente de consumo:
+\begin{equation}\label{eq:cv}
+\Delta GHH=\frac{G_1-G_0}{G_0},\qquad
+CE=\frac{C_1-C_0-v(h_1)+v(h_0)}{C_0}.
+\end{equation}
+Os resultados percentuais multiplicam essas expressões por 100. O indicador não incorpora saúde, produção doméstica, barganha, transições de emprego ou pesos distributivos e, portanto, não deve ser interpretado como uma ordenação completa de bem-estar social.
+
+\subsection{Fechamento de curto prazo}
+
+O fechamento é estático e de equilíbrio parcial. Capital e emprego total são predeterminados; retroalimentações salário--preço, monetárias, fiscais e intersetoriais permanecem fora do modelo. O apêndice online organiza os canais incluídos, delimitados e omitidos. O exercício não quantifica ajuste endógeno de capital nem incidência distributiva, pois não inclui equações de investimento ou alocação individual de consumo.

@@ -1,0 +1,41 @@
+% Shared journal typography. Exporter inlines this file into each document.
+% Compile with XeLaTeX; Times New Roman is also installed on Overleaf.
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Times New Roman}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\normalsize\itshape}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\itshape}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\itshape}{\theparagraph}{1em}{}
+\usepackage{caption}
+\DeclareCaptionFont{journal}{\normalsize\onehalfspacing}
+\captionsetup{font=journal,labelfont=it}
+\makeatletter
+% setspace resets floats to single spacing; restore journal spacing afterwards.
+\AtBeginDocument{\apptocmd{\@xfloat}{\onehalfspacing\normalsize}{}{\PackageError{journal_style}{Cannot restore float spacing}{Check the float implementation.}}}
+\patchcmd{\l@section}{\bfseries}{\itshape}{}{}
+\patchcmd{\@footnotetext}{\reset@font\footnotesize}{\reset@font\normalsize\onehalfspacing}{}{}
+\renewcommand{\footnotesize}{\normalsize}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip 1.5em
+  \begin{center}
+    {\normalsize\itshape\@title\par}\vskip 1em
+    {\normalsize\@author\par}\vskip .5em
+    {\normalsize\@date\par}
+  \end{center}\par\vskip 1em}
+\renewenvironment{abstract}
+  {\begin{center}\normalsize\itshape\abstractname\end{center}\begin{quotation}\normalsize}
+  {\end{quotation}}
+\makeatother
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\normalfont\itshape #1}
+\pagestyle{plain}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000

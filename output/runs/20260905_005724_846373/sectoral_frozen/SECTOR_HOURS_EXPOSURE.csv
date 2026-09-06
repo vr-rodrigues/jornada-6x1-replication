@@ -1,0 +1,7 @@
+h1,sector,formal_hours_above_cap_share,share_of_sector_employment,share_of_classified_total_employment,occupied_weighted,mechanically_exposed_weighted,interpretation,input_status
+40,agriculture,0.78,0.30654000000000003,0.026055900000000003,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata
+40,industry,0.65,0.5018,0.10186540000000001,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata
+40,services,0.64,0.40256000000000003,0.28662272,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata
+36,agriculture,0.96,0.37728,0.0320688,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata
+36,industry,0.95,0.7333999999999999,0.1488802,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata
+36,services,0.9,0.5661,0.4030632,,,Mechanical exposure under model mapping of formal habitual hours to cap; not workers legally covered or welfare incidence,legacy_hypotheses_not_new_microdata

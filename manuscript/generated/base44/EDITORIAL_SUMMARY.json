@@ -1,0 +1,248 @@
+{
+  "checks": {
+    "status": "passed",
+    "national_sensitivity_rows": 64,
+    "sectoral_rows": 16,
+    "simulations_checked": 80,
+    "max_errors": {
+      "restoration": 7.105427357601002e-15,
+      "frozen_restoration": 2.220446049250313e-16,
+      "kkt": 8.181233468462778e-14,
+      "decomposition": 1.7763568394002505e-15,
+      "CE": 8.659739592076221e-15,
+      "GHH": 1.0436096431476471e-14,
+      "resource_constraint": 0.0,
+      "bridge": 2.195910120406097e-11
+    },
+    "max_national_anchor_error": 7.105427357601002e-15,
+    "observed_national_target_error": 0.0,
+    "elapsed_seconds": 10.381061599997338
+  },
+  "sectoral_bridges": [
+    {
+      "efficiency_mode": "bilateral",
+      "sigma_sub": 1.326,
+      "omega": 0.6744758937357848,
+      "target": 1.6823345045627869,
+      "implied": 1.6823345045627867,
+      "residual": -2.220446049250313e-16,
+      "measure": "hourly",
+      "universe": "three classified PNAD sectors; positive paid main-job income",
+      "formal_hours": "min(habitual,44)",
+      "informal_hours": "habitual, unrestricted",
+      "aggregation": "sum payrolls and paid-worker physical hours before taking formal/informal ratio",
+      "identification": "common omega conditional on sigma, eta and wedge normalization"
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "sigma_sub": 1.326,
+      "omega": 0.6755751882551347,
+      "target": 1.6823345045627869,
+      "implied": 1.6823345045627873,
+      "residual": 4.440892098500626e-16,
+      "measure": "hourly",
+      "universe": "three classified PNAD sectors; positive paid main-job income",
+      "formal_hours": "min(habitual,44)",
+      "informal_hours": "habitual, unrestricted",
+      "aggregation": "sum payrolls and paid-worker physical hours before taking formal/informal ratio",
+      "identification": "common omega conditional on sigma, eta and wedge normalization"
+    }
+  ],
+  "national_no_fatigue": [
+    {
+      "efficiency_mode": "bilateral",
+      "hours_cap": 40,
+      "A_req_pct": 2.3972342385487844,
+      "dY_pct": -2.5360650152776,
+      "CE_pct": -0.6709857615214833,
+      "dGHH_pct": -0.8565775678997658
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "hours_cap": 36,
+      "A_req_pct": 7.424102114359399,
+      "dY_pct": -7.502088874288193,
+      "CE_pct": -2.520735179941987,
+      "dGHH_pct": -3.21795980418126
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "hours_cap": 40,
+      "A_req_pct": 2.3972342385487844,
+      "dY_pct": -2.5360650152776,
+      "CE_pct": -0.6709857615214833,
+      "dGHH_pct": -0.8565775678997658
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "hours_cap": 36,
+      "A_req_pct": 7.424102114359399,
+      "dY_pct": -7.502088874288193,
+      "CE_pct": -2.520735179941987,
+      "dGHH_pct": -3.21795980418126
+    }
+  ],
+  "sectoral": [
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 40,
+      "sector": "agriculture",
+      "dY_pct": -3.084489464794038,
+      "A_req_pct": 2.0854133037702782,
+      "dInf_pp": 0.8159042726324395,
+      "CE_pct": -1.9138445146724674,
+      "dGHH_pct": -2.443205763411661
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 40,
+      "sector": "industry",
+      "dY_pct": -1.8803821119254382,
+      "A_req_pct": 1.746101555900692,
+      "dInf_pp": 0.6434619907035088,
+      "CE_pct": 0.14208519844417783,
+      "dGHH_pct": 0.1813853597159717
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 40,
+      "sector": "services",
+      "dY_pct": -1.5427796624244317,
+      "A_req_pct": 1.4950513333399806,
+      "dInf_pp": 0.43825648388886584,
+      "CE_pct": 0.32826439034857907,
+      "dGHH_pct": 0.4190609238492498
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 40,
+      "sector": "AGGREGATE",
+      "dY_pct": -1.7111006992539868,
+      "A_req_pct": 1.6015275054297007,
+      "dInf_pp": 0.5088846236913913,
+      "CE_pct": 0.14116849523313485,
+      "dGHH_pct": 0.18021510029761897
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 36,
+      "sector": "agriculture",
+      "dY_pct": -12.064724709849074,
+      "A_req_pct": 8.854006177848838,
+      "dInf_pp": 3.2107501177341957,
+      "CE_pct": -9.444675017182643,
+      "dGHH_pct": -12.057031936828906
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 36,
+      "sector": "industry",
+      "dY_pct": -9.046224178677187,
+      "A_req_pct": 8.969130184696539,
+      "dInf_pp": 3.2736002371166473,
+      "CE_pct": -3.837450475162351,
+      "dGHH_pct": -4.898872947015767
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 36,
+      "sector": "services",
+      "dY_pct": -7.919340743211678,
+      "A_req_pct": 8.161551014562264,
+      "dInf_pp": 2.385226798598372,
+      "CE_pct": -2.76957425195673,
+      "dGHH_pct": -3.5356267046256127
+    },
+    {
+      "efficiency_mode": "bilateral",
+      "h1": 36,
+      "sector": "AGGREGATE",
+      "dY_pct": -8.42268479407412,
+      "A_req_pct": 8.405137074205072,
+      "dInf_pp": 2.629678226119908,
+      "CE_pct": -3.4386363746225315,
+      "dGHH_pct": -4.389748563347912
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 40,
+      "sector": "agriculture",
+      "dY_pct": -3.052123068604451,
+      "A_req_pct": 2.0646764710146703,
+      "dInf_pp": 0.8074904903889846,
+      "CE_pct": -1.8819865547684782,
+      "dGHH_pct": -2.402536027364015
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 40,
+      "sector": "industry",
+      "dY_pct": -1.8681147464471914,
+      "A_req_pct": 1.7333990854523584,
+      "dInf_pp": 0.6400590049628452,
+      "CE_pct": 0.1542354100334845,
+      "dGHH_pct": 0.19689626812785258
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 40,
+      "sector": "services",
+      "dY_pct": -1.4966121061339877,
+      "A_req_pct": 1.449994775881125,
+      "dInf_pp": 0.4245987993503231,
+      "CE_pct": 0.3737952818734749,
+      "dGHH_pct": 0.4771854662214573
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 40,
+      "sector": "AGGREGATE",
+      "dY_pct": -1.6718794961257055,
+      "A_req_pct": 1.5648480198568127,
+      "dInf_pp": 0.497724085384571,
+      "CE_pct": 0.17987332929287828,
+      "dGHH_pct": 0.22962552675686593
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 36,
+      "sector": "agriculture",
+      "dY_pct": -9.875695845633247,
+      "A_req_pct": 7.104437776880945,
+      "dInf_pp": 2.6250830505522127,
+      "CE_pct": -7.25381525396271,
+      "dGHH_pct": -9.260189685909843
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 36,
+      "sector": "industry",
+      "dY_pct": -7.30783296515356,
+      "A_req_pct": 7.123504419402993,
+      "dInf_pp": 2.61207332734657,
+      "CE_pct": -2.0850846894611554,
+      "dGHH_pct": -2.661810241865305
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 36,
+      "sector": "services",
+      "dY_pct": -6.223617936812776,
+      "A_req_pct": 6.309040287239465,
+      "dInf_pp": 1.8435419956824517,
+      "CE_pct": -1.0705456093147134,
+      "dGHH_pct": -1.366653969337932
+    },
+    {
+      "efficiency_mode": "flat_below",
+      "h1": 36,
+      "sector": "AGGREGATE",
+      "dY_pct": -6.6836309449407665,
+      "A_req_pct": 6.559958233205432,
+      "dInf_pp": 2.060120931949916,
+      "CE_pct": -1.6940859041497547,
+      "dGHH_pct": -2.1626628563613894
+    }
+  ],
+  "sectoral_target_note": "paid persons in agriculture, industry and services; unclassified activity excluded"
+}

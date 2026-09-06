@@ -1,0 +1,61 @@
+\section{Calibração e disciplina empírica}\label{sec:calibration}
+
+\subsection{Parâmetros e momentos-alvo}
+
+A Tabela~\ref{tab:params} lista os parâmetros. As entradas observadas vêm da PNAD Contínua \citep{PNAD2024T4Microdados}; parâmetros calibrados por momentos ($\omega$, $\tau_g$, $\pi_g$, $\psi$) são ajustados internamente. Parâmetros escolhidos pelo autor descrevem margens motivadas pela evidência sobre horas de trabalho em \citet{Pencavel2015} e \citet{CollewetSauermann2017}, a literatura de produtividade informal \citep{LaPortaShleifer2014} e a evidência transnacional sobre horas em \citet{BickFuchsSchundelnLagakos2018}, sem serem identificados por esses estudos para o Brasil. O apêndice online apresenta fontes e sensibilidade completas para cada parâmetro.
+
+\begin{table}[p]
+\centering
+\caption{Valores de parâmetros por base evidencial.}\label{tab:params}
+\normalsize
+\begin{tabular}{@{}p{2.1cm}p{4.1cm}p{8.1cm}@{}}
+\toprule
+Parâmetro & Valor & Base da escolha \\
+\midrule
+\multicolumn{3}{l}{\textit{Entradas PNAD 2024T4 e regra de base de 44h}} \\
+$i_0$ & $0{,}3860009$ & Informalidade, VD4009 e V4019. \\
+$(h_b^0,\theta_b)$ & Base limitada a 44h & Horas habituais formais com $h_b^0=\min\{h_b^{obs},44\}$. \\
+$h_I$ & $35{,}48475$ & Média habitual informal no trabalho principal. \\
+$R_h$ & $1{,}682473$ & Renda por horas; denominador formal limitado a 44h. \\
+\midrule
+\multicolumn{3}{l}{\textit{Calibração condicional: bilateral / fadiga acima do pico}} \\
+$\omega$ & $0{,}675651$ / $0{,}676650$ & Ajuste de $R_h$ com $\sigma_{\mathrm{sub}}$ e $\eta_I$ fixos. \\
+$\tau$ & $2{,}661015$ / $2{,}714237$ & Condição inicial de composição e normalização~\eqref{eq:wedge_normalization}. \\
+$\pi$ & $0$ / $0$ & Mesma normalização; não identificado separadamente. \\
+$\kappa$ & $0{,}002109804$ & Derivado das hipóteses $E_Q$, $h^*$ e $h_{\mathrm{ref}}$. \\
+$\psi$ & $(8{,}2548;\,8{,}4199)\times10^{-5}$ & Normalização da condição representativa de horas. \\
+\midrule
+\multicolumn{3}{l}{\textit{Hipóteses e unidades mantidas}} \\
+$\sigma_{\mathrm{sub}}$ & $1{,}326$ & Elasticidade CES de referência; sensibilidade no apêndice. \\
+$\alpha;\,\eta_I$ & $0{,}35;\,0{,}40$ & Elasticidade do capital e eficiência relativa informal. \\
+$E_Q;\,h^*$ & $0{,}60;\,40$h & Elasticidade local de $he(h)$ e pico de eficiência horária. \\
+$h_{\mathrm{ref}}$ & $42{,}244$h & Âncora externa da eficiência, separada da nova média. \\
+$\gamma;\,\nu$ & $0{,}06;\,2$ & Custo de ajuste; inverso da elasticidade de Frisch. \\
+$N;\,K;\,A$ & $0{,}59;\,1;\,1$ & Unidades do modelo; $N$ e $K$ fixos. \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\textwidth}
+\normalsize\justifying
+\textit{Notas:} Cunhas em unidades do modelo, não alíquotas observadas. As duas colunas de valores calibrados referem-se às funções da equação~\eqref{eq:efficiency_modes}. $N=0{,}59$ normaliza as unidades dos custos, sem estimar ocupados/população. A distribuição inicial aplica o teto de 44h às horas formais, preservando os pesos PNAD; a média informal permanece observada. \textit{Fonte:} microdados do IBGE e calibração condicional.
+\end{minipage}
+\end{table}
+
+O parâmetro $\kappa$ deriva da elasticidade local $E_Q=d\log[he(h)]/d\log h=0{,}60$ na referência de $42{,}244$h, uma hipótese tecnológica distinta da média observada. Trata-se da elasticidade do trabalho efetivo por pessoa. O parâmetro $\psi$ é normalizado pela condição inicial de horas do agente representativo. As derivações constam do apêndice.
+
+\subsection{Elasticidade formal--informal e disciplina da calibração}
+
+A calibração não trata $\sigma_{\mathrm{sub}}$ como uma estimativa estrutural direta. O valor central $\sigma_{\mathrm{sub}}=1{,}326$ é um ponto de referência expositivo, não uma elasticidade identificada. Mantemos esse valor e ajustamos $\omega$ à razão formal--informal de remuneração horária da PNAD. A ponte supõe remuneração igual ao produto marginal bruto; não transporta diretamente o prêmio estimado no modelo de busca de \citet{MeghirNaritaRobin2015}.
+
+A razão divide massas de renda habitual positiva por totais de horas válidas do trabalho principal. Para compatibilizá-la com a base, substituímos as horas formais no denominador por $\min\{h^{obs},44\}$, mantendo renda e horas informais. A razão passa de $1{,}622443$ nos dados integrais a $1{,}682473$ sob essa regra. No modelo, $W_{F,g}=MP_{F,g}$ e $W_{I,g}=MP_{I,g}$ são remunerações semanais por trabalhador. Calculamos esses marginais antes de agregar grupos:
+\begin{equation}\label{eq:hourly_bridge}
+R_h^{\mathrm{mod}}=
+\frac{\displaystyle\sum_gN_{F,g}W_{F,g}/\sum_gN_{F,g}\bar h_{F,g}}
+{\displaystyle\sum_gN_{I,g}W_{I,g}/\sum_gN_{I,g}h_{I,g}}.
+\end{equation}
+A média $\bar h_{F,g}$ é de horas físicas. Essa agregação distingue remuneração por hora de remuneração semanal e de remuneração por unidade de trabalho efetivo.
+
+Fixados $\sigma_{\mathrm{sub}}$, $\eta_I$ e os demais parâmetros, igualamos~\eqref{eq:hourly_bridge} a $1{,}682473$, recalibrando as cunhas a cada tentativa de $\omega$. Obtemos $\omega=0{,}675651$ no bilateral e $0{,}676650$ na fadiga acima do pico, distintos da participação formal de $0{,}613999$. A extensão da ponte aos ocupados sem remuneração requer uma hipótese de seleção; o apêndice documenta os universos e as alternativas. Um único momento não identifica conjuntamente tecnologia e cunhas.
+
+Essa disciplina é importante para o sinal da resposta da informalidade. Na referência, $\sigma_{\mathrm{sub}}>1$ e os insumos são substitutos imperfeitos: no teto de 36 horas, a redução do trabalho efetivo formal desloca empregos marginais para a informalidade. \citet{DerenoncourtGerardLagosMontialoux2025} documentam efeitos do salário mínimo sobre salários informais e realocação limitada para fora do emprego formal no Brasil. Essa evidência situa a interação entre regulação e informalidade; sua elasticidade de realocação não identifica diretamente $\sigma_{\mathrm{sub}}$. O apêndice online reporta as grades completas dos parâmetros CES, com pontos interiores e ponte recalibrada em cada ponto, e discute a distinção entre elasticidades na literatura.
+
+Como robustez, reconstruímos a calibração preservando a distribuição habitual integral, inclusive acima de 44h, e variamos eficiência, pico, distribuição de horas e tratamento dos custos. As sensibilidades incluem o cenário sem fadiga e não constituem um conjunto identificado ou intervalo de confiança.

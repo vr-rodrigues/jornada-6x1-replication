@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[brazilian]{babel}
+\usepackage[margin=2.5cm,bottom=3cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,multirow,threeparttable}
+\usepackage{csquotes}
+\usepackage[authordate,backend=biber,natbib=true,doi=true,url=true,urldate=long,giveninits=false,dashed=false]{biblatex-chicago}
+\addbibresource{bibliography_clean.bib}
+\addbibresource{bibliography_verified.bib}
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{\addcomma\space\bibstring{and}\space}
+\DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+\usepackage{ragged2e,setspace,placeins}
+\input{journal_style}
+\usepackage[protrusion=false]{microtype}
+\usepackage{caption,xurl}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[main-]{.build_paper/journal/main}[main.pdf]
+\graphicspath{{generated/}{./}}
+\onehalfspacing
+\raggedbottom
+\setlength{\emergencystretch}{3em}
+\Urlmuskip=0mu plus 1mu\relax
+\urlstyle{same}
+\setcounter{topnumber}{3}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\newcommand{\Areq}{A_{\mathrm{req}}}
+\title{Apêndice online de\\[3pt]
+``Jornada de trabalho, produtividade e informalidade:\\
+uma avaliação quantitativa para o Brasil''}
+\author{}
+\date{Setembro de 2026}
+\begin{document}
+\maketitle
+Este apêndice documenta os microdados, a correspondência entre momentos e parâmetros, a solução do modelo e as sensibilidades do artigo. O exercício principal limita as horas habituais formais da PNAD Contínua de 2024T4 a 44h na referência, recalibra a ponte de remuneração e aplica os novos tetos de 40h e 36h. Essa referência é uma hipótese de comparação. A distribuição habitual integral permanece como sensibilidade. As comparações centrais mantêm $\sigma=1{,}326$ e distinguem a atualização dos dados das correções de código.
+\setcounter{tocdepth}{1}
+\hypersetup{bookmarksdepth=2}
+\tableofcontents
+\clearpage
+\input{sections/app_data.tex}
+\input{sections/app_model.tex}
+\input{sections/app_results.tex}
+\clearpage
+\printbibliography
+\end{document}

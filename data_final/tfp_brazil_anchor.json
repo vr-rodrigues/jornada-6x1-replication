@@ -1,128 +1,217 @@
 {
-  "source": "Penn World Table 10.0 (downloaded 2026-04-20), variable rtfpna",
+  "source": "PWT 11.0 via FRED, series RTFPNABRA632NRUG, downloaded to data_raw/fred/RTFPNABRA632NRUG_pwt110.csv",
   "country": "Brazil",
   "a_req_pct": 6.63,
-  "modern_era_1995_2019": {
-    "horizon": "1995-2019",
+  "modern_era_1995_latest": {
+    "horizon": "1995-2023",
     "start_year": 1995,
-    "end_year": 2019,
-    "span_years": 24,
-    "tfp_start": 1.1866,
-    "tfp_end": 0.9705,
-    "annual_growth_pct": -0.834,
-    "years_to_compensate_areq": Infinity
+    "end_year": 2023,
+    "span_years": 28,
+    "tfp_start": 1.2907,
+    "tfp_end": 0.9768,
+    "annual_growth_pct": -0.99,
+    "years_to_compensate_areq": null
   },
-  "long_run_1990_2019": {
+  "long_run_1990_latest": {
+    "horizon": "1990-2023",
+    "start_year": 1990,
+    "end_year": 2023,
+    "span_years": 33,
+    "tfp_start": 1.2844,
+    "tfp_end": 0.9768,
+    "annual_growth_pct": -0.826,
+    "years_to_compensate_areq": null
+  },
+  "pre_covid_1990_2019": {
     "horizon": "1990-2019",
     "start_year": 1990,
     "end_year": 2019,
     "span_years": 29,
-    "tfp_start": 1.1566,
-    "tfp_end": 0.9705,
-    "annual_growth_pct": -0.603,
-    "years_to_compensate_areq": Infinity
+    "tfp_start": 1.2844,
+    "tfp_end": 1.0114,
+    "annual_growth_pct": -0.821,
+    "years_to_compensate_areq": null
+  },
+  "best_post1990_rolling_decade": {
+    "horizon": "2000-2010",
+    "start_year": 2000,
+    "end_year": 2010,
+    "span_years": 10,
+    "tfp_start": 1.2094,
+    "tfp_end": 1.2153,
+    "annual_growth_pct": 0.049,
+    "years_to_compensate_areq": 130.1
   },
   "growth_decade_2003_2013": {
     "horizon": "2003-2013",
     "start_year": 2003,
     "end_year": 2013,
     "span_years": 10,
-    "tfp_start": 1.0826,
-    "tfp_end": 1.1112,
-    "annual_growth_pct": 0.26,
-    "years_to_compensate_areq": 24.7
+    "tfp_start": 1.1679,
+    "tfp_end": 1.1638,
+    "annual_growth_pct": -0.035,
+    "years_to_compensate_areq": null
   },
   "recent_decade_2010_2019": {
     "horizon": "2010-2019",
     "start_year": 2010,
     "end_year": 2019,
     "span_years": 9,
-    "tfp_start": 1.1513,
-    "tfp_end": 0.9705,
-    "annual_growth_pct": -1.88,
-    "years_to_compensate_areq": Infinity
+    "tfp_start": 1.2153,
+    "tfp_end": 1.0114,
+    "annual_growth_pct": -2.021,
+    "years_to_compensate_areq": null
   },
+  "required_annualized_gains": [
+    {
+      "scenario": "40h alternative, central",
+      "hours_cap": 40,
+      "specification": "central schedule",
+      "a_req_pct": 1.9249,
+      "required_gain_3yr_pct": 0.6375598689028372,
+      "required_gain_5yr_pct": 0.38204958798937483,
+      "required_gain_10yr_pct": 0.19084268933433624
+    },
+    {
+      "scenario": "36h endpoint, one-sided fatigue",
+      "hours_cap": 36,
+      "specification": "one-sided fatigue e(h)",
+      "a_req_pct": 6.6327612114201795,
+      "required_gain_3yr_pct": 2.163763975986366,
+      "required_gain_5yr_pct": 1.2926961409368554,
+      "required_gain_10yr_pct": 0.6442726343316885
+    },
+    {
+      "scenario": "36h endpoint, two-sided penalty",
+      "hours_cap": 36,
+      "specification": "two-sided penalty e(h)",
+      "a_req_pct": 8.1824,
+      "required_gain_3yr_pct": 2.6562835023254516,
+      "required_gain_5yr_pct": 1.585406404780998,
+      "required_gain_10yr_pct": 0.7895859723518139
+    }
+  ],
   "all_horizons": [
     {
-      "horizon": "1954-2019",
+      "horizon": "1954-2023",
       "start_year": 1954,
-      "end_year": 2019,
-      "span_years": 65,
-      "tfp_start": 0.8054,
-      "tfp_end": 0.9705,
-      "annual_growth_pct": 0.287,
-      "years_to_compensate_areq": 22.4
+      "end_year": 2023,
+      "span_years": 69,
+      "tfp_start": 0.9521,
+      "tfp_end": 0.9768,
+      "annual_growth_pct": 0.037,
+      "years_to_compensate_areq": 173.0
     },
     {
       "horizon": "1954-1980",
       "start_year": 1954,
       "end_year": 1980,
       "span_years": 26,
-      "tfp_start": 0.8054,
-      "tfp_end": 1.4498,
-      "annual_growth_pct": 2.286,
-      "years_to_compensate_areq": 2.8
+      "tfp_start": 0.9521,
+      "tfp_end": 1.6602,
+      "annual_growth_pct": 2.162,
+      "years_to_compensate_areq": 3.0
     },
     {
       "horizon": "1980-2000",
       "start_year": 1980,
       "end_year": 2000,
       "span_years": 20,
-      "tfp_start": 1.4498,
-      "tfp_end": 1.1137,
-      "annual_growth_pct": -1.31,
-      "years_to_compensate_areq": Infinity
+      "tfp_start": 1.6602,
+      "tfp_end": 1.2094,
+      "annual_growth_pct": -1.572,
+      "years_to_compensate_areq": null
+    },
+    {
+      "horizon": "1990-2023",
+      "start_year": 1990,
+      "end_year": 2023,
+      "span_years": 33,
+      "tfp_start": 1.2844,
+      "tfp_end": 0.9768,
+      "annual_growth_pct": -0.826,
+      "years_to_compensate_areq": null
     },
     {
       "horizon": "1990-2019",
       "start_year": 1990,
       "end_year": 2019,
       "span_years": 29,
-      "tfp_start": 1.1566,
-      "tfp_end": 0.9705,
-      "annual_growth_pct": -0.603,
-      "years_to_compensate_areq": Infinity
+      "tfp_start": 1.2844,
+      "tfp_end": 1.0114,
+      "annual_growth_pct": -0.821,
+      "years_to_compensate_areq": null
+    },
+    {
+      "horizon": "1995-2023",
+      "start_year": 1995,
+      "end_year": 2023,
+      "span_years": 28,
+      "tfp_start": 1.2907,
+      "tfp_end": 0.9768,
+      "annual_growth_pct": -0.99,
+      "years_to_compensate_areq": null
     },
     {
       "horizon": "1995-2019",
       "start_year": 1995,
       "end_year": 2019,
       "span_years": 24,
-      "tfp_start": 1.1866,
-      "tfp_end": 0.9705,
-      "annual_growth_pct": -0.834,
-      "years_to_compensate_areq": Infinity
+      "tfp_start": 1.2907,
+      "tfp_end": 1.0114,
+      "annual_growth_pct": -1.011,
+      "years_to_compensate_areq": null
     },
     {
-      "horizon": "2000-2019",
+      "horizon": "2000-2023",
       "start_year": 2000,
-      "end_year": 2019,
-      "span_years": 19,
-      "tfp_start": 1.1137,
-      "tfp_end": 0.9705,
-      "annual_growth_pct": -0.722,
-      "years_to_compensate_areq": Infinity
+      "end_year": 2023,
+      "span_years": 23,
+      "tfp_start": 1.2094,
+      "tfp_end": 0.9768,
+      "annual_growth_pct": -0.924,
+      "years_to_compensate_areq": null
     },
     {
       "horizon": "2003-2013",
       "start_year": 2003,
       "end_year": 2013,
       "span_years": 10,
-      "tfp_start": 1.0826,
-      "tfp_end": 1.1112,
-      "annual_growth_pct": 0.26,
-      "years_to_compensate_areq": 24.7
+      "tfp_start": 1.1679,
+      "tfp_end": 1.1638,
+      "annual_growth_pct": -0.035,
+      "years_to_compensate_areq": null
     },
     {
       "horizon": "2010-2019",
       "start_year": 2010,
       "end_year": 2019,
       "span_years": 9,
-      "tfp_start": 1.1513,
-      "tfp_end": 0.9705,
-      "annual_growth_pct": -1.88,
-      "years_to_compensate_areq": Infinity
+      "tfp_start": 1.2153,
+      "tfp_end": 1.0114,
+      "annual_growth_pct": -2.021,
+      "years_to_compensate_areq": null
+    },
+    {
+      "horizon": "2019-2023",
+      "start_year": 2019,
+      "end_year": 2023,
+      "span_years": 4,
+      "tfp_start": 1.0114,
+      "tfp_end": 0.9768,
+      "annual_growth_pct": -0.867,
+      "years_to_compensate_areq": null
+    },
+    {
+      "horizon": "2000-2010",
+      "start_year": 2000,
+      "end_year": 2010,
+      "span_years": 10,
+      "tfp_start": 1.2094,
+      "tfp_end": 1.2153,
+      "annual_growth_pct": 0.049,
+      "years_to_compensate_areq": 130.1
     }
   ],
-  "key_finding": "Brazilian TFP has declined over the long run (1990-2019: -0.60%/yr) and over recent decades. Even the best growth decade (2003-2013) had TFP growth of only +0.26%/yr, requiring 25 years to accumulate A_req = 6.63%. A one-off TFP gain of this magnitude has no historical precedent in the modern Brazilian series."
+  "key_finding": "PWT is used as an external scale benchmark, not as validation evidence. For the one-sided fatigue 36h endpoint, accumulating A_req=6.63% requires annual TFP gains of 2.16% over 3 years, 1.29% over 5 years, or 0.64% over 10 years. For scale, Brazil's PWT rtfpna growth was -0.83%/yr over 1990-2023 and +0.05%/yr in the best post-1990 rolling decade (2000-2010)."
 }

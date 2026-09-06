@@ -1,0 +1,87 @@
+{
+  "status": "verified_official_fallback",
+  "source": "MTE RAIS 2022 official workbook, TABELA 2 C87:D95; corroborated by Executive Summary Table 6, page 9",
+  "source_url": "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/estatisticas-trabalho/rais/rais-2022/4-tabelas_rais-2022.xlsx",
+  "year": 2022,
+  "n_active_links": 52790864,
+  "small_le49_share_formal": 0.3938863739756182,
+  "large_ge50_share_formal": 0.6061136260243818,
+  "breakdown": [
+    {
+      "code": "2",
+      "label": "De 1 a 4 empregados",
+      "n_active_links": 4747386,
+      "source_cell": "'TABELA 2'!C87:D87",
+      "share": 0.08992817393555066
+    },
+    {
+      "code": "3",
+      "label": "De 5 a 9 empregados",
+      "n_active_links": 4494655,
+      "source_cell": "'TABELA 2'!C88:D88",
+      "share": 0.085140773600523
+    },
+    {
+      "code": "4",
+      "label": "De 10 a 19 empregados",
+      "n_active_links": 5166304,
+      "source_cell": "'TABELA 2'!C89:D89",
+      "share": 0.09786360003503637
+    },
+    {
+      "code": "5",
+      "label": "De 20 a 49 empregados",
+      "n_active_links": 6385257,
+      "source_cell": "'TABELA 2'!C90:D90",
+      "share": 0.12095382640450818
+    },
+    {
+      "code": "6",
+      "label": "De 50 a 99 empregados",
+      "n_active_links": 4493390,
+      "source_cell": "'TABELA 2'!C91:D91",
+      "share": 0.08511681112095457
+    },
+    {
+      "code": "7",
+      "label": "De 100 a 249 empregados",
+      "n_active_links": 5492785,
+      "source_cell": "'TABELA 2'!C92:D92",
+      "share": 0.10404802240023955
+    },
+    {
+      "code": "8",
+      "label": "De 250 a 499 empregados",
+      "n_active_links": 4360688,
+      "source_cell": "'TABELA 2'!C93:D93",
+      "share": 0.08260308071487521
+    },
+    {
+      "code": "9",
+      "label": "De 500 a 999 empregados",
+      "n_active_links": 4300250,
+      "source_cell": "'TABELA 2'!C94:D94",
+      "share": 0.08145822352898031
+    },
+    {
+      "code": "10",
+      "label": "1000 ou mais empregados",
+      "n_active_links": 13350149,
+      "source_cell": "'TABELA 2'!C95:D95",
+      "share": 0.25288748825933216
+    }
+  ],
+  "unit": "Employment links active 31 December 2022, not unique people",
+  "size_unit": "Establishment, not consolidated firm",
+  "universe": "All formal employment links (public/private and other legal types), all Brazil",
+  "informality_by_size": null,
+  "informality_by_size_status": "Original 50%/20% are unverified hypotheses, not RAIS observations",
+  "contracted_hours_counts": null,
+  "contracted_hours_status": "Microdata BigQuery blocked; no contracted-hours distribution inferred from PNAD",
+  "original_claims": {
+    "small_share": 0.59,
+    "subcategories_sum": 0.32,
+    "source_verdict": "Neither matches the official 2022 active-links establishment-size table"
+  },
+  "pnad_comparability": "Do not merge these administrative establishment shares with all-worker PNAD informality without a universe bridge."
+}

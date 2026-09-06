@@ -173,11 +173,17 @@ def main():
         )
     lines += [
         r"\hline\hline",
-        r"\multicolumn{5}{l}{\footnotesize $\delta$ represents a post-reform contraction of TFP beyond the}\\",
-        r"\multicolumn{5}{l}{\footnotesize mechanical effect of the hours cap. The $\delta = 0$ row reproduces}\\",
-        r"\multicolumn{5}{l}{\footnotesize the main result of Table~\ref{tab:main_results}. Other rows show how}\\",
-        r"\multicolumn{5}{l}{\footnotesize outcomes deteriorate if the reform itself depresses TFP by $\delta$.}\\",
         r"\end{tabular}",
+        r"\\[2pt]",
+        r"\begin{minipage}{0.95\textwidth}",
+        r"\justifying",
+        (
+            r"{\footnotesize $\delta$ represents a post-reform contraction of TFP beyond the "
+            r"mechanical effect of the hours cap. The $\delta = 0$ row reproduces "
+            r"the main result of Table~\ref{tab:main_results}. Other rows show how "
+            r"outcomes deteriorate if the reform itself depresses TFP by $\delta$.}"
+        ),
+        r"\end{minipage}",
         r"\end{table}",
     ]
     with open(OUT_TAB, "w", encoding="utf-8") as f:

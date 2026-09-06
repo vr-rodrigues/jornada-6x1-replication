@@ -1,0 +1,7 @@
+{
+  "url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2024/PNADC_042024_20250815.zip",
+  "path": "data_raw\\reprocessed\\ibge\\PNADC_042024_20250815.zip",
+  "sha256": "1e04e77bd7c96d212a24000e32b1f41d713ad476bc84109b72c750246f390a2a",
+  "bytes": 209873314,
+  "retrieved_or_verified_utc": "2026-09-05T03:57:29.519566+00:00"
+}

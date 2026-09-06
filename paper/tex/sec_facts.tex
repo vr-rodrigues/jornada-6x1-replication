@@ -2,15 +2,15 @@
 % Subsection: Brazilian facts (inside Section 2)
 % =============================================================
 
-Four Brazilian facts motivate the model and discipline the calibration. First, formal hours are concentrated at the statutory maximum. DIEESE (2024) reports $8.5\%$ of formal workers at 36 hours, $26.9\%$ at 40 hours, and $64.6\%$ at or near 44 hours, with an average of $42.2$ hours per week. PNAD Cont\'{i}nua Q4 2024 habitual hours give a flatter distribution with an average of $41.2$. The majority of formal workers operate at or above 40 hours, the margin a 36-hour cap would bind.
+Formal hours are concentrated near the statutory maximum. The baseline maps the DIEESE contracted-hours distribution into three model bins: $8.5\%$ of formal workers in the $\leq 39$h category are assigned to the 36h bin, $26.9\%$ at 40h remain in the 40h bin, and $64.6\%$ in the $\geq 41$h category are assigned to the 44h bin \citep{DIEESE2024}. PNAD Cont\'{i}nua Q4 2024 habitual hours give a flatter distribution, with an average of $41.2$ hours \citep{PNAD2025}. Most formal workers operate at or above 40 hours, the margin a 36-hour cap would bind.
 
-Second, informality is large and dispersed. The national rate is $37.8\%$ (narrow) or $44.2\%$ (broad). The sectoral range is $71.8\%$ in agriculture, $44.4\%$ in industry, and $41.2\%$ in services (Table~\ref{tab:facts_informality}).
+Informality is large and dispersed. The national rate is $37.8\%$ under the narrow PNAD definition and $44.2\%$ under the broad IBGE one \citep{PNAD2025}. The sectoral range runs from $41.2\%$ in services to $71.8\%$ in agriculture (Table~\ref{tab:facts_informality}).
 
-Third, the formal--informal wage premium is positive and moderate. \citet{MeghirNaritaRobin2015} document a conditional wage premium $R\in[1.15, 1.55]$, the ratio of mean formal hourly wages to mean informal hourly wages among otherwise comparable workers. The calibration below uses this premium to pin down the CES substitution elasticity $\sigma_{\text{sub}}$.
+The formal-informal wage premium is positive and moderate. \citet{MeghirNaritaRobin2015} document a conditional wage premium $R\in[1.15, 1.55]$, the ratio of mean formal hourly wages to mean informal hourly wages among otherwise comparable workers. The calibration below uses this premium to pin down the CES substitution elasticity $\sigma_{\text{sub}}$.
 
-Fourth, Brazilian TFP has been stagnant or declining throughout the post-1990 period. The Penn World Table 10.01 \texttt{rtfpna} series shows an annualized decline of $-0.6\%$ per year over 1990--2019 and growth of only $+0.26\%$ per year in the best post-Real Plan decade (2003--2013). The Brazilian TFP benchmark in Section~\ref{sec:results} uses this series as the anchor for $A_{\text{req}}$.
+Brazilian TFP has been stagnant or declining throughout the post-1990 period. The Penn World Table 11.0 \texttt{rtfpna} series shows an annualized decline of $-0.83\%$ per year from 1990 to 2023 and $-0.82\%$ from 1990 to 2019, before COVID \citep{FeenstraInklaarTimmer2015,PWT2025,FREDPWTBrazil2026}. The best rolling post-1990 decade in the updated series is 2000 to 2010, with only $+0.05\%$ per year. The TFP benchmark in Section~\ref{sec:results} uses this updated series as the anchor for $A_{\text{req}}$.
 
-These four facts point to a minimal model with three margins: concentration of formal workers near the statutory cap, substitution between formal and informal effective labor disciplined by the observed wage premium, and per-hour productivity that varies with the workweek. The model below combines these three margins with two firm-size groups for differential incidence and GHH preferences for welfare evaluation.
+These facts call for a model with formal workers concentrated near the cap, substitution between formal and informal effective labor, and per-hour productivity that varies with the workweek. The model adds two firm-size groups for incidence and GHH preferences for welfare.
 
 \begin{table}[htbp]
 \centering
@@ -30,6 +30,7 @@ National    & 1.000 & 44.2\% & 41.2 & 0.143 & 0.406 & 0.451 \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.95\textwidth}
-{\footnotesize \textit{Notes:} $\lambda_s$ is the sector's share of national employment. Informality uses the broad IBGE definition (VD4009 combined with V4017 CNPJ indicator). ``Avg.\ hours'' is the mean weekly hours of \emph{formal} workers (V4039, habitual). $\theta_{36}$, $\theta_{40}$, $\theta_{44}$ are the shares of formal workers in each contracted-hours bin. \textit{Source:} PNAD Cont\'{i}nua Q4 2024, IBGE microdata, survey-weighted, $N=209{,}311$.}
+\justifying
+{\footnotesize \textit{Notes:} $\lambda_s$ is the sector's share of national employment. Informality uses the broad IBGE definition (VD4009 combined with V4017 CNPJ indicator). ``Avg.\ hours'' is the mean weekly hours of \emph{formal} workers (V4039, habitual). $\theta_{36}$, $\theta_{40}$, $\theta_{44}$ are the shares of formal workers in each contracted-hours bin. \textit{Source:} PNAD Cont\'{i}nua Q4 2024, IBGE microdata, survey-weighted, $N=209{,}311$ \citep{PNAD2025}.}
 \end{minipage}
 \end{table}

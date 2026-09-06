@@ -1,0 +1,11 @@
+[
+  {
+    "ano": 2024,
+    "trimestre": 4,
+    "sample_n": 469334,
+    "working_age_sample_n": 385717,
+    "population_weighted": 212313960.00234538,
+    "working_age_weighted": 173429638.0020279,
+    "invalid_weight_n": 0
+  }
+]

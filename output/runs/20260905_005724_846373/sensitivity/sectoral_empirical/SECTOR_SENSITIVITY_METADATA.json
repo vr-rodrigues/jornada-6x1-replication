@@ -1,0 +1,275 @@
+{
+  "source_file": {
+    "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\data_intermediate\\reprocessed\\pnad_targets.json",
+    "sha256": "6e0fe36c6da60afe511582420fd917d579101e5032f10473ff36ba014a8a9ecf"
+  },
+  "pnad_metadata": {
+    "source": "IBGE official public microdata (explicit fallback after BigQuery auth/access failure)",
+    "table": null,
+    "year": 2024,
+    "quarter": 4,
+    "weights": "V1028",
+    "universe": "Persons aged 14+ occupied in reference week (VD4002=1); main-job characteristics; all Brazil",
+    "cnpj": "V4019: 1 registered, 2 not registered, other/missing unknown for employer/self-employed",
+    "hours": "V4039 habitual main job; V4039C actual main job; contracted hours unavailable",
+    "wage_bridge": "Positive VD4016 habitual monthly income and valid habitual main-job hours, same observations in payroll and hours denominators; monthly-to-weekly factor 12/52; formal/informal ratio",
+    "uncertainty": "Point estimates using survey weights; no design-based standard errors; no claim of identified structural parameters",
+    "retrieved_utc": "2026-09-05T03:57:39.300770+00:00",
+    "file_vintage": "PNADC_042024_20250815.zip",
+    "dictionary_vintage": "Dicionario_e_input_20221031.zip",
+    "source_url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2024/PNADC_042024_20250815.zip"
+  },
+  "pnad_status": "verified_official_fallback",
+  "pnad_quality": {
+    "population": {
+      "ano": 2024,
+      "trimestre": 4,
+      "sample_n": 469334,
+      "working_age_sample_n": 385717,
+      "population_weighted": 212313960.00234538,
+      "working_age_weighted": 173429638.0020279,
+      "invalid_weight_n": 0
+    },
+    "invalid_weight_n": 0,
+    "unknown_informality_n": 0,
+    "missing_habitual_n": 0,
+    "missing_actual_n": 0,
+    "missing_income_n": 5006
+  },
+  "employment_coverage_share": 0.9998106701103413,
+  "excluded_activity_groups": {
+    "unclassified": {
+      "occupied_weighted": 19279.83346925,
+      "sample_n": 36,
+      "employment_share": 0.00018932988965873263
+    }
+  },
+  "employment_denominator": "occupied persons in agriculture, industry or services; national unclassified CNAE excluded",
+  "national_wage_ratio_targets": {
+    "aggregate_hourly_payroll_over_hours": 1.622443453115618,
+    "mean_monthly_per_worker": 1.8800997144694487,
+    "mean_weekly_per_worker": 1.8800997144694485,
+    "mean_individual_hourly": 1.5840944959969794,
+    "aggregate_hourly_formal_capped44": 1.6824732562046965
+  },
+  "input_kind": "reprocessed",
+  "capital_hypothesis_source": {
+    "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\data_final\\SECTORAL_BASELINE_FACTS.csv",
+    "sha256": "b24e15bc879bc6b6a6aee81cf5c63c129071ad081ae272079f3de34d18da9a9f"
+  },
+  "capital_hypothesis": "K_sector proportional to legacy 2021 VAB shares; K fixed, not an observed capital stock",
+  "sector_model_scope": "one representative group per sector; fixed sector employment and capital; no IO, no worker incidence",
+  "hours_scope": "main job; PNAD habitual/actual hours are distinct from contracted hours",
+  "n_cases": 37,
+  "n_rows": 592,
+  "interpretation": "Hypothetical parameter grid with corners, faces and interior points; not an identified set",
+  "moment_restrictions": "Informality refitted with normalized wedges at every point. Wage-ratio restrictions not imposed on CES grid.",
+  "hours_sensitivity": "Mixtures of own and pooled formal-employment-weighted observed supports; raw support kept",
+  "baseline_hours_cap_operation": 120.0,
+  "explicit_runtime_target_overrides": {},
+  "efficiency_extrapolation": "Curvature anchored externally at 42.244h extrapolated across observed part-time and long hours; these responses are sensitivity assumptions, not estimated behavior",
+  "cases": [
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.55,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.55,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.55,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.622,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.622,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.622,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.7,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.7,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.1,
+      "omega": 0.7,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.55,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.55,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.55,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.622,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.622,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.622,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.7,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.7,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.326,
+      "omega": 0.7,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.55,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.55,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.55,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.622,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.622,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.622,
+      "eta": 0.5
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.7,
+      "eta": 0.3
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.7,
+      "eta": 0.4
+    },
+    {
+      "experiment": "CES_grid",
+      "sigma": 1.6,
+      "omega": 0.7,
+      "eta": 0.5
+    },
+    {
+      "experiment": "efficiency_elasticity",
+      "e_q": 0.4
+    },
+    {
+      "experiment": "efficiency_elasticity",
+      "e_q": 0.6
+    },
+    {
+      "experiment": "efficiency_elasticity",
+      "e_q": 0.8
+    },
+    {
+      "experiment": "efficiency_peak",
+      "peak": 38.0
+    },
+    {
+      "experiment": "efficiency_peak",
+      "peak": 39.0
+    },
+    {
+      "experiment": "efficiency_peak",
+      "peak": 40.0
+    },
+    {
+      "experiment": "efficiency_peak",
+      "peak": 41.0
+    },
+    {
+      "experiment": "hours_uniform_mixture",
+      "mixing": 0.0
+    },
+    {
+      "experiment": "hours_uniform_mixture",
+      "mixing": 0.5
+    },
+    {
+      "experiment": "hours_uniform_mixture",
+      "mixing": 1.0
+    }
+  ]
+}

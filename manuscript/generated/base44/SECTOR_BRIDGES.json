@@ -1,0 +1,30 @@
+[
+  {
+    "efficiency_mode": "bilateral",
+    "sigma_sub": 1.326,
+    "omega": 0.6744758937357848,
+    "target": 1.6823345045627869,
+    "implied": 1.6823345045627867,
+    "residual": -2.220446049250313e-16,
+    "measure": "hourly",
+    "universe": "three classified PNAD sectors; positive paid main-job income",
+    "formal_hours": "min(habitual,44)",
+    "informal_hours": "habitual, unrestricted",
+    "aggregation": "sum payrolls and paid-worker physical hours before taking formal/informal ratio",
+    "identification": "common omega conditional on sigma, eta and wedge normalization"
+  },
+  {
+    "efficiency_mode": "flat_below",
+    "sigma_sub": 1.326,
+    "omega": 0.6755751882551347,
+    "target": 1.6823345045627869,
+    "implied": 1.6823345045627873,
+    "residual": 4.440892098500626e-16,
+    "measure": "hourly",
+    "universe": "three classified PNAD sectors; positive paid main-job income",
+    "formal_hours": "min(habitual,44)",
+    "informal_hours": "habitual, unrestricted",
+    "aggregation": "sum payrolls and paid-worker physical hours before taking formal/informal ratio",
+    "identification": "common omega conditional on sigma, eta and wedge normalization"
+  }
+]

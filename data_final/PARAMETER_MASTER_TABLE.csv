@@ -1,5 +1,5 @@
 symbol,name,value,unit,calibration_method,target_moment,source
-alpha,Capital share,0.35,proportion,External,labsh from PWT,"PWT 10.01 + Gollin (2002, JPE)"
+alpha,Capital share,0.35,proportion,External,labsh from PWT,"PWT labor-share evidence + Gollin (2002, JPE)"
 kappa,Efficiency curvature,0.0021098039890823555,1/h^2,Derived from e_q,"e_q=0.6, h_ref=42.244",Pencavel (2015)
 omega,CES formal weight,0.622,proportion,External (PNAD-anchored),1 - narrow informality (avg 4q 2025),PNAD Continua 2025
 sigma_sub,CES substitution elasticity,1.326,elasticity,Moment-matched (wage premium),"MNR wage premium R in [1.15,1.55]","Meghir, Narita, Robin (2015)"
@@ -12,8 +12,8 @@ tau_S,Formal wedge (small firms),2.6093404374402684,model units,Bisection,Target
 tau_L,Formal wedge (large firms),0.0035019491349490566,model units,Bisection,Target inf=0.2,Calibrated
 pi_m_S,Informal cost (small),0.0,model units,Bisection,Ensures wedge >= 0,Calibrated
 pi_m_L,Informal cost (large),42.10984212780755,model units,Bisection,Ensures wedge >= 0,Calibrated
-gamma_F_S,Adjustment cost (small),0.12,proportion,External,CLT/FGTS effective marginal cost,RAIS + CLT
-gamma_F_L,Adjustment cost (large),0.03,proportion,External,CLT/FGTS effective marginal cost,RAIS + CLT
+gamma_F_S,Adjustment cost (small),0.12,proportion,External,Payroll-compliance effective marginal cost,RAIS + Lei 8.212/eSocial
+gamma_F_L,Adjustment cost (large),0.03,proportion,External,Payroll-compliance effective marginal cost,RAIS + Lei 8.212/eSocial
 N_total,Total employment (normalized),0.59,normalized,External,Employment-to-population,PNAD Continua
 h0,Baseline hours cap,44.0,hours/week,Institutional,CLT Art. 58,Statutory
 h1,Reform hours cap,36.0,hours/week,Policy,PEC 6x1,Main counterfactual

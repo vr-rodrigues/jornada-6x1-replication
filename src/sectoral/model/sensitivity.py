@@ -1,135 +1,111 @@
-# -*- coding: utf-8 -*-
-"""
-Sensitivity analysis for the sectoral extension.
-Varies sigma_sub and eta_I to check robustness.
-"""
+"""Sector sensitivities with interior grid points; not an identified set."""
 
-import csv
-import os
+from __future__ import annotations
+
+import argparse
+import copy
+from itertools import product
+import json
+from pathlib import Path
 import sys
+
 import numpy as np
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__)))))
-sys.path.insert(0, PROJECT_ROOT)
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.sectoral.model.sector_model import (
-    load_sectoral_facts, load_national_targets,
-    build_sector_params, run_sectoral_simulation
-)
+from src.sectoral.model.inputs import load_inputs, load_national_targets
+from src.sectoral.model.sector_model import build_sector_params, run_sectoral_simulation, _write_csv
 
 
-def run_sensitivity():
-    data_final = os.path.join(PROJECT_ROOT, "data_final")
-    output_dir = os.path.join(PROJECT_ROOT, "output", "sectoral", "tables")
-
-    sectors = load_sectoral_facts(data_final)
-    targets = load_national_targets(data_final)
-
+def run_sensitivity(data_dir=None, output_dir=None, input_kind="frozen",
+                    hypotheses_dir=None, targets_path=None, omega=0.622):
+    data_dir = Path(data_dir or PROJECT_ROOT / "data_final")
+    hypotheses_dir = Path(hypotheses_dir or PROJECT_ROOT / "data_final")
+    output_dir = Path(output_dir or PROJECT_ROOT / "output" / "corrected" / "sectoral_sensitivity")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    targets = load_national_targets(targets_path or hypotheses_dir / "calibration_targets.csv")
+    facts, provenance = load_inputs(data_dir, input_kind, hypotheses_dir)
+    overrides = {}
+    if input_kind == "reprocessed" and targets_path is None:
+        overrides = {"H0": float(max(max(s["hours_bins"]) for s in facts.values())),
+                     "H_REF_EFFICIENCY": 42.244}
+        targets.update(overrides)
+    cases = []
+    # Full CES grid includes face points and the strict interior, not only corners.
+    for sigma, omega_value, eta in product((1.1, 1.326, 1.6), (0.55, omega, 0.70), (0.30, 0.40, 0.50)):
+        cases.append({"experiment": "CES_grid", "sigma": sigma, "omega": omega_value, "eta": eta})
+    for e_q in (0.40, 0.60, 0.80):
+        cases.append({"experiment": "efficiency_elasticity", "e_q": e_q})
+    for peak in (38., 39., 40., 41.):
+        cases.append({"experiment": "efficiency_peak", "peak": peak})
+    for mixing in (0., 0.5, 1.):
+        cases.append({"experiment": "hours_uniform_mixture", "mixing": mixing})
     rows = []
-    h1 = 36.0  # Focus on the main scenario
+    for index, case in enumerate(cases):
+        trial_facts = copy.deepcopy(facts)
+        trial_targets = {**targets, "ETA_I": case.get("eta", targets["ETA_I"]),
+                         "E_Q": case.get("e_q", targets["E_Q"]),
+                         "H_STAR": case.get("peak", targets["H_STAR"])}
+        if "mixing" in case:
+            # Same observed hours support; mix each sector with a national
+            # formal-employment-weighted distribution, not with invented hours.
+            support = np.unique(np.concatenate([s["hours_bins"] for s in facts.values()]))
+            formal_masses = {s: f["lambda_s"]*(1-f["inf_rate"]) for s, f in facts.items()}
+            formal_total = sum(formal_masses.values())
+            pooled = np.zeros(len(support))
+            for name, f in facts.items():
+                loc = np.searchsorted(support, f["hours_bins"])
+                np.add.at(pooled, loc, formal_masses[name]/formal_total*f["theta"])
+            for name, f in trial_facts.items():
+                own = np.zeros(len(support))
+                np.add.at(own, np.searchsorted(support, f["hours_bins"]), f["theta"])
+                f["hours_bins"] = support
+                f["theta"] = (1-case["mixing"])*own + case["mixing"]*pooled
+        for mode in ("bilateral", "flat_below"):
+            params, kappa = build_sector_params(trial_facts, trial_targets,
+                                                case.get("sigma", 1.326), case.get("omega", omega),
+                                                efficiency_mode=mode)
+            for cap in (40., 36.):
+                result = run_sectoral_simulation(params, kappa, cap)
+                for name, r in {**result["sectors"], "AGGREGATE": result["aggregate"]}.items():
+                    rows.append({
+                        "case": index, "experiment": case["experiment"], "input_kind": input_kind,
+                        "efficiency_mode": mode, "h0": trial_targets["H0"], "h1": int(cap), "sector": name,
+                        "sigma_sub": case.get("sigma", 1.326), "omega": case.get("omega", omega),
+                        "eta_I": trial_targets["ETA_I"], "e_q": trial_targets["E_Q"],
+                        "peak": trial_targets["H_STAR"], "hours_mixing": case.get("mixing", 0.),
+                        "kappa": kappa, "A_req_pct": r["A_req_pct"], "A_req_frozen_pct": r["A_req_frozen_pct"],
+                        "dY_pct": r["dY_pct"], "dInf_pp": r["dInf_pp"],
+                        "dGHH_pct": r["dGHH_pct"], "CE_pct": r["CE_pct"],
+                        "classification": "sensitivity_not_identified_set",
+                    })
+    _write_csv(output_dir / "SECTOR_SENSITIVITY.csv", rows)
+    metadata = {**provenance, "n_cases": len(cases), "n_rows": len(rows),
+                "interpretation": "Hypothetical parameter grid with corners, faces and interior points; not an identified set",
+                "moment_restrictions": "Informality refitted with normalized wedges at every point. Wage-ratio restrictions not imposed on CES grid.",
+                "hours_sensitivity": "Mixtures of own and pooled formal-employment-weighted observed supports; raw support kept",
+                "baseline_hours_cap_operation": targets["H0"],
+                "explicit_runtime_target_overrides": overrides,
+                "efficiency_extrapolation": "Curvature anchored externally at 42.244h extrapolated across observed part-time and long hours; these responses are sensitivity assumptions, not estimated behavior",
+                "cases": cases}
+    (output_dir / "SECTOR_SENSITIVITY_METADATA.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"New sectoral sensitivity results: {len(cases)} cases, {len(rows)} rows")
+    return {"rows": rows, "metadata": metadata}
 
-    # ── Sensitivity to sigma_sub ──
-    print("=" * 60)
-    print("SENSITIVITY: sigma_sub")
-    print("=" * 60)
 
-    sigma_values = [1.065, 1.15, 1.23]
-    for sigma in sigma_values:
-        print(f"\n  sigma_sub = {sigma}...")
-        params, kappa = build_sector_params(sectors, targets,
-                                             sigma_sub=sigma)
-        res = run_sectoral_simulation(params, kappa, h1)
-
-        row = {
-            "parameter": "sigma_sub",
-            "value": sigma,
-            "areq_agriculture": res["sectors"]["agriculture"]["A_req_pct"],
-            "areq_industry": res["sectors"]["industry"]["A_req_pct"],
-            "areq_services": res["sectors"]["services"]["A_req_pct"],
-            "areq_aggregate": res["aggregate"]["A_req_pct"],
-            "dY_aggregate": res["aggregate"]["dY_pct"],
-            "dCV_aggregate": res["aggregate"]["dCV_pct"],
-        }
-        rows.append(row)
-        print(f"    A_req: agro={row['areq_agriculture']:.2f}%, "
-              f"ind={row['areq_industry']:.2f}%, "
-              f"serv={row['areq_services']:.2f}%, "
-              f"agg={row['areq_aggregate']:.2f}%")
-
-    # ── Sensitivity to eta_I ──
-    print(f"\n{'='*60}")
-    print("SENSITIVITY: eta_I")
-    print("=" * 60)
-
-    eta_values = [0.10, 0.15, 0.25]
-    for eta_I in eta_values:
-        print(f"\n  eta_I = {eta_I}...")
-        # Override eta_I in targets
-        targets_mod = dict(targets)
-        targets_mod["ETA_I"] = eta_I
-        params, kappa = build_sector_params(sectors, targets_mod)
-        res = run_sectoral_simulation(params, kappa, h1)
-
-        row = {
-            "parameter": "eta_I",
-            "value": eta_I,
-            "areq_agriculture": res["sectors"]["agriculture"]["A_req_pct"],
-            "areq_industry": res["sectors"]["industry"]["A_req_pct"],
-            "areq_services": res["sectors"]["services"]["A_req_pct"],
-            "areq_aggregate": res["aggregate"]["A_req_pct"],
-            "dY_aggregate": res["aggregate"]["dY_pct"],
-            "dCV_aggregate": res["aggregate"]["dCV_pct"],
-        }
-        rows.append(row)
-        print(f"    A_req: agro={row['areq_agriculture']:.2f}%, "
-              f"ind={row['areq_industry']:.2f}%, "
-              f"serv={row['areq_services']:.2f}%, "
-              f"agg={row['areq_aggregate']:.2f}%")
-
-    # ── Sensitivity to uniform theta ──
-    print(f"\n{'='*60}")
-    print("SENSITIVITY: uniform theta (national for all sectors)")
-    print("=" * 60)
-
-    national_theta = np.array([
-        targets["THETA_36"], targets["THETA_40"], targets["THETA_44"]
-    ])
-    sectors_uniform = {}
-    for sname, sdata in sectors.items():
-        sectors_uniform[sname] = {**sdata, "theta": national_theta}
-
-    params, kappa = build_sector_params(sectors_uniform, targets)
-    res = run_sectoral_simulation(params, kappa, h1)
-
-    row = {
-        "parameter": "uniform_theta",
-        "value": "national",
-        "areq_agriculture": res["sectors"]["agriculture"]["A_req_pct"],
-        "areq_industry": res["sectors"]["industry"]["A_req_pct"],
-        "areq_services": res["sectors"]["services"]["A_req_pct"],
-        "areq_aggregate": res["aggregate"]["A_req_pct"],
-        "dY_aggregate": res["aggregate"]["dY_pct"],
-        "dCV_aggregate": res["aggregate"]["dCV_pct"],
-    }
-    rows.append(row)
-    print(f"    A_req: agro={row['areq_agriculture']:.2f}%, "
-          f"ind={row['areq_industry']:.2f}%, "
-          f"serv={row['areq_services']:.2f}%, "
-          f"agg={row['areq_aggregate']:.2f}%")
-
-    # Save
-    out_path = os.path.join(output_dir, "SECTOR_SENSITIVITY.csv")
-    fieldnames = ["parameter", "value",
-                   "areq_agriculture", "areq_industry", "areq_services",
-                   "areq_aggregate", "dY_aggregate", "dCV_aggregate"]
-    with open(out_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
-    print(f"\nSaved: {out_path}")
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-dir", type=Path, default=PROJECT_ROOT / "data_final")
+    parser.add_argument("--output-dir", type=Path, default=PROJECT_ROOT / "output" / "corrected" / "sectoral_sensitivity")
+    parser.add_argument("--input-kind", choices=("frozen", "frozen_pnad", "reprocessed"), default="frozen")
+    parser.add_argument("--hypotheses-dir", type=Path, default=PROJECT_ROOT / "data_final")
+    parser.add_argument("--targets-path", type=Path)
+    parser.add_argument("--omega", type=float, default=0.622)
+    args = parser.parse_args(argv)
+    run_sensitivity(**vars(args))
+    return 0
 
 
 if __name__ == "__main__":
-    run_sensitivity()
+    raise SystemExit(main())

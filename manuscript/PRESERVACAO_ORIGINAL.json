@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "PAPER_original_20260905_020616",
+    "verified": 10,
+    "failures": []
+  },
+  {
+    "directory": "PAPER_revisao_ampla_20260905_024411",
+    "verified": 79,
+    "failures": []
+  },
+  {
+    "directory": "PAPER_antes_segunda_revisao_20260905_092422",
+    "verified": 81,
+    "failures": []
+  }
+]

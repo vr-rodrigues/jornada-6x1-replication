@@ -14,25 +14,25 @@ import matplotlib.pyplot as plt
 
 
 # Palette (kept consistent across figures)
-COLOR_PREF = "#2980b9"   # blue (preferred flat-below)
-COLOR_CONS = "#c0392b"   # red (conservative symmetric)
-COLOR_NEUTRAL = "#2c3e50"
-COLOR_ACCENT = "#e67e22"
+COLOR_PREF = "#f06f55"
+COLOR_CONS = "#5e1a84"
+COLOR_NEUTRAL = "#20132d"
+COLOR_ACCENT = "#f6c36b"
 
 
-TEXT_DARK = "#1a1a1a"   # near-black for titles and labels, matching Fig 6
+TEXT_DARK = "#222222"
 
 
 def apply_style():
     """Apply the unified paper style. Call at the top of each plot script."""
     mpl.rcParams.update({
         "font.family": "serif",
-        "font.size": 11,
-        "axes.titlesize": 12,
-        "axes.titleweight": "normal",
-        "axes.labelsize": 11,
-        "xtick.labelsize": 10,
-        "ytick.labelsize": 10,
+        "font.size": 12,
+        "axes.titlesize": 15,
+        "axes.titleweight": "bold",
+        "axes.labelsize": 12,
+        "xtick.labelsize": 11,
+        "ytick.labelsize": 11,
         "legend.fontsize": 10,
         "axes.facecolor": "white",
         "figure.facecolor": "white",
@@ -40,10 +40,7 @@ def apply_style():
         "axes.linewidth": 0.7,
         "axes.labelcolor": TEXT_DARK,
         "text.color": TEXT_DARK,
-        "grid.color": "#d8d8d8",
-        "grid.linestyle": "--",
-        "grid.linewidth": 0.4,
-        "grid.alpha": 0.7,
+        "axes.grid": False,
         "xtick.direction": "out",
         "ytick.direction": "out",
         "xtick.major.size": 3,
@@ -60,14 +57,12 @@ def apply_style():
 def set_axis_style(ax, title=None, xlabel=None, ylabel=None):
     """Apply unified axis styling: italic title, italic labels, subtle spines."""
     if title is not None:
-        ax.set_title(title, fontstyle="italic", loc="left",
-                      pad=10, color=TEXT_DARK)
+        ax.set_title(title, fontweight="bold", loc="left", pad=10, color=TEXT_DARK)
     if xlabel is not None:
-        ax.set_xlabel(xlabel, fontstyle="italic", color=TEXT_DARK)
+        ax.set_xlabel(xlabel, color=TEXT_DARK)
     if ylabel is not None:
-        ax.set_ylabel(ylabel, fontstyle="italic", color=TEXT_DARK)
-    # Light grid
-    ax.grid(True, linestyle="--", linewidth=0.4, alpha=0.7, color="#d8d8d8")
+        ax.set_ylabel(ylabel, color=TEXT_DARK)
+    ax.grid(False)
     ax.set_axisbelow(True)
     # Hide top and right spines to match the heatmap look
     for spine in ("top", "right"):

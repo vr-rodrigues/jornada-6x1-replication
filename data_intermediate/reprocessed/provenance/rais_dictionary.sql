@@ -1,0 +1,1 @@
+SELECT * FROM `basedosdados.br_me_rais.dicionario` WHERE nome_coluna IN ('tamanho_estabelecimento','vinculo_ativo_3112','quantidade_horas_contratadas') ORDER BY nome_coluna,chave

@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+
+% === Packages ===
+\usepackage[a4paper,margin=2.5cm,bottom=3cm]{geometry}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage[authordate,backend=biber,natbib=true,doi=true,url=true,urldate=long,giveninits=false,dashed=false]{biblatex-chicago}
+\addbibresource{bibliography_clean.bib}
+\addbibresource{bibliography_verified.bib}
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{\addcomma\space\bibstring{and}\space}
+\DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+\usepackage{ragged2e}
+\usepackage{threeparttable}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{setspace}
+\input{journal_style}
+\usepackage[protrusion=false]{microtype}
+\usepackage{caption}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+  hidelinks,
+  pdftitle={Jornada de trabalho, produtividade e informalidade: uma avaliacao quantitativa para o Brasil},
+  pdfauthor={}
+}
+\Urlmuskip=0mu plus 1mu\relax
+\urlstyle{same}
+\graphicspath{{./}}
+\onehalfspacing
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setcounter{topnumber}{4}
+\setcounter{dbltopnumber}{4}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.03}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.25cm}
+\raggedbottom
+\emergencystretch=3em
+\renewcommand{\abstractname}{Resumo}
+\renewcommand{\refname}{Refer\^encias}
+\renewcommand{\tablename}{Tabela}
+\renewcommand{\figurename}{Figura}
+\newcommand{\tabnotes}[1]{\par\vspace{2pt}\noindent\begin{minipage}{\linewidth}\normalsize #1\end{minipage}}
+\newcommand{\Areq}{A_{\mathrm{req}}}
+
+% Public replication package and online appendix
+\newif\ifanonymous
+\anonymoustrue
+\newcommand{\onlineappendixurl}{https://github.com/vr-rodrigues/jornada-6x1-replication}
+
+% === Metadata ===
+\title{\textit{Jornada de trabalho, produtividade e informalidade: uma avalia\c{c}\~ao quantitativa para o Brasil}}
+\author{}
+\date{}
+
+% Keep paragraph fragments from becoming isolated lines across pages.
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\begin{document}
+\maketitle
+\vspace{-0.3cm}
+
+% === Resumo ===
+\begin{abstract}
+\noindent\input{sections/abstract_pt}
+
+\vspace{0.05cm}
+\noindent{\normalsize \textit{Palavras-chave:} jornada de trabalho; informalidade; produtividade; Brasil.
+
+\noindent \textit{Classifica\c{c}\~ao JEL:} E24; J22; J46.}
+
+
+\newpage
+\end{abstract}
+\renewcommand{\abstractname}{Abstract}
+\begin{center}
+\textit{Working hours, productivity, and informality: a quantitative assessment for Brazil}
+\end{center}
+\begin{abstract}
+\noindent\input{sections/abstract_en}
+
+\noindent{\normalsize \textit{Keywords:} working hours; informality; productivity; Brazil.}
+\end{abstract}
+
+
+\FloatBarrier
+
+\newpage
+% ==================================================================
+% 1. Introdu\c{c}\~ao
+% ==================================================================
+\input{sections/intro}
+\input{sections/facts}
+\input{sections/model}
+\input{sections/calibration}
+\input{sections/validation}
+\input{sections/results}
+\input{sections/policy}
+\input{sections/conclusion}
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,242 @@
+{
+  "reviewed_utc": "2026-09-05T17:08:24.522006+00:00",
+  "preservation": [
+    {
+      "directory": "PAPER_original_20260905_020616",
+      "verified": 10,
+      "failures": []
+    },
+    {
+      "directory": "PAPER_revisao_ampla_20260905_024411",
+      "verified": 79,
+      "failures": []
+    },
+    {
+      "directory": "PAPER_antes_segunda_revisao_20260905_092422",
+      "verified": 81,
+      "failures": []
+    },
+    {
+      "directory": "PAPER_antes_restaurar_graficos_20260905_134322",
+      "verified": 82,
+      "failures": []
+    }
+  ],
+  "asset_files_verified": 40,
+  "source_files_verified": 24,
+  "new_curves_and_experiments": {
+    "cap_curves_rows": 228,
+    "cap_curve_anchor_max_error": 7.105427357601002e-15,
+    "cap_curve_restoration_max_error": 5.255795798575491e-13,
+    "transition": {
+      "status": "passed",
+      "scenarios": 1364,
+      "sigma_columns": 44,
+      "relief_rows": 31,
+      "sigma_grid": [
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6000000000000001,
+        0.65,
+        0.7000000000000001,
+        0.75,
+        0.8,
+        0.8500000000000001,
+        0.9,
+        0.9500000000000001,
+        1.0,
+        1.05,
+        1.1,
+        1.15,
+        1.2000000000000002,
+        1.25,
+        1.3,
+        1.326,
+        1.35,
+        1.4,
+        1.4500000000000002,
+        1.5,
+        1.5500000000000003,
+        1.6,
+        1.65,
+        1.7000000000000002,
+        1.75,
+        1.8000000000000003,
+        1.85,
+        1.9,
+        1.9500000000000002,
+        2.0,
+        2.0500000000000003,
+        2.1,
+        2.15,
+        2.2,
+        2.25,
+        2.3000000000000003,
+        2.35,
+        2.4,
+        2.45,
+        2.5
+      ],
+      "relief_grid": [
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05,
+        0.06666666666666667,
+        0.08333333333333333,
+        0.1,
+        0.11666666666666667,
+        0.13333333333333333,
+        0.15,
+        0.16666666666666666,
+        0.18333333333333332,
+        0.2,
+        0.21666666666666667,
+        0.23333333333333334,
+        0.25,
+        0.26666666666666666,
+        0.2833333333333333,
+        0.3,
+        0.31666666666666665,
+        0.3333333333333333,
+        0.35,
+        0.36666666666666664,
+        0.3833333333333333,
+        0.4,
+        0.4166666666666667,
+        0.43333333333333335,
+        0.45,
+        0.4666666666666667,
+        0.48333333333333334,
+        0.5
+      ],
+      "efficiency_mode": "bilateral",
+      "group": "national_PNAD",
+      "hours_cap": 40.0,
+      "baseline": "complete_observed_habitual_hours",
+      "baseline_operator_h0": 120.0,
+      "wedge_change": "tau_cap=(1-relief)*tau; pi and baseline adjustment anchor unchanged",
+      "normalization": "baseline tau>=0, pi>=0, tau*pi=0; not separate identification",
+      "bridge": "hourly target fixed; omega and baseline wedges recalibrated at each sigma",
+      "intervention": "conditional static national private wedge, not observed firm-size or fiscal policy",
+      "resource_costs": false,
+      "plotted_measure": "signed A_req_pct",
+      "nonnegative_counterpart": "A_req_nonnegative_pct=max(0,A_req_pct)",
+      "max_restoration_residual": 5.377920331284258e-13,
+      "max_frozen_restoration_residual": 2.220446049250313e-16,
+      "max_kkt_violation": 1.3320789783721754e-13,
+      "max_bridge_residual": 6.620748393970644e-11,
+      "max_baseline_informality_error": 2.7200464103316335e-15,
+      "anchor_errors": {
+        "omega": 0.0,
+        "Y0": 0.0,
+        "Y1": 0.0,
+        "dY_pct": 1.3877787807814457e-17,
+        "A_req_pct": 4.163336342344337e-17,
+        "A_req_frozen_pct": 1.3877787807814457e-17,
+        "baseline_informality_pct": 0.0,
+        "informality_pct": 7.105427357601002e-15,
+        "dInf_pp": 9.367506770274758e-17,
+        "canonical_omega": 0.0
+      },
+      "max_anchor_error": 7.105427357601002e-15,
+      "min_A_req_pct": -4.532449617366307,
+      "max_A_req_pct": 0.08555850672811172,
+      "elapsed_seconds": 18.52985630001058,
+      "original_visual_source": "snapshot/src/tables_figures/plot_figures_pt.py:440-600"
+    },
+    "welfare_threshold": {
+      "hours_cap": 36,
+      "gain_range_pct": [
+        0.0,
+        8.0
+      ],
+      "points_per_mode": 81,
+      "modes": {
+        "flat_below": {
+          "max_kkt_violation": 2.907681148807406e-15,
+          "max_resource_residual": 0.0,
+          "model_evaluations": 81,
+          "canonical_anchor_max_error": 1.1102230246251565e-16,
+          "zero_crossing_gain_pct": null,
+          "zero_crossing_residual_dGHH_pct": null,
+          "nonnegative_gain_required_pct": 0.0,
+          "status": "positive_at_zero_gain",
+          "dGHH_pct_at_zero_gain": 1.223749551582381,
+          "CE_pct_at_zero_gain": 0.9586038154061985
+        },
+        "bilateral": {
+          "max_kkt_violation": 3.79248498924567e-15,
+          "max_resource_residual": 0.0,
+          "model_evaluations": 88,
+          "canonical_anchor_max_error": 8.881784197001252e-16,
+          "zero_crossing_gain_pct": 0.7725689412013459,
+          "zero_crossing_residual_dGHH_pct": 3.238190286027689e-14,
+          "nonnegative_gain_required_pct": 0.7725689412013459,
+          "status": "neutrality_root_found",
+          "dGHH_pct_at_zero_gain": -1.007537030199391,
+          "CE_pct_at_zero_gain": -0.7892373403228561
+        }
+      },
+      "composition": "reoptimized at every TFP evaluation, including root search",
+      "calibration": "baseline bridge, wedges and preferences held fixed along each curve",
+      "metric_plotted": "100*(G1-G0)/G0; G=C-v(h), per-worker representative mean hours",
+      "CE_in_csv": "100*(G1-G0)/C0; same zero as GHH, different denominator",
+      "resource_constraint": "C + resource_cost = Y; input-selected transfer treatment"
+    }
+  },
+  "unchanged_canonical_numerical_tables": [
+    "national_results.csv",
+    "sectoral_results.csv",
+    "comparison_results.csv",
+    "decomposition.csv",
+    "decomposition_levels.csv",
+    "tfp_history.csv",
+    "tfp_horizons.csv"
+  ],
+  "only_manuscript_sections_changed": [
+    "results",
+    "policy",
+    "app_model",
+    "app_results"
+  ],
+  "main_preamble_and_entrypoint_unchanged": true,
+  "external_appendix_links": [
+    {
+      "file": "main.pdf",
+      "destination": "table.caption.4"
+    },
+    {
+      "file": "main.pdf",
+      "destination": "table.caption.4"
+    }
+  ],
+  "build_checks": {
+    "main": {
+      "pages": 24,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 49421
+    },
+    "online_appendix_pt": {
+      "pages": 20,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 42150
+    },
+    "folha_rosto": {
+      "pages": 2,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 4211
+    }
+  },
+  "pdf_sha256": {
+    "main.pdf": "e23920657ab3165fd7eac9c6383b6d7196f1932883ed7615b077c5a8d3b1c81a",
+    "online_appendix_pt.pdf": "dc0992824b79a43aa962a0b083e97f01d6cc8b1bbf4ab0fdeb97316b55d8f3c1",
+    "folha_rosto.pdf": "8fe83762cc2761c76a415ef2e45634c5809d8d0d8bbbd1655f03c27902f9e109"
+  },
+  "status": "passed"
+}

@@ -9,6 +9,8 @@
 \usepackage{multirow}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{ragged2e}
+\Urlmuskip=0mu plus 1mu\relax
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
@@ -26,36 +28,45 @@
 
 % === Metadata ===
 \title{Online Appendix to\\
-``How much productivity do we need to reduce the workweek?''}
+``How much productivity is needed to shorten the workweek?\\
+Brazil's 36-hour proposal and 40-hour alternatives''}
 \author{Victor Rangel\thanks{Insper. E-mail: \texttt{victorr@insper.edu.br}.}}
-\date{March 2026}
+\date{April 2026}
 
 \begin{document}
 
 \maketitle
 
-This online appendix collects the data sources, the partial-equilibrium omissions, the calibration details, the sensitivity grids, the sectoral decomposition, the type-level welfare table, the output decomposition, the historical TFP table, the derivations, and the asymmetric-$e(h)$ robustness referenced in the main paper. Section, equation, table, and figure numbers are prefixed with ``A.''. Cross-references to the main paper resolve to the labels in the main document.
+This online appendix collects the data sources, the partial-equilibrium omissions, the calibration details, the sensitivity grids, the sectoral decomposition, the type-level welfare table, the output decomposition, the historical TFP table, the derivations, and the hours-efficiency robustness referenced in the main paper. Section, equation, table, and figure numbers are prefixed with ``A.''. Cross-references to the main paper resolve to the labels in the main document.
 
 \tableofcontents
 \clearpage
 
 \section{Data sources}\label{app:data}
 
-All data are from publicly available sources. PNAD Cont\'{i}nua (IBGE/SIDRA), tables 4093, 4097, 6374, and 6413 (quarterly, 2023--2025), provides the informality rate, position in occupation, average hours, firm-size distribution, and the CES formal weight $\omega=0.622$ ($1$ minus the narrow PNAD informality rate averaged over the four quarters of 2025). RAIS/CAGED (Ministry of Labor) provides annual administrative records of formal employment, used for firm-size distribution and formal/informal employment shares. The Penn World Table 10.01 provides the labor share for Brazil ($\text{labsh}=0.578$), adjusted via \citet{Gollin2002} to $\alpha=0.35$. DIEESE (2024) provides the hours distribution across the formal workforce: $\theta=(0.085, 0.269, 0.646)$ for the $\{36,40,44\}$ hours bins. An auditing exercise in the replication package verifies that the non-targeted moments in the main text are not algebraic consequences of the calibration.
+All data are from publicly available sources. PNAD Cont\'{i}nua (IBGE/SIDRA), tables 4093, 4097, 6374, 6389, and 6413, provides the informality rate, position in occupation, average hours, published earnings by formal/informal category pair, firm-size distribution, and the CES formal weight $\omega=0.622$ \citep{PNAD2025}. The package freezes the SIDRA pulls in \texttt{data\_intermediate/pnad\_targets.json} and \texttt{data\_raw/sidra/pnadcm\_6389\_wage\_by\_position\_last.json}. RAIS/CAGED provides administrative records of formal employment, used for firm-size distribution and formal employment shares \citep{RAIS2022}. Since the replication package does not call a public RAIS API, the RAIS-derived shares are documented in \texttt{data\_intermediate/rais\_targets.json}. PWT labor-share evidence, adjusted via \citet{Gollin2002}, gives $\alpha=0.35$. The historical TFP anchor uses PWT 11.0 via the FRED series \texttt{RTFPNABRA632NRUG}, which extends Brazil's \texttt{rtfpna} series to 2023 \citep{PWT2025,FREDPWTBrazil2026}. The FRED input is frozen at \texttt{data\_raw/fred/RTFPNABRA632NRUG\_pwt110.csv}. DIEESE provides contracted-hours categories that the model maps into $\theta=(0.085, 0.269, 0.646)$ for the $\{36,40,44\}$ bins \citep{DIEESE2024}. The mapping assigns the DIEESE $\leq 39$h category to the 36h bin, keeps the 40h category, and assigns the $\geq 41$h category to the 44h bin. An auditing exercise in the replication package verifies that the non-targeted moments in the main text are not algebraic consequences of the calibration.
 
 \clearpage
 \section{What partial equilibrium omits}\label{app:pe_omits}
 
 The static partial-equilibrium framework excludes seven general-equilibrium channels. Capital accumulation responds to the lower marginal product of capital after the effective labor contraction. Wages and prices adjust in general equilibrium, partially restoring formal labor demand. Labor force participation may rise with leisure. Monetary and fiscal authorities may accommodate. Workers may reallocate across sectors. The formalization decision may move in either direction. Work-sharing is shut down by the fixed-$N$ assumption. All seven channels except the last have a negative expected sign on $A_{\text{req}}$.
 
-The capital-adjustment bound in Equation~\eqref{eq:pe_bound} of the main paper uses a textbook user-cost elasticity $\varepsilon_K\in[0.2,0.4]$ \citep{Caballero1999} and the baseline capital share $\alpha=0.35$. At these elasticities over a $3$--$5$ year horizon, the effective $A_{\text{req}}$ under the conservative specification falls from $8.18\%$ to $6.4\%$--$7.2\%$, and under the preferred specification to $4.8\%$--$5.6\%$. The remaining six channels are individually small and of mixed sign. The headline numbers should be read as short-run upper bounds on the required TFP gain. The $1$--$2$ year model horizon is not the same as the 30-year PWT series used to anchor $A_{\text{req}}$. The anchor is best read as the cumulative TFP gain required over a $3$--$10$ year phase-in horizon.
+Table~\ref{tab:omitted_channels} separates channels already modeled from those bracketed quantitatively and those discussed qualitatively. The table is deliberately balanced: it includes channels that could lower the output-neutrality benchmark, such as capital adjustment, and channels that could raise or redirect it, such as compliance, overtime scheduling, wage bargaining, and organizational disruption.
+
+\input{tab_omitted_channels_autogen}
+
+The pessimistic TFP stress test lets post-reform TFP fall by $\delta$ before computing the productivity gain required to restore output. It is not a forecast of implementation disruption. It is a robustness exercise for the case in which reorganization, compliance frictions, or learning losses make the transition temporarily less productive.
+
+\input{tab_stress_test_autogen}
+
+The capital-adjustment bound in Equation~\eqref{eq:pe_bound} of the main paper uses a textbook user-cost elasticity $\varepsilon_K\in[0.2,0.4]$ \citep{Caballero1999} and the baseline capital share $\alpha=0.35$. At these elasticities over a $3$ to $5$ year horizon, the effective $A_{\text{req}}$ under the two-sided penalty specification falls from $8.18\%$ to between $6.4\%$ and $7.2\%$, and under the one-sided fatigue specification to between $4.8\%$ and $5.6\%$. The remaining six channels are individually small and of mixed sign. The headline numbers should be read as short-run upper bounds on the required TFP gain. The $1$ to $2$ year model horizon is not the same as the historical PWT window used to anchor $A_{\text{req}}$. The anchor is best read as the cumulative TFP gain required over a $3$ to $10$ year phase-in horizon.
 
 \clearpage
 \section{Calibration details}\label{app:calibration_details}
 
 \subsection{Hours-output elasticity and efficiency shape}
 
-The Pencavel evidence documents declining marginal product of hours at long workweeks for a specific industrial setting. \citet{CollewetSauermann2017} find analogous long-hour productivity losses in a Dutch call-center panel. \citet{BickFuchsSchundelnLagakos2018} provide cross-country evidence consistent with declining marginal product of hours, though their primary focus is the relationship between hours and income. Neither paper identifies a precise peak location or an efficiency response below a peak. The choice to place the peak at $h^*=40$ and to compare a preferred flat-below specification (no penalty for shorter hours) with a conservative symmetric specification (equal curvature either side) is a modeling choice loosely informed by this evidence rather than a direct estimate from it. Section~\ref{app:asymmetric} reports four alternative shapes.
+The Pencavel evidence documents declining marginal product of hours at long workweeks for a specific industrial setting. \citet{CollewetSauermann2017} find analogous long-hour productivity losses in a Dutch call-center panel. \citet{BickFuchsSchundelnLagakos2018} provide cross-country evidence consistent with declining marginal product of hours, though their primary focus is the relationship between hours and income. Neither paper identifies a precise peak location or an efficiency response below a peak. The choice to place the peak at $h^*=40$ and to compare a one-sided fatigue specification (no penalty for shorter hours) with a two-sided penalty specification (equal curvature either side) is a modeling choice loosely informed by this evidence rather than a direct estimate from it. Section~\ref{app:hours_efficiency} reports four alternative shapes.
 
 \subsection{Informal efficiency and adjustment costs}
 
@@ -63,20 +74,24 @@ The informal efficiency $\eta_I=0.40$ is set at the midpoint of the informal-to-
 
 \subsection{Reconciliation with higher substitution elasticities}\label{app:sigma_discussion}
 
-Refugee-crisis studies report substitution elasticities between worker types of $\sigma\approx 11$--$30$ \citep{OttavianoPeri2012, BaharDiTellaGulek2025}. These magnitudes are not directly comparable to $\sigma_{\text{sub}}$ as defined here for three reasons. The margin differs. Refugee studies measure substitution between workers of different origin in a market-clearing equilibrium, while $\sigma_{\text{sub}}$ captures intra-firm substitution between formal and informal employment regimes. The horizon differs. Refugee studies identify medium-run responses that include firm entry and organizational reallocation, while the model here holds the firm distribution fixed. The unit differs. Refugee studies typically include self-employed workers, while the aggregator concerns salaried employment. DSGE models of informality \citep{LeyvaUrrutia2020, McKiernan2021} similarly use $\sigma$ parameters that govern sectoral mobility rather than intra-firm substitution. In \citet{Ulyssea2018}, formal and informal workers are effectively perfect substitutes within the firm, with productivity differences captured entirely by the distribution of firm types. The calibration $\sigma=1.326$ with $\eta_I=0.40$ can be read as a parametric decomposition in which the formal--informal wage ratio directly pins the per-efficiency-unit relative productivity of informal labor, and a modest intra-firm substitutability ($\sigma>1$) absorbs the remaining reallocation margin, both jointly disciplined by the observed wage premium.
+Refugee-crisis studies report substitution elasticities between worker types of $\sigma\approx 11$ to $30$ \citep{OttavianoPeri2012, BaharDiTellaGulek2025}. These magnitudes are not directly comparable to $\sigma_{\text{sub}}$ as defined here. Refugee studies measure substitution between workers of different origin in a market-clearing equilibrium. Here, $\sigma_{\text{sub}}$ captures intra-firm substitution between formal and informal employment regimes. The horizon also differs, since refugee studies identify medium-run responses that include firm entry and organizational reallocation, while the model here holds the firm distribution fixed. The unit differs as well, since refugee studies typically include self-employed workers, while the aggregator concerns salaried employment. DSGE models of informality \citep{LeyvaUrrutia2020, McKiernan2021} similarly use $\sigma$ parameters that govern sectoral mobility rather than intra-firm substitution. In \citet{Ulyssea2018}, formal and informal workers are effectively perfect substitutes within the firm, with productivity differences captured entirely by the distribution of firm types. The calibration $\sigma=1.326$ with $\eta_I=0.40$ can be read as a parametric decomposition in which the formal-informal wage ratio pins the per-efficiency-unit relative productivity of informal labor, while modest intra-firm substitutability ($\sigma>1$) absorbs the remaining reallocation margin. Both are disciplined by the observed wage premium.
 
 \subsection{Disciplining $\sigma_{\text{sub}}$: full results}
 
-For each $\sigma$ in a grid over $[0.40,3.00]$, the full model is recalibrated and the implied formal--informal wage premium is computed from the CES first-order condition,
+For each $\sigma$ in a grid over $[0.40,3.00]$, the full model is recalibrated and the implied formal-informal wage premium is computed from the CES first-order condition,
 \[
 R(\sigma)=\frac{\omega}{1-\omega}\cdot\left(\frac{L_F}{L_I}\right)^{\rho-1}\cdot z,
 \]
 where $z=\text{eff}_{hF}/(\eta_I h_I e(h_I))$. The mapping is monotone in $\sigma$. At the recalibrated $(\omega,\eta_I)=(0.622,0.40)$, setting $R\in[1.15,1.55]$ delivers $\sigma\in[1.116,1.469]$ and the conservative midbox $A_{\text{req}}\in[7.50\%,8.58\%]$ (the full $(\sigma,\omega,\eta_I)$-box envelope is $[6.93\%,9.23\%]$). \citet{DerenoncourtGerardLagosMontialoux2025} estimate a small formal-to-informal reallocation elasticity of about $-0.28$ from the Brazilian minimum-wage passthrough, consistent with the modest intra-firm $\sigma$ used in this paper.
 
+The wage-premium bridge compares current published PNAD earnings with the MNR window. These ratios are not used as controlled estimates of the formal premium. They check whether the private-employee and domestic-worker category pairs place current Brazilian formal/informal earnings gaps close to the structural window used to discipline $\sigma_{\text{sub}}$. The self-employed and employer pairs are shown for context but not used for identification because their earnings mix labor income with capital, scale, and client composition.
+
+\input{tab_wage_premium_bridge_autogen}
+
 \clearpage
 \section{Sensitivity}\label{app:sensitivity}
 
-Table~\ref{tab:sensitivity_univariate} reports $A_{\text{req}}$ under univariate variation of each parameter within economically-disciplined ranges. Three parameters are load-bearing: $\sigma$, $\omega$, $\eta_I$. The remaining primitives shift $A_{\text{req}}$ by at most $\pm 0.3$ pp. Table~\ref{tab:heatmap} reports the full $(\sigma,\omega)$ grid. The qualitative finding that $A_{\text{req}}$ exceeds $4\%$ across all combinations in the joint grid is fully robust.
+The sensitivity analysis varies each parameter within economically disciplined ranges. Three parameters carry most of the variation in $A_{\text{req}}$, namely $\sigma$, $\omega$, and $\eta_I$. The remaining primitives shift $A_{\text{req}}$ by at most $\pm 0.3$ pp. The full $(\sigma,\omega)$ grid leaves the qualitative finding unchanged, with $A_{\text{req}}$ above $4\%$ across all combinations in the joint grid.
 
 \begin{table}[htbp]
 \centering
@@ -97,6 +112,7 @@ $\nu$ & $[1.0, 3.0]$ & $\Delta$CV: $[-3.4\%, -3.3\%]$ & Low (welfare only) \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.95\textwidth}
+\justifying
 {\footnotesize \textit{Notes:} Each row varies one parameter inside its data-consistent range and holds all others at baseline. ``Disciplined range'' is the interval drawn from external evidence (Section~\ref{app:calibration_details}). ``$A_{\text{req}}$ range'' is the implied interval for the required TFP gain under the conservative $e(h)$ specification at the $44\to 36$h cap. ``Hierarchy'' classifies each parameter by the width of its $A_{\text{req}}$ interval.}
 \end{minipage}
 \end{table}
@@ -116,11 +132,12 @@ $\sigma$ \textbackslash{} $\omega$ & 0.58 & 0.622 & 0.66 \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.80\textwidth}
-{\footnotesize \textit{Notes:} Each cell is the required one-off TFP gain (\%) at the $44\to 36$h cap under the conservative symmetric $e(h)$ specification, for the listed $(\sigma,\omega)$ pair at $\eta_I=0.40$ and all other parameters at baseline. The bolded row $\sigma=1.326$ is the calibrated central value (corresponding to $R\approx 1.40$, the midpoint of the MNR window). The MNR-consistent interval at the recalibrated $(\omega,\eta_I)=(0.622,0.40)$ is $[1.116,1.469]$. Over the three-way $(\sigma,\omega,\eta_I)$ box with $\eta_I\in\{0.33,0.40,0.50\}$, the envelope across the eight corners is $[6.93\%,9.23\%]$.}
+\justifying
+{\footnotesize \textit{Notes:} Each cell is the required one-off TFP gain (\%) at the $44\to 36$h cap under the two-sided penalty $e(h)$ specification, for the listed $(\sigma,\omega)$ pair at $\eta_I=0.40$ and all other parameters at baseline. The bolded row $\sigma=1.326$ is the calibrated central value (corresponding to $R\approx 1.40$, the midpoint of the MNR window). The MNR-consistent interval at the recalibrated $(\omega,\eta_I)=(0.622,0.40)$ is $[1.116,1.469]$. Over the three-way $(\sigma,\omega,\eta_I)$ box with $\eta_I\in\{0.33,0.40,0.50\}$, the envelope across the eight corners is $[6.93\%,9.23\%]$.}
 \end{minipage}
 \end{table}
 
-Table~\ref{tab:envelope_corners} reports the explicit eight-corner envelope under both specifications. The corners span $\sigma\in\{1.116,1.469\}$, $\omega\in\{0.58,0.66\}$, and $\eta_I\in\{0.33,0.50\}$. The table is generated from the validation JSON files in the replication package.
+The explicit eight-corner envelope covers both specifications. The corners span $\sigma\in\{1.116,1.469\}$, $\omega\in\{0.58,0.66\}$, and $\eta_I\in\{0.33,0.50\}$. The table is generated from the validation JSON files in the replication package.
 
 \input{tab_envelope_corners_autogen}
 
@@ -134,28 +151,13 @@ This section applies the national framework separately to three broad sectors (a
 \clearpage
 \section{Welfare: type-level view}\label{app:welfare_additional}
 
-Table~\ref{tab:welfare_conditional} reports a type-level decomposition of the welfare effect at the $44\to 36$h reform under the conservative specification, using CES wage-bill shares. Workers who remain formal work approximately 6 fewer hours per week with a consumption loss of around $6\%$ and a net welfare gain under GHH preferences with $\nu=2$. Informal workers' welfare is largely unchanged because $h_I=44$ is not subject to the cap. The mass of workers deformalized at the margin faces sharp losses. At the moderate $\eta_I=0.40$ this mass is material and smaller than under lower-efficiency specifications. The type-level figures are a first-order approximation. The exact representative-agent CV in Equation~\eqref{eq:cv} of the main paper computes the composite at aggregate consumption and hours, and the gap between the share-weighted type-level sum and the aggregate CV is the Jensen-type correction implied by the concavity of the GHH composite.
+The type-level decomposition uses worker shares and wage-bill shares under the conservative $44\to 36$h reform. Workers who remain formal work approximately six fewer hours per week and gain in the first-order incidence calculation. Informal workers' welfare is largely unchanged because $h_I=44$ is not subject to the cap. The mass of workers deformalized at the margin faces sharp losses. At the moderate $\eta_I=0.40$ this mass is small but quantitatively important for incidence. The type-level figures are a first-order approximation. The exact representative-agent CV in Equation~\eqref{eq:cv} of the main paper computes the composite at aggregate consumption and hours, so it is not the weighted sum of the type-level rows.
 
-\begin{table}[htbp]
-\centering
-\caption{Welfare by worker type ($44\to 36$h, conservative).}\label{tab:welfare_conditional}
-\small
-\begin{tabular}{lcc}
-\hline\hline
-Worker type & $\Delta$CV$_k$ (first-order) & Share $s_k$ \\
-\hline
-Formal stayers & $+1.9\%$ & $60.1\%$ \\
-Informal (unaffected) & $\approx 0$ & $38.6\%$ \\
-Deformalized & $-32.0\%$ & $1.3\%$ \\
-\hline
-Aggregate, Equation~\eqref{eq:cv} of main & $-3.63\%$ & $100\%$ \\
-\hline\hline
-\end{tabular}
-\\[2pt]
-\begin{minipage}{0.90\textwidth}
-{\footnotesize \textit{Notes:} $\Delta$CV$_k$ is the first-order compensating variation applied to type $k$ (GHH, $\nu=2$), evaluated at each type's consumption and hours. $s_k$ is the CES wage-bill share used as an aggregation weight. The share-weighted sum of the type-level numbers is $+0.009$. The representative-agent value from Equation~\eqref{eq:cv} of the main paper is $-0.026$. The gap is the Jensen-type correction from the concavity of the GHH composite.}
-\end{minipage}
-\end{table}
+\input{tab_welfare_incidence_by_type_autogen}
+
+The separable-preference diagnostic recomputes the welfare schedule using separable log and separable CRRA(2) preferences. The diagnostic is not a distributional welfare analysis, but it checks whether the sign pattern is a knife-edge implication of GHH preferences.
+
+\input{tab_welfare_preference_robustness_autogen}
 
 Figure~\ref{fig:welfare_threshold} shows the welfare response as a function of an exogenous TFP gain at the 36h cap under both specifications. The welfare-neutral thresholds are generated by the replication pipeline and marked in the figure.
 
@@ -165,13 +167,14 @@ Figure~\ref{fig:welfare_threshold} shows the welfare response as a function of a
 \caption{Welfare $\Delta$CV as a function of TFP gain at the 36h cap.}\label{fig:welfare_threshold}
 \vspace{2pt}
 \begin{minipage}{0.85\textwidth}
+\justifying
 {\footnotesize \textit{Notes:} Horizontal axis: exogenous one-off TFP gain applied on top of the $44\to 36$h reform. Vertical axis: aggregate welfare $\Delta$CV from Equation~\eqref{eq:cv} of the main paper. The curves and thresholds are generated by \texttt{src/tables\_figures/plot\_welfare\_schedule.py}.}
 \end{minipage}
 \end{figure}
 
 \begin{table}[htbp]
 \centering
-\caption{Welfare schedule, conservative specification.}\label{tab:welfare_schedule}
+\caption{Welfare schedule, two-sided penalty specification.}\label{tab:welfare_schedule}
 \small
 \begin{tabular}{rrrrl}
 \hline\hline
@@ -191,7 +194,8 @@ Hours cap & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$CV & $\Delta$Inf \\
 \end{tabular}
 \\[2pt]
 \begin{minipage}{0.85\textwidth}
-{\footnotesize \textit{Notes:} All rows are model outcomes under the conservative symmetric $e(h)$ specification, measured relative to the $44$h baseline. $A_{\text{req}}$ is the required TFP gain for the given cap. $\Delta Y$ is the aggregate output change. $\Delta$CV is aggregate welfare from Equation~\eqref{eq:cv} of the main paper. $\Delta$Inf is the change in aggregate informality. The bold row is the proposed $36$h cap.}
+\justifying
+{\footnotesize \textit{Notes:} All rows are model outcomes under the two-sided penalty $e(h)$ specification, measured relative to the $44$h baseline. $A_{\text{req}}$ is the required TFP gain for the given cap. $\Delta Y$ is the aggregate output change. $\Delta$CV is aggregate welfare from Equation~\eqref{eq:cv} of the main paper. $\Delta$Inf is the change in aggregate informality. The bold row is the $36$h endpoint.}
 \end{minipage}
 \end{table}
 
@@ -204,7 +208,8 @@ Hours cap & $A_{\text{req}}$ & $\Delta Y$ & $\Delta$CV & $\Delta$Inf \\
 \caption{Decomposition of $\Delta Y$ at the $44\to 36$h cap under each calibration.}\label{fig:decomposition}
 \vspace{2pt}
 \begin{minipage}{0.92\textwidth}
-{\footnotesize \textit{Notes:} The bars are generated by \texttt{src/tables\_figures/plot\_main\_figures.py}. The mechanical-hours channel is the direct effect of the lower formal-hours cap, holding per-hour efficiency fixed. The efficiency channel is the change in formal hourly efficiency $e(h)$. The residual includes the formal--informal reallocation response and the CES cross-term. The exact values are written to \texttt{output/validation/decomposition\_results.json}.}
+\justifying
+{\footnotesize \textit{Notes:} The bars are generated by \texttt{src/tables\_figures/plot\_main\_figures.py}. The mechanical-hours channel is the direct effect of the lower formal-hours cap, holding per-hour efficiency fixed. The efficiency channel is the change in formal hourly efficiency $e(h)$. The residual includes the formal-informal reallocation response and the CES cross-term. The exact values are written to \texttt{output/validation/decomposition\_results.json}.}
 \end{minipage}
 \end{figure}
 
@@ -241,29 +246,11 @@ where $\partial Y_g/\partial L_{F,g}=(1-\alpha)Y_g/L_g\cdot(\partial L_g/\partia
 $A_{\text{req}}$ solves Equation~\eqref{eq:areq} of the main paper. The Cobb-Douglas structure $Y_g=A K_g^\alpha L_g^{1-\alpha}$ is linear in $A$ and the optimal $L_g(A)$ is weakly increasing in $A$, so $\partial\sum_g Y_g/\partial A>0$ and bisection converges to a unique $A_{\text{req}}$.
 
 \clearpage
-\section{Asymmetric $e(h)$ robustness}\label{app:asymmetric}
+\section{Hours-efficiency robustness}\label{app:hours_efficiency}
 
-Table~\ref{tab:asymmetric_eh} reports $A_{\text{req}}$ under four specifications for $e(h)$. The baseline symmetric $e(h)=\exp\{-\kappa(h-40)^2\}$ with $\kappa=2.11\times 10^{-3}$ is compared against three asymmetric alternatives that vary curvature below $h^*=40$ while keeping curvature above $h^*$ at $\kappa$.
+The robustness check compares the one-sided fatigue and two-sided penalty specifications with a no-efficiency benchmark, alternative below-40 curvature, and one-hour shifts in the efficiency peak. Curvature above $h^*=40$ is fixed at the baseline $\kappa$ except in the no-efficiency row.
 
-\begin{table}[htbp]
-\centering
-\caption{$A_{\text{req}}$ under asymmetric $e(h)$.}\label{tab:asymmetric_eh}
-\small
-\begin{tabular}{llrr}
-\hline\hline
-Scenario & Assumption below $h^*$ & $e(36)$ & $A_{\text{req}}$ \\
-\hline
-Symmetric (conservative) & $\kappa_{\text{below}}=\kappa$ & 0.967 & 8.18\% \\
-Half-curvature below & $\kappa_{\text{below}}=0.5\kappa$ & 0.983 & 7.40\% \\
-Double-curvature below & $\kappa_{\text{below}}=2\kappa$ & 0.935 & 9.73\% \\
-Flat below (preferred) & $\kappa_{\text{below}}=0$ & 1.000 & 6.63\% \\
-\hline\hline
-\end{tabular}
-\\[2pt]
-\begin{minipage}{0.90\textwidth}
-{\footnotesize \textit{Notes:} Curvature above $h^*=40$ is fixed at $\kappa=2.11\times 10^{-3}$ in all four scenarios. Only the curvature below the peak varies. $e(36)$ is per-hour efficiency at the proposed $36$h cap (the further $e(36)$ is from one, the larger the efficiency penalty). $A_{\text{req}}$ is the required TFP gain at the $44\to 36$h cap under each scenario.}
-\end{minipage}
-\end{table}
+\input{tab_efficiency_diagnostics_autogen}
 
 % === Bibliography ===
 \clearpage

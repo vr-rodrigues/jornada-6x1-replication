@@ -1,0 +1,55 @@
+{
+  "verified_utc": "2026-09-05T18:34:02.965275+00:00",
+  "status": "passed",
+  "backup": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER_antes_repor_literatura_20260905_152208",
+  "preserved_archives": {
+    "PAPER_antes_base44_20260905_143805": 97,
+    "PAPER_antes_repor_literatura_20260905_152208": 116,
+    "PAPER_antes_restaurar_graficos_20260905_134322": 82,
+    "PAPER_antes_segunda_revisao_20260905_092422": 81,
+    "PAPER_original_20260905_020616": 10,
+    "PAPER_revisao_ampla_20260905_024411": 79
+  },
+  "unchanged_generated_assets": 55,
+  "unchanged_input_hashes": 15,
+  "unchanged_modules": 7,
+  "unchanged_display_equations": 32,
+  "unchanged_asset_manifest": true,
+  "unchanged_preambles_and_abstracts": true,
+  "restored_main_citations": [
+    "DixCarneiroGoldbergMeghirUlyssea2026",
+    "DerenoncourtGerardLagosMontialoux2025",
+    "Caballero1999"
+  ],
+  "restored_appendix_citations": [
+    "OttavianoPeri2012",
+    "BaharDiTellaGulek2025",
+    "LeyvaUrrutia2020",
+    "McKiernan2021",
+    "Gollin2002"
+  ],
+  "checks": {
+    "main": {
+      "pages": 25,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 52983
+    },
+    "online_appendix_pt": {
+      "pages": 23,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 45720
+    },
+    "folha_rosto": {
+      "pages": 2,
+      "unresolved_references": [],
+      "overfull_boxes": [],
+      "text_characters": 4263
+    }
+  },
+  "external_main_links": 2,
+  "copyable_reproduction_command": true,
+  "build_manifest_sha256": "27041ab470f1cabe3436b17fd7ee7cf442aee9c64122c74b808d0656dbe13007",
+  "visual_review_sha256": "4499b27c457414d3a5bdbf335545467f9e31f649de34280891b7ccb1a7b800ef"
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-05",
+  "render_directory": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\.build_paper\\journal\\qa_delivery",
+  "documents": {
+    "main": {
+      "pages_reviewed": 25,
+      "pdf_sha256": "733677d503b97f6a9c7f8fc31b53e28010e3faadfc8ab908894c5f54b1b1db24",
+      "page_png_sha256": {
+        "page-01.png": "44d7b70a1ee19af7a87fed1b8f1630c1e08347d5e75fc7f89df819e9935983ed",
+        "page-02.png": "af71a4d24baf984c9ebfe492f299f694252db7ccc024c9a1a2dcd468d3e85964",
+        "page-03.png": "d3d802467dd141cbcbdad7177ce3ebf4258032e23f5b1221230bb49cd5bff4f7",
+        "page-04.png": "7a3213414a8d1832fb2249cc0c3cee63fc8aa73f1a4acecc02cd9589b5c49e56",
+        "page-05.png": "b61002f87d412320410d3c2bca488172b1fd14f45b3f55dbf9616486f2424a55",
+        "page-06.png": "5cbc9dc7d9e9b1752334866be84e5cd8ee30c3d2e9de06ff1ad58a13cc917dd2",
+        "page-07.png": "33a2f229d7edabaac07d6b1b46aa8f108e7cc9f5c87391d38e3b011162e103c1",
+        "page-08.png": "b13f7d5f9e2df51a7a005da90c3e6482daec307092656fc07082bff9d8b7b9de",
+        "page-09.png": "163f8307f8f90629aa3fdc2bd2ea182ffe2198eca80cec798e1215856e8bfc9b",
+        "page-10.png": "d0817a62124a40e8e3c5275c013baefa367a5234e94a6905063dbe4ce6745e9c",
+        "page-11.png": "34075bc591bbdd6decb3654931b9869ebd3262f889e1e5229b86748cf04486e9",
+        "page-12.png": "be16457bfe43c23aab465ee9270adef44bf377e23b71988f7bb1eaacca538ae6",
+        "page-13.png": "116a675d1d401526cd9f612c8d9b0035bc6ed10f484465ed30fba8208c949080",
+        "page-14.png": "49bb59c5076373c12a92e74800862046d32f70ea959bbd0fb282010cd93948e0",
+        "page-15.png": "1bc00c70788fead6ddc7fcf86a81a06148fd52c69bb286e1ac094ccd33a2182a",
+        "page-16.png": "ff9d75eaaea2df766a02811551881f3dd24772bfa9aaa46c151e79b3613ac25d",
+        "page-17.png": "0fe6959a91ca68ae1defa95439daf27dcfbfa1ef0801ab6edef62bc69b695c14",
+        "page-18.png": "bc0963d05bf9c8a763264e1cddb74d8e196639cf47bcabbe1f6f0acd79691bca",
+        "page-19.png": "2880761fbfd257536363ed785532e79269133b639c256da8bfa20dc09f2fc960",
+        "page-20.png": "2f3fcf1fb9552dedb8d701aaf54ade1c2d012b2ff1401bedaa53877cbdd8eff5",
+        "page-21.png": "7b0c54018110d525e98bf64bcfe1bc56a813d869e10a1bf69a1ebed7f9319528",
+        "page-22.png": "99313e1e26db31731d278e0121372556d5cda887a03eb7d94c6f7b0a64c16a24",
+        "page-23.png": "82d9f8c4f0cc4f1be1578e283add981d4e000c1bda71a369a525eb15b5b0c7ef",
+        "page-24.png": "e7ce028fa3efb95e5367679a2824c062c2d772a5df235455481804f8b337f2fe",
+        "page-25.png": "e7f71c5948347eb46182f6e3829b26207a728447d04fec545ab4991b5a6f10fc"
+      },
+      "visual_review": "All pages checked with Poppler contact sheets and detailed inspections; typography, tables, figures, bibliography and margins reviewed."
+    },
+    "online_appendix_pt": {
+      "pages_reviewed": 26,
+      "pdf_sha256": "725b7066c2fb8c6ab40bf887efbe8c5db5bab7f5489b9175efc7590039bcfdb3",
+      "page_png_sha256": {
+        "page-01.png": "f660fdf05713e8581d0437b23335c62ff7cbd713820e3aa2562bb88c4bfe36b3",
+        "page-02.png": "64d74f41ae0f0208aca37b070d647832031a71eb97e0ee67f81d24107ef0e3bf",
+        "page-03.png": "995d069c931ba4741bb6ef3946c89fe64d13e963cca5c0aaf6a5cc621be5aa9f",
+        "page-04.png": "8fcae995316d4430cb9a2b47020288b81db9dc1d20f2c532b4661f1acc3d75b7",
+        "page-05.png": "d012ace501897c59090efee1f685dad667075e5caed0eab7106496a6f561372d",
+        "page-06.png": "1810eca6d132776f2a9407b0fddc2515d0096ef1228841534b91378012b8a85b",
+        "page-07.png": "1f9118f85f0e157d8468edc21d4fc6123b16fa00040003c009bde40623e54daa",
+        "page-08.png": "3a18b811372c443c5f09cc772a2afe246bafa01d0afcfd3a22ba131cd1c6e4bd",
+        "page-09.png": "374eba42e002b40a09e1373ac4371e5174e495b18dfec69e3e2a16d74cfd7538",
+        "page-10.png": "81821bd8ff387d12a46ba292da15c8d7f7c74b8c86ccd3c9f3f2222c59bbe481",
+        "page-11.png": "879639e7f276241064eb15317bf9814ccadeff37dcc633ba9b42c807f57f22db",
+        "page-12.png": "ea4ac6977115bba0a9d7115ccaf03696be1d12b46c7edb5ff2979210a15e74fe",
+        "page-13.png": "8c2ab9097dbb94c9f9950f3a3db852b9f0b02cfdab4554379738a0678294db0e",
+        "page-14.png": "ee7fc153d964b668c18e69489faf5b3efc6f39f57c22e0395560e134fab1f1b5",
+        "page-15.png": "3a9f9abfa7e91491aed39b158f52d6f051401b2fae75322e425ede40f1dc0e70",
+        "page-16.png": "87ebe236a7e2d785f5430f8b5ba2e534249912d54bf7ba79ddb15e091f7d53cc",
+        "page-17.png": "cef72f557ae1a85e81978a986711205b20e1b3627c683b7d96e08b44e6e3bdbc",
+        "page-18.png": "b3902507bb07ee7ef2250e5d21a01885c9d2b236261cf5c018e56867fe52bef7",
+        "page-19.png": "c830d327e8e7a39046fe43e32b74ad6479728481084c6b26f88d0a96517d9966",
+        "page-20.png": "60cddbed67c5941551200afe7c2472c0e32d6d6df501ca51703455c48e93dbd4",
+        "page-21.png": "b0679d79a8f2bd991af6f4de201fe599bb8a6ce4d3cd65618dac4389b5509b7e",
+        "page-22.png": "04665f03c8fe7fc9e7f7be336c3ea0f82883f4b363fc9b98ec824f5f5e3d6cba",
+        "page-23.png": "617f8bfe35b23d48b936aec90a37525bfc8589bb72b9dbf61239f7fa63b0289c",
+        "page-24.png": "4bd881f37e9c7522fb2127193f787ddf7971d42b86de4c6843ca265c59e21939",
+        "page-25.png": "8132fc4ba89cd856cb5b2072e52d756ca30a1b4733e12f2eef97f0b82dd60308",
+        "page-26.png": "8e167b2d3ee1277306e87037bc4541863a2f360088940606ad7dfd57e77c4a60"
+      },
+      "visual_review": "All pages checked with Poppler contact sheets and detailed inspections; typography, tables, figures, bibliography and margins reviewed."
+    },
+    "folha_rosto": {
+      "pages_reviewed": 2,
+      "pdf_sha256": "70426b3fc4eb811eada6ae7307c91a604d0249c323ccca0cfe4970b6fba11590",
+      "page_png_sha256": {
+        "page-1.png": "30ad91ffe65293931a43d28cee48502d308649b1c3dd7e2a919221c837df7d58",
+        "page-2.png": "fc7bbb36b31c742fde38a305d0fef34e72b564e34b632b0dce3df75b6893b562"
+      },
+      "visual_review": "All pages checked with Poppler contact sheets and detailed inspections; typography, tables, figures, bibliography and margins reviewed."
+    }
+  },
+  "total_pages": 53
+}

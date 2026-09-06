@@ -1,0 +1,8 @@
+{
+  "label": "conditional sensitivity grid, not identified set",
+  "points": 296,
+  "fixed": "Each point recalibrates tau/pi to the same conditional group targets. Capital and total employment fixed.",
+  "interior": "Includes interior sigma, omega, eta, peak, elasticity and hours weights.",
+  "wage_constraint": "CES grid records whether the hourly ratio is in an assumed 1.15-1.55 interval; the whole box need not pass.",
+  "external_evidence": "E_Q and peak are transport assumptions, not Brazilian estimates from Pencavel."
+}

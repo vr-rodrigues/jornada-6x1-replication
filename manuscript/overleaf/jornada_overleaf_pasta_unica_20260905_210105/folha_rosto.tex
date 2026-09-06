@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2.5cm,bottom=3cm]{geometry}
+\usepackage[brazilian,english]{babel}
+\usepackage{setspace}
+ % Shared journal typography. Exporter inlines this file into each document.
+% Compile with XeLaTeX; Times New Roman is also installed on Overleaf.
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Times New Roman}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\normalsize\itshape}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\itshape}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalfont\normalsize\itshape}{\theparagraph}{1em}{}
+\usepackage{caption}
+\DeclareCaptionFont{journal}{\normalsize\onehalfspacing}
+\captionsetup{font=journal,labelfont=it}
+\makeatletter
+% setspace resets floats to single spacing; restore journal spacing afterwards.
+\AtBeginDocument{\apptocmd{\@xfloat}{\onehalfspacing\normalsize}{}{\PackageError{journal_style}{Cannot restore float spacing}{Check the float implementation.}}}
+\patchcmd{\l@section}{\bfseries}{\itshape}{}{}
+\patchcmd{\@footnotetext}{\reset@font\footnotesize}{\reset@font\normalsize\onehalfspacing}{}{}
+\renewcommand{\footnotesize}{\normalsize}
+\renewcommand{\@maketitle}{%
+  \newpage\null\vskip 1.5em
+  \begin{center}
+    {\normalsize\itshape\@title\par}\vskip 1em
+    {\normalsize\@author\par}\vskip .5em
+    {\normalsize\@date\par}
+  \end{center}\par\vskip 1em}
+\renewenvironment{abstract}
+  {\begin{center}\normalsize\itshape\abstractname\end{center}\begin{quotation}\normalsize}
+  {\end{quotation}}
+\makeatother
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\normalfont\itshape #1}
+\pagestyle{plain}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\hypersetup{
+  pdftitle={Folha de rosto - Jornada de trabalho, produtividade e informalidade},
+  pdfauthor={Victor Rangel; Fernando Barros Jr}
+}
+
+\begin{document}
+
+\begin{center}
+{\normalsize\itshape Jornada de trabalho, produtividade e informalidade: uma avalia\c{c}\~ao quantitativa para o Brasil\par}
+
+\vspace{0.8em}
+{\normalsize\itshape Working hours, productivity, and informality: a quantitative assessment for Brazil\par}
+
+\vspace{1.5em}
+{\normalsize Victor Rangel\par}
+Insper, São Paulo, SP, Brazil\par
+E-mail: \href{mailto:victorrsr@al.isper.edu.br}{victorrsr@al.isper.edu.br}\par
+ORCID: \href{https://orcid.org/0000-0002-4520-2795}{0000-0002-4520-2795}
+
+\vspace{0.8em}
+{\normalsize Fernando Barros Jr\par}
+University of São Paulo at Ribeirão Preto, Ribeirão Preto, SP, Brazil\par
+E-mail: \href{mailto:fabarrosjr@usp.br}{fabarrosjr@usp.br}\par
+ORCID: \href{https://orcid.org/0000-0002-9073-7684}{0000-0002-9073-7684}\par
+\end{center}
+
+\section*{Resumo}
+
+ Este artigo quantifica o ganho de produtividade total dos fatores (PTF) necessário para neutralizar, no curto prazo, a perda de produto associada a tetos alternativos para a jornada semanal no Brasil. Combinamos momentos da PNAD Contínua de 2024T4 com um modelo estático de equilíbrio parcial no qual trabalho formal e informal são substitutos imperfeitos, a eficiência horária depende da jornada e as cunhas de formalização governam a composição do emprego. Para representar as reformas de 44 para 40 e 36 horas, limitamos previamente as horas habituais formais a 44h, como hipótese de mensuração da base. A alternativa de 40 horas requer $1{,}53$--$1{,}57\%$ de PTF. A passagem para 36 horas requer entre $6{,}52\%$ e $8{,}38\%$, conforme a hipótese sobre eficiência abaixo de 40 horas; no mesmo contrafactual, a informalidade aumenta entre $2{,}28$ e $2{,}92$ pontos percentuais. Decomposições mostram que a contração física de horas formais explica a maior parcela negativa da variação do produto. A comparação com a trajetória brasileira de PTF e os exercícios de bem-estar sugerem uma diferença quantitativa importante entre reformas moderadas e o teto de 36 horas. As magnitudes dependem da fadiga e das horas iniciais: preservar a cauda habitual acima de 44h reduz o requisito em 40 horas para cerca de $0{,}07\%$. Os resultados motivam a avaliação de trajetórias graduais e de instrumentos de transição, sem constituir uma estimativa causal dos efeitos de uma proposta legislativa específica.
+
+\textit{Palavras-chave:} jornada de trabalho; informalidade; produtividade; Brasil.
+
+\textit{Classifica\c{c}\~ao JEL:} E24; J22; J46.
+
+\clearpage
+\selectlanguage{english}
+\section*{Abstract}
+
+ This paper quantifies the total factor productivity (TFP) gain required to offset the short-run output loss associated with alternative weekly working-hour ceilings in Brazil. We combine moments from the 2024Q4 PNAD Contínua with a static partial-equilibrium model in which formal and informal labor are imperfect substitutes, hourly efficiency depends on working hours, and formalization wedges govern the composition of employment. To represent reductions from 44 to 40 and 36 hours, we initially cap formal workers' usual hours at 44 as a baseline measurement assumption. The 40-hour alternative requires $1.53$--$1.57\%$ higher TFP. Moving to 36 hours requires $6.52$--$8.38\%$, depending on the efficiency assumption below 40 hours; informality rises by $2.28$--$2.92$ percentage points in the same counterfactual. Decompositions show that fewer physical formal hours account for the largest negative component of the output change. Comparison with Brazil's historical TFP path and welfare exercises suggests an important quantitative difference between moderate reforms and the 36-hour ceiling. Magnitudes depend on fatigue and baseline hours: retaining the observed usual-hours tail above 44 reduces the requirement at 40 hours to approximately $0.07\%$. The results motivate the assessment of gradual paths and transition instruments, without providing a causal estimate of the effects of a specific legislative proposal.
+
+\textit{Keywords:} working hours; informality; productivity; Brazil.
+
+\textit{JEL classification:} E24; J22; J46.
+
+\selectlanguage{brazilian}
+\section*{Declara\c{c}\~oes}
+
+\textit{Autoria.} Victor Rangel e Fernando Barros Jr.
+
+\textit{Conflito de interesses.} Os autores declaram n\~ao haver conflito de interesses financeiro, institucional ou pessoal relacionado a este manuscrito.
+
+\textit{Disponibilidade de dados.} O pacote de replicação que acompanha esta versão contém código, entradas verificadas, resultados, testes e instruções de reprodução. Os microdados da PNAD Contínua de 2024T4 e as tabelas da RAIS 2022 foram obtidos nas fontes oficiais do IBGE e do Ministério do Trabalho e Emprego; a série de PTF provém da Penn World Table 11.0, via FRED. O apêndice documenta os universos, as versões e as hipóteses mantidas. O endereço público do projeto é \url{https://github.com/vr-rodrigues/jornada-6x1-replication}; a revisão aqui apresentada é a versão local que acompanha o manuscrito.
+
+\textit{Uso de intelig\^encia artificial.} O manuscrito utilizou Codex como apoio t\'ecnico e editorial. Os autores permanecem integralmente respons\'aveis pelo trabalho.
+
+\end{document}

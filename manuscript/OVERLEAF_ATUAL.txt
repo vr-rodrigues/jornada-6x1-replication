@@ -1,0 +1,3 @@
+overleaf/jornada_overleaf_pasta_unica_20260905_210105.zip
+Compiler: XeLaTeX; bibliography: Biber
+3 .tex + 1 .bib + 8 figure PDFs; all in the root.

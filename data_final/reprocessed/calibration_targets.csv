@@ -1,0 +1,23 @@
+target_id,value,unit,source,definition,evidence_status
+INF_AGG,0.3860008721172535,proportion,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,VD4009 and V4019; occupied persons age14+; V1028 weights,verified_observation
+N_TOTAL,0.5871658367477847,proportion,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Occupied persons / population aged14+,verified_observation
+HI,35.484752321570376,hours/week,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,"Habitual main-job hours, informal workers",verified_observation
+H_FORMAL_HABITUAL,41.42440250746032,hours/week,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Habitual main-job hours; not contracted,verified_observation
+H_FORMAL_ACTUAL,39.98102056697602,hours/week,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Actual main-job hours; not contracted,verified_observation
+R_HOURLY_AGGREGATE,1.622443453115618,ratio,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,(sum weighted formal income / sum weighted formal hours)/(informal analogue); same paid sample,verified_observation
+R_WEEKLY_PER_WORKER,1.8800997144694485,ratio,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Ratio of means; monthly income multiplied by12/52; includes employer/self-employment earnings,verified_observation
+THETA_36,0.14414630810109436,proportion,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Habitual hours <=36/37-40/>40; representative36/40/44 is a model approximation,verified_observation
+THETA_40,0.40025302032911664,proportion,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Habitual hours <=36/37-40/>40; representative36/40/44 is a model approximation,verified_observation
+THETA_44,0.4556006715697891,proportion,PNAD 2024Q4 official microdata; see reprocessed/provenance and manifest.json,Habitual hours <=36/37-40/>40; representative36/40/44 is a model approximation,verified_observation
+RAIS_SHARE_SMALL,0.3938863739756182,proportion,MTE RAIS2022 Table6 / workbook TABELA2,Active links at establishments1-49; not PNAD person or total-employment share,verified_observation
+RAIS_SHARE_LARGE,0.6061136260243818,proportion,MTE RAIS2022 Table6 / workbook TABELA2,Active links at establishments50+; not consolidated firms,verified_observation
+ALPHA,0.35,proportion,Frozen structural choice; not re-estimated,Capital share (Gollin-adjusted); legacy provenance is not verified evidence,assumption
+ETA_I,0.4,proportion,Frozen structural choice; not re-estimated,Relative efficiency of informal labor; legacy provenance is not verified evidence,assumption
+E_Q,0.6,elasticity,Frozen structural choice; not re-estimated,Hours-output elasticity at h_ref; legacy provenance is not verified evidence,assumption
+H0,44.0,hours/week,Frozen structural choice; not re-estimated,Baseline weekly hours cap (formal); legacy provenance is not verified evidence,assumption
+H1,36.0,hours/week,Frozen structural choice; not re-estimated,Reform weekly hours cap; legacy provenance is not verified evidence,assumption
+H_STAR,40.0,hours/week,Frozen structural choice; not re-estimated,Peak-efficiency hours; legacy provenance is not verified evidence,assumption
+GAMMA_F_SMALL,0.12,proportion,Frozen structural choice; not re-estimated,Formal cost wedge (small firms); legacy provenance is not verified evidence,assumption
+GAMMA_F_LARGE,0.03,proportion,Frozen structural choice; not re-estimated,Formal cost wedge (large firms); legacy provenance is not verified evidence,assumption
+INF_SMALL,0.5,proportion,Frozen structural choice; not re-estimated,"Informality rate (small firms, <=49 employees); legacy provenance is not verified evidence",assumption
+INF_LARGE,0.2,proportion,Frozen structural choice; not re-estimated,"Informality rate (large firms, 50+ employees); legacy provenance is not verified evidence",assumption

@@ -2,7 +2,7 @@
 % Subsection: Model (inside Section 2)
 % =============================================================
 
-A representative firm in group $g\in\{\text{Small},\text{Large}\}$ (small: at most 49 employees; large: 50 or more) produces output $Y_g$ from capital $K_g$ and effective labor $L_g$ using a Cobb--Douglas technology,
+A representative firm in group $g\in\{\text{Small},\text{Large}\}$ produces output $Y_g$ from capital $K_g$ and effective labor $L_g$ using a Cobb-Douglas technology. Small firms have at most 49 employees, and large firms have 50 or more.
 \begin{equation}\label{eq:production}
     Y_g = A\cdot K_g^{\alpha}\cdot L_g^{1-\alpha},
 \end{equation}
@@ -14,7 +14,7 @@ where $\omega$ is the CES weight on formal labor and $\sigma_{\text{sub}}$ is th
 \[
 L_{F,g}=N_{F,g}\sum_b\theta_b h_b e(h_b),\qquad L_{I,g}=\eta_I N_{I,g} h_I e(h_I),
 \]
-where $N_{F,g}$ and $N_{I,g}$ are the headcounts of formal and informal workers in group $g$ (with $N_{I,g}\equiv N_g-N_{F,g}$ and total group employment $N_g$ fixed), $h_b$ indexes the three contracted-hours bins $b\in\{36,40,44\}$ with shares $\theta_b$ among formal workers, $h_I=44$ is weekly hours for informal workers, and $\eta_I$ is the per-head productivity of an informal worker relative to a formal worker. Per-hour efficiency follows $e(h)=\exp\{-\kappa(h-h^*)^2\}$ above the peak $h^*=40$, where $\kappa$ is the curvature of the fatigue penalty. Below the peak the paper considers two regimes. The preferred flat-below specification sets $e(h)=1$ for $h\leq h^*$. The conservative symmetric specification keeps the same quadratic form below $h^*$. The flat-below specification is informed by \citet{Pencavel2015}, who documents the fatigue leg above the peak but does not characterize efficiency below it. The symmetric specification serves as a conservative upper bound on the required TFP gain.
+where $N_{F,g}$ and $N_{I,g}$ are the headcounts of formal and informal workers in group $g$ (with $N_{I,g}\equiv N_g-N_{F,g}$ and total group employment $N_g$ fixed), $h_b$ indexes the three contracted-hours bins $b\in\{36,40,44\}$ with shares $\theta_b$ among formal workers, $h_I=44$ is weekly hours for informal workers, and $\eta_I$ is the per-head productivity of an informal worker relative to a formal worker. Per-hour efficiency follows $e(h)=\exp\{-\kappa(h-h^*)^2\}$ above the peak $h^*=40$, where $\kappa$ is the curvature of the long-hours fatigue penalty. Below the peak the paper considers two transparent regimes. The preferred \emph{one-sided fatigue} specification sets $e(h)=1$ for $h\leq h^*$: long workweeks are tiring, but shorter workweeks are not mechanically punished. The conservative \emph{two-sided penalty} specification keeps the same quadratic form below $h^*$: deviations on either side of 40 hours reduce per-hour efficiency. The one-sided specification is informed by \citet{Pencavel2015}, who documents the fatigue leg above the peak but does not characterize efficiency below it. The two-sided specification serves as a conservative upper bound on the required TFP gain.
 
 Each firm chooses the number of formal workers $N_{F,g}$ to maximize profit net of three cost wedges,
 \begin{equation}\label{eq:firm}
@@ -34,8 +34,8 @@ For welfare, preferences are GHH \citep{GreenwoodHercowitzHuffman1988} with $\si
 \end{equation}
 The numerator and denominator are the post- and pre-reform consumption-equivalents of welfare under GHH preferences, computed as consumption net of the monetized labor disutility $\psi h^{1+\nu}/(1+\nu)$. $\Delta$CV is the percentage change in welfare.
 
-The model is static and partial-equilibrium. Capital is predetermined, total employment $N$ is fixed, and general-equilibrium feedbacks (wage-price, monetary, fiscal, cross-sector) are absent. The online appendix enumerates the omitted channels and bounds their aggregate effect. A textbook user-cost elasticity $\varepsilon_K\in[0.2,0.4]$ \citep{Caballero1999} with capital share $\alpha=0.35$ implies
+The model is static and partial-equilibrium. Capital is predetermined, total employment $N$ is fixed, and general-equilibrium feedbacks (wage-price, monetary, fiscal, cross-sector) are absent. Appendix Table~\ref{tab:omitted_channels} lists the modeled, bracketed, and omitted channels, including compliance, overtime, wage bargaining, labor supply, and sectoral linkages. A textbook user-cost elasticity $\varepsilon_K\in[0.2,0.4]$ \citep{Caballero1999} with capital share $\alpha=0.35$ implies
 \begin{equation}\label{eq:pe_bound}
     \Delta A_{\text{req}}^{K}\approx -\alpha\cdot\varepsilon_K\cdot|\Delta L_F/L|\in[-1.0,-1.8]\text{ pp},
 \end{equation}
-where $\Delta A_{\text{req}}^{K}$ is the downward correction to the short-run $A_{\text{req}}$ once the endogenous response of the capital stock is factored in. The medium-run analog of the headline thus falls by $1$--$2$ pp over a $3$--$5$ year horizon.
+where $\Delta A_{\text{req}}^{K}$ is the downward correction to the short-run $A_{\text{req}}$ once the endogenous response of the capital stock is factored in. The medium-run analog of the headline falls by $1$ to $2$ pp over a $3$ to $5$ year horizon.

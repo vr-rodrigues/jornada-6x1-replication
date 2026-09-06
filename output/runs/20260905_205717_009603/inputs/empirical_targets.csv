@@ -1,0 +1,21 @@
+﻿target_id,value,source,notes
+INF_AGG,0.3860008721172535,"PNAD Continua Trimestral, Tabela 4093, IBGE",Avg last 4 quarters: 37.8%; Latest: 37.6%
+INF_SMALL,0.5,PNAD Continua / RAIS cross-reference,Target for wedge calibration (tau_S)
+INF_LARGE,0.2,PNAD Continua / RAIS cross-reference,Target for wedge calibration (tau_L)
+SHARE_SMALL,0.59,"RAIS 2022, Ministerio do Trabalho","RAIS-based, formal employment only (not PNAD all-workers)"
+SHARE_LARGE,0.41,"RAIS 2022, Ministerio do Trabalho",Complement of SHARE_SMALL
+GAMMA_F_SMALL,0.12,Payroll legislation + calibration,Calibrated to reproduce INF_SMALL via wedge bisection
+GAMMA_F_LARGE,0.03,Payroll legislation + calibration,Calibrated to reproduce INF_LARGE via wedge bisection
+ALPHA,0.35,"PWT labor-share evidence + Gollin (2002, JPE)",Gollin correction for self-employment income
+LABSH_RAW,0.578,"PWT labor-share evidence, Brazil, 2019",Before Gollin adjustment
+THETA_36,0.085,"DIEESE 2024, Table 7 contracted-hours distribution",Mapped from DIEESE <=39h category; mapping documented in paper/tex/online_appendix.tex
+THETA_40,0.269,"DIEESE 2024, Table 7 contracted-hours distribution",Mapped from DIEESE 40h category; mapping documented in paper/tex/online_appendix.tex
+THETA_44,0.646,"DIEESE 2024, Table 7 contracted-hours distribution",Mapped from DIEESE >=41h category; mapping documented in paper/tex/online_appendix.tex
+ETA_I,0.4,"La Porta & Shleifer (2014, JEP)",Theoretically consistent with CES marginal-product identification under competitive wage-taking
+E_Q,0.6,"Pencavel (2015, Economic Journal)",d ln(h*e(h))/d ln(h) at h_ref=42.24
+N_TOTAL,0.59,"PNAD Continua, employment-to-population ratio",Approximate employment-to-population ratio for working-age
+H0,120.0,CLT Art. 58,Statutory limit
+H1,36.0,PEC 6x1 proposal,Main policy counterfactual
+H_STAR,40.0,"Pencavel (2015), Collewet & Sauermann (2017)",Modeling choice informed by long-hour productivity evidence; not directly estimated for Brazil
+HI,35.484752321570376,Model assumption,Assumption: informals work the pre-reform maximum
+H_REF_EFFICIENCY,42.244,Frozen external efficiency anchor hypothesis,Independent of PNAD mean hours

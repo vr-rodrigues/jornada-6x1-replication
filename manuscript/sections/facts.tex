@@ -1,0 +1,39 @@
+\section{Ambiente institucional e fatos brasileiros}\label{sec:facts}
+
+\subsection{A reforma e os contrafactuais relevantes}
+
+A PEC 8/2025 foi apresentada com uma semana de quatro dias e teto de 36 horas \citep{CamaraPEC82025Protocol}. O debate de 2025 e abril de 2026 passou a incluir teto de 40 horas, escala 5x2 e transições faseadas; em 22 de abril de 2026, a admissibilidade da PEC 8/2025 e da PEC 221/2019 foi aprovada na Comissão de Constituição e Justiça \citep{CamaraFortyHours2025,CamaraFortyHoursBill2026,CamaraAdmissibility2026,CamaraSpecialCommission2026}. A análise, portanto, considera toda a sequência de tetos entre 44 e 36 horas, em vez de tratar apenas o ponto final de maior intensidade.
+
+\subsection{Horas formais, informalidade e produtividade}
+
+As horas formais estão concentradas em jornadas de 40 horas ou mais, a margem restringida por um teto de 36h. A PNAD Contínua de 2024T4 informa média habitual de $41{,}42$ horas entre formais e $35{,}48$ entre informais no trabalho principal \citep{PNAD2024T4Microdados}. São horas habituais, distintas das efetivas e das contratadas. Para representar a base de 44h, limitamos previamente a distribuição formal a esse teto, reduzindo sua média para $39{,}95$ horas; a jornada informal permanece na média observada. Preservar a cauda acima de 44h é uma sensibilidade separada.\footnote{Na PNAD, $17{,}97\%$ dos formais reportam mais de 44 horas habituais. A limitação inicial é uma hipótese de mensuração e exposição à reforma, não uma observação de contratos. A formalidade estatística não equivale à cobertura de uma mesma regra de jornada; o exercício não identifica sua aplicação a contratos e horas extras.}
+
+A informalidade é grande e dispersa. A taxa nacional é de $38{,}60\%$, combinando posição na ocupação e registro do negócio no CNPJ \citep{PNADDicionario2022}. A faixa setorial vai de $34{,}21\%$ em serviços a $75{,}75\%$ na agricultura (Tabela~\ref{tab:facts_informality}). A remuneração formal--informal também disciplina o problema: a razão de massas de renda habitual por totais de horas é de $1{,}62244$ entre ocupados remunerados. Esse momento inclui conta própria e empregadores e não é um prêmio salarial condicional. Ao limitar também as horas formais no denominador da ponte a 44h, a razão passa a $1{,}68247$. A calibração usa essa razão compatível com a base para ajustar o peso tecnológico formal, mantendo a elasticidade CES de referência.
+
+A PTF brasileira permaneceu estagnada ou em queda ao longo do período pós-1990. A série \texttt{rtfpna} da Penn World Table 11.0 mostra queda anualizada de $-0{,}83\%$ ao ano de 1990 a 2023 e $-0{,}82\%$ no horizonte pré-Covid de 1990 a 2019 \citep{FeenstraInklaarTimmer2015,PWT2025,FREDPWTBrazil2026}. Entre janelas de dez anos inteiramente contidas em 1990--2019, a melhor década móvel é de 2000 a 2010, com apenas $+0{,}05\%$ ao ano. O benchmark de PTF na Seção~\ref{sec:results} usa essa série atualizada como referência de escala para $A_{\text{req}}$.
+
+Em conjunto, esses fatos disciplinam três margens: a exposição dos trabalhadores formais ao novo teto, a composição inicial formal--informal e a escala do ganho de produtividade requerido. A Tabela~\ref{tab:facts_informality} documenta a heterogeneidade setorial que motiva a extensão do exercício.\footnote{A calibração nacional utiliza um grupo Brasil e a extensão desagrega a economia por setor. As participações por porte da RAIS referem-se a vínculos formais em estabelecimentos, sem uma ligação validada com o universo de pessoas da PNAD \citep{RAIS2022TabelasVerificadas}. As comparações entre fontes e as definições de dados são documentadas no apêndice online.}
+
+\begin{table}[t]
+\centering
+\caption{Emprego, informalidade e horas habituais, PNAD Contínua 2024T4.}\label{tab:facts_informality}
+\normalsize
+\begin{tabular}{lrrrr}
+\toprule
+ & Parcela do & Informalidade & \multicolumn{2}{c}{Horas semanais médias} \\
+\cmidrule(lr){4-5}
+Setor & emprego (\%) & (\%) & Formais & Informais \\
+\midrule
+Agricultura & 7{,}574 & 75{,}750 & 45{,}206 & 35{,}680 \\
+Indústria e construção & 20{,}474 & 40{,}258 & 42{,}513 & 37{,}081 \\
+Serviços & 71{,}934 & 34{,}211 & 40{,}996 & 34{,}904 \\
+Não classificado & 0{,}019 & 60{,}027 & 42{,}111 & 36{,}902 \\
+\midrule
+Brasil & 100{,}000 & 38{,}600 & 41{,}424 & 35{,}485 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.96\textwidth}
+\normalsize\justifying
+\textit{Notas:} Ocupados de 14 anos ou mais; trabalho principal; peso V1028; amostra de 209.311 pessoas. Informalidade combina VD4009 com o indicador de CNPJ V4019. Agricultura corresponde às divisões 01--03 da CNAE Domiciliar 2.0; indústria e construção, a 05--43; serviços, a 45--99. Os casos não classificados são preservados na estatística nacional e excluídos explicitamente na extensão de três setores, com renormalização das parcelas. A tabela apresenta as horas observadas, antes da limitação formal a 44h usada no modelo. São estimativas pontuais ponderadas, sem erros-padrão de desenho amostral; diferenças de soma decorrem de arredondamento. \textit{Fonte:} microdados do IBGE \citep{PNAD2024T4Microdados}.
+\end{minipage}
+\end{table}

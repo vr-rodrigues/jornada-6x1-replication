@@ -1,0 +1,65 @@
+{
+  "old_V4017_classification_informality_rate_same_2024Q4": 0.4417411615297911,
+  "correct_V4019_informality_rate": 0.3860008721172535,
+  "cnpj_misclassified_weighted": 8951234.064737558,
+  "sample_notes": "Same raw2024Q4 sample: isolates variable coding error from data vintage changes",
+  "hours": {
+    "share_above44": 0.17973275463843574,
+    "mean_habitual_capped44": 39.94663957468149,
+    "assumption": "Applying a legal cap to reported habitual hours is a model proxy, not observed contracted hours."
+  },
+  "private_employee_wage_bridge": {
+    "universe": "Private-sector employees VD4009=1 or2, positive habitual main-job earnings and valid habitual hours; excludes employer/self-employed income",
+    "wage_ratio_formal_informal": {
+      "aggregate_hourly_payroll_over_hours": 1.164324516879578,
+      "mean_monthly_per_worker": 1.318281587689886,
+      "mean_weekly_per_worker": 1.3182815876898855,
+      "mean_individual_hourly": 1.1749502576772184,
+      "aggregate_hourly_formal_capped44": 1.1957304416861925
+    },
+    "wages": {
+      "total": {
+        "paid_workers_weighted": 52345267.84299453,
+        "income_monthly_sum": 149260808085.66284,
+        "hours_weekly_sum": 2150242998.8234186,
+        "hours_weekly_sum_capped44": 2086399349.7058535,
+        "aggregate_hourly_payroll_over_hours_capped44": 16.50920849394356,
+        "mean_monthly_per_worker": 2851.4670807179505,
+        "mean_weekly_per_worker": 658.0308647810656,
+        "aggregate_hourly_payroll_over_hours": 16.019027563289306,
+        "mean_individual_hourly": 16.287293143945305,
+        "hours_valid_weighted": 52395850.443282105,
+        "hours_missing_or_invalid_weighted": 0.0,
+        "wage_bridge_excluded_weighted": 50582.60028757155
+      },
+      "formal": {
+        "paid_workers_weighted": 38469306.76680765,
+        "income_monthly_sum": 117194569800.72438,
+        "hours_weekly_sum": 1630729808.5926368,
+        "hours_weekly_sum_capped44": 1587898601.8564901,
+        "aggregate_hourly_payroll_over_hours_capped44": 17.031881438540577,
+        "mean_monthly_per_worker": 3046.4435065370867,
+        "mean_weekly_per_worker": 703.0254245854815,
+        "aggregate_hourly_payroll_over_hours": 16.584538150182315,
+        "mean_individual_hourly": 16.956590780633636,
+        "hours_valid_weighted": 38469306.76680765,
+        "hours_missing_or_invalid_weighted": 0.0,
+        "wage_bridge_excluded_weighted": 0.0
+      },
+      "informal": {
+        "paid_workers_weighted": 13875961.076186882,
+        "income_monthly_sum": 32066238284.938477,
+        "hours_weekly_sum": 519513190.2307821,
+        "hours_weekly_sum_capped44": 498500747.8493634,
+        "aggregate_hourly_payroll_over_hours_capped44": 14.844313021801538,
+        "mean_monthly_per_worker": 2310.9201668177557,
+        "mean_weekly_per_worker": 533.289269265636,
+        "aggregate_hourly_payroll_over_hours": 14.243913882900394,
+        "mean_individual_hourly": 14.431752042129379,
+        "hours_valid_weighted": 13926543.676474452,
+        "hours_missing_or_invalid_weighted": 0.0,
+        "wage_bridge_excluded_weighted": 50582.60028756969
+      }
+    }
+  }
+}

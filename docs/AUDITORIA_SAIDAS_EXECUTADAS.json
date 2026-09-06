@@ -1,0 +1,22 @@
+{
+  "run_directory": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\replication_package\\output\\runs\\20260905_005724_846373",
+  "audited_utc": "2026-09-05T03:58:44.983362+00:00",
+  "simulation_count": 48,
+  "allocation_count": 264,
+  "max_restore_error": 2.142730437526552e-13,
+  "max_decomposition_error": 5.329070518200751e-15,
+  "max_CE_error": 1.0547118733938987e-14,
+  "hashes_checked": 195,
+  "status": "passed",
+  "national_rows": 32,
+  "versions": [
+    "original",
+    "code_corrected_frozen_inputs",
+    "bridge_recalibrated_assumed_hourly",
+    "rais_verified_only",
+    "single_group_frozen_control",
+    "reprocessed_data_fixed_omega",
+    "reprocessed_data",
+    "reprocessed_topcoded44"
+  ]
+}

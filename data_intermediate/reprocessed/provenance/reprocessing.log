@@ -1,0 +1,14 @@
+BigQuery unavailable: Forbidden: 403 POST https://bigquery.googleapis.com/bigquery/v2/projects/upa-research/jobs?prettyPrint=false: Access Denied: Project upa-research: User does not have bigquery.jobs.create permission in project upa-research.
+
+Location: None
+Job ID: 88eef524-9e63-4e66-8d81-264dc5eda17e
+
+Using explicitly allowed official IBGE/MTE fallback, SAME 2024Q4.
+PNAD official parser: 300,000 records
+PNAD official parser: 400,000 records
+{
+  "pnad_informality": 0.3860008721172535,
+  "pnad_occupied": 101831958.5143261,
+  "rais_small_share": 0.3938863739756182,
+  "rais_active_links": 52790864
+}

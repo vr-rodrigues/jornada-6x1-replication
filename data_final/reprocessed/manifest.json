@@ -1,0 +1,14 @@
+{
+  "status": "complete_with_explicit_bq_blocker",
+  "route": "official_ibge_mte_fallback",
+  "pnad_period": "2024Q4",
+  "rais_year": 2022,
+  "utc": "2026-09-05T03:57:39.609786+00:00",
+  "bigquery_billed_bytes": 0,
+  "digests": {
+    "data_intermediate\\reprocessed\\pnad_targets.json": "6e0fe36c6da60afe511582420fd917d579101e5032f10473ff36ba014a8a9ecf",
+    "data_intermediate\\reprocessed\\rais_targets.json": "ab19625f4bd4d4df0057cbc44b4ed373e40bc64352cef522bb90693ba52c374a",
+    "data_intermediate\\reprocessed\\provenance\\pnad_cells_rows.json": "0209bcc4a4a490da24a6b4078ae4779306f0cba9be998ea7ec016b8b4fd841d2",
+    "data_intermediate\\reprocessed\\provenance\\pnad_population_rows.json": "ddfced154a8f625611cd59c320051366a9a22dd880134ffa4ef91fcbe8840cab"
+  }
+}

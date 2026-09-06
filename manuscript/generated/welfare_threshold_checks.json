@@ -1,0 +1,39 @@
+{
+  "hours_cap": 36,
+  "gain_range_pct": [
+    0.0,
+    8.0
+  ],
+  "points_per_mode": 81,
+  "modes": {
+    "flat_below": {
+      "max_kkt_violation": 2.949788850681312e-15,
+      "max_resource_residual": 0.0,
+      "model_evaluations": 88,
+      "canonical_anchor_max_error": 0.0,
+      "zero_crossing_gain_pct": 1.6230676609401349,
+      "zero_crossing_residual_dGHH_pct": 2.0374248436774623e-13,
+      "nonnegative_gain_required_pct": 1.6230676609401349,
+      "status": "neutrality_root_found",
+      "dGHH_pct_at_zero_gain": -2.1209845049641367,
+      "CE_pct_at_zero_gain": -1.661437862221907
+    },
+    "bilateral": {
+      "max_kkt_violation": 3.0208040929791125e-15,
+      "max_resource_residual": 0.0,
+      "model_evaluations": 88,
+      "canonical_anchor_max_error": 0.0,
+      "zero_crossing_gain_pct": 3.3964731346985033,
+      "zero_crossing_residual_dGHH_pct": 1.9502864799367376e-12,
+      "nonnegative_gain_required_pct": 3.3964731346985033,
+      "status": "neutrality_root_found",
+      "dGHH_pct_at_zero_gain": -4.365855055297139,
+      "CE_pct_at_zero_gain": -3.4199197933160925
+    }
+  },
+  "composition": "reoptimized at every TFP evaluation, including root search",
+  "calibration": "baseline bridge, wedges and preferences held fixed along each curve",
+  "metric_plotted": "100*(G1-G0)/G0; G=C-v(h), per-worker representative mean hours",
+  "CE_in_csv": "100*(G1-G0)/C0; same zero as GHH, different denominator",
+  "resource_constraint": "C + resource_cost = Y; input-selected transfer treatment"
+}

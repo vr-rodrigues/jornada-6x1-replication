@@ -1,0 +1,136 @@
+{
+  "date": "2026-09-05",
+  "documents": {
+    "main": {
+      "pages": 25,
+      "all_pages_numbered": true,
+      "bold_spans": [],
+      "margin_exceptions": [],
+      "Times_text_sizes_PDF_pt": {
+        "11.96": 50452,
+        "8.85": 111,
+        "6.89": 26,
+        "7.52": 46,
+        "6.27": 144,
+        "9.4": 40,
+        "7.1": 49,
+        "7.75": 22,
+        "9.68": 25,
+        "6.46": 47,
+        "6.91": 46,
+        "7.54": 55,
+        "6.28": 135,
+        "9.42": 36,
+        "7.49": 55,
+        "8.17": 161,
+        "10.22": 60,
+        "6.81": 13
+      },
+      "common_baseline_distances_PDF_pt": [
+        [
+          17.93,
+          583
+        ],
+        [
+          16.67,
+          4
+        ],
+        [
+          17.69,
+          3
+        ],
+        [
+          2.65,
+          2
+        ],
+        [
+          15.27,
+          2
+        ]
+      ],
+      "pdf_sha256": "733677d503b97f6a9c7f8fc31b53e28010e3faadfc8ab908894c5f54b1b1db24"
+    },
+    "online_appendix_pt": {
+      "pages": 26,
+      "all_pages_numbered": true,
+      "bold_spans": [],
+      "margin_exceptions": [],
+      "Times_text_sizes_PDF_pt": {
+        "11.96": 40131,
+        "8.85": 167,
+        "6.58": 3,
+        "6.74": 21,
+        "7.35": 52,
+        "6.13": 75,
+        "8.58": 34,
+        "6.83": 67,
+        "7.45": 20,
+        "6.21": 89,
+        "8.69": 38,
+        "5.74": 123,
+        "6.18": 3,
+        "5.42": 73,
+        "6.69": 40,
+        "6.82": 35,
+        "7.44": 12,
+        "6.2": 52,
+        "8.68": 55
+      },
+      "common_baseline_distances_PDF_pt": [
+        [
+          17.93,
+          449
+        ],
+        [
+          17.69,
+          4
+        ],
+        [
+          14.68,
+          4
+        ],
+        [
+          13.06,
+          3
+        ],
+        [
+          7.3,
+          1
+        ]
+      ],
+      "pdf_sha256": "725b7066c2fb8c6ab40bf887efbe8c5db5bab7f5489b9175efc7590039bcfdb3"
+    },
+    "folha_rosto": {
+      "pages": 2,
+      "all_pages_numbered": true,
+      "bold_spans": [],
+      "margin_exceptions": [],
+      "Times_text_sizes_PDF_pt": {
+        "11.96": 4196
+      },
+      "common_baseline_distances_PDF_pt": [
+        [
+          17.93,
+          39
+        ]
+      ],
+      "pdf_sha256": "70426b3fc4eb811eada6ae7307c91a604d0249c323ccca0cfe4970b6fba11590"
+    }
+  },
+  "bibliography_checks": {
+    "main": {
+      "cited_and_printed": 34,
+      "missing_access_dates": []
+    },
+    "online_appendix_pt": {
+      "cited_and_printed": 13,
+      "missing_access_dates": []
+    }
+  },
+  "original_backup_preserved": true,
+  "numeric_csv_unchanged": 19,
+  "sections_content_preserved": 13,
+  "overleaf_archive": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\PAPER\\overleaf\\jornada_overleaf_pasta_unica_20260905_202821.zip",
+  "overleaf_sha256": "a513a7adbfd7eaa0304c080562fe8fc7a340cf84b69859efb2c5a65fbb1e9ab2",
+  "overleaf_clean_compilation_pages_identical": 53
+}

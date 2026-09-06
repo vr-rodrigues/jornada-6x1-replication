@@ -1,0 +1,16 @@
+{
+  "source_url": "https://fred.stlouisfed.org/series/RTFPNABRA632NRUG",
+  "pwt_url": "https://www.rug.nl/ggdc/productivity/pwt/",
+  "verified_date": "2026-09-05",
+  "release": "Penn World Table 11.0",
+  "FRED_updated": "2026-02-04",
+  "variable": "rtfpna",
+  "unit": "index 2021=1; annual; constant national prices",
+  "local_raw_sha256": "3475e738843340c9640729f7fd4f47d2403c76af97a401af533c657200272c0b",
+  "best_10yr_window_restricted_to_1990_2019": {
+    "start": 2000,
+    "end": 2010,
+    "growth_pct_year": 0.04934924729989021
+  },
+  "reference_only_not_causal_validation": true
+}

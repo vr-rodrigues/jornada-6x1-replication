@@ -9,6 +9,8 @@
 \usepackage{multirow}
 \usepackage{natbib}
 \usepackage{hyperref}
+\usepackage{ragged2e}
+\Urlmuskip=0mu plus 1mu\relax
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
@@ -18,13 +20,14 @@
 \usepackage{xr-hyper}
 \externaldocument{online_appendix}
 
-% URL of the online appendix (replace with the public link once available)
-\newcommand{\onlineappendixurl}{[URL pending]}
+% Public replication package and online appendix
+\newcommand{\onlineappendixurl}{https://github.com/vr-rodrigues/jornada-6x1-replication}
 
 % === Metadata ===
-\title{How much productivity do we need to reduce the workweek?}
+\title{How much productivity is needed to shorten the workweek?\\
+Brazil's 36-hour proposal and 40-hour alternatives}
 \author{Victor Rangel\thanks{Insper. E-mail: \texttt{victorr@insper.edu.br}.}}
-\date{March 2026}
+\date{April 2026}
 
 \begin{document}
 
@@ -32,7 +35,7 @@
 
 % === Abstract ===
 \begin{abstract}
-Brazil proposes to reduce the formal workweek from 44 to 36 hours (PEC 8/2025). An important strand of the Brazilian debate presumes the cut can be absorbed by gains in productivity. The quantitative question is how large that gain would have to be. This paper computes the one-off TFP gain that would leave aggregate output unchanged in the short run --- the output-neutrality benchmark $A_{\text{req}}$ --- using a structural partial-equilibrium model with a CES aggregator over formal and informal effective labor, calibrated to Brazilian microdata. The required gain is $A_{\text{req}}\approx 6.6\%$ under the preferred specification, with a conservative upper bound a couple of percentage points higher. The figure is high relative to the post-1990 Brazilian TFP series, in which productivity fell on average and rose only modestly in the best post-Real-Plan decade. Aggregate informality rises by $1.6$--$1.9$ pp, but the dominant channel of the output cost is the mechanical reduction in hours rather than reallocation. Welfare peaks inside the model near a cap of 42 hours and turns negative below 40 hours, with small firms and the most exposed sectors bearing disproportionate costs. The results favor evaluating a phased reduction with an intermediate stop rather than a single-step cut to 36 hours.
+Brazil's workweek debate began with a 36-hour proposal, but it now includes 40-hour and phased alternatives. This paper computes $A_{\text{req}}$, the one-off TFP gain that would make shorter formal hours output-neutral in a short-run accounting model with informality, firm-size heterogeneity, and an hours-productivity schedule. A 40-hour cap requires a modest productivity gain and leaves the representative agent GHH diagnostic positive. The 36-hour endpoint is more demanding, with an output-neutrality benchmark around $6$--$8\%$ depending on the hours-efficiency specification and disciplined calibration envelopes of roughly $5.6$--$7.5\%$ and $6.9$--$9.2\%$. The benchmark is large relative to Brazil's recent TFP record, while most of the output cost comes from fewer formal hours rather than from reallocation into informality. The results support evaluating intermediate and phased paths separately from a direct move to 36 hours; they do not rank reforms by social welfare.
 \end{abstract}
 
 \textbf{Keywords:} working hours, informality, total factor productivity, CES aggregator, Brazil, welfare
@@ -56,12 +59,12 @@ Brazil proposes to reduce the formal workweek from 44 to 36 hours (PEC 8/2025). 
 \input{sec_calibration}
 
 % ==================================================================
-% 3. Validation
+% 3. Calibration checks
 % ==================================================================
 \input{sec_validation}
 
 % ==================================================================
-% 4. Main results (includes welfare as §4.4)
+% 4. Main results (includes welfare as Section 4.4)
 % ==================================================================
 \input{sec_results}
 \input{sec_welfare_conditional}
@@ -72,9 +75,9 @@ Brazil proposes to reduce the formal workweek from 44 to 36 hours (PEC 8/2025). 
 \input{sec_conclusion}
 
 % === Online appendix and replication ===
-\paragraph{Online appendix.} An online appendix containing data sources, partial-equilibrium omissions, calibration details, sensitivity grids, sectoral decomposition, type-level welfare, output decomposition, the historical TFP table, derivations, and the asymmetric-$e(h)$ robustness is available at \url{\onlineappendixurl}.
+\paragraph{Online appendix.} The \href{\onlineappendixurl}{public replication repository} contains the online appendix with data sources, omitted-channel diagnostics, calibration details, sensitivity grids, sectoral results, welfare incidence, output decomposition, historical TFP table, derivations, and hours-efficiency robustness.
 
-\paragraph{Code and data availability.} Code and calibration targets to reproduce every numbered table and figure in this paper are available at the author's public repository \url{https://github.com/vr-rodrigues/jornada-6x1-replication} (to be activated upon publication).
+\paragraph{Code and data availability.} Code, calibration targets, and unit tests to reproduce every numbered table and figure in this paper are available at the author's \href{https://github.com/vr-rodrigues/jornada-6x1-replication}{public GitHub repository}.
 
 % === Bibliography ===
 \bibliographystyle{aer}

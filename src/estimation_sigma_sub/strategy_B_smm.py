@@ -60,7 +60,7 @@ def calibrate_and_simulate(sigma_sub, verbose=False):
     """
     # Fixed parameters
     alpha = 0.35
-    eta_I = 0.15
+    eta_I = 0.40
     e_q = 0.60
     h0 = 44.0
     h1 = 36.0

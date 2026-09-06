@@ -1,0 +1,265 @@
+{
+  "created": "2026-09-05",
+  "files": [
+    {
+      "file": "../jornada 6x1/50-paper/deep-search-prompt.md",
+      "sha256": "18e7f958617c8d473ef818c067e3d31ba7537a28afab4260549255170731f1be",
+      "lines": 166,
+      "archived_snapshot": "external local note preserved in place"
+    },
+    {
+      "file": "../jornada 6x1/50-paper/paper-jornada-6x1.md",
+      "sha256": "90c0f6553682b2439f976a62d98fbc84fd2032e337bfe819f97e6ca151274e1f",
+      "lines": 79,
+      "archived_snapshot": "external local note preserved in place"
+    },
+    {
+      "file": "../jornada 6x1/50-paper/pontes-carlin-soskice.md",
+      "sha256": "e760efce3c822a6a8703c5da671489d938bcc5baa1b3c274a58ddcdf7f3d27a8",
+      "lines": 103,
+      "archived_snapshot": "external local note preserved in place"
+    },
+    {
+      "file": "data_final/calibration_targets.csv",
+      "sha256": "12d9625bafa72d1fbf5c762225ee9c9c12ef1fe6591ff6dc82091252b23a5a44",
+      "lines": 20,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\data_final\\calibration_targets.csv"
+    },
+    {
+      "file": "data_intermediate/pnad_targets.json",
+      "sha256": "f3ef59b66835b72d4d17c58b233d2a945ac78e5fc13a5de062aaeba8670b6e95",
+      "lines": 349,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\data_intermediate\\pnad_targets.json"
+    },
+    {
+      "file": "data_intermediate/rais_targets.json",
+      "sha256": "575db5e98130fb551720c6f236fd19e5735ace80a673f2d6d20dbabd0d66891a",
+      "lines": 62,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\data_intermediate\\rais_targets.json"
+    },
+    {
+      "file": "data_intermediate/sectoral_data.README.md",
+      "sha256": "eeb2bbc49352c3838ec512f09d419d0a62c19e9464cb11dbaeef0b3999dbe378",
+      "lines": 36,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\data_intermediate\\sectoral_data.README.md"
+    },
+    {
+      "file": "docs/DATA_PROVENANCE.md",
+      "sha256": "1bf15a6eff2d5bb17f3d46c70ebb84d2cce6999aaf2d3900695baf336573710f",
+      "lines": 235,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\docs\\DATA_PROVENANCE.md"
+    },
+    {
+      "file": "docs/MODEL_VALIDATION.md",
+      "sha256": "663ec54bcd6484e3218972b026299df48f4d08d2ff905d33f4a3ecfce4a81505",
+      "lines": 91,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\docs\\MODEL_VALIDATION.md"
+    },
+    {
+      "file": "docs/SIGMA_SUB_DECISION_MEMO.md",
+      "sha256": "ddbc48edb091599d5f8fc197fd747c1de4328884d1a43caca1ec8df6caafe7b2",
+      "lines": 137,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\docs\\SIGMA_SUB_DECISION_MEMO.md"
+    },
+    {
+      "file": "paper/arxiv_submission_main_pt/bibliography_clean.bib",
+      "sha256": "d52df47ce160c45fee484d9dd0584288d2f325628c00dd0bf1be8473401e4677",
+      "lines": 486,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\arxiv_submission_main_pt\\bibliography_clean.bib"
+    },
+    {
+      "file": "paper/arxiv_submission_main_pt/main_pt.tex",
+      "sha256": "24319bcdd53c6e679cb1bed516c469bb4d5e6849e8be27599ddc8f803a06e84e",
+      "lines": 462,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\arxiv_submission_main_pt\\main_pt.tex"
+    },
+    {
+      "file": "paper/arxiv_submission_main_pt_flat/bibliography_clean.bib",
+      "sha256": "d52df47ce160c45fee484d9dd0584288d2f325628c00dd0bf1be8473401e4677",
+      "lines": 486,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\arxiv_submission_main_pt_flat\\bibliography_clean.bib"
+    },
+    {
+      "file": "paper/arxiv_submission_main_pt_flat/main_pt.tex",
+      "sha256": "24319bcdd53c6e679cb1bed516c469bb4d5e6849e8be27599ddc8f803a06e84e",
+      "lines": 462,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\arxiv_submission_main_pt_flat\\main_pt.tex"
+    },
+    {
+      "file": "paper/tex/bibliography_clean.bib",
+      "sha256": "d52df47ce160c45fee484d9dd0584288d2f325628c00dd0bf1be8473401e4677",
+      "lines": 486,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\bibliography_clean.bib"
+    },
+    {
+      "file": "paper/tex/main.tex",
+      "sha256": "1dd9eb02c4724bafa4faa8b54787b3affbd4ebaa481719ff9fc8e7caf95eace0",
+      "lines": 86,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\main.tex"
+    },
+    {
+      "file": "paper/tex/main_pt.tex",
+      "sha256": "24319bcdd53c6e679cb1bed516c469bb4d5e6849e8be27599ddc8f803a06e84e",
+      "lines": 462,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\main_pt.tex"
+    },
+    {
+      "file": "paper/tex/online_appendix.tex",
+      "sha256": "8f39982680d7d5e34706fbf82ee3a0bc312589bfdd38bf5087bbaca09daa5384",
+      "lines": 260,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\online_appendix.tex"
+    },
+    {
+      "file": "paper/tex/online_appendix_pt.tex",
+      "sha256": "033115b2b83e681c24e1e0b8e39af7fe14bd9660057d4368dea77744d920ad2b",
+      "lines": 363,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\online_appendix_pt.tex"
+    },
+    {
+      "file": "paper/tex/sec_calibration.tex",
+      "sha256": "442a2d15de9cc90b69d54f55cc3edf5af3015b56818c2f0f8e869d1142e8fcd7",
+      "lines": 54,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_calibration.tex"
+    },
+    {
+      "file": "paper/tex/sec_conclusion.tex",
+      "sha256": "0fbb692e54d5668bbbae24a8602cb19d15d504d8193daf19d0689a57f5e86707",
+      "lines": 19,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_conclusion.tex"
+    },
+    {
+      "file": "paper/tex/sec_facts.tex",
+      "sha256": "663d0d25f259f0cb72dea2c526cfeee40c7941eddc3b849df802cb19113f1713",
+      "lines": 36,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_facts.tex"
+    },
+    {
+      "file": "paper/tex/sec_introduction.tex",
+      "sha256": "688930a8c42f9442e90d80b6bcc0b156437d15c44692fc0a5a4f184519c208b9",
+      "lines": 23,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_introduction.tex"
+    },
+    {
+      "file": "paper/tex/sec_model.tex",
+      "sha256": "f5b82e68a8f9c16430d370acc1b16e3c103b8f57fe91f4c82e3a933fe64035fa",
+      "lines": 41,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_model.tex"
+    },
+    {
+      "file": "paper/tex/sec_results.tex",
+      "sha256": "43d6f2f5bac173ef336f54b63bc20fd7588e05abead8e63130863adb93c3dcaf",
+      "lines": 66,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_results.tex"
+    },
+    {
+      "file": "paper/tex/sec_sectoral_body.tex",
+      "sha256": "6b58a71c5982488fa754045be9a3f2bf8331d5d099bbf35af8ec57a19cf2ac73",
+      "lines": 71,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_sectoral_body.tex"
+    },
+    {
+      "file": "paper/tex/sec_validation.tex",
+      "sha256": "958f9bdde8ec4609dbde3318200bcb5f9ca6a0a60b94820d59f1431dcb274527",
+      "lines": 48,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_validation.tex"
+    },
+    {
+      "file": "paper/tex/sec_welfare_conditional.tex",
+      "sha256": "577c29c217c90cd123da72f43fad26b69dbea7673ca6a136710e44ac98ddc66a",
+      "lines": 28,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\sec_welfare_conditional.tex"
+    },
+    {
+      "file": "paper/tex/tab_areq_tfp_horizons_autogen.tex",
+      "sha256": "fa60fb174934479b6b56a0f3725c4d3dd461153a52a5b11c931dfc9b213843ab",
+      "lines": 22,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_areq_tfp_horizons_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_areq_tfp_horizons_pt_autogen.tex",
+      "sha256": "e16d500050c8c1c24f4fd6c68d94b04c5d2f34c564f8dd2945a96d2a5b69767d",
+      "lines": 22,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_areq_tfp_horizons_pt_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_efficiency_diagnostics_autogen.tex",
+      "sha256": "db72b38664c6e723c49516829832a9290a2ba522850e3ffd683285c7ae85a3bb",
+      "lines": 27,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_efficiency_diagnostics_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_efficiency_diagnostics_pt_autogen.tex",
+      "sha256": "b7cd014c4429363c300b867df366aca6d2f96bc742c0cf946fbbb49d6b37c36d",
+      "lines": 27,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_efficiency_diagnostics_pt_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_envelope_corners_autogen.tex",
+      "sha256": "1cc2c88072c1988fbe7758d898ea79854c943f97d5c8b32f3d122cfbde775324",
+      "lines": 26,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_envelope_corners_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_envelope_corners_pt_autogen.tex",
+      "sha256": "6e48565e5566ec00fade904f697cdd2d5dad3f67e38566406e320882efd2c4a8",
+      "lines": 26,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_envelope_corners_pt_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_omitted_channels_autogen.tex",
+      "sha256": "8c3b589b058c98eb6d8a74f0a8e925785bf01290d77ca4623ab1000cc95c2ff1",
+      "lines": 25,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_omitted_channels_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_portugal_validation_autogen.tex",
+      "sha256": "2a582a5f416fb91e50ce29d17609dc6a4b523be5421ecbf4298c34849e0e6c7a",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_portugal_validation_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_stress_test_autogen.tex",
+      "sha256": "ca2db7d94809ff0057215d41848fe0b1eebbe0dbe49096ffd343ea37f04e2f1a",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_stress_test_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_stress_test_pt_autogen.tex",
+      "sha256": "b2353d8217094bf28ec01ff23c18c6ed739763fa8625f7cf23eb8fbbcf3c2f30",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_stress_test_pt_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_wage_premium_bridge_autogen.tex",
+      "sha256": "356800c519ded6f25afe806d192faa395538819e2f8ef8518c161825a41f1056",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_wage_premium_bridge_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_wage_premium_bridge_pt_autogen.tex",
+      "sha256": "f638e81f665c665a32955d781c76fa58dd1ace0a79a1c2662530cba114b3ffdd",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_wage_premium_bridge_pt_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_welfare_incidence_by_type_autogen.tex",
+      "sha256": "018feeb6b9e8739c7a814c4b579d353c34deb8684de6ce501706e50f3c834ef2",
+      "lines": 24,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_welfare_incidence_by_type_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_welfare_preference_robustness_autogen.tex",
+      "sha256": "fcee9aae3033c0cb9878d5a255a99f91378e2120e818d1fb0627977ce5571809",
+      "lines": 25,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_welfare_preference_robustness_autogen.tex"
+    },
+    {
+      "file": "paper/tex/tab_welfare_preference_robustness_pt_autogen.tex",
+      "sha256": "249f2d7ce04de28ae7dbe310911603488bb33e8df574bf97954e5ff27ef44b36",
+      "lines": 25,
+      "archived_snapshot": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\auditoria_original_20260905_002456\\snapshot\\paper\\tex\\tab_welfare_preference_robustness_pt_autogen.tex"
+    }
+  ],
+  "issue_count": 1525,
+  "locations": 872
+}

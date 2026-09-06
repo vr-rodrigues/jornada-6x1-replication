@@ -1,0 +1,31 @@
+\section{Checagens da calibração e benchmarks externos}\label{sec:validation}
+
+O modelo reproduz os momentos-alvo por construção. A validação relevante, portanto, exige momentos não calibrados e comparações externas. Esses exercícios não identificam causalmente o contrafactual brasileiro contemporâneo.
+
+A Tabela~\ref{tab:calibration_fit} reúne momentos-alvo e checagens domésticas. A informalidade inicial e a razão horária são reproduzidas por construção. As horas médias do modelo e a parcela acima de 36h decorrem da distribuição e da regra de limitação a 44h, não constituindo validação comportamental. A razão semanal apresenta diferença de $0{,}01393$ em relação à PNAD. Embora não seja alvo direto, compartilha a renda da ponte horária e depende das médias de horas; sua proximidade é uma checagem descritiva, sem validar as elasticidades. A ponte empírica usa remunerados, enquanto o modelo inclui todos os ocupados.
+
+\begin{table}[t]
+\centering
+\caption{Alvos, entradas e checagem descritiva no cenário nacional principal.}\label{tab:calibration_fit}
+\normalsize
+\begin{tabular}{@{}p{6.1cm}rrp{4.4cm}@{}}
+\toprule
+Momento & Referência & Modelo & Interpretação \\
+\midrule
+Informalidade inicial (\%) & 38{,}60009 & 38{,}60009 & Alvo das cunhas \\
+Razão por hora, base de 44h & 1{,}68247 & 1{,}68247 & Alvo de $\omega$, condicional \\
+Horas habituais formais médias & 41{,}42440 & 39{,}94664 & Base limitada a 44h \\
+Horas habituais informais médias & 35{,}48475 & 35{,}48475 & Entrada fixa \\
+Formais com mais de 36h (\%) & 85{,}58537 & 85{,}58537 & Entrada, identidade de pesos \\
+Razão de remuneração semanal & 1{,}88010 & 1{,}89403 & Não alvo; consistência descritiva \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\textwidth}
+\normalsize\justifying
+\textit{Notas:} Os dois modos de eficiência reproduzem os valores do modelo apresentados, até o arredondamento. A referência da razão horária usa as mesmas rendas observadas com as horas formais limitadas a 44h; sem essa transformação, a razão é $1{,}62244$. A referência das horas formais médias é a observada; o modelo aplica a regra de base de 44h. As razões empíricas de remuneração usam renda positiva e horas válidas; o modelo estende a ponte aos ocupados de todas as categorias. Não há regressão com controles individuais. A razão semanal é relacionada algebricamente à razão horária e às horas médias de cada modalidade. Fonte: PNAD Contínua 2024T4 e calibração.
+\end{minipage}
+\end{table}
+
+As comparações externas consideram a reforma portuguesa de 1996 no teto $44\to40$h e a reforma brasileira de 1988 no teto $48\to44$h. Em Portugal, \citet{AsaiLopesTondini2024} estimam aumento de $4{,}4$ pontos logarítmicos nas vendas por hora nas firmas afetadas. Esse resultado nominal difere da PTF e do produto físico por hora do modelo. A evidência brasileira de \citet{GonzagaMenezesFilhoCamargo2003} trata de horas, remuneração e transições de emprego; a resposta de salário-hora também não equivale à produtividade horária.
+
+Portugal e o Brasil de 1988 diferem do ambiente da PEC 8/2025 em informalidade, arranjo institucional e magnitude da reforma. São referências para margens que o modelo não codifica, não limites empíricos para $\Areq$. Sem harmonizar população e variável de resultado, não permitem classificar o modelo como conservador; o emprego total fixo também impede reproduzir seus testes sobre desemprego. O apêndice apresenta as sensibilidades e as verificações de consistência dos cálculos.

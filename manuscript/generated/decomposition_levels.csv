@@ -1,0 +1,5 @@
+﻿efficiency_mode,hours_cap,Y0,YH,YE,Y1,denominator,order
+bilateral,40,4.184726136567193,4.090840798853129,4.1231237057109835,4.114567073902902,Y0,physical_hours;efficiency;formal_informal_reallocation
+bilateral,36,4.184726136567193,3.9040552383224165,3.876343480445415,3.8333086095153623,Y0,physical_hours;efficiency;formal_informal_reallocation
+flat_below,40,4.268422256052508,4.174996771900204,4.2071160582949245,4.19860031522371,Y0,physical_hours;efficiency;formal_informal_reallocation
+flat_below,36,4.268422256052508,3.989278664343917,4.0194396939656745,3.984733429243401,Y0,physical_hours;efficiency;formal_informal_reallocation

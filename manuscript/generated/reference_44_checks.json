@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "baseline_operator_h0": 44.0,
+  "version": "reprocessed_topcoded44",
+  "errors": {
+    "dY_pct": 0.0,
+    "A_req_pct": 0.0,
+    "A_req_frozen_pct": 0.0,
+    "dGHH_pct": 0.0,
+    "CE_pct": 0.0,
+    "dInf_pp": 0.0
+  },
+  "method": "Recomputed with identical baseline and counterfactual hours; no shift of plotted values"
+}

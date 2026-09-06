@@ -166,12 +166,18 @@ lines = [
     f"$\\Delta$Inf (pp) & \\textit{{n/a}} & ${d40['dInf_pp']:+.3f}$ & ${d36['dInf_pp']:+.3f}$ \\\\",
     f"$A_{{\\text{{req}}}}$ (\\%) & \\textit{{n/a}} & ${d40['A_req_pct']:+.2f}$ & ${d36['A_req_pct']:+.2f}$ \\\\",
     r"\hline\hline",
-    r"\multicolumn{4}{l}{\footnotesize Signs match across all comparable outcomes. Magnitudes differ because} \\",
-    r"\multicolumn{4}{l}{\footnotesize (i) the Portuguese estimates are firm-level (treated vs.\ control, partial}\\",
-    r"\multicolumn{4}{l}{\footnotesize equilibrium) whereas ours are economy-wide, and (ii) our $e(h)$ captures}\\",
-    r"\multicolumn{4}{l}{\footnotesize only the fatigue channel, whereas the empirical productivity response}\\",
-    r"\multicolumn{4}{l}{\footnotesize also reflects worker selection, intensification and sectoral capital deepening.}\\",
     r"\end{tabular}",
+    r"\\[2pt]",
+    r"\begin{minipage}{0.95\textwidth}",
+    r"\justifying",
+    (
+        r"{\footnotesize Signs match across all comparable outcomes. Magnitudes differ because "
+        r"the Portuguese estimates are firm-level, treated-versus-control partial-equilibrium "
+        r"estimates, while ours are economy-wide. The model's $e(h)$ captures only the fatigue "
+        r"channel, while the empirical productivity response also reflects worker selection, "
+        r"intensification, and sectoral capital deepening.}"
+    ),
+    r"\end{minipage}",
     r"\end{table}",
 ]
 with open(OUT_TAB, "w", encoding="utf-8") as f:

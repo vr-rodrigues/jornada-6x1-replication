@@ -1,0 +1,17 @@
+input_kind,efficiency_mode,h1,sector,hours_pct,efficiency_pct,reallocation_pct,total_pct,order,denominator
+reprocessed,bilateral,40,agriculture,-4.085224528575381,5.034401436797428,0.5283681628805811,1.4775450711026277,physical hours -> efficiency -> formal-informal reallocation,0.2355028737453191
+reprocessed,bilateral,40,industry,-2.959092978104463,2.215440026457137,-0.06480420865453741,-0.8084571603018631,physical hours -> efficiency -> formal-informal reallocation,0.9070768938625153
+reprocessed,bilateral,40,services,-2.8342573241612143,2.913538096077994,0.0029751562649097257,0.08225592818168945,physical hours -> efficiency -> formal-informal reallocation,2.739008128388016
+reprocessed,bilateral,40,AGGREGATE,-2.9393282177621445,2.8790781738434466,0.019012527766601558,-0.041237516152096386,physical hours -> efficiency -> formal-informal reallocation,3.8815878959958505
+reprocessed,bilateral,36,agriculture,-7.858476218566571,3.5240111527161773,-2.30446295493656,-6.638928020786953,physical hours -> efficiency -> formal-informal reallocation,0.2355028737453191
+reprocessed,bilateral,36,industry,-7.318920166789419,0.7093327119169663,-0.5689025501057635,-7.178490004978216,physical hours -> efficiency -> formal-informal reallocation,0.9070768938625153
+reprocessed,bilateral,36,services,-6.941376960293123,1.4230132620534892,-0.19978118182268428,-5.718144880062318,physical hours -> efficiency -> formal-informal reallocation,2.739008128388016
+reprocessed,bilateral,36,AGGREGATE,-7.085245975975269,1.383706643285074,-0.4137348761200419,-6.115274208810237,physical hours -> efficiency -> formal-informal reallocation,3.8815878959958505
+reprocessed,flat_below,40,agriculture,-4.033730056608919,4.971199788717116,0.5186415513302267,1.4561112834384238,physical hours -> efficiency -> formal-informal reallocation,0.23875656919055563
+reprocessed,flat_below,40,industry,-2.9330547140804413,2.19587882086448,-0.06376834560810024,-0.8009442388240617,physical hours -> efficiency -> formal-informal reallocation,0.9135816103172618
+reprocessed,flat_below,40,services,-2.743093197135986,2.81985766246875,0.002797568796091648,0.07956203412885512,physical hours -> efficiency -> formal-informal reallocation,2.806639870202901
+reprocessed,flat_below,40,AGGREGATE,-2.864764338308957,2.805609407239681,0.018546012826580638,-0.040608918242695205,physical hours -> efficiency -> formal-informal reallocation,3.9589780497107183
+reprocessed,flat_below,36,agriculture,-7.757603657427595,4.709942520668543,-1.629398043514278,-4.6770591802733295,physical hours -> efficiency -> formal-informal reallocation,0.23875656919055563
+reprocessed,flat_below,36,industry,-7.25313867778099,2.0734727987280137,-0.4438216744701232,-5.6234875535231,physical hours -> efficiency -> formal-informal reallocation,0.9135816103172618
+reprocessed,flat_below,36,services,-6.713603563981064,2.64860469322197,-0.14410175121246765,-4.209100621971562,physical hours -> efficiency -> formal-informal reallocation,2.806639870202901
+reprocessed,flat_below,36,AGGREGATE,-6.901068922291952,2.64020051055792,-0.3028404078113021,-4.563708819545333,physical hours -> efficiency -> formal-informal reallocation,3.9589780497107183

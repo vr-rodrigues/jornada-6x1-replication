@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "national_sensitivity_rows": 64,
+  "sectoral_rows": 16,
+  "simulations_checked": 80,
+  "max_errors": {
+    "restoration": 7.105427357601002e-15,
+    "frozen_restoration": 2.220446049250313e-16,
+    "kkt": 8.181233468462778e-14,
+    "decomposition": 1.7763568394002505e-15,
+    "CE": 8.659739592076221e-15,
+    "GHH": 1.0436096431476471e-14,
+    "resource_constraint": 0.0,
+    "bridge": 2.195910120406097e-11
+  },
+  "max_national_anchor_error": 7.105427357601002e-15,
+  "observed_national_target_error": 0.0,
+  "elapsed_seconds": 10.381061599997338
+}

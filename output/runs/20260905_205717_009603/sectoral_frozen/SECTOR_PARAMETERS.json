@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-09-05T23:57:22.308003+00:00",
+    "source_file": {
+      "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\github_publicacao_20260905\\data_final\\SECTORAL_BASELINE_FACTS.csv",
+      "sha256": "b24e15bc879bc6b6a6aee81cf5c63c129071ad081ae272079f3de34d18da9a9f"
+    },
+    "input_kind": "frozen",
+    "capital_hypothesis_source": {
+      "path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\github_publicacao_20260905\\data_final\\SECTORAL_BASELINE_FACTS.csv",
+      "sha256": "b24e15bc879bc6b6a6aee81cf5c63c129071ad081ae272079f3de34d18da9a9f"
+    },
+    "capital_hypothesis": "K_sector proportional to legacy 2021 VAB shares; K fixed, not an observed capital stock",
+    "sector_model_scope": "one representative group per sector; fixed sector employment and capital; no IO, no worker incidence",
+    "hours_scope": "main job; PNAD habitual/actual hours are distinct from contracted hours",
+    "targets_path": "C:\\Users\\victo\\OneDrive\\Pesquisas\\0. GAVETA\\jornada 6 x 1\\github_publicacao_20260905\\data_final\\calibration_targets.csv",
+    "targets_sha256": "12d9625bafa72d1fbf5c762225ee9c9c12ef1fe6591ff6dc82091252b23a5a44",
+    "effective_targets": {
+      "INF_AGG": 0.37799999999999995,
+      "INF_SMALL": 0.5,
+      "INF_LARGE": 0.2,
+      "SHARE_SMALL": 0.59,
+      "SHARE_LARGE": 0.41,
+      "GAMMA_F_SMALL": 0.12,
+      "GAMMA_F_LARGE": 0.03,
+      "ALPHA": 0.35,
+      "LABSH_RAW": 0.578,
+      "THETA_36": 0.085,
+      "THETA_40": 0.269,
+      "THETA_44": 0.646,
+      "ETA_I": 0.4,
+      "E_Q": 0.6,
+      "N_TOTAL": 0.59,
+      "H0": 44.0,
+      "H1": 36.0,
+      "H_STAR": 40.0,
+      "HI": 44.0
+    },
+    "explicit_runtime_target_overrides": {},
+    "sigma_sub": 1.326,
+    "omega": 0.622,
+    "omega_source": "explicit technological hypothesis",
+    "omega_by_mode": null,
+    "omega_is_not_formal_employment_share": true,
+    "efficiency_curvature_anchor_hours": 42.244,
+    "kappa_override": null,
+    "baseline_hours_cap_operation": 44.0,
+    "habitual_hours_policy_mapping": "Baseline min(h_habitual,H0) preserves all observed hours because H0 is at least max support; H0 is an identity operation, not the legal cap. Reform min(h_habitual,h1) is a policy mapping assumption, not contracted hours data.",
+    "efficiency_extrapolation": "The same efficiency curve anchored at 42.244h is extrapolated over the full empirical hours support; long-hours and part-time responses are assumptions, not estimated behavior.",
+    "observed_formal_support_by_sector": {
+      "agriculture": {
+        "min_hours": 36.0,
+        "max_hours": 44.0,
+        "share_above_44h": 0.0
+      },
+      "industry": {
+        "min_hours": 36.0,
+        "max_hours": 44.0,
+        "share_above_44h": 0.0
+      },
+      "services": {
+        "min_hours": 36.0,
+        "max_hours": 44.0,
+        "share_above_44h": 0.0
+      }
+    },
+    "welfare": "representative-agent diagnostics; sector values do not constitute worker incidence",
+    "resource_costs": false,
+    "all_results_newly_executed": true,
+    "legacy_output_files_used": []
+  },
+  "parameters": {
+    "bilateral": {
+      "agriculture": {
+        "A": 1.0,
+        "K": 0.0766,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.05015,
+        "formal_wedge": 4.458077260085504,
+        "pi_m": 0.0,
+        "gamma_F": 0.06,
+        "NF_init": 0.01970895,
+        "theta": [
+          0.04,
+          0.18,
+          0.78
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "bilateral",
+        "resource_costs": false,
+        "inf_target": 0.607,
+        "lambda_s": 0.085,
+        "vab_share": 0.0766,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      },
+      "industry": {
+        "A": 1.0,
+        "K": 0.2585,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.11977,
+        "formal_wedge": 0.0,
+        "pi_m": 40.926232741033424,
+        "gamma_F": 0.06,
+        "NF_init": 0.09246244,
+        "theta": [
+          0.05,
+          0.3,
+          0.65
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "bilateral",
+        "resource_costs": false,
+        "inf_target": 0.228,
+        "lambda_s": 0.203,
+        "vab_share": 0.2585,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      },
+      "services": {
+        "A": 1.0,
+        "K": 0.6649,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.42007999999999995,
+        "formal_wedge": 1.3995278110391767,
+        "pi_m": 0.0,
+        "gamma_F": 0.06,
+        "NF_init": 0.26423031999999996,
+        "theta": [
+          0.1,
+          0.26,
+          0.64
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "bilateral",
+        "resource_costs": false,
+        "inf_target": 0.371,
+        "lambda_s": 0.712,
+        "vab_share": 0.6649,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      }
+    },
+    "flat_below": {
+      "agriculture": {
+        "A": 1.0,
+        "K": 0.0766,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.05015,
+        "formal_wedge": 4.461345925790828,
+        "pi_m": 0.0,
+        "gamma_F": 0.06,
+        "NF_init": 0.01970895,
+        "theta": [
+          0.04,
+          0.18,
+          0.78
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "flat_below",
+        "resource_costs": false,
+        "inf_target": 0.607,
+        "lambda_s": 0.085,
+        "vab_share": 0.0766,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      },
+      "industry": {
+        "A": 1.0,
+        "K": 0.2585,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.11977,
+        "formal_wedge": 0.0,
+        "pi_m": 40.87930199632992,
+        "gamma_F": 0.06,
+        "NF_init": 0.09246244,
+        "theta": [
+          0.05,
+          0.3,
+          0.65
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "flat_below",
+        "resource_costs": false,
+        "inf_target": 0.228,
+        "lambda_s": 0.203,
+        "vab_share": 0.2585,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      },
+      "services": {
+        "A": 1.0,
+        "K": 0.6649,
+        "alpha": 0.35,
+        "omega": 0.622,
+        "sigma_sub": 1.326,
+        "eta_I": 0.4,
+        "kappa": 0.0021098039890823555,
+        "h_star": 40.0,
+        "h0": 44.0,
+        "hI": 44.0,
+        "N_total": 0.42007999999999995,
+        "formal_wedge": 1.4043601192283073,
+        "pi_m": 0.0,
+        "gamma_F": 0.06,
+        "NF_init": 0.26423031999999996,
+        "theta": [
+          0.1,
+          0.26,
+          0.64
+        ],
+        "hours_bins": [
+          36.0,
+          40.0,
+          44.0
+        ],
+        "efficiency_mode": "flat_below",
+        "resource_costs": false,
+        "inf_target": 0.371,
+        "lambda_s": 0.712,
+        "vab_share": 0.6649,
+        "h_ref_efficiency": 42.244,
+        "wedge_normalization": "tau>=0; pi>=0; tau*pi=0; baseline FOC exact"
+      }
+    }
+  }
+}

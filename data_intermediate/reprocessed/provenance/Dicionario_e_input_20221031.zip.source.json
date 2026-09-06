@@ -1,0 +1,7 @@
+{
+  "url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/Documentacao/Dicionario_e_input_20221031.zip",
+  "path": "data_intermediate\\reprocessed\\provenance\\Dicionario_e_input_20221031.zip",
+  "sha256": "691ce2acd94e805741c71ea699888ad628a5fb5cbf1037fdf9626eba6b99cadc",
+  "bytes": 70208,
+  "retrieved_or_verified_utc": "2026-09-05T03:57:29.520579+00:00"
+}
